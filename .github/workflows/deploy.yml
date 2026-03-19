@@ -33,7 +33,7 @@ jobs:
           SSH_PASS: ${{ secrets.SSH_PASS }}
           DEPLOY_PATH: ${{ secrets.DEPLOY_PATH }}
         run: |
-          sshpass -p "$SSH_PASS" ssh -o StrictHostKeyChecking=no -p $SSH_PORT $SSH_USER@$SSH_HOST "mkdir -p $DEPLOY_PATH"
+          sshpass -p "$SSH_PASS" ssh -o StrictHostKeyChecking=no -p $SSH_PORT $SSH_USER@$SSH_HOST "sudo mkdir -p $DEPLOY_PATH && sudo chown $SSH_USER:$SSH_USER $DEPLOY_PATH"
           sshpass -p "$SSH_PASS" scp -o StrictHostKeyChecking=no -P $SSH_PORT -r ./ $SSH_USER@$SSH_HOST:$DEPLOY_PATH/
 
       - name: Run database migrations
@@ -44,7 +44,7 @@ jobs:
           SSH_PASS: ${{ secrets.SSH_PASS }}
           DEPLOY_PATH: ${{ secrets.DEPLOY_PATH }}
         run: |
-          sshpass -p "$SSH_PASS" ssh -o StrictHostKeyChecking=no -p $SSH_PORT $SSH_USER@$SSH_HOST "cd $DEPLOY_PATH && docker compose run --rm migrate"
+          sshpass -p "$SSH_PASS" ssh -o StrictHostKeyChecking=no -p $SSH_PORT $SSH_USER@$SSH_HOST "cd $DEPLOY_PATH && sudo docker compose run --rm migrate"
 
       - name: Deploy application
         env:
@@ -54,4 +54,4 @@ jobs:
           SSH_PASS: ${{ secrets.SSH_PASS }}
           DEPLOY_PATH: ${{ secrets.DEPLOY_PATH }}
         run: |
-          sshpass -p "$SSH_PASS" ssh -o StrictHostKeyChecking=no -p $SSH_PORT $SSH_USER@$SSH_HOST "cd $DEPLOY_PATH && docker compose up -d --build app"
+          sshpass -p "$SSH_PASS" ssh -o StrictHostKeyChecking=no -p $SSH_PORT $SSH_USER@$SSH_HOST "cd $DEPLOY_PATH && sudo docker compose up -d --build app"
