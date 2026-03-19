@@ -1,0 +1,53 @@
+@import "tailwindcss";
+
+@theme {
+  --color-arc-dark: #0f172a;
+  --color-arc-darker: #020617;
+  --color-arc-light: #f8fafc;
+  --color-arc-accent: #38bdf8;
+  --color-arc-accent-hover: #0284c7;
+  
+  --color-rarity-common: #94a3b8;
+  --color-rarity-rare: #3b82f6;
+  --color-rarity-epic: #a855f7;
+  --color-rarity-legendary: #eab308;
+  
+  --font-sans: 'Inter', system-ui, sans-serif;
+}
+
+@layer base {
+  body {
+    background-color: var(--color-arc-darker);
+    color: var(--color-arc-light);
+    font-family: var(--font-sans);
+  }
+}
+
+@layer components {
+  .btn-primary {
+    @apply px-4 py-2 bg-arc-accent text-white rounded-md hover:bg-arc-accent-hover transition-colors font-medium;
+  }
+  
+  .card {
+    @apply bg-arc-dark border border-gray-800 rounded-lg p-4 shadow-lg;
+  }
+  
+  .glass-panel {
+    @apply bg-arc-dark/80 backdrop-blur-md border border-gray-800 rounded-lg;
+  }
+}
+
+/* Custom Scrollbar for Sci-Fi feel */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: var(--color-arc-darker);
+}
+::-webkit-scrollbar-thumb {
+  background: #334155;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-arc-accent);
+}
