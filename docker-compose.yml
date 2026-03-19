@@ -1,4 +1,14 @@
 services:
+  migrate:
+    image: mysql:8
+    env_file:
+      - .env
+    volumes:
+      - ./scripts:/app/scripts
+      - ./migrations:/app/migrations
+    entrypoint: ["bash", "/app/scripts/migrate.sh"]
+    restart: "no"
+
   app:
     build:
       context: .
@@ -8,4 +18,7 @@ services:
       - "4102:80"
     env_file:
       - .env
+    depends_on:
+      migrate:
+        condition: service_completed_successfully
     restart: unless-stopped
