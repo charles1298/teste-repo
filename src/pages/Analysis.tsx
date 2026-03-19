@@ -25,7 +25,7 @@ const TierRow = ({ tier, items }: { tier: Tier; items: Item[] }) => {
       </div>
       <div className="flex-1 p-4 grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4">
         {items.length === 0 ? (
-          <span className="text-gray-500 italic flex items-center col-span-full">No data in this tier.</span>
+          <span className="text-gray-500 italic flex items-center col-span-full">Sem dados neste nível.</span>
         ) : (
           items.map(item => (
             <div key={item.id} className="relative group overflow-hidden rounded border border-gray-700 hover:border-arc-accent transition-colors bg-black/40">
@@ -63,13 +63,13 @@ const Analysis = () => {
   return (
     <div className="space-y-12 pb-20 md:pb-10">
       <div className="border-b border-gray-800 pb-6">
-        <h1 className="text-3xl font-bold text-white uppercase tracking-wider">Tactical Analysis</h1>
-        <p className="text-gray-400">AI-generated combat effectiveness and rarity tier lists.</p>
+        <h1 className="text-3xl font-bold text-white uppercase tracking-wider">Análise Tática</h1>
+        <p className="text-gray-400">Listas de níveis de eficácia em combate e raridade geradas por IA.</p>
       </div>
 
       <section>
         <h2 className="text-xl font-bold text-arc-accent mb-6 uppercase tracking-widest flex items-center">
-          <span className="bg-arc-accent w-2 h-6 mr-3"></span> Automated Tier List
+          <span className="bg-arc-accent w-2 h-6 mr-3"></span> Lista de Níveis Automatizada
         </h2>
         <div className="space-y-4">
           <TierRow tier="S" items={tierList.S} />
@@ -81,20 +81,20 @@ const Analysis = () => {
 
       <section className="grid grid-cols-1 md:grid-cols-3 gap-6">
         <div className="glass-panel p-6 border-t-4 border-t-arc-accent">
-          <h3 className="font-bold text-white mb-4 uppercase tracking-wider">Top Field Gear</h3>
+          <h3 className="font-bold text-white mb-4 uppercase tracking-wider">Melhor Equipamento de Campo</h3>
           <ul className="space-y-3">
             {topOverall.map((item, idx) => (
               <li key={item.id} className="flex items-center space-x-3 text-sm">
                 <span className="text-arc-accent font-bold">0{idx + 1}</span>
                 <span className="text-gray-300 flex-1 truncate">{item.name}</span>
-                <span className="text-xs bg-gray-800 px-2 py-1 rounded text-gray-400">Score {item.useValue}</span>
+                <span className="text-xs bg-gray-800 px-2 py-1 rounded text-gray-400">Pontuação {item.useValue}</span>
               </li>
             ))}
           </ul>
         </div>
 
         <div className="glass-panel p-6 border-t-4 border-t-yellow-500">
-          <h3 className="font-bold text-white mb-4 uppercase tracking-wider">Rarest Finds</h3>
+          <h3 className="font-bold text-white mb-4 uppercase tracking-wider">Descobertas Mais Raras</h3>
           <ul className="space-y-3">
             {topRare.map((item, idx) => (
               <li key={item.id} className="flex items-center space-x-3 text-sm">
@@ -107,13 +107,13 @@ const Analysis = () => {
         </div>
 
         <div className="glass-panel p-6 border-t-4 border-t-purple-500">
-          <h3 className="font-bold text-white mb-4 uppercase tracking-wider">Scrap Value</h3>
+          <h3 className="font-bold text-white mb-4 uppercase tracking-wider">Resgate de Sucata</h3>
           <ul className="space-y-3">
             {topCrafting.map((item, idx) => (
               <li key={item.id} className="flex items-center space-x-3 text-sm">
                 <span className="text-purple-500 font-bold">0{idx + 1}</span>
                 <span className="text-gray-300 flex-1 truncate">{item.name}</span>
-                <span className="text-xs bg-gray-800 px-2 py-1 rounded text-purple-400">Yield {item.recycleValue}</span>
+                <span className="text-xs bg-gray-800 px-2 py-1 rounded text-purple-400">Rendimento {item.recycleValue}</span>
               </li>
             ))}
           </ul>

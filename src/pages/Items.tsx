@@ -76,20 +76,20 @@ const ItemModal = ({ item, onClose }: { item: Item; onClose: () => void }) => {
         
         <div className="p-6 space-y-6">
           <div>
-            <h3 className="text-sm font-semibold text-gray-400 uppercase tracking-widest mb-2 border-b border-gray-700 pb-1">Description</h3>
+            <h3 className="text-sm font-semibold text-gray-400 uppercase tracking-widest mb-2 border-b border-gray-700 pb-1">Descrição</h3>
             <p className="text-gray-200 leading-relaxed">{item.description}</p>
           </div>
 
           <div className="grid grid-cols-2 gap-4">
             <div className="bg-gray-800/50 p-4 rounded border border-gray-700">
-              <span className="text-xs text-gray-400 uppercase block mb-1">Utility Rating</span>
+              <span className="text-xs text-gray-400 uppercase block mb-1">Avaliação de Utilidade</span>
               <div className="flex items-end">
                 <span className="text-3xl font-bold text-blue-400">{item.useValue}</span>
                 <span className="text-sm text-gray-500 mb-1 ml-1">/ 100</span>
               </div>
             </div>
             <div className="bg-gray-800/50 p-4 rounded border border-gray-700">
-              <span className="text-xs text-gray-400 uppercase block mb-1">Recycle Yield</span>
+              <span className="text-xs text-gray-400 uppercase block mb-1">Rendimento de Reciclagem</span>
               <div className="flex items-end">
                 <span className="text-3xl font-bold text-orange-400">{item.recycleValue}</span>
                 <span className="text-sm text-gray-500 mb-1 ml-1">/ 100</span>
@@ -102,7 +102,7 @@ const ItemModal = ({ item, onClose }: { item: Item; onClose: () => void }) => {
             isKeep ? 'bg-green-900/20 border-green-500/50' : 'bg-red-900/20 border-red-500/50'
           )}>
             <h3 className="text-sm font-semibold uppercase tracking-widest mb-2 border-b border-gray-700/50 pb-1 flex items-center">
-              AI Recommendation: 
+              Recomendação da IA: 
               <span className={clsx('ml-2 px-2 py-0.5 rounded text-xs font-bold', isKeep ? 'bg-green-500 text-black' : 'bg-red-500 text-white')}>
                 {recommendation.action}
               </span>
@@ -131,8 +131,8 @@ const Items = () => {
     <div className="space-y-6 pb-20 md:pb-10">
       <div className="flex flex-col md:flex-row md:items-center justify-between gap-4 border-b border-gray-800 pb-6">
         <div>
-          <h1 className="text-3xl font-bold text-white uppercase tracking-wider">Arsenal & Cargo</h1>
-          <p className="text-gray-400">Database of discovered gear and resources.</p>
+          <h1 className="text-3xl font-bold text-white uppercase tracking-wider">Arsenal e Recursos</h1>
+          <p className="text-gray-400">Banco de dados de equipamentos e recursos descobertos.</p>
         </div>
         
         <div className="flex flex-col sm:flex-row gap-3">
@@ -140,7 +140,7 @@ const Items = () => {
             <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-500" size={18} />
             <input
               type="text"
-              placeholder="Search database..."
+              placeholder="Pesquisar itens..."
               className="w-full sm:w-64 bg-gray-900 border border-gray-700 text-white rounded-md pl-10 pr-4 py-2 focus:outline-none focus:border-arc-accent transition-colors"
               value={searchTerm}
               onChange={(e) => setSearchTerm(e.target.value)}
@@ -154,12 +154,12 @@ const Items = () => {
               value={rarityFilter}
               onChange={(e) => setRarityFilter(e.target.value as Rarity | 'All')}
             >
-              <option value="All">All Rarities</option>
-              <option value="Common">Common</option>
-              <option value="Uncommon">Uncommon</option>
-              <option value="Rare">Rare</option>
-              <option value="Epic">Epic</option>
-              <option value="Legendary">Legendary</option>
+              <option value="All">Todas as Raridades</option>
+              <option value="Common">Comum</option>
+              <option value="Uncommon">Incomum</option>
+              <option value="Rare">Raro</option>
+              <option value="Epic">Épico</option>
+              <option value="Legendary">Lendário</option>
             </select>
           </div>
         </div>
@@ -174,12 +174,12 @@ const Items = () => {
         
         {filteredItems.length === 0 && (
           <div className="col-span-full py-12 text-center text-gray-500">
-            <p className="text-xl">No items match current filters.</p>
+            <p className="text-xl">Nenhum item corresponde aos filtros atuais.</p>
             <button 
               className="mt-4 text-arc-accent hover:underline"
               onClick={() => { setSearchTerm(''); setRarityFilter('All'); }}
             >
-              Clear Filters
+              Limpar Filtros
             </button>
           </div>
         )}

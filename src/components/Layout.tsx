@@ -5,10 +5,10 @@ import { twMerge } from 'tailwind-merge';
 
 const Layout = () => {
   const navItems = [
-    { to: '/', label: 'Dashboard', icon: <LayoutDashboard size={20} /> },
-    { to: '/items', label: 'Items Database', icon: <PackageSearch size={20} /> },
-    { to: '/analysis', label: 'Advanced Analysis', icon: <ActivitySquare size={20} /> },
-    { to: '/map', label: 'Interactive Map', icon: <MapIcon size={20} /> },
+    { to: '/', label: 'Painel Central', icon: <LayoutDashboard size={20} /> },
+    { to: '/items', label: 'Arsenal e Itens', icon: <PackageSearch size={20} /> },
+    { to: '/analysis', label: 'Análise Avançada', icon: <ActivitySquare size={20} /> },
+    { to: '/map', label: 'Mapa Interativo', icon: <MapIcon size={20} /> },
   ];
 
   return (
@@ -19,7 +19,7 @@ const Layout = () => {
           <div className="flex items-center justify-between h-16">
             <div className="flex items-center">
               <span className="text-2xl font-bold tracking-widest text-white uppercase" style={{ textShadow: '0 0 10px var(--color-arc-accent)' }}>
-                ARC <span className="text-arc-accent">Raiders</span> Guide
+                ARC <span className="text-arc-accent">Raiders</span> Guia
               </span>
             </div>
             

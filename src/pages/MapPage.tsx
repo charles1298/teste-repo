@@ -8,27 +8,27 @@ import L from 'leaflet';
 const MARKER_CONFIG: Record<MarkerType, { color: string; label: string; svg: string }> = {
   Loot: {
     color: '#eab308',
-    label: 'High-tier Loot',
+    label: 'Saque de Alto Nível',
     svg: `<svg width="28" height="28" viewBox="0 0 28 28"><circle cx="14" cy="14" r="10" fill="#eab308" stroke="#fff" stroke-width="2"/><text x="14" y="18" text-anchor="middle" fill="#000" font-size="12" font-weight="bold">$</text></svg>`,
   },
   Schematic: {
     color: '#06b6d4',
-    label: 'Schematics / Blueprints',
+    label: 'Esquemas / Projetos',
     svg: `<svg width="28" height="28" viewBox="0 0 28 28"><rect x="4" y="4" width="20" height="20" rx="3" fill="#06b6d4" stroke="#fff" stroke-width="2" transform="rotate(45 14 14)"/><text x="14" y="18" text-anchor="middle" fill="#fff" font-size="11" font-weight="bold">✦</text></svg>`,
   },
   Extraction: {
     color: '#22c55e',
-    label: 'Extraction Point',
+    label: 'Ponto de Extração',
     svg: `<svg width="28" height="28" viewBox="0 0 28 28"><polygon points="14,2 26,24 2,24" fill="#22c55e" stroke="#fff" stroke-width="2"/><text x="14" y="21" text-anchor="middle" fill="#fff" font-size="10" font-weight="bold">▲</text></svg>`,
   },
   Danger: {
     color: '#ef4444',
-    label: 'Danger Zone',
+    label: 'Zona de Perigo',
     svg: `<svg width="28" height="28" viewBox="0 0 28 28"><circle cx="14" cy="14" r="10" fill="#ef4444" stroke="#fff" stroke-width="2"/><text x="14" y="19" text-anchor="middle" fill="#fff" font-size="14" font-weight="bold">☠</text></svg>`,
   },
   Boss: {
     color: '#a855f7',
-    label: 'Boss / Elite',
+    label: 'Chefe / Elite',
     svg: `<svg width="28" height="28" viewBox="0 0 28 28"><polygon points="14,1 17.5,10 27,10 19.5,16 22,26 14,20 6,26 8.5,16 1,10 10.5,10" fill="#a855f7" stroke="#fff" stroke-width="1.5"/></svg>`,
   },
 };
@@ -90,9 +90,9 @@ const MapPage = () => {
       {/* Header */}
       <div className="border-b border-gray-800 pb-2">
         <h1 className="text-3xl font-bold text-white uppercase tracking-wider">
-          Tactical <span className="text-arc-accent">Map</span>
+          Mapa <span className="text-arc-accent">Tático</span>
         </h1>
-        <p className="text-gray-400 text-sm">Select a map and explore loot, schematics, and strategic locations.</p>
+        <p className="text-gray-400 text-sm">Selecione um mapa e explore saques, esquemas e locais estratégicos.</p>
       </div>
 
       {/* ─── Map Selector Tabs ─── */}
@@ -194,7 +194,7 @@ const MapPage = () => {
                   {marker.items && marker.items.length > 0 && (
                     <div className="border-t border-gray-200 pt-2">
                       <p className="text-[10px] uppercase font-bold text-gray-500 mb-1 tracking-wider">
-                        Possible Drops
+                        Possíveis Saques
                       </p>
                       <div className="flex flex-wrap gap-1">
                         {marker.items.map((item, i) => (
@@ -217,7 +217,7 @@ const MapPage = () => {
         {/* ─── Filter Panel (overlays the map) ─── */}
         <div className="absolute top-3 left-3 z-[400] bg-arc-darker/90 backdrop-blur-md border border-gray-700 px-3 py-3 rounded-lg">
           <h4 className="text-white text-xs font-bold uppercase mb-2 tracking-wider border-b border-gray-700 pb-1">
-            Filters
+            Filtros
           </h4>
           <div className="space-y-1.5">
             {(Object.entries(MARKER_CONFIG) as [MarkerType, typeof MARKER_CONFIG[MarkerType]][]).map(
@@ -264,7 +264,7 @@ const MapPage = () => {
         {/* ─── Legend Panel ─── */}
         <div className="absolute top-3 right-3 z-[400] bg-arc-darker/90 backdrop-blur-md border border-gray-700 p-3 rounded-lg pointer-events-none">
           <h4 className="text-white text-xs font-bold uppercase mb-2 tracking-wider border-b border-gray-700 pb-1">
-            Legend
+            Legenda
           </h4>
           <ul className="space-y-1.5 text-xs text-gray-300">
             {(Object.entries(MARKER_CONFIG) as [MarkerType, typeof MARKER_CONFIG[MarkerType]][]).map(
@@ -284,7 +284,7 @@ const MapPage = () => {
             )}
           </ul>
           <div className="mt-2 pt-2 border-t border-gray-700 text-[10px] text-gray-500">
-            {filteredMarkers.length} markers shown
+            {filteredMarkers.length} marcadores exibidos
           </div>
         </div>
       </div>
