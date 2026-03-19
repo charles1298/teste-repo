@@ -27,7 +27,8 @@
 
 @layer components {
   .btn-primary {
-    @apply px-4 py-2 bg-arc-accent text-white font-bold uppercase tracking-wider clip-bevel hover:bg-arc-accent-hover transition-all duration-200 border border-arc-accent/50 hover:shadow-[0_0_15px_var(--color-arc-accent)] hover:border-arc-accent;
+    @apply px-4 py-2 bg-arc-accent text-white font-bold uppercase tracking-wider hover:bg-arc-accent-hover transition-all duration-200 border border-arc-accent/50 hover:shadow-[0_0_15px_var(--color-arc-accent)] hover:border-arc-accent;
+    clip-path: polygon(10px 0, 100% 0, 100% calc(100% - 10px), calc(100% - 10px) 100%, 0 100%, 0 10px);
   }
   
   .card {
