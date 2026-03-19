@@ -1,0 +1,11 @@
+services:
+  app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: arc-raiders-guide
+    ports:
+      - "4102:80"
+    env_file:
+      - .env
+    restart: unless-stopped
