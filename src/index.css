@@ -1,18 +1,19 @@
 @import "tailwindcss";
 
 @theme {
-  --color-arc-dark: #0f172a;
-  --color-arc-darker: #020617;
-  --color-arc-light: #f8fafc;
-  --color-arc-accent: #38bdf8;
-  --color-arc-accent-hover: #0284c7;
+  --color-arc-dark: #111111;
+  --color-arc-darker: #050505;
+  --color-arc-light: #f3f4f6;
+  --color-arc-accent: #ff4d00;
+  --color-arc-accent-hover: #cc3d00;
+  --color-arc-cyan: #00e5ff;
   
   --color-rarity-common: #94a3b8;
   --color-rarity-rare: #3b82f6;
   --color-rarity-epic: #a855f7;
   --color-rarity-legendary: #eab308;
   
-  --font-sans: 'Inter', system-ui, sans-serif;
+  --font-sans: 'Rajdhani', 'Inter', system-ui, sans-serif;
 }
 
 @layer base {
@@ -20,33 +21,74 @@
     background-color: var(--color-arc-darker);
     color: var(--color-arc-light);
     font-family: var(--font-sans);
+    overflow-x: hidden;
   }
 }
 
 @layer components {
   .btn-primary {
-    @apply px-4 py-2 bg-arc-accent text-white rounded-md hover:bg-arc-accent-hover transition-colors font-medium;
+    @apply px-4 py-2 bg-arc-accent text-white font-bold uppercase tracking-wider clip-bevel hover:bg-arc-accent-hover transition-all duration-200 border border-arc-accent/50 hover:shadow-[0_0_15px_var(--color-arc-accent)] hover:border-arc-accent;
   }
   
   .card {
-    @apply bg-arc-dark border border-gray-800 rounded-lg p-4 shadow-lg;
+    @apply bg-arc-dark/90 border border-gray-800/80 p-4 shadow-[0_4px_20px_rgba(0,0,0,0.5)] relative overflow-hidden;
   }
   
   .glass-panel {
-    @apply bg-arc-dark/80 backdrop-blur-md border border-gray-800 rounded-lg;
+    @apply bg-arc-darker/70 backdrop-blur-md border border-white/5 shadow-lg;
   }
+
+  .clip-bevel {
+    clip-path: polygon(10px 0, 100% 0, 100% calc(100% - 10px), calc(100% - 10px) 100%, 0 100%, 0 10px);
+  }
+  
+  .tech-border {
+    @apply relative border border-gray-800 bg-arc-darker/50 backdrop-blur-sm;
+  }
+  .tech-border::before {
+    content: '';
+    @apply absolute top-0 left-0 w-2 h-2 border-t-2 border-l-2 border-arc-accent opacity-70;
+  }
+  .tech-border::after {
+    content: '';
+    @apply absolute bottom-0 right-0 w-2 h-2 border-b-2 border-r-2 border-arc-accent opacity-70;
+  }
+}
+
+/* ARC Raiders Specific Effects */
+.scanlines {
+  background: linear-gradient(
+    to bottom,
+    rgba(255,255,255,0),
+    rgba(255,255,255,0) 50%,
+    rgba(0,0,0,0.1) 50%,
+    rgba(0,0,0,0.1)
+  );
+  background-size: 100% 4px;
+  position: fixed;
+  top: 0; left: 0; right: 0; bottom: 0;
+  pointer-events: none;
+  z-index: 9998;
+}
+
+.vignette {
+  position: fixed;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: radial-gradient(circle at center, transparent 30%, rgba(0, 0, 0, 0.8) 100%);
+  pointer-events: none;
+  z-index: 9999;
 }
 
 /* Custom Scrollbar for Sci-Fi feel */
 ::-webkit-scrollbar {
-  width: 8px;
+  width: 6px;
 }
 ::-webkit-scrollbar-track {
   background: var(--color-arc-darker);
+  border-left: 1px solid #1a1a1a;
 }
 ::-webkit-scrollbar-thumb {
-  background: #334155;
-  border-radius: 4px;
+  background: #333;
 }
 ::-webkit-scrollbar-thumb:hover {
   background: var(--color-arc-accent);

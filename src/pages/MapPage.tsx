@@ -88,11 +88,12 @@ const MapPage = () => {
   return (
     <div className="h-[calc(100vh-8rem)] md:h-[calc(100vh-10rem)] w-full flex flex-col space-y-3 pb-20 md:pb-0">
       {/* Header */}
-      <div className="border-b border-gray-800 pb-2">
-        <h1 className="text-3xl font-bold text-white uppercase tracking-wider">
+      <div className="border-b border-gray-800 pb-2 relative pl-4">
+        <div className="absolute -left-0 top-0 bottom-0 w-1 bg-arc-accent shadow-[0_0_10px_var(--color-arc-accent)]"></div>
+        <h1 className="text-3xl font-black text-white uppercase tracking-[0.1em] drop-shadow-[0_0_8px_rgba(255,255,255,0.5)]">
           Mapa <span className="text-arc-accent">Tático</span>
         </h1>
-        <p className="text-gray-400 text-sm">Selecione um mapa e explore saques, esquemas e locais estratégicos.</p>
+        <p className="text-arc-cyan/80 font-mono text-sm tracking-widest uppercase mt-1">Selecione uma zona de incursão e explore pontos de interesse.</p>
       </div>
 
       {/* ─── Map Selector Tabs ─── */}
@@ -129,20 +130,20 @@ const MapPage = () => {
       </div>
 
       {/* ─── Map Description ─── */}
-      <div className="flex items-center gap-3 bg-arc-dark/60 border border-gray-800 rounded-lg px-4 py-2">
+      <div className="flex items-center gap-3 bg-arc-darker/80 tech-border px-4 py-2 mt-2">
         <div
-          className="w-2 h-8 rounded-full flex-shrink-0"
-          style={{ backgroundColor: activeMap.accentColor }}
+          className="w-2 h-8 flex-shrink-0"
+          style={{ backgroundColor: activeMap.accentColor, boxShadow: `0 0 10px ${activeMap.accentColor}` }}
         />
         <div>
-          <span className="text-white font-bold">{activeMap.name}</span>
-          <span className="text-gray-500 text-sm ml-2">— {activeMap.subtitle}</span>
-          <p className="text-gray-400 text-xs leading-snug">{activeMap.description}</p>
+          <span className="text-white font-bold tracking-wider uppercase text-lg">{activeMap.name}</span>
+          <span className="text-arc-cyan font-mono text-xs ml-2 uppercase tracking-widest">— {activeMap.subtitle}</span>
+          <p className="text-gray-400 text-sm leading-snug">{activeMap.description}</p>
         </div>
       </div>
 
       {/* ─── Map + Controls Container ─── */}
-      <div className="flex-1 relative rounded-lg overflow-hidden border-2 border-gray-800 shadow-2xl">
+      <div className="flex-1 relative overflow-hidden tech-border shadow-[0_0_30px_rgba(0,0,0,0.8)] mt-2">
         {/* Leaflet Map */}
         <MapContainer
           center={[50, 50]}
@@ -215,7 +216,7 @@ const MapPage = () => {
         </MapContainer>
 
         {/* ─── Filter Panel (overlays the map) ─── */}
-        <div className="absolute top-3 left-3 z-[400] bg-arc-darker/90 backdrop-blur-md border border-gray-700 px-3 py-3 rounded-lg">
+        <div className="absolute top-3 left-3 z-[400] tech-border bg-arc-darker/90 backdrop-blur-md px-3 py-3 w-48">
           <h4 className="text-white text-xs font-bold uppercase mb-2 tracking-wider border-b border-gray-700 pb-1">
             Filtros
           </h4>
@@ -262,7 +263,7 @@ const MapPage = () => {
         </div>
 
         {/* ─── Legend Panel ─── */}
-        <div className="absolute top-3 right-3 z-[400] bg-arc-darker/90 backdrop-blur-md border border-gray-700 p-3 rounded-lg pointer-events-none">
+        <div className="absolute top-3 right-3 z-[400] tech-border bg-arc-darker/90 backdrop-blur-md p-3 pointer-events-none w-48">
           <h4 className="text-white text-xs font-bold uppercase mb-2 tracking-wider border-b border-gray-700 pb-1">
             Legenda
           </h4>

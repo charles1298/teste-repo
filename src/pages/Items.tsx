@@ -21,8 +21,8 @@ const ItemCard = ({ item, onClick }: { item: Item; onClick: () => void }) => {
       initial={{ opacity: 0, scale: 0.9 }}
       animate={{ opacity: 1, scale: 1 }}
       exit={{ opacity: 0, scale: 0.9 }}
-      whileHover={{ y: -5, boxShadow: '0 10px 25px -5px rgba(56, 189, 248, 0.3)' }}
-      className="card cursor-pointer flex flex-col h-full bg-gray-900 border-gray-700 hover:border-arc-accent transition-all duration-300"
+      whileHover={{ y: -5, boxShadow: '0 0 20px rgba(255, 77, 0, 0.4)' }}
+      className="tech-border cursor-pointer flex flex-col h-full bg-arc-darker/80 hover:border-arc-accent transition-all duration-300"
       onClick={onClick}
     >
       <div className="relative h-48 w-full mb-4 overflow-hidden rounded">
@@ -31,10 +31,10 @@ const ItemCard = ({ item, onClick }: { item: Item; onClick: () => void }) => {
           {item.rarity}
         </div>
       </div>
-      <div className="flex-grow">
-        <h3 className="text-xl font-bold text-white mb-1">{item.name}</h3>
-        <p className="text-sm text-gray-400 mb-3">{item.type}</p>
-        <p className="text-gray-300 text-sm line-clamp-2">{item.description}</p>
+      <div className="flex-grow p-4">
+        <h3 className="text-xl font-bold tracking-wider text-white mb-1 uppercase drop-shadow-[0_0_5px_rgba(255,255,255,0.3)]">{item.name}</h3>
+        <p className="text-sm text-arc-cyan font-mono mb-3 tracking-widest">{item.type}</p>
+        <p className="text-gray-400 text-sm line-clamp-2">{item.description}</p>
       </div>
     </motion.div>
   );
@@ -57,7 +57,7 @@ const ItemModal = ({ item, onClose }: { item: Item; onClose: () => void }) => {
         initial={{ y: 50, opacity: 0 }}
         animate={{ y: 0, opacity: 1 }}
         exit={{ y: 50, opacity: 0 }}
-        className="glass-panel w-full max-w-2xl max-h-[90vh] overflow-y-auto"
+        className="tech-border bg-arc-darker w-full max-w-2xl max-h-[90vh] overflow-y-auto"
         onClick={(e) => e.stopPropagation()}
       >
         <div className="relative h-64 w-full">
@@ -130,9 +130,10 @@ const Items = () => {
   return (
     <div className="space-y-6 pb-20 md:pb-10">
       <div className="flex flex-col md:flex-row md:items-center justify-between gap-4 border-b border-gray-800 pb-6">
-        <div>
-          <h1 className="text-3xl font-bold text-white uppercase tracking-wider">Arsenal e Recursos</h1>
-          <p className="text-gray-400">Banco de dados de equipamentos e recursos descobertos.</p>
+        <div className="relative pl-4">
+          <div className="absolute -left-0 top-0 bottom-0 w-1 bg-arc-accent shadow-[0_0_10px_var(--color-arc-accent)]"></div>
+          <h1 className="text-3xl font-black text-white uppercase tracking-[0.1em] drop-shadow-[0_0_8px_rgba(255,255,255,0.5)]">Arsenal e Recursos</h1>
+          <p className="text-arc-cyan/80 font-mono text-sm tracking-widest uppercase mt-1">Banco de dados de equipamentos identificados.</p>
         </div>
         
         <div className="flex flex-col sm:flex-row gap-3">

@@ -18,7 +18,7 @@ const TierRow = ({ tier, items }: { tier: Tier; items: Item[] }) => {
     <motion.div
       initial={{ opacity: 0, x: -20 }}
       animate={{ opacity: 1, x: 0 }}
-      className="flex flex-col md:flex-row mb-4 bg-gray-900 border border-gray-800 rounded-lg overflow-hidden"
+      className="flex flex-col md:flex-row mb-4 bg-arc-darker border border-gray-800 rounded shadow-[0_4px_15px_rgba(0,0,0,0.5)] overflow-hidden tech-border"
     >
       <div className={clsx('flex items-center justify-center p-6 w-full md:w-32 border-b md:border-b-0 md:border-r font-black text-5xl', tierColors[tier])}>
         {tier}
@@ -62,9 +62,10 @@ const Analysis = () => {
 
   return (
     <div className="space-y-12 pb-20 md:pb-10">
-      <div className="border-b border-gray-800 pb-6">
-        <h1 className="text-3xl font-bold text-white uppercase tracking-wider">Análise Tática</h1>
-        <p className="text-gray-400">Listas de níveis de eficácia em combate e raridade geradas por IA.</p>
+      <div className="border-b border-gray-800 pb-6 relative pl-4">
+        <div className="absolute -left-0 top-0 bottom-0 w-1 bg-arc-accent shadow-[0_0_10px_var(--color-arc-accent)]"></div>
+        <h1 className="text-3xl font-black text-white uppercase tracking-[0.1em] drop-shadow-[0_0_8px_rgba(255,255,255,0.5)]">Análise Tática</h1>
+        <p className="text-arc-cyan/80 font-mono text-sm tracking-widest uppercase mt-1">Listas de eficácia e raridade geradas pela Rede.</p>
       </div>
 
       <section>
@@ -80,7 +81,7 @@ const Analysis = () => {
       </section>
 
       <section className="grid grid-cols-1 md:grid-cols-3 gap-6">
-        <div className="glass-panel p-6 border-t-4 border-t-arc-accent">
+        <div className="tech-border p-6 border-t-4 border-t-arc-accent">
           <h3 className="font-bold text-white mb-4 uppercase tracking-wider">Melhor Equipamento de Campo</h3>
           <ul className="space-y-3">
             {topOverall.map((item, idx) => (
@@ -93,7 +94,7 @@ const Analysis = () => {
           </ul>
         </div>
 
-        <div className="glass-panel p-6 border-t-4 border-t-yellow-500">
+        <div className="tech-border p-6 border-t-4 border-t-arc-cyan">
           <h3 className="font-bold text-white mb-4 uppercase tracking-wider">Descobertas Mais Raras</h3>
           <ul className="space-y-3">
             {topRare.map((item, idx) => (
@@ -106,7 +107,7 @@ const Analysis = () => {
           </ul>
         </div>
 
-        <div className="glass-panel p-6 border-t-4 border-t-purple-500">
+        <div className="tech-border p-6 border-t-4 border-t-purple-500">
           <h3 className="font-bold text-white mb-4 uppercase tracking-wider">Resgate de Sucata</h3>
           <ul className="space-y-3">
             {topCrafting.map((item, idx) => (

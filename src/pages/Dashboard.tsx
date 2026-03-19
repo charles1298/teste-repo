@@ -21,12 +21,13 @@ const Dashboard = () => {
       <motion.div
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
-        className="text-center md:text-left"
+        className="text-center md:text-left relative"
       >
-        <h1 className="text-4xl font-bold tracking-wider uppercase bg-clip-text text-transparent bg-gradient-to-r from-arc-accent to-blue-300">
+        <div className="absolute -left-4 top-0 bottom-0 w-1 bg-arc-accent shadow-[0_0_10px_var(--color-arc-accent)]"></div>
+        <h1 className="text-4xl font-black tracking-[0.15em] uppercase text-white drop-shadow-[0_0_8px_rgba(255,255,255,0.5)] pl-4">
           Centro de Comando
         </h1>
-        <p className="text-gray-400 mt-2">Visão geral do banco de dados e operações de ARC Raiders.</p>
+        <p className="text-arc-cyan/80 mt-2 pl-4 font-mono text-sm uppercase tracking-widest">Visão geral do banco de dados e operações táticas.</p>
       </motion.div>
 
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -36,9 +37,9 @@ const Dashboard = () => {
           initial={{ opacity: 0, scale: 0.9 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ delay: 0.1 }}
-          className="glass-panel p-6"
+          className="tech-border p-6"
         >
-          <h2 className="text-xl font-semibold mb-4 text-arc-accent border-b border-gray-700 pb-2">Zona de Pouso Ativa</h2>
+          <h2 className="text-xl font-bold tracking-widest uppercase mb-4 text-arc-accent border-b border-white/10 pb-2">Zona de Pouso Ativa</h2>
           <div className="flex flex-col space-y-4">
             <div>
               <span className="text-gray-400 text-sm">Mapa Atual:</span>
@@ -62,9 +63,9 @@ const Dashboard = () => {
           initial={{ opacity: 0, scale: 0.9 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ delay: 0.2 }}
-          className="glass-panel p-6"
+          className="tech-border p-6"
         >
-          <h2 className="text-xl font-semibold mb-4 text-arc-accent border-b border-gray-700 pb-2">Informações do Bando de Dados</h2>
+          <h2 className="text-xl font-bold tracking-widest uppercase mb-4 text-arc-accent border-b border-white/10 pb-2">Banco de Dados</h2>
           <div className="text-center mb-6">
             <span className="text-5xl font-black text-white">{totalItems}</span>
             <span className="text-gray-400 block mt-1 uppercase text-sm tracking-widest">Total de Itens</span>
@@ -94,9 +95,9 @@ const Dashboard = () => {
           initial={{ opacity: 0, scale: 0.9 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ delay: 0.3 }}
-          className="glass-panel p-6 md:col-span-2 lg:col-span-1"
+          className="tech-border p-6 md:col-span-2 lg:col-span-1"
         >
-          <h2 className="text-xl font-semibold mb-4 text-arc-accent border-b border-gray-700 pb-2">Equipamentos de Alta Prioridade</h2>
+          <h2 className="text-xl font-bold tracking-widest uppercase mb-4 text-arc-accent border-b border-white/10 pb-2">Alta Prioridade</h2>
           <ul className="space-y-3">
             {topItems.map((item, index) => (
               <li key={item.id} className="flex items-center space-x-3 bg-gray-800/30 p-2 rounded border border-gray-700 hover:border-arc-accent transition-colors">
