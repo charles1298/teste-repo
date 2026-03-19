@@ -1,7 +1,7 @@
 import { useMemo } from 'react';
 import { ITEMS } from '../data/items';
 import type { Item } from '../data/items';
-import { calculateTier, getTopItems, getRarestItems, getBestCraftingItems } from '../utils/analysis';
+import { calculateTier, getTopItems, getRarestItems, getBestRecycleItems } from '../utils/analysis';
 import type { Tier } from '../utils/analysis';
 import { motion } from 'framer-motion';
 import clsx from 'clsx';
@@ -58,7 +58,7 @@ const Analysis = () => {
 
   const topOverall = useMemo(() => getTopItems(ITEMS, 3), []);
   const topRare = useMemo(() => getRarestItems(ITEMS, 3), []);
-  const topCrafting = useMemo(() => getBestCraftingItems(ITEMS, 3), []);
+  const topCrafting = useMemo(() => getBestRecycleItems(ITEMS, 3), []);
 
   return (
     <div className="space-y-12 pb-20 md:pb-10">

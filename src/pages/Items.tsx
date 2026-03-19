@@ -9,6 +9,7 @@ import clsx from 'clsx';
 const ItemCard = ({ item, onClick }: { item: Item; onClick: () => void }) => {
   const rarityColors = {
     Common: 'text-gray-400 border-gray-400',
+    Uncommon: 'text-green-400 border-green-400',
     Rare: 'text-blue-400 border-blue-400',
     Epic: 'text-purple-400 border-purple-400',
     Legendary: 'text-yellow-400 border-yellow-400',
@@ -155,6 +156,7 @@ const Items = () => {
             >
               <option value="All">All Rarities</option>
               <option value="Common">Common</option>
+              <option value="Uncommon">Uncommon</option>
               <option value="Rare">Rare</option>
               <option value="Epic">Epic</option>
               <option value="Legendary">Legendary</option>
