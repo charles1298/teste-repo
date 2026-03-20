@@ -26,11 +26,11 @@ const CardItem = ({ card, isOwned, onToggleOwn }: { card: SupportCard, isOwned: 
         isOwned ? "border-uma-pink shadow-md" : "border-pink-100"
       )}
     >
-      <div className="relative w-full aspect-[3/4] mb-3 overflow-hidden rounded-xl bg-pink-50 flex items-center justify-center border border-pink-100">
+      <div className="relative w-full aspect-[5/7] mb-3 overflow-hidden rounded-xl bg-pink-50 flex items-center justify-center border border-pink-100 p-1">
         <img 
           src={card.imageUrl} 
           alt={card.name} 
-          className="object-cover w-full h-full transform group-hover:scale-110 transition-transform duration-500" 
+          className="object-contain w-full h-full transform group-hover:scale-110 transition-transform duration-500" 
           onError={(e) => {
             const target = e.target as HTMLImageElement;
             target.onerror = null;

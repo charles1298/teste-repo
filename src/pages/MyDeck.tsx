@@ -33,11 +33,11 @@ const MyDeck = () => {
               key={card.id}
               className="card group border-uma-pink shadow-md flex flex-col"
             >
-              <div className="relative w-full aspect-[3/4] mb-3 overflow-hidden rounded-xl bg-pink-50 flex items-center justify-center border border-pink-100">
+              <div className="relative w-full aspect-[5/7] mb-3 overflow-hidden rounded-xl bg-pink-50 flex items-center justify-center border border-pink-100 p-1">
                 <img 
                   src={card.imageUrl} 
                   alt={card.name} 
-                  className="object-cover w-full h-full" 
+                  className="object-contain w-full h-full" 
                   onError={(e) => {
                     const target = e.target as HTMLImageElement;
                     target.onerror = null;
