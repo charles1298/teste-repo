@@ -44,6 +44,15 @@ const MyDeck = () => {
                     target.src = 'https://upload.wikimedia.org/wikipedia/en/thumb/8/87/Uma_Musume_Pretty_Derby_logo.png/400px-Uma_Musume_Pretty_Derby_logo.png';
                   }}
                 />
+                
+                <div className="absolute top-2 left-2">
+                  <img 
+                    src={card.typeIconUrl} 
+                    alt={card.type} 
+                    title={card.type}
+                    className="w-7 h-7 drop-shadow-md bg-white/50 rounded-full p-0.5" 
+                  />
+                </div>
                 <button 
                   onClick={() => toggleCard(card.id)}
                   className="absolute top-2 right-2 bg-white/90 text-red-500 p-1.5 rounded-full shadow-md hover:bg-red-50 transition-colors"

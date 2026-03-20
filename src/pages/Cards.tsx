@@ -40,11 +40,19 @@ const CardItem = ({ card, isOwned, onToggleOwn }: { card: SupportCard, isOwned: 
         <div className={clsx('absolute top-2 right-2 px-2 py-0.5 text-xs font-black rounded-lg border-2 shadow-sm', getRarityColor(card.rarity))}>
           {card.rarity}
         </div>
-        {isOwned && (
-          <div className="absolute top-2 left-2 bg-uma-pink text-white p-1.5 rounded-full shadow-md animate-bounce">
-            <Star size={14} fill="currentColor" />
-          </div>
-        )}
+        <div className="absolute top-2 left-2 flex flex-col gap-2">
+          <img 
+            src={card.typeIconUrl} 
+            alt={card.type} 
+            title={card.type}
+            className="w-7 h-7 drop-shadow-md bg-white/50 rounded-full p-0.5" 
+          />
+          {isOwned && (
+            <div className="bg-uma-pink text-white p-1.5 rounded-full shadow-md animate-bounce w-fit">
+              <Star size={14} fill="currentColor" />
+            </div>
+          )}
+        </div>
       </div>
       <div className="flex flex-col flex-grow text-center">
         <h3 className="text-sm font-bold text-gray-800 line-clamp-2 h-10 mb-2">{card.name}</h3>
