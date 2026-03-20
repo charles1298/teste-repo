@@ -8,6 +8,7 @@ export interface SupportCard {
   type: CardType;
   typeIconUrl: string;
   imageUrl: string;
+  hasUniqueSkill?: boolean;
 }
 
 export const SUPPORT_CARDS: SupportCard[] = [
@@ -17,7 +18,8 @@ export const SUPPORT_CARDS: SupportCard[] = [
     "rarity": "SSR",
     "type": "Intelligence",
     "typeIconUrl": "/assets/icons/icon-type-4.png",
-    "imageUrl": "/assets/cards/uma-30088.png?v=3"
+    "imageUrl": "/assets/cards/uma-30088.png?v=3",
+    "hasUniqueSkill": true
   },
   {
     "id": "uma-30087",
@@ -25,7 +27,8 @@ export const SUPPORT_CARDS: SupportCard[] = [
     "rarity": "SSR",
     "type": "Stamina",
     "typeIconUrl": "/assets/icons/icon-type-1.png",
-    "imageUrl": "/assets/cards/uma-30087.png?v=3"
+    "imageUrl": "/assets/cards/uma-30087.png?v=3",
+    "hasUniqueSkill": true
   },
   {
     "id": "uma-30086",
@@ -33,7 +36,8 @@ export const SUPPORT_CARDS: SupportCard[] = [
     "rarity": "SSR",
     "type": "Speed",
     "typeIconUrl": "/assets/icons/icon-type-0.png",
-    "imageUrl": "/assets/cards/uma-30086.png?v=3"
+    "imageUrl": "/assets/cards/uma-30086.png?v=3",
+    "hasUniqueSkill": true
   },
   {
     "id": "uma-30085",
@@ -41,7 +45,8 @@ export const SUPPORT_CARDS: SupportCard[] = [
     "rarity": "SSR",
     "type": "Power",
     "typeIconUrl": "/assets/icons/icon-type-2.png",
-    "imageUrl": "/assets/cards/uma-30085.png?v=3"
+    "imageUrl": "/assets/cards/uma-30085.png?v=3",
+    "hasUniqueSkill": true
   },
   {
     "id": "uma-30084",
@@ -49,7 +54,8 @@ export const SUPPORT_CARDS: SupportCard[] = [
     "rarity": "SSR",
     "type": "Speed",
     "typeIconUrl": "/assets/icons/icon-type-0.png",
-    "imageUrl": "/assets/cards/uma-30084.png?v=3"
+    "imageUrl": "/assets/cards/uma-30084.png?v=3",
+    "hasUniqueSkill": true
   },
   {
     "id": "uma-30083",
@@ -57,7 +63,8 @@ export const SUPPORT_CARDS: SupportCard[] = [
     "rarity": "SSR",
     "type": "Guts",
     "typeIconUrl": "/assets/icons/icon-type-3.png",
-    "imageUrl": "/assets/cards/uma-30083.png?v=3"
+    "imageUrl": "/assets/cards/uma-30083.png?v=3",
+    "hasUniqueSkill": true
   },
   {
     "id": "uma-30082",
@@ -65,15 +72,17 @@ export const SUPPORT_CARDS: SupportCard[] = [
     "rarity": "SSR",
     "type": "Intelligence",
     "typeIconUrl": "/assets/icons/icon-type-4.png",
-    "imageUrl": "/assets/cards/uma-30082.png?v=3"
+    "imageUrl": "/assets/cards/uma-30082.png?v=3",
+    "hasUniqueSkill": true
   },
   {
     "id": "uma-30080",
     "name": "Sasami Anshinzawa",
     "rarity": "SSR",
     "type": "Unknown",
-    "typeIconUrl": "/assets/icons/icon-type-6.png",
-    "imageUrl": "/assets/cards/uma-30080.png?v=3"
+    "typeIconUrl": "/assets/icons/icon-type-5.png",
+    "imageUrl": "/assets/cards/uma-30080.png?v=3",
+    "hasUniqueSkill": true
   },
   {
     "id": "uma-30079",
@@ -81,7 +90,8 @@ export const SUPPORT_CARDS: SupportCard[] = [
     "rarity": "SSR",
     "type": "Stamina",
     "typeIconUrl": "/assets/icons/icon-type-1.png",
-    "imageUrl": "/assets/cards/uma-30079.png?v=3"
+    "imageUrl": "/assets/cards/uma-30079.png?v=3",
+    "hasUniqueSkill": true
   },
   {
     "id": "uma-30078",
@@ -89,7 +99,8 @@ export const SUPPORT_CARDS: SupportCard[] = [
     "rarity": "SSR",
     "type": "Speed",
     "typeIconUrl": "/assets/icons/icon-type-0.png",
-    "imageUrl": "/assets/cards/uma-30078.png?v=3"
+    "imageUrl": "/assets/cards/uma-30078.png?v=3",
+    "hasUniqueSkill": true
   },
   {
     "id": "uma-30077",
@@ -97,7 +108,8 @@ export const SUPPORT_CARDS: SupportCard[] = [
     "rarity": "SSR",
     "type": "Power",
     "typeIconUrl": "/assets/icons/icon-type-2.png",
-    "imageUrl": "/assets/cards/uma-30077.png?v=3"
+    "imageUrl": "/assets/cards/uma-30077.png?v=3",
+    "hasUniqueSkill": true
   },
   {
     "id": "uma-30076",
@@ -105,7 +117,8 @@ export const SUPPORT_CARDS: SupportCard[] = [
     "rarity": "SSR",
     "type": "Speed",
     "typeIconUrl": "/assets/icons/icon-type-0.png",
-    "imageUrl": "/assets/cards/uma-30076.png?v=3"
+    "imageUrl": "/assets/cards/uma-30076.png?v=3",
+    "hasUniqueSkill": true
   },
   {
     "id": "uma-30075",
@@ -113,7 +126,8 @@ export const SUPPORT_CARDS: SupportCard[] = [
     "rarity": "SSR",
     "type": "Stamina",
     "typeIconUrl": "/assets/icons/icon-type-1.png",
-    "imageUrl": "/assets/cards/uma-30075.png?v=3"
+    "imageUrl": "/assets/cards/uma-30075.png?v=3",
+    "hasUniqueSkill": true
   },
   {
     "id": "uma-30074",
@@ -121,7 +135,8 @@ export const SUPPORT_CARDS: SupportCard[] = [
     "rarity": "SSR",
     "type": "Power",
     "typeIconUrl": "/assets/icons/icon-type-2.png",
-    "imageUrl": "/assets/cards/uma-30074.png?v=3"
+    "imageUrl": "/assets/cards/uma-30074.png?v=3",
+    "hasUniqueSkill": true
   },
   {
     "id": "uma-30073",
@@ -129,7 +144,8 @@ export const SUPPORT_CARDS: SupportCard[] = [
     "rarity": "SSR",
     "type": "Intelligence",
     "typeIconUrl": "/assets/icons/icon-type-4.png",
-    "imageUrl": "/assets/cards/uma-30073.png?v=3"
+    "imageUrl": "/assets/cards/uma-30073.png?v=3",
+    "hasUniqueSkill": true
   },
   {
     "id": "uma-30072",
@@ -137,7 +153,8 @@ export const SUPPORT_CARDS: SupportCard[] = [
     "rarity": "SSR",
     "type": "Speed",
     "typeIconUrl": "/assets/icons/icon-type-0.png",
-    "imageUrl": "/assets/cards/uma-30072.png?v=3"
+    "imageUrl": "/assets/cards/uma-30072.png?v=3",
+    "hasUniqueSkill": true
   },
   {
     "id": "uma-30071",
@@ -145,7 +162,8 @@ export const SUPPORT_CARDS: SupportCard[] = [
     "rarity": "SSR",
     "type": "Power",
     "typeIconUrl": "/assets/icons/icon-type-2.png",
-    "imageUrl": "/assets/cards/uma-30071.png?v=3"
+    "imageUrl": "/assets/cards/uma-30071.png?v=3",
+    "hasUniqueSkill": true
   },
   {
     "id": "uma-30070",
@@ -153,7 +171,8 @@ export const SUPPORT_CARDS: SupportCard[] = [
     "rarity": "SSR",
     "type": "Guts",
     "typeIconUrl": "/assets/icons/icon-type-3.png",
-    "imageUrl": "/assets/cards/uma-30070.png?v=3"
+    "imageUrl": "/assets/cards/uma-30070.png?v=3",
+    "hasUniqueSkill": true
   },
   {
     "id": "uma-30069",
@@ -161,7 +180,8 @@ export const SUPPORT_CARDS: SupportCard[] = [
     "rarity": "SSR",
     "type": "Stamina",
     "typeIconUrl": "/assets/icons/icon-type-1.png",
-    "imageUrl": "/assets/cards/uma-30069.png?v=3"
+    "imageUrl": "/assets/cards/uma-30069.png?v=3",
+    "hasUniqueSkill": true
   },
   {
     "id": "uma-30068",
@@ -169,7 +189,8 @@ export const SUPPORT_CARDS: SupportCard[] = [
     "rarity": "SSR",
     "type": "Intelligence",
     "typeIconUrl": "/assets/icons/icon-type-4.png",
-    "imageUrl": "/assets/cards/uma-30068.png?v=3"
+    "imageUrl": "/assets/cards/uma-30068.png?v=3",
+    "hasUniqueSkill": true
   },
   {
     "id": "uma-30066",
@@ -177,7 +198,8 @@ export const SUPPORT_CARDS: SupportCard[] = [
     "rarity": "SSR",
     "type": "Intelligence",
     "typeIconUrl": "/assets/icons/icon-type-4.png",
-    "imageUrl": "/assets/cards/uma-30066.png?v=3"
+    "imageUrl": "/assets/cards/uma-30066.png?v=3",
+    "hasUniqueSkill": true
   },
   {
     "id": "uma-30065",
@@ -185,7 +207,8 @@ export const SUPPORT_CARDS: SupportCard[] = [
     "rarity": "SSR",
     "type": "Speed",
     "typeIconUrl": "/assets/icons/icon-type-0.png",
-    "imageUrl": "/assets/cards/uma-30065.png?v=3"
+    "imageUrl": "/assets/cards/uma-30065.png?v=3",
+    "hasUniqueSkill": true
   },
   {
     "id": "uma-30064",
@@ -193,7 +216,8 @@ export const SUPPORT_CARDS: SupportCard[] = [
     "rarity": "SSR",
     "type": "Power",
     "typeIconUrl": "/assets/icons/icon-type-2.png",
-    "imageUrl": "/assets/cards/uma-30064.png?v=3"
+    "imageUrl": "/assets/cards/uma-30064.png?v=3",
+    "hasUniqueSkill": true
   },
   {
     "id": "uma-30063",
@@ -201,7 +225,8 @@ export const SUPPORT_CARDS: SupportCard[] = [
     "rarity": "SSR",
     "type": "Guts",
     "typeIconUrl": "/assets/icons/icon-type-3.png",
-    "imageUrl": "/assets/cards/uma-30063.png?v=3"
+    "imageUrl": "/assets/cards/uma-30063.png?v=3",
+    "hasUniqueSkill": true
   },
   {
     "id": "uma-30062",
@@ -209,7 +234,8 @@ export const SUPPORT_CARDS: SupportCard[] = [
     "rarity": "SSR",
     "type": "Stamina",
     "typeIconUrl": "/assets/icons/icon-type-1.png",
-    "imageUrl": "/assets/cards/uma-30062.png?v=3"
+    "imageUrl": "/assets/cards/uma-30062.png?v=3",
+    "hasUniqueSkill": true
   },
   {
     "id": "uma-30061",
@@ -217,7 +243,8 @@ export const SUPPORT_CARDS: SupportCard[] = [
     "rarity": "SSR",
     "type": "Intelligence",
     "typeIconUrl": "/assets/icons/icon-type-4.png",
-    "imageUrl": "/assets/cards/uma-30061.png?v=3"
+    "imageUrl": "/assets/cards/uma-30061.png?v=3",
+    "hasUniqueSkill": true
   },
   {
     "id": "uma-30060",
@@ -225,7 +252,8 @@ export const SUPPORT_CARDS: SupportCard[] = [
     "rarity": "SSR",
     "type": "Guts",
     "typeIconUrl": "/assets/icons/icon-type-3.png",
-    "imageUrl": "/assets/cards/uma-30060.png?v=3"
+    "imageUrl": "/assets/cards/uma-30060.png?v=3",
+    "hasUniqueSkill": true
   },
   {
     "id": "uma-30059",
@@ -233,7 +261,8 @@ export const SUPPORT_CARDS: SupportCard[] = [
     "rarity": "SSR",
     "type": "Stamina",
     "typeIconUrl": "/assets/icons/icon-type-1.png",
-    "imageUrl": "/assets/cards/uma-30059.png?v=3"
+    "imageUrl": "/assets/cards/uma-30059.png?v=3",
+    "hasUniqueSkill": true
   },
   {
     "id": "uma-30058",
@@ -241,7 +270,8 @@ export const SUPPORT_CARDS: SupportCard[] = [
     "rarity": "SSR",
     "type": "Power",
     "typeIconUrl": "/assets/icons/icon-type-2.png",
-    "imageUrl": "/assets/cards/uma-30058.png?v=3"
+    "imageUrl": "/assets/cards/uma-30058.png?v=3",
+    "hasUniqueSkill": true
   },
   {
     "id": "uma-30057",
@@ -249,7 +279,8 @@ export const SUPPORT_CARDS: SupportCard[] = [
     "rarity": "SSR",
     "type": "Speed",
     "typeIconUrl": "/assets/icons/icon-type-0.png",
-    "imageUrl": "/assets/cards/uma-30057.png?v=3"
+    "imageUrl": "/assets/cards/uma-30057.png?v=3",
+    "hasUniqueSkill": true
   },
   {
     "id": "uma-30056",
@@ -257,7 +288,8 @@ export const SUPPORT_CARDS: SupportCard[] = [
     "rarity": "SSR",
     "type": "Power",
     "typeIconUrl": "/assets/icons/icon-type-2.png",
-    "imageUrl": "/assets/cards/uma-30056.png?v=3"
+    "imageUrl": "/assets/cards/uma-30056.png?v=3",
+    "hasUniqueSkill": true
   },
   {
     "id": "uma-30055",
@@ -265,7 +297,8 @@ export const SUPPORT_CARDS: SupportCard[] = [
     "rarity": "SSR",
     "type": "Intelligence",
     "typeIconUrl": "/assets/icons/icon-type-4.png",
-    "imageUrl": "/assets/cards/uma-30055.png?v=3"
+    "imageUrl": "/assets/cards/uma-30055.png?v=3",
+    "hasUniqueSkill": true
   },
   {
     "id": "uma-30054",
@@ -273,7 +306,8 @@ export const SUPPORT_CARDS: SupportCard[] = [
     "rarity": "SSR",
     "type": "Intelligence",
     "typeIconUrl": "/assets/icons/icon-type-4.png",
-    "imageUrl": "/assets/cards/uma-30054.png?v=3"
+    "imageUrl": "/assets/cards/uma-30054.png?v=3",
+    "hasUniqueSkill": true
   },
   {
     "id": "uma-30048",
@@ -281,7 +315,8 @@ export const SUPPORT_CARDS: SupportCard[] = [
     "rarity": "SSR",
     "type": "Guts",
     "typeIconUrl": "/assets/icons/icon-type-3.png",
-    "imageUrl": "/assets/cards/uma-30048.png?v=3"
+    "imageUrl": "/assets/cards/uma-30048.png?v=3",
+    "hasUniqueSkill": true
   },
   {
     "id": "uma-30047",
@@ -289,7 +324,8 @@ export const SUPPORT_CARDS: SupportCard[] = [
     "rarity": "SSR",
     "type": "Power",
     "typeIconUrl": "/assets/icons/icon-type-2.png",
-    "imageUrl": "/assets/cards/uma-30047.png?v=3"
+    "imageUrl": "/assets/cards/uma-30047.png?v=3",
+    "hasUniqueSkill": true
   },
   {
     "id": "uma-30046",
@@ -297,7 +333,8 @@ export const SUPPORT_CARDS: SupportCard[] = [
     "rarity": "SSR",
     "type": "Stamina",
     "typeIconUrl": "/assets/icons/icon-type-1.png",
-    "imageUrl": "/assets/cards/uma-30046.png?v=3"
+    "imageUrl": "/assets/cards/uma-30046.png?v=3",
+    "hasUniqueSkill": true
   },
   {
     "id": "uma-30045",
@@ -305,7 +342,8 @@ export const SUPPORT_CARDS: SupportCard[] = [
     "rarity": "SSR",
     "type": "Speed",
     "typeIconUrl": "/assets/icons/icon-type-0.png",
-    "imageUrl": "/assets/cards/uma-30045.png?v=3"
+    "imageUrl": "/assets/cards/uma-30045.png?v=3",
+    "hasUniqueSkill": true
   },
   {
     "id": "uma-30044",
@@ -313,7 +351,8 @@ export const SUPPORT_CARDS: SupportCard[] = [
     "rarity": "SSR",
     "type": "Speed",
     "typeIconUrl": "/assets/icons/icon-type-0.png",
-    "imageUrl": "/assets/cards/uma-30044.png?v=3"
+    "imageUrl": "/assets/cards/uma-30044.png?v=3",
+    "hasUniqueSkill": true
   },
   {
     "id": "uma-30043",
@@ -321,7 +360,8 @@ export const SUPPORT_CARDS: SupportCard[] = [
     "rarity": "SSR",
     "type": "Stamina",
     "typeIconUrl": "/assets/icons/icon-type-1.png",
-    "imageUrl": "/assets/cards/uma-30043.png?v=3"
+    "imageUrl": "/assets/cards/uma-30043.png?v=3",
+    "hasUniqueSkill": true
   },
   {
     "id": "uma-30042",
@@ -329,7 +369,8 @@ export const SUPPORT_CARDS: SupportCard[] = [
     "rarity": "SSR",
     "type": "Power",
     "typeIconUrl": "/assets/icons/icon-type-2.png",
-    "imageUrl": "/assets/cards/uma-30042.png?v=3"
+    "imageUrl": "/assets/cards/uma-30042.png?v=3",
+    "hasUniqueSkill": true
   },
   {
     "id": "uma-30041",
@@ -337,7 +378,8 @@ export const SUPPORT_CARDS: SupportCard[] = [
     "rarity": "SSR",
     "type": "Intelligence",
     "typeIconUrl": "/assets/icons/icon-type-4.png",
-    "imageUrl": "/assets/cards/uma-30041.png?v=3"
+    "imageUrl": "/assets/cards/uma-30041.png?v=3",
+    "hasUniqueSkill": true
   },
   {
     "id": "uma-30040",
@@ -345,7 +387,8 @@ export const SUPPORT_CARDS: SupportCard[] = [
     "rarity": "SSR",
     "type": "Guts",
     "typeIconUrl": "/assets/icons/icon-type-3.png",
-    "imageUrl": "/assets/cards/uma-30040.png?v=3"
+    "imageUrl": "/assets/cards/uma-30040.png?v=3",
+    "hasUniqueSkill": true
   },
   {
     "id": "uma-30039",
@@ -353,7 +396,8 @@ export const SUPPORT_CARDS: SupportCard[] = [
     "rarity": "SSR",
     "type": "Speed",
     "typeIconUrl": "/assets/icons/icon-type-0.png",
-    "imageUrl": "/assets/cards/uma-30039.png?v=3"
+    "imageUrl": "/assets/cards/uma-30039.png?v=3",
+    "hasUniqueSkill": true
   },
   {
     "id": "uma-30038",
@@ -361,15 +405,17 @@ export const SUPPORT_CARDS: SupportCard[] = [
     "rarity": "SSR",
     "type": "Stamina",
     "typeIconUrl": "/assets/icons/icon-type-1.png",
-    "imageUrl": "/assets/cards/uma-30038.png?v=3"
+    "imageUrl": "/assets/cards/uma-30038.png?v=3",
+    "hasUniqueSkill": true
   },
   {
     "id": "uma-30036",
     "name": "Riko Kashimoto",
     "rarity": "SSR",
     "type": "Unknown",
-    "typeIconUrl": "/assets/icons/icon-type-6.png",
-    "imageUrl": "/assets/cards/uma-30036.png?v=3"
+    "typeIconUrl": "/assets/icons/icon-type-5.png",
+    "imageUrl": "/assets/cards/uma-30036.png?v=3",
+    "hasUniqueSkill": true
   },
   {
     "id": "uma-30034",
@@ -377,7 +423,8 @@ export const SUPPORT_CARDS: SupportCard[] = [
     "rarity": "SSR",
     "type": "Power",
     "typeIconUrl": "/assets/icons/icon-type-2.png",
-    "imageUrl": "/assets/cards/uma-30034.png?v=3"
+    "imageUrl": "/assets/cards/uma-30034.png?v=3",
+    "hasUniqueSkill": true
   },
   {
     "id": "uma-30033",
@@ -385,7 +432,8 @@ export const SUPPORT_CARDS: SupportCard[] = [
     "rarity": "SSR",
     "type": "Power",
     "typeIconUrl": "/assets/icons/icon-type-2.png",
-    "imageUrl": "/assets/cards/uma-30033.png?v=3"
+    "imageUrl": "/assets/cards/uma-30033.png?v=3",
+    "hasUniqueSkill": true
   },
   {
     "id": "uma-30032",
@@ -393,7 +441,8 @@ export const SUPPORT_CARDS: SupportCard[] = [
     "rarity": "SSR",
     "type": "Power",
     "typeIconUrl": "/assets/icons/icon-type-2.png",
-    "imageUrl": "/assets/cards/uma-30032.png?v=3"
+    "imageUrl": "/assets/cards/uma-30032.png?v=3",
+    "hasUniqueSkill": true
   },
   {
     "id": "uma-30031",
@@ -401,7 +450,8 @@ export const SUPPORT_CARDS: SupportCard[] = [
     "rarity": "SSR",
     "type": "Intelligence",
     "typeIconUrl": "/assets/icons/icon-type-4.png",
-    "imageUrl": "/assets/cards/uma-30031.png?v=3"
+    "imageUrl": "/assets/cards/uma-30031.png?v=3",
+    "hasUniqueSkill": true
   },
   {
     "id": "uma-30030",
@@ -409,7 +459,8 @@ export const SUPPORT_CARDS: SupportCard[] = [
     "rarity": "SSR",
     "type": "Guts",
     "typeIconUrl": "/assets/icons/icon-type-3.png",
-    "imageUrl": "/assets/cards/uma-30030.png?v=3"
+    "imageUrl": "/assets/cards/uma-30030.png?v=3",
+    "hasUniqueSkill": true
   },
   {
     "id": "uma-30029",
@@ -417,7 +468,8 @@ export const SUPPORT_CARDS: SupportCard[] = [
     "rarity": "SSR",
     "type": "Stamina",
     "typeIconUrl": "/assets/icons/icon-type-1.png",
-    "imageUrl": "/assets/cards/uma-30029.png?v=3"
+    "imageUrl": "/assets/cards/uma-30029.png?v=3",
+    "hasUniqueSkill": true
   },
   {
     "id": "uma-30028",
@@ -425,7 +477,8 @@ export const SUPPORT_CARDS: SupportCard[] = [
     "rarity": "SSR",
     "type": "Speed",
     "typeIconUrl": "/assets/icons/icon-type-0.png",
-    "imageUrl": "/assets/cards/uma-30028.png?v=3"
+    "imageUrl": "/assets/cards/uma-30028.png?v=3",
+    "hasUniqueSkill": true
   },
   {
     "id": "uma-30027",
@@ -433,7 +486,8 @@ export const SUPPORT_CARDS: SupportCard[] = [
     "rarity": "SSR",
     "type": "Guts",
     "typeIconUrl": "/assets/icons/icon-type-3.png",
-    "imageUrl": "/assets/cards/uma-30027.png?v=3"
+    "imageUrl": "/assets/cards/uma-30027.png?v=3",
+    "hasUniqueSkill": true
   },
   {
     "id": "uma-30026",
@@ -441,7 +495,8 @@ export const SUPPORT_CARDS: SupportCard[] = [
     "rarity": "SSR",
     "type": "Speed",
     "typeIconUrl": "/assets/icons/icon-type-0.png",
-    "imageUrl": "/assets/cards/uma-30026.png?v=3"
+    "imageUrl": "/assets/cards/uma-30026.png?v=3",
+    "hasUniqueSkill": true
   },
   {
     "id": "uma-30025",
@@ -449,7 +504,8 @@ export const SUPPORT_CARDS: SupportCard[] = [
     "rarity": "SSR",
     "type": "Speed",
     "typeIconUrl": "/assets/icons/icon-type-0.png",
-    "imageUrl": "/assets/cards/uma-30025.png?v=3"
+    "imageUrl": "/assets/cards/uma-30025.png?v=3",
+    "hasUniqueSkill": true
   },
   {
     "id": "uma-30024",
@@ -457,7 +513,8 @@ export const SUPPORT_CARDS: SupportCard[] = [
     "rarity": "SSR",
     "type": "Power",
     "typeIconUrl": "/assets/icons/icon-type-2.png",
-    "imageUrl": "/assets/cards/uma-30024.png?v=3"
+    "imageUrl": "/assets/cards/uma-30024.png?v=3",
+    "hasUniqueSkill": true
   },
   {
     "id": "uma-30023",
@@ -465,7 +522,8 @@ export const SUPPORT_CARDS: SupportCard[] = [
     "rarity": "SSR",
     "type": "Stamina",
     "typeIconUrl": "/assets/icons/icon-type-1.png",
-    "imageUrl": "/assets/cards/uma-30023.png?v=3"
+    "imageUrl": "/assets/cards/uma-30023.png?v=3",
+    "hasUniqueSkill": true
   },
   {
     "id": "uma-30022",
@@ -473,15 +531,17 @@ export const SUPPORT_CARDS: SupportCard[] = [
     "rarity": "SSR",
     "type": "Stamina",
     "typeIconUrl": "/assets/icons/icon-type-1.png",
-    "imageUrl": "/assets/cards/uma-30022.png?v=3"
+    "imageUrl": "/assets/cards/uma-30022.png?v=3",
+    "hasUniqueSkill": true
   },
   {
     "id": "uma-30021",
     "name": "Tazuna Hayakawa",
     "rarity": "SSR",
     "type": "Unknown",
-    "typeIconUrl": "/assets/icons/icon-type-6.png",
-    "imageUrl": "/assets/cards/uma-30021.png?v=3"
+    "typeIconUrl": "/assets/icons/icon-type-5.png",
+    "imageUrl": "/assets/cards/uma-30021.png?v=3",
+    "hasUniqueSkill": true
   },
   {
     "id": "uma-30020",
@@ -489,7 +549,8 @@ export const SUPPORT_CARDS: SupportCard[] = [
     "rarity": "SSR",
     "type": "Speed",
     "typeIconUrl": "/assets/icons/icon-type-0.png",
-    "imageUrl": "/assets/cards/uma-30020.png?v=3"
+    "imageUrl": "/assets/cards/uma-30020.png?v=3",
+    "hasUniqueSkill": true
   },
   {
     "id": "uma-30019",
@@ -497,7 +558,8 @@ export const SUPPORT_CARDS: SupportCard[] = [
     "rarity": "SSR",
     "type": "Guts",
     "typeIconUrl": "/assets/icons/icon-type-3.png",
-    "imageUrl": "/assets/cards/uma-30019.png?v=3"
+    "imageUrl": "/assets/cards/uma-30019.png?v=3",
+    "hasUniqueSkill": true
   },
   {
     "id": "uma-30018",
@@ -505,7 +567,8 @@ export const SUPPORT_CARDS: SupportCard[] = [
     "rarity": "SSR",
     "type": "Speed",
     "typeIconUrl": "/assets/icons/icon-type-0.png",
-    "imageUrl": "/assets/cards/uma-30018.png?v=3"
+    "imageUrl": "/assets/cards/uma-30018.png?v=3",
+    "hasUniqueSkill": true
   },
   {
     "id": "uma-30017",
@@ -513,7 +576,8 @@ export const SUPPORT_CARDS: SupportCard[] = [
     "rarity": "SSR",
     "type": "Power",
     "typeIconUrl": "/assets/icons/icon-type-2.png",
-    "imageUrl": "/assets/cards/uma-30017.png?v=3"
+    "imageUrl": "/assets/cards/uma-30017.png?v=3",
+    "hasUniqueSkill": true
   },
   {
     "id": "uma-30016",
@@ -521,7 +585,8 @@ export const SUPPORT_CARDS: SupportCard[] = [
     "rarity": "SSR",
     "type": "Stamina",
     "typeIconUrl": "/assets/icons/icon-type-1.png",
-    "imageUrl": "/assets/cards/uma-30016.png?v=3"
+    "imageUrl": "/assets/cards/uma-30016.png?v=3",
+    "hasUniqueSkill": true
   },
   {
     "id": "uma-30015",
@@ -529,7 +594,8 @@ export const SUPPORT_CARDS: SupportCard[] = [
     "rarity": "SSR",
     "type": "Speed",
     "typeIconUrl": "/assets/icons/icon-type-0.png",
-    "imageUrl": "/assets/cards/uma-30015.png?v=3"
+    "imageUrl": "/assets/cards/uma-30015.png?v=3",
+    "hasUniqueSkill": true
   },
   {
     "id": "uma-30014",
@@ -537,7 +603,8 @@ export const SUPPORT_CARDS: SupportCard[] = [
     "rarity": "SSR",
     "type": "Speed",
     "typeIconUrl": "/assets/icons/icon-type-0.png",
-    "imageUrl": "/assets/cards/uma-30014.png?v=3"
+    "imageUrl": "/assets/cards/uma-30014.png?v=3",
+    "hasUniqueSkill": true
   },
   {
     "id": "uma-30013",
@@ -545,7 +612,8 @@ export const SUPPORT_CARDS: SupportCard[] = [
     "rarity": "SSR",
     "type": "Intelligence",
     "typeIconUrl": "/assets/icons/icon-type-4.png",
-    "imageUrl": "/assets/cards/uma-30013.png?v=3"
+    "imageUrl": "/assets/cards/uma-30013.png?v=3",
+    "hasUniqueSkill": true
   },
   {
     "id": "uma-30012",
@@ -553,7 +621,8 @@ export const SUPPORT_CARDS: SupportCard[] = [
     "rarity": "SSR",
     "type": "Guts",
     "typeIconUrl": "/assets/icons/icon-type-3.png",
-    "imageUrl": "/assets/cards/uma-30012.png?v=3"
+    "imageUrl": "/assets/cards/uma-30012.png?v=3",
+    "hasUniqueSkill": true
   },
   {
     "id": "uma-30011",
@@ -561,7 +630,8 @@ export const SUPPORT_CARDS: SupportCard[] = [
     "rarity": "SSR",
     "type": "Guts",
     "typeIconUrl": "/assets/icons/icon-type-3.png",
-    "imageUrl": "/assets/cards/uma-30011.png?v=3"
+    "imageUrl": "/assets/cards/uma-30011.png?v=3",
+    "hasUniqueSkill": true
   },
   {
     "id": "uma-30010",
@@ -569,7 +639,8 @@ export const SUPPORT_CARDS: SupportCard[] = [
     "rarity": "SSR",
     "type": "Intelligence",
     "typeIconUrl": "/assets/icons/icon-type-4.png",
-    "imageUrl": "/assets/cards/uma-30010.png?v=3"
+    "imageUrl": "/assets/cards/uma-30010.png?v=3",
+    "hasUniqueSkill": true
   },
   {
     "id": "uma-30009",
@@ -577,7 +648,8 @@ export const SUPPORT_CARDS: SupportCard[] = [
     "rarity": "SSR",
     "type": "Stamina",
     "typeIconUrl": "/assets/icons/icon-type-1.png",
-    "imageUrl": "/assets/cards/uma-30009.png?v=3"
+    "imageUrl": "/assets/cards/uma-30009.png?v=3",
+    "hasUniqueSkill": true
   },
   {
     "id": "uma-30008",
@@ -585,7 +657,8 @@ export const SUPPORT_CARDS: SupportCard[] = [
     "rarity": "SSR",
     "type": "Stamina",
     "typeIconUrl": "/assets/icons/icon-type-1.png",
-    "imageUrl": "/assets/cards/uma-30008.png?v=3"
+    "imageUrl": "/assets/cards/uma-30008.png?v=3",
+    "hasUniqueSkill": true
   },
   {
     "id": "uma-30007",
@@ -593,7 +666,8 @@ export const SUPPORT_CARDS: SupportCard[] = [
     "rarity": "SSR",
     "type": "Power",
     "typeIconUrl": "/assets/icons/icon-type-2.png",
-    "imageUrl": "/assets/cards/uma-30007.png?v=3"
+    "imageUrl": "/assets/cards/uma-30007.png?v=3",
+    "hasUniqueSkill": true
   },
   {
     "id": "uma-30006",
@@ -601,7 +675,8 @@ export const SUPPORT_CARDS: SupportCard[] = [
     "rarity": "SSR",
     "type": "Guts",
     "typeIconUrl": "/assets/icons/icon-type-3.png",
-    "imageUrl": "/assets/cards/uma-30006.png?v=3"
+    "imageUrl": "/assets/cards/uma-30006.png?v=3",
+    "hasUniqueSkill": true
   },
   {
     "id": "uma-30005",
@@ -609,7 +684,8 @@ export const SUPPORT_CARDS: SupportCard[] = [
     "rarity": "SSR",
     "type": "Power",
     "typeIconUrl": "/assets/icons/icon-type-2.png",
-    "imageUrl": "/assets/cards/uma-30005.png?v=3"
+    "imageUrl": "/assets/cards/uma-30005.png?v=3",
+    "hasUniqueSkill": true
   },
   {
     "id": "uma-30004",
@@ -617,7 +693,8 @@ export const SUPPORT_CARDS: SupportCard[] = [
     "rarity": "SSR",
     "type": "Stamina",
     "typeIconUrl": "/assets/icons/icon-type-1.png",
-    "imageUrl": "/assets/cards/uma-30004.png?v=3"
+    "imageUrl": "/assets/cards/uma-30004.png?v=3",
+    "hasUniqueSkill": true
   },
   {
     "id": "uma-30003",
@@ -625,7 +702,8 @@ export const SUPPORT_CARDS: SupportCard[] = [
     "rarity": "SSR",
     "type": "Speed",
     "typeIconUrl": "/assets/icons/icon-type-0.png",
-    "imageUrl": "/assets/cards/uma-30003.png?v=3"
+    "imageUrl": "/assets/cards/uma-30003.png?v=3",
+    "hasUniqueSkill": true
   },
   {
     "id": "uma-30002",
@@ -633,7 +711,8 @@ export const SUPPORT_CARDS: SupportCard[] = [
     "rarity": "SSR",
     "type": "Speed",
     "typeIconUrl": "/assets/icons/icon-type-0.png",
-    "imageUrl": "/assets/cards/uma-30002.png?v=3"
+    "imageUrl": "/assets/cards/uma-30002.png?v=3",
+    "hasUniqueSkill": true
   },
   {
     "id": "uma-30001",
@@ -641,7 +720,8 @@ export const SUPPORT_CARDS: SupportCard[] = [
     "rarity": "SSR",
     "type": "Guts",
     "typeIconUrl": "/assets/icons/icon-type-3.png",
-    "imageUrl": "/assets/cards/uma-30001.png?v=3"
+    "imageUrl": "/assets/cards/uma-30001.png?v=3",
+    "hasUniqueSkill": true
   },
   {
     "id": "uma-20043",
@@ -808,7 +888,7 @@ export const SUPPORT_CARDS: SupportCard[] = [
     "name": "Aoi Kiryuin",
     "rarity": "SR",
     "type": "Unknown",
-    "typeIconUrl": "/assets/icons/icon-type-6.png",
+    "typeIconUrl": "/assets/icons/icon-type-5.png",
     "imageUrl": "/assets/cards/uma-20021.png?v=3"
   },
   {
@@ -1000,7 +1080,7 @@ export const SUPPORT_CARDS: SupportCard[] = [
     "name": "Sasami Anshinzawa",
     "rarity": "R",
     "type": "Unknown",
-    "typeIconUrl": "/assets/icons/icon-type-6.png",
+    "typeIconUrl": "/assets/icons/icon-type-5.png",
     "imageUrl": "/assets/cards/uma-10074.png?v=3"
   },
   {
@@ -1112,7 +1192,7 @@ export const SUPPORT_CARDS: SupportCard[] = [
     "name": "Riko Kashimoto",
     "rarity": "R",
     "type": "Unknown",
-    "typeIconUrl": "/assets/icons/icon-type-6.png",
+    "typeIconUrl": "/assets/icons/icon-type-5.png",
     "imageUrl": "/assets/cards/uma-10060.png?v=3"
   },
   {
@@ -1416,7 +1496,7 @@ export const SUPPORT_CARDS: SupportCard[] = [
     "name": "Aoi Kiryuin",
     "rarity": "R",
     "type": "Unknown",
-    "typeIconUrl": "/assets/icons/icon-type-6.png",
+    "typeIconUrl": "/assets/icons/icon-type-5.png",
     "imageUrl": "/assets/cards/uma-10022.png?v=3"
   },
   {
@@ -1424,7 +1504,7 @@ export const SUPPORT_CARDS: SupportCard[] = [
     "name": "Tazuna Hayakawa",
     "rarity": "R",
     "type": "Unknown",
-    "typeIconUrl": "/assets/icons/icon-type-6.png",
+    "typeIconUrl": "/assets/icons/icon-type-5.png",
     "imageUrl": "/assets/cards/uma-10021.png?v=3"
   },
   {

@@ -1,6 +1,6 @@
 import { SUPPORT_CARDS } from '../data/cards';
 import { useDeck } from '../hooks/useDeck';
-import { Star } from 'lucide-react';
+import { Star, Sparkles } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
 
 const MyDeck = () => {
@@ -45,13 +45,18 @@ const MyDeck = () => {
                   }}
                 />
                 
-                <div className="absolute top-2 left-2">
+                <div className="absolute top-2 left-2 flex flex-col gap-2">
                   <img 
                     src={card.typeIconUrl} 
                     alt={card.type} 
                     title={card.type}
                     className="w-7 h-7 drop-shadow-md bg-white/50 rounded-full p-0.5" 
                   />
+                  {card.hasUniqueSkill && (
+                    <div className="bg-amber-400 text-white p-1.5 rounded-full shadow-md w-fit border border-white" title="Habilidade Única">
+                      <Sparkles size={14} fill="currentColor" />
+                    </div>
+                  )}
                 </div>
                 <button 
                   onClick={() => toggleCard(card.id)}

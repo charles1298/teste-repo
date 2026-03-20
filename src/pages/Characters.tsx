@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { PLAYABLE_CHARACTERS, type PlayableCharacter, getCardById } from '../data/characters';
-import { Search, ChevronDown, ChevronUp, Trophy, MapPin, Zap } from 'lucide-react';
+import { Search, ChevronDown, ChevronUp, Trophy, MapPin, Zap, Sparkles } from 'lucide-react';
 import clsx from 'clsx';
 import { motion, AnimatePresence } from 'framer-motion';
 
@@ -123,9 +123,16 @@ const CharacterCard = ({ character, index }: { character: PlayableCharacter; ind
                             target.src = 'https://upload.wikimedia.org/wikipedia/en/thumb/8/87/Uma_Musume_Pretty_Derby_logo.png/400px-Uma_Musume_Pretty_Derby_logo.png';
                           }}
                         />
-                        {card.typeIconUrl && (
-                          <img src={card.typeIconUrl} alt={card.type} className="absolute top-1 left-1 w-5 h-5 rounded-full bg-white/70 p-0.5" />
-                        )}
+                        <div className="absolute top-1 left-1 flex flex-col gap-1">
+                          {card.typeIconUrl && (
+                            <img src={card.typeIconUrl} alt={card.type} className="w-4 h-4 rounded-full bg-white/70 p-0.5" />
+                          )}
+                          {card.hasUniqueSkill && (
+                            <div className="bg-amber-400 text-white p-0.5 rounded-full shadow-sm w-fit border border-white">
+                              <Sparkles size={10} fill="currentColor" />
+                            </div>
+                          )}
+                        </div>
                       </div>
                       <span className="text-[9px] font-bold text-slate-500 mt-1 text-center line-clamp-1 w-full">{card.name}</span>
                     </div>

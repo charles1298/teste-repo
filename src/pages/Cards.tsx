@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { SUPPORT_CARDS, type SupportCard } from '../data/cards';
 import { useDeck } from '../hooks/useDeck';
-import { Search, Plus, Minus, Star } from 'lucide-react';
+import { Search, Plus, Minus, Star, Sparkles } from 'lucide-react';
 import clsx from 'clsx';
 import { motion, AnimatePresence } from 'framer-motion';
 
@@ -47,6 +47,11 @@ const CardItem = ({ card, isOwned, onToggleOwn }: { card: SupportCard, isOwned: 
             title={card.type}
             className="w-7 h-7 drop-shadow-md bg-white/50 rounded-full p-0.5" 
           />
+          {card.hasUniqueSkill && (
+            <div className="bg-amber-400 text-white p-1.5 rounded-full shadow-md w-fit border border-white" title="Habilidade Única">
+              <Sparkles size={14} fill="currentColor" />
+            </div>
+          )}
           {isOwned && (
             <div className="bg-uma-pink text-white p-1.5 rounded-full shadow-md animate-bounce w-fit">
               <Star size={14} fill="currentColor" />
