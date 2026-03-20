@@ -11,6 +11,7 @@ export interface PlayableCharacter {
   nameJp: string;
   distance: string;
   style: string;
+  imageUrl: string;
   scenarioDecks: ScenarioDeck[];
 }
 
@@ -24,24 +25,28 @@ const SHORT_DECKS: ScenarioDeck[] = [
   { scenario: 'Aoharu Cup', cards: ['uma-30077','uma-30028','uma-30004','uma-30085','uma-30024','uma-30005'] },
   { scenario: "L'Arc", cards: ['uma-30078','uma-30028','uma-30010','uma-30004','uma-30024','uma-30021'] },
   { scenario: 'Grand Masters', cards: ['uma-30028','uma-30078','uma-30042','uma-30010','uma-30004','uma-30085'] },
+  { scenario: 'Deck Econômico', cards: ['uma-20018','uma-20004','uma-20008','uma-20023','uma-20013','uma-30028'] },
 ];
 const MILE_DECKS: ScenarioDeck[] = [
   { scenario: 'URA Finals', cards: ['uma-30078','uma-30028','uma-30010','uma-30024','uma-30021','uma-30016'] },
   { scenario: 'Aoharu Cup', cards: ['uma-30077','uma-30028','uma-30085','uma-30024','uma-30005','uma-30016'] },
   { scenario: "L'Arc", cards: ['uma-30078','uma-30028','uma-30016','uma-30010','uma-30024','uma-30021'] },
   { scenario: 'Grand Masters', cards: ['uma-30028','uma-30078','uma-30010','uma-30042','uma-30016','uma-30085'] },
+  { scenario: 'Deck Econômico', cards: ['uma-20004','uma-20008','uma-20023','uma-20019','uma-20028','uma-30028'] },
 ];
 const MED_DECKS: ScenarioDeck[] = [
   { scenario: 'URA Finals', cards: ['uma-30078','uma-30028','uma-30016','uma-30010','uma-30021','uma-30024'] },
   { scenario: 'Aoharu Cup', cards: ['uma-30077','uma-30028','uma-30016','uma-30085','uma-30024','uma-30005'] },
   { scenario: "L'Arc", cards: ['uma-30078','uma-30016','uma-30075','uma-30010','uma-30028','uma-30021'] },
   { scenario: 'Grand Masters', cards: ['uma-30028','uma-30077','uma-30016','uma-30042','uma-30010','uma-30085'] },
+  { scenario: 'Deck Econômico', cards: ['uma-20004','uma-20019','uma-20011','uma-20023','uma-20028','uma-30010'] },
 ];
 const LONG_DECKS: ScenarioDeck[] = [
   { scenario: 'URA Finals', cards: ['uma-30078','uma-30028','uma-30016','uma-30075','uma-30021','uma-30010'] },
   { scenario: 'Aoharu Cup', cards: ['uma-30077','uma-30028','uma-30016','uma-30075','uma-30085','uma-30024'] },
   { scenario: "L'Arc", cards: ['uma-30078','uma-30016','uma-30075','uma-30010','uma-30028','uma-30021'] },
   { scenario: 'Grand Masters', cards: ['uma-30028','uma-30016','uma-30075','uma-30042','uma-30010','uma-30085'] },
+  { scenario: 'Deck Econômico', cards: ['uma-20019','uma-20010','uma-20015','uma-20023','uma-20027','uma-30016'] },
 ];
 
 type CharDef = [string, string, string, string, string];
@@ -100,5 +105,6 @@ const deckMap: Record<string, ScenarioDeck[]> = {
 
 export const PLAYABLE_CHARACTERS: PlayableCharacter[] = RAW.map(([id,name,nameJp,distance,style]) => ({
   id: `chara-${id}`, name, nameJp, distance, style,
+  imageUrl: `/assets/characters/${id}.png?v=1`,
   scenarioDecks: deckMap[distance] || MED_DECKS,
 }));

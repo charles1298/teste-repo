@@ -9,6 +9,7 @@ const scenarioColors: Record<string, string> = {
   'Aoharu Cup': 'bg-green-500',
   "L'Arc": 'bg-purple-500',
   'Grand Masters': 'bg-amber-500',
+  'Deck Econômico': 'bg-rose-400',
 };
 
 const distanceColors: Record<string, string> = {
@@ -32,8 +33,6 @@ const CharacterCard = ({ character, index }: { character: PlayableCharacter; ind
   const currentDeck = character.scenarioDecks[activeScenario];
   const deckCards = currentDeck.cards.map(id => getCardById(id)).filter(Boolean);
 
-  const initials = character.name.split(' ').map(w => w[0]).join('').slice(0, 2);
-
   return (
     <motion.div
       layout
@@ -46,8 +45,17 @@ const CharacterCard = ({ character, index }: { character: PlayableCharacter; ind
         className="flex items-center gap-4 p-4 cursor-pointer hover:bg-pink-50/50 transition-colors"
         onClick={() => setExpanded(!expanded)}
       >
-        <div className="w-14 h-14 rounded-xl bg-gradient-to-br from-uma-pink to-purple-500 flex items-center justify-center text-white font-black text-lg flex-shrink-0 shadow-md">
-          {initials}
+        <div className="w-16 h-16 rounded-xl overflow-hidden bg-pink-50 border-2 border-pink-200 flex-shrink-0 shadow-sm">
+          <img
+            src={character.imageUrl}
+            alt={character.name}
+            className="w-full h-full object-contain"
+            onError={(e) => {
+              const target = e.target as HTMLImageElement;
+              target.onerror = null;
+              target.style.display = 'none';
+            }}
+          />
         </div>
         <div className="flex-grow min-w-0">
           <h3 className="text-base font-black text-gray-800 truncate">{character.name}</h3>
