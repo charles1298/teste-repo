@@ -38,6 +38,11 @@ const MyDeck = () => {
                   src={card.imageUrl} 
                   alt={card.name} 
                   className="object-cover w-full h-full" 
+                  onError={(e) => {
+                    const target = e.target as HTMLImageElement;
+                    target.onerror = null;
+                    target.src = 'https://upload.wikimedia.org/wikipedia/en/thumb/8/87/Uma_Musume_Pretty_Derby_logo.png/400px-Uma_Musume_Pretty_Derby_logo.png';
+                  }}
                 />
                 <button 
                   onClick={() => toggleCard(card.id)}

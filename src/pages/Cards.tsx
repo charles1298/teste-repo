@@ -32,7 +32,9 @@ const CardItem = ({ card, isOwned, onToggleOwn }: { card: SupportCard, isOwned: 
           alt={card.name} 
           className="object-cover w-full h-full transform group-hover:scale-110 transition-transform duration-500" 
           onError={(e) => {
-            (e.target as HTMLImageElement).src = 'https://upload.wikimedia.org/wikipedia/en/thumb/8/87/Uma_Musume_Pretty_Derby_logo.png/400px-Uma_Musume_Pretty_Derby_logo.png';
+            const target = e.target as HTMLImageElement;
+            target.onerror = null;
+            target.src = 'https://upload.wikimedia.org/wikipedia/en/thumb/8/87/Uma_Musume_Pretty_Derby_logo.png/400px-Uma_Musume_Pretty_Derby_logo.png';
           }}
         />
         <div className={clsx('absolute top-2 right-2 px-2 py-0.5 text-xs font-black rounded-lg border-2 shadow-sm', getRarityColor(card.rarity))}>
