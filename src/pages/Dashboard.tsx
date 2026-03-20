@@ -1,117 +1,57 @@
-import { ITEMS } from '../data/items';
-import type { Rarity } from '../data/items';
-import { useMapRotation } from '../hooks/useMapRotation';
-import { getTopItems } from '../utils/analysis';
-import { motion } from 'framer-motion';
+import { ArrowRight, Star, Heart } from 'lucide-react';
+import { NavLink } from 'react-router-dom';
 
 const Dashboard = () => {
-  const { currentMap, nextMap, timeLeftFormatted } = useMapRotation();
-  const topItems = getTopItems(ITEMS, 3);
-
-  // Calculate statistics
-  const rarityCounts = ITEMS.reduce((acc, item) => {
-    acc[item.rarity] = (acc[item.rarity] || 0) + 1;
-    return acc;
-  }, {} as Record<Rarity, number>);
-
-  const totalItems = ITEMS.length;
-
   return (
-    <div className="space-y-8 pb-10">
-      <motion.div
-        initial={{ opacity: 0, y: 20 }}
-        animate={{ opacity: 1, y: 0 }}
-        className="text-center md:text-left relative"
-      >
-        <div className="absolute -left-4 top-0 bottom-0 w-1 bg-arc-accent shadow-[0_0_10px_var(--color-arc-accent)]"></div>
-        <h1 className="text-4xl font-black tracking-[0.15em] uppercase text-white drop-shadow-[0_0_8px_rgba(255,255,255,0.5)] pl-4">
-          Centro de Comando
-        </h1>
-        <p className="text-arc-cyan/80 mt-2 pl-4 font-mono text-sm uppercase tracking-widest">Visão geral do banco de dados e operações táticas.</p>
-      </motion.div>
-
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+    <div className="space-y-8 animate-in fade-in duration-500 pb-10">
+      <div className="relative overflow-hidden rounded-3xl bg-gradient-to-br from-uma-pink to-pink-400 p-8 md:p-12 shadow-xl border-4 border-pink-200">
+        <div className="absolute top-0 right-0 w-64 h-64 bg-white/20 rounded-full -translate-y-1/4 translate-x-1/4 blur-3xl"></div>
+        <div className="absolute bottom-0 left-0 w-48 h-48 bg-yellow-300/20 rounded-full translate-y-1/4 -translate-x-1/4 blur-2xl"></div>
         
-        {/* Map Rotation Widget */}
-        <motion.div
-          initial={{ opacity: 0, scale: 0.9 }}
-          animate={{ opacity: 1, scale: 1 }}
-          transition={{ delay: 0.1 }}
-          className="tech-border p-6"
-        >
-          <h2 className="text-xl font-bold tracking-widest uppercase mb-4 text-arc-accent border-b border-white/10 pb-2">Zona de Pouso Ativa</h2>
-          <div className="flex flex-col space-y-4">
-            <div>
-              <span className="text-gray-400 text-sm">Mapa Atual:</span>
-              <p className="text-2xl font-bold text-white tracking-wide">{currentMap}</p>
-            </div>
-            <div>
-              <span className="text-gray-400 text-sm">Próxima Rotação:</span>
-              <p className="text-lg text-gray-300">{nextMap}</p>
-            </div>
-            <div className="mt-4 pt-4 border-t border-gray-700">
-              <span className="text-gray-400 text-sm block mb-1">Tempo Restante:</span>
-              <div className="font-mono text-3xl font-bold text-red-400">
-                {timeLeftFormatted}
-              </div>
-            </div>
+        <div className="relative z-10 flex flex-col md:flex-row items-center gap-8 text-white">
+          <div className="flex-1 text-center md:text-left">
+            <h1 className="text-4xl md:text-5xl font-black mb-4 drop-shadow-md cursor-default">
+              Bem-vindo à <br/><span className="text-yellow-300">Tracen Academy!</span>
+            </h1>
+            <p className="text-pink-50 text-lg md:text-xl font-medium max-w-xl mb-8 leading-relaxed">
+              Prepare suas garotas cavalo (Umamusume) para a glória no Twinkle Series. Monte o melhor deck de cartas de suporte e conquiste a vitória!
+            </p>
+            <NavLink to="/cards" className="inline-block bg-white text-uma-pink font-bold text-lg px-8 py-3 rounded-full hover:bg-pink-50 hover:scale-105 active:scale-95 transition-all shadow-lg border-2 border-white">
+              Ver Cartas de Suporte
+            </NavLink>
           </div>
-        </motion.div>
-
-        {/* Database Stats Widget */}
-        <motion.div
-          initial={{ opacity: 0, scale: 0.9 }}
-          animate={{ opacity: 1, scale: 1 }}
-          transition={{ delay: 0.2 }}
-          className="tech-border p-6"
-        >
-          <h2 className="text-xl font-bold tracking-widest uppercase mb-4 text-arc-accent border-b border-white/10 pb-2">Banco de Dados</h2>
-          <div className="text-center mb-6">
-            <span className="text-5xl font-black text-white">{totalItems}</span>
-            <span className="text-gray-400 block mt-1 uppercase text-sm tracking-widest">Total de Itens</span>
+          <div className="hidden md:flex w-64 h-64 bg-white/10 rounded-full border-4 border-white/20 items-center justify-center p-8 backdrop-blur-sm shadow-inner rotate-3">
+             <Star className="w-full h-full text-yellow-300 drop-shadow-lg" fill="currentColor" />
           </div>
-          <div className="grid grid-cols-2 gap-4">
-            <div className="bg-gray-800/50 rounded p-2 text-center border-l-2 border-[#94a3b8]">
-              <span className="text-2xl font-bold text-[#94a3b8]">{rarityCounts['Common'] || 0}</span>
-              <span className="block text-xs text-gray-400">Comum</span>
-            </div>
-            <div className="bg-gray-800/50 rounded p-2 text-center border-l-2 border-[#3b82f6]">
-              <span className="text-2xl font-bold text-[#3b82f6]">{rarityCounts['Rare'] || 0}</span>
-              <span className="block text-xs text-gray-400">Raro</span>
-            </div>
-            <div className="bg-gray-800/50 rounded p-2 text-center border-l-2 border-[#a855f7]">
-              <span className="text-2xl font-bold text-[#a855f7]">{rarityCounts['Epic'] || 0}</span>
-              <span className="block text-xs text-gray-400">Épico</span>
-            </div>
-            <div className="bg-gray-800/50 rounded p-2 text-center border-l-2 border-[#eab308]">
-              <span className="text-2xl font-bold text-[#eab308]">{rarityCounts['Legendary'] || 0}</span>
-              <span className="block text-xs text-gray-400">Lendário</span>
-            </div>
+        </div>
+      </div>
+
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <div className="bg-white rounded-3xl p-6 shadow-md border-2 border-pink-100 hover:border-uma-pink hover:shadow-xl transition-all duration-300 group">
+          <div className="w-12 h-12 bg-pink-100 text-uma-pink rounded-xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
+            <Heart size={24} fill="currentColor" />
           </div>
-        </motion.div>
+          <h2 className="text-2xl font-bold text-gray-800 mb-2">Construa Laços</h2>
+          <p className="text-gray-500 mb-4 font-medium leading-relaxed">
+            As cartas de suporte são essenciais para treinar os atributos das suas Umamusume de forma eficaz.
+          </p>
+          <NavLink to="/cards" className="text-uma-pink font-bold flex items-center gap-2 group-hover:gap-3 transition-all">
+            Explorar Cartas <ArrowRight size={18} />
+          </NavLink>
+        </div>
 
-        {/* Top Priority Items Widget */}
-        <motion.div
-          initial={{ opacity: 0, scale: 0.9 }}
-          animate={{ opacity: 1, scale: 1 }}
-          transition={{ delay: 0.3 }}
-          className="tech-border p-6 md:col-span-2 lg:col-span-1"
-        >
-          <h2 className="text-xl font-bold tracking-widest uppercase mb-4 text-arc-accent border-b border-white/10 pb-2">Alta Prioridade</h2>
-          <ul className="space-y-3">
-            {topItems.map((item, index) => (
-              <li key={item.id} className="flex items-center space-x-3 bg-gray-800/30 p-2 rounded border border-gray-700 hover:border-arc-accent transition-colors">
-                <span className="text-2xl font-bold text-gray-600">#{index + 1}</span>
-                <img src={item.imageUrl} alt={item.name} className="w-10 h-10 object-cover rounded" />
-                <div className="flex-1 overflow-hidden">
-                  <p className="font-semibold text-white truncate">{item.name}</p>
-                  <p className="text-xs text-gray-400">{item.type} | Pontuação: {item.useValue}</p>
-                </div>
-              </li>
-            ))}
-          </ul>
-        </motion.div>
-
+        <div className="bg-white rounded-3xl p-6 shadow-md border-2 border-blue-100 hover:border-blue-400 hover:shadow-xl transition-all duration-300 group">
+          <div className="w-12 h-12 bg-blue-100 text-blue-500 rounded-xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
+            <Star size={24} fill="currentColor" />
+          </div>
+          <h2 className="text-2xl font-bold text-gray-800 mb-2">Monte seu Deck</h2>
+          <p className="text-gray-500 mb-4 font-medium leading-relaxed">
+            Selecione até 6 cartas para preencher seu deck perfeito de treinamento e participar de eventos.
+          </p>
+          <NavLink to="/deck" className="text-blue-500 font-bold flex items-center gap-2 group-hover:gap-3 transition-all">
+            Ver Meu Deck <ArrowRight size={18} />
+          </NavLink>
+        </div>
       </div>
     </div>
   );
