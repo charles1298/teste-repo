@@ -3,10 +3,11 @@ import { ITEMS } from '../data/items';
 import type { Rarity, Item } from '../data/items';
 import { evaluateItem } from '../utils/recycling';
 import { motion, AnimatePresence } from 'framer-motion';
-import { Search, Filter, X } from 'lucide-react';
+import { Search, Filter, X, Briefcase } from 'lucide-react';
 import clsx from 'clsx';
+import { useInventory } from '../hooks/useInventory';
 
-const ItemCard = ({ item, onClick }: { item: Item; onClick: () => void }) => {
+const ItemCard = ({ item, isOwned, onToggleOwn, onClick }: { item: Item; isOwned: boolean; onToggleOwn: (e: React.MouseEvent) => void; onClick: () => void }) => {
   const rarityColors = {
     Common: 'text-gray-400 border-gray-400',
     Uncommon: 'text-green-400 border-green-400',
@@ -26,6 +27,20 @@ const ItemCard = ({ item, onClick }: { item: Item; onClick: () => void }) => {
       onClick={onClick}
     >
       <div className="relative h-48 w-full mb-4 overflow-hidden rounded">
+        <div className="absolute top-2 left-2 z-10">
+          <button 
+            onClick={onToggleOwn}
+            className={clsx(
+              "p-2 rounded-full backdrop-blur-md transition-all duration-300 border",
+              isOwned 
+                ? "bg-arc-accent text-black border-arc-accent shadow-[0_0_10px_rgba(255,77,0,0.8)]" 
+                : "bg-black/50 text-gray-400 border-white/20 hover:bg-black/80 hover:text-white hover:border-white/50"
+            )}
+            title={isOwned ? "Remover do Inventário" : "Adicionar ao Inventário"}
+          >
+            <Briefcase size={16} />
+          </button>
+        </div>
         <img src={item.imageUrl} alt={item.name} className="object-cover w-full h-full filter brightness-75 hover:brightness-100 transition-all duration-500" />
         <div className={clsx('absolute top-2 right-2 px-2 py-1 text-xs font-bold uppercase tracking-widest bg-black/80 rounded border', rarityColors[item.rarity])}>
           {item.rarity}
@@ -119,6 +134,7 @@ const Items = () => {
   const [searchTerm, setSearchTerm] = useState('');
   const [rarityFilter, setRarityFilter] = useState<Rarity | 'All'>('All');
   const [selectedItem, setSelectedItem] = useState<Item | null>(null);
+  const { inventory, toggleWeapon } = useInventory();
 
   const filteredItems = ITEMS.filter(item => {
     const matchesSearch = item.name.toLowerCase().includes(searchTerm.toLowerCase()) || 
@@ -169,7 +185,16 @@ const Items = () => {
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
         <AnimatePresence>
           {filteredItems.map(item => (
-            <ItemCard key={item.id} item={item} onClick={() => setSelectedItem(item)} />
+            <ItemCard 
+              key={item.id} 
+              item={item} 
+              isOwned={inventory.ownedWeapons.includes(item.id)}
+              onToggleOwn={(e) => {
+                e.stopPropagation();
+                toggleWeapon(item.id);
+              }}
+              onClick={() => setSelectedItem(item)} 
+            />
           ))}
         </AnimatePresence>
         

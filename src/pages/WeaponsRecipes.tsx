@@ -1,9 +1,11 @@
 import { useState } from 'react';
 import { WEAPON_RECIPES } from '../data/recipes';
-import { Search, Hammer, Clock } from 'lucide-react';
+import { Search, Hammer, Clock, CheckCircle2, AlertCircle } from 'lucide-react';
+import { useInventory } from '../hooks/useInventory';
 
 const WeaponsRecipes = () => {
   const [searchTerm, setSearchTerm] = useState('');
+  const { inventory } = useInventory();
 
   const filteredRecipes = WEAPON_RECIPES.filter(recipe => 
     recipe.weaponName.toLowerCase().includes(searchTerm.toLowerCase()) ||
@@ -90,17 +92,32 @@ const WeaponsRecipes = () => {
                 </div>
 
                 <div className="mt-auto">
-                  <h4 className="text-xs font-bold uppercase text-gray-500 mb-2 border-b border-white/5 pb-1">Materiais Necessários</h4>
+                  <div className="flex items-center justify-between mb-2 border-b border-white/5 pb-1">
+                    <h4 className="text-xs font-bold uppercase text-gray-500">Materiais Necessários</h4>
+                    {recipe.ingredients.every(ing => (inventory.materials[ing.name] || 0) >= ing.amount) ? (
+                      <span className="text-[10px] uppercase font-bold text-green-400 flex items-center gap-1"><CheckCircle2 size={12}/> Pronta para criar</span>
+                    ) : (
+                      <span className="text-[10px] uppercase font-bold text-orange-400 flex items-center gap-1"><AlertCircle size={12}/> Faltam materiais</span>
+                    )}
+                  </div>
                   <ul className="space-y-2">
-                    {recipe.ingredients.map((ing, idx) => (
-                      <li key={idx} className="flex justify-between items-center text-sm font-mono text-gray-300">
-                        <span className="flex items-center gap-2">
-                          <span className="w-1.5 h-1.5 rounded-full bg-arc-accent/70"></span>
-                          {ing.name}
-                        </span>
-                        <span className="text-arc-accent font-bold">x{ing.amount}</span>
-                      </li>
-                    ))}
+                    {recipe.ingredients.map((ing, idx) => {
+                      const haveAmount = inventory.materials[ing.name] || 0;
+                      const isEnough = haveAmount >= ing.amount;
+                      return (
+                        <li key={idx} className="flex justify-between items-center text-sm font-mono text-gray-300">
+                          <span className="flex items-center gap-2">
+                            <span className={`w-1.5 h-1.5 rounded-full ${isEnough ? 'bg-green-500' : 'bg-orange-500'}`}></span>
+                            {ing.name}
+                          </span>
+                          <span className="flex items-center gap-2 text-xs">
+                            <span className={isEnough ? "text-green-400" : "text-orange-400 font-bold"}>
+                              {haveAmount}/{ing.amount}
+                            </span>
+                          </span>
+                        </li>
+                      );
+                    })}
                   </ul>
                 </div>
               </div>

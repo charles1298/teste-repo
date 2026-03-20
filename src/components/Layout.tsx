@@ -1,5 +1,5 @@
 import { NavLink, Outlet } from 'react-router-dom';
-import { LayoutDashboard, PackageSearch, ActivitySquare, Map as MapIcon, Wrench } from 'lucide-react';
+import { LayoutDashboard, PackageSearch, ActivitySquare, Map as MapIcon, Wrench, Briefcase } from 'lucide-react';
 import clsx from 'clsx';
 import { twMerge } from 'tailwind-merge';
 
@@ -10,6 +10,7 @@ const Layout = () => {
     { to: '/analysis', label: 'Análise Avançada', icon: <ActivitySquare size={20} /> },
     { to: '/map', label: 'Mapa Interativo', icon: <MapIcon size={20} /> },
     { to: '/recipes', label: 'Receitas', icon: <Wrench size={20} /> },
+    { to: '/inventory', label: 'Inventário', icon: <Briefcase size={20} /> },
   ];
 
   return (

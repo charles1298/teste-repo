@@ -5,6 +5,7 @@ import Items from './pages/Items';
 import Analysis from './pages/Analysis';
 import MapPage from './pages/MapPage';
 import WeaponsRecipes from './pages/WeaponsRecipes';
+import Inventory from './pages/Inventory';
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
           <Route path="analysis" element={<Analysis />} />
           <Route path="map" element={<MapPage />} />
           <Route path="recipes" element={<WeaponsRecipes />} />
+          <Route path="inventory" element={<Inventory />} />
         </Route>
       </Routes>
     </Router>
