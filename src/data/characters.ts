@@ -54,35 +54,13 @@ export function getCardById(id: string) {
   return SUPPORT_CARDS.find(c => c.id === id);
 }
 
-// Meta deck templates by distance
-function generateScenarios(
-  baseRec: string[], 
-  baseEco: string[], 
-  cardsPool: RecommendedCard[]
-): ScenarioDeck[] {
-  const var1 = [...baseRec]; var1[0] = 'uma-30076'; // Aceleração
-  const var2 = [...baseRec]; var2[1] = 'uma-30045'; // Foco
-  const var3 = [...baseRec]; var3[2] = 'uma-30022'; // Stamina/Recovery
-  
-  return ['URA Finale', 'Unity Cup', 'Trackblazer'].map(scenario => ({
-    scenario,
-    decks: [
-      { name: 'Deck Recomendado', recommendedIds: baseRec },
-      { name: 'Deck Econômico', recommendedIds: baseEco },
-      { name: 'Variação 1 (Meta Speed)', recommendedIds: var1 },
-      { name: 'Variação 2 (Meta Guts)', recommendedIds: var2 },
-      { name: 'Variação 3 (Meta Stamina)', recommendedIds: var3 },
-    ],
-    cards: cardsPool
-  }));
-}
-
-const SHORT_POOL: RecommendedCard[] = [
-  { id: 'uma-30078', type: 'Speed', reason: 'Vel. Elite' },
-  { id: 'uma-30028', type: 'Speed', reason: 'Bônus' },
-  { id: 'uma-30020', type: 'Speed', reason: 'Acel. S.' },
-  { id: 'uma-30016', type: 'Stamina', reason: 'Resis.' },
-  { id: 'uma-30007', type: 'Power', reason: 'Força' },
+// Unified Cards Pool
+const ALL_POOL: RecommendedCard[] = [
+  { id: 'uma-30078', type: 'Speed', reason: 'Curta' },
+  { id: 'uma-30028', type: 'Speed', reason: 'Universal' },
+  { id: 'uma-30020', type: 'Speed', reason: 'Aceleração' },
+  { id: 'uma-30016', type: 'Stamina', reason: 'Recup.' },
+  { id: 'uma-30007', type: 'Power', reason: 'Poder' },
   { id: 'uma-30010', type: 'Intelligence', reason: 'Visão' },
   { id: 'uma-20018', type: 'Speed', reason: 'SR Alta' },
   { id: 'uma-20004', type: 'Speed', reason: 'Efic. SR' },
@@ -90,46 +68,56 @@ const SHORT_POOL: RecommendedCard[] = [
   { id: 'uma-20019', type: 'Stamina', reason: 'SR Stamina' },
   { id: 'uma-20002', type: 'Power', reason: 'SR Força' },
   { id: 'uma-20011', type: 'Intelligence', reason: 'Int. SR' },
-  { id: 'uma-30076', type: 'Speed', reason: 'Aceleração' },
-  { id: 'uma-30045', type: 'Speed', reason: 'Sweep' },
-  { id: 'uma-30022', type: 'Stamina', reason: 'McQueen' }
+  { id: 'uma-30076', type: 'Speed', reason: 'Fuga' },
+  { id: 'uma-30045', type: 'Speed', reason: 'Acel.' },
+  { id: 'uma-30022', type: 'Stamina', reason: 'Resis.' },
+  { id: 'uma-30086', type: 'Speed', reason: 'Top Road' },
+  { id: 'uma-30017', type: 'Speed', reason: 'Precedente' },
+  { id: 'uma-30029', type: 'Power', reason: 'Intermediário' },
+  { id: 'uma-30024', type: 'Intelligence', reason: 'Posição' },
+  { id: 'uma-30062', type: 'Stamina', reason: 'Longa' },
+  { id: 'uma-30034', type: 'Stamina', reason: 'Perseguidor' },
+  { id: 'uma-30083', type: 'Guts', reason: 'Raça' },
 ];
 
-const MILE_POOL: RecommendedCard[] = [
-  ...SHORT_POOL
-];
+const DISTANCE_BASE: Record<string, string[]> = {
+  'Curta': ['uma-30078', 'uma-30028', 'uma-30020'],
+  'Milha': ['uma-30028', 'uma-30086', 'uma-30020'],
+  'Média': ['uma-30028', 'uma-30086', 'uma-30016'],
+  'Longa': ['uma-30028', 'uma-30086', 'uma-30062'],
+};
 
-const MED_POOL: RecommendedCard[] = [
-  ...SHORT_POOL
-];
+const STYLE_BASE: Record<string, string[]> = {
+  'Runner': ['uma-30007', 'uma-30010', 'uma-30076'],
+  'Leader': ['uma-30017', 'uma-30007', 'uma-30010'],
+  'Betweener': ['uma-30029', 'uma-30024', 'uma-30010'],
+  'Chaser': ['uma-30034', 'uma-30024', 'uma-30010'],
+};
 
-const LONG_POOL: RecommendedCard[] = [
-  ...SHORT_POOL
-];
+const ECO_BASE = ['uma-20018', 'uma-20004', 'uma-20039', 'uma-20019', 'uma-20002', 'uma-20011'];
 
-const SHORT_DECKS = generateScenarios(
-  ['uma-30078', 'uma-30028', 'uma-30020', 'uma-30016', 'uma-30007', 'uma-30010'],
-  ['uma-20018', 'uma-20004', 'uma-20039', 'uma-20019', 'uma-20002', 'uma-20011'],
-  SHORT_POOL
-);
+function getDecksForCharacter(distance: string, style: string): ScenarioDeck[] {
+  const distCards = DISTANCE_BASE[distance] || DISTANCE_BASE['Média'];
+  const styleCards = STYLE_BASE[style] || STYLE_BASE['Betweener'];
+  
+  const baseRec = [...distCards, ...styleCards];
+  
+  const var1 = [...baseRec]; var1[0] = 'uma-30045'; 
+  const var2 = [...baseRec]; var2[1] = 'uma-30083';
+  const var3 = [...baseRec]; var3[2] = 'uma-30022';
 
-const MILE_DECKS = generateScenarios(
-  ['uma-30028', 'uma-30086', 'uma-30020', 'uma-30016', 'uma-30017', 'uma-30010'],
-  ['uma-20018', 'uma-20004', 'uma-20039', 'uma-20019', 'uma-20002', 'uma-20011'],
-  MILE_POOL
-);
-
-const MED_DECKS = generateScenarios(
-  ['uma-30028', 'uma-30086', 'uma-30016', 'uma-30029', 'uma-30024', 'uma-30010'],
-  ['uma-20018', 'uma-20004', 'uma-20039', 'uma-20019', 'uma-20002', 'uma-20011'],
-  MED_POOL
-);
-
-const LONG_DECKS = generateScenarios(
-  ['uma-30028', 'uma-30086', 'uma-30016', 'uma-30062', 'uma-30034', 'uma-30010'],
-  ['uma-20018', 'uma-20004', 'uma-20039', 'uma-20019', 'uma-20002', 'uma-20011'],
-  LONG_POOL
-);
+  return ['URA Finale', 'Unity Cup', 'Trackblazer'].map(scenario => ({
+    scenario,
+    decks: [
+      { name: 'Deck Recomendado', recommendedIds: baseRec },
+      { name: 'Deck Econômico', recommendedIds: ECO_BASE },
+      { name: 'Variação 1 (Meta Speed)', recommendedIds: var1 },
+      { name: 'Variação 2 (Meta Guts)', recommendedIds: var2 },
+      { name: 'Variação 3 (Meta Stamina)', recommendedIds: var3 },
+    ],
+    cards: ALL_POOL
+  }));
+}
 
 type CharDef = [string, string, string, string, string];
 // [id, name, nameJp, distance, style]
@@ -181,11 +169,6 @@ const RAW: CharDef[] = [
   ['super-creek','Super Creek','スーパークリーク','Longa','Betweener'],
 ];
 
-const deckMap: Record<string, ScenarioDeck[]> = {
-  'Curta': SHORT_DECKS, 'Milha': MILE_DECKS,
-  'Média': MED_DECKS, 'Longa': LONG_DECKS,
-};
-
 export const PLAYABLE_CHARACTERS: PlayableCharacter[] = RAW.map(([id,name,nameJp,distance,style]) => {
   const matchingKeys = Object.keys(GAME8_ICONS).filter(k => k.startsWith(name));
   
@@ -225,6 +208,6 @@ export const PLAYABLE_CHARACTERS: PlayableCharacter[] = RAW.map(([id,name,nameJp
   return {
     id: `chara-${id}`, name, nameJp, distance, style,
     versions: allVersions,
-    scenarioDecks: deckMap[distance] || MED_DECKS,
+    scenarioDecks: getDecksForCharacter(distance, style),
   };
 });
