@@ -53,10 +53,10 @@ const RecommendedCardItem = ({ item, isOwned = false }: { item: RecommendedCard,
 
   return (
     <div className={clsx(
-      "flex flex-col items-center group relative p-1 rounded-lg transition-all bg-zinc-900 hover:shadow-md border border-zinc-800",
+      "flex flex-col items-center group relative p-1 rounded-lg transition-all bg-white hover:shadow-md border border-slate-100",
       isOwned && "ring-2 ring-uma-pink ring-offset-1"
     )}>
-      <div className="w-full aspect-[5/7] rounded-md overflow-hidden bg-zinc-900 border border-pink-900/30 relative group-hover:scale-[1.02] transition-transform">
+      <div className="w-full aspect-[5/7] rounded-md overflow-hidden bg-white border border-pink-100 relative group-hover:scale-[1.02] transition-transform">
         <img
           src={card.imageUrl}
           alt={card.name}
@@ -74,8 +74,8 @@ const RecommendedCardItem = ({ item, isOwned = false }: { item: RecommendedCard,
         )}
       </div>
       <div className="mt-1 w-full flex flex-col items-center gap-0.5">
-        <span className="text-[10px] font-bold text-slate-200 truncate w-full text-center leading-tight">{card.name}</span>
-        <span className="text-[9px] font-medium text-uma-pink bg-pink-950/40 px-1 rounded-sm truncate w-full text-center">
+        <span className="text-[10px] font-bold text-slate-700 truncate w-full text-center leading-tight">{card.name}</span>
+        <span className="text-[9px] font-medium text-uma-pink bg-pink-50 px-1 rounded-sm truncate w-full text-center">
           {item.reason}
         </span>
       </div>
@@ -106,13 +106,13 @@ const CharacterCard = ({ character, index, ownedDeck }: { character: PlayableCha
       initial={{ opacity: 0, y: 20 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ delay: index * 0.03 }}
-      className="bg-zinc-900 rounded-2xl border border-pink-900/30 shadow-sm overflow-hidden hover:shadow-md transition-shadow"
+      className="bg-white rounded-2xl border border-pink-100 shadow-sm overflow-hidden hover:shadow-md transition-shadow"
     >
       <div
         className="flex items-center gap-4 p-4 cursor-pointer hover:bg-pink-50/50 transition-colors"
         onClick={() => setExpanded(!expanded)}
       >
-        <div className="w-16 h-16 rounded-xl overflow-hidden bg-pink-950/40 border-2 border-pink-900/50 flex-shrink-0 shadow-sm">
+        <div className="w-16 h-16 rounded-xl overflow-hidden bg-pink-50 border-2 border-pink-200 flex-shrink-0 shadow-sm">
           <img
             src={character.imageUrl}
             alt={character.name}
@@ -125,20 +125,20 @@ const CharacterCard = ({ character, index, ownedDeck }: { character: PlayableCha
           />
         </div>
         <div className="flex-grow min-w-0">
-          <h3 className="text-base font-black text-gray-100 truncate">{character.name}</h3>
-          <p className="text-xs text-slate-300 font-medium">{character.nameJp}</p>
+          <h3 className="text-base font-black text-gray-800 truncate">{character.name}</h3>
+          <p className="text-xs text-slate-400 font-medium">{character.nameJp}</p>
           <div className="flex items-center gap-2 mt-1">
             <span className={clsx('text-[10px] font-bold px-2 py-0.5 rounded-full border', distanceColors[character.distance])}>
               <MapPin size={10} className="inline mr-0.5" />{character.distance}
             </span>
-            <span className="text-[10px] font-bold text-slate-300 bg-slate-100 px-2 py-0.5 rounded-full">
+            <span className="text-[10px] font-bold text-slate-500 bg-slate-100 px-2 py-0.5 rounded-full">
               {styleEmoji[character.style]} {character.style}
             </span>
           </div>
         </div>
         <div className={clsx(
           "p-2 rounded-full transition-colors flex-shrink-0",
-          expanded ? "bg-uma-pink text-white" : "bg-pink-900/40 text-uma-pink"
+          expanded ? "bg-uma-pink text-white" : "bg-pink-100 text-uma-pink"
         )}>
           {expanded ? <ChevronUp size={18} /> : <ChevronDown size={18} />}
         </div>
@@ -163,7 +163,7 @@ const CharacterCard = ({ character, index, ownedDeck }: { character: PlayableCha
                       "px-3 py-1.5 rounded-full text-xs font-bold transition-all",
                       activeScenario === i
                         ? `${scenarioColors[deck.scenario] || 'bg-uma-pink'} text-white shadow-md scale-105`
-                        : "bg-zinc-800 text-gray-400 hover:bg-gray-200"
+                        : "bg-gray-100 text-gray-400 hover:bg-gray-200"
                     )}
                   >
                     <Trophy size={12} className="inline mr-1" />
@@ -174,13 +174,13 @@ const CharacterCard = ({ character, index, ownedDeck }: { character: PlayableCha
 
               <div className="space-y-6">
                 {/* Recommended Deck - 6 Cards */}
-                <div className="bg-gradient-to-br from-pink-50/50 to-purple-50/50 rounded-2xl p-4 border border-pink-900/30/50 shadow-inner">
+                <div className="bg-gradient-to-br from-pink-50/50 to-purple-50/50 rounded-2xl p-4 border border-pink-100/50 shadow-inner">
                   <div className="flex items-center justify-between mb-4">
-                    <p className="text-xs font-black text-slate-300 uppercase flex items-center gap-2">
+                    <p className="text-xs font-black text-slate-500 uppercase flex items-center gap-2">
                       <Zap size={16} className="text-amber-400 fill-amber-400" /> 
                       Deck Recomendado - {currentDeck.scenario}
                     </p>
-                    <span className="text-[10px] font-bold text-uma-pink bg-zinc-900 px-2 py-0.5 rounded-full border border-pink-900/30 shadow-sm">
+                    <span className="text-[10px] font-bold text-uma-pink bg-white px-2 py-0.5 rounded-full border border-pink-100 shadow-sm">
                       Padrão Meta (6 Cartas)
                     </span>
                   </div>
@@ -202,16 +202,16 @@ const CharacterCard = ({ character, index, ownedDeck }: { character: PlayableCha
 
                 {/* Categorized Options */}
                 <div>
-                  <p className="text-xs font-black text-slate-300 mb-3 uppercase tracking-wider flex items-center gap-2 px-2">
+                  <p className="text-xs font-black text-slate-400 mb-3 uppercase tracking-wider flex items-center gap-2 px-2">
                     <Search size={14} />
                     Mais Opções por Categoria
                   </p>
                   <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3">
                     {Object.entries(categories).map(([type, cards]) => (
-                      <div key={type} className="bg-slate-50/50 rounded-xl p-3 border border-zinc-800">
-                        <div className="flex items-center gap-1.5 mb-2 border-b border-zinc-700/50 pb-1">
+                      <div key={type} className="bg-slate-50/50 rounded-xl p-3 border border-slate-100">
+                        <div className="flex items-center gap-1.5 mb-2 border-b border-slate-200/50 pb-1">
                           <img src={typeIcons[type]} alt={type} className="w-5 h-5" />
-                          <span className="text-xs font-black text-slate-300 uppercase tracking-wider">
+                          <span className="text-xs font-black text-slate-500 uppercase tracking-wider">
                             {typeNames[type]}
                           </span>
                         </div>
@@ -220,7 +220,7 @@ const CharacterCard = ({ character, index, ownedDeck }: { character: PlayableCha
                             <RecommendedCardItem key={item.id} item={item} isOwned={ownedDeck.includes(item.id)} />
                           ))}
                           {cards.length === 0 && (
-                            <div className="col-span-3 py-2 text-center text-[10px] text-slate-300 font-medium italic">
+                            <div className="col-span-3 py-2 text-center text-[10px] text-slate-400 font-medium italic">
                               Nenhuma recomendação meta
                             </div>
                           )}
@@ -254,20 +254,20 @@ const Characters = () => {
 
   return (
     <div className="space-y-6 pb-10">
-      <div className="bg-zinc-900 rounded-3xl p-6 shadow-sm border border-pink-900/30">
+      <div className="bg-white rounded-3xl p-6 shadow-sm border border-pink-100">
         <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-4">
           <div>
             <h1 className="text-3xl font-black text-uma-pink drop-shadow-sm">🏇 Personagens</h1>
-            <p className="text-slate-300 font-medium text-sm">
+            <p className="text-slate-500 font-medium text-sm">
               {PLAYABLE_CHARACTERS.length} personagens jogáveis e seus melhores decks de suporte por cenário
             </p>
           </div>
           <div className="relative w-full md:w-72">
-            <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-pink-400" size={20} />
+            <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-pink-300" size={20} />
             <input
               type="text"
               placeholder="Buscar personagem..."
-              className="w-full bg-pink-950/40 border-2 border-pink-900/50 text-slate-200 rounded-full pl-10 pr-4 py-2 focus:outline-none focus:border-uma-pink focus:ring-2 focus:ring-pink-200 transition-all font-medium"
+              className="w-full bg-pink-50 border-2 border-pink-200 text-slate-700 rounded-full pl-10 pr-4 py-2 focus:outline-none focus:border-uma-pink focus:ring-2 focus:ring-pink-200 transition-all font-medium"
               value={searchTerm}
               onChange={(e) => setSearchTerm(e.target.value)}
             />
@@ -282,7 +282,7 @@ const Characters = () => {
                 'px-4 py-1.5 rounded-full text-xs font-bold border transition-all',
                 distanceFilter === d
                   ? 'bg-uma-pink text-white border-uma-pink shadow-md'
-                  : 'bg-zinc-900 text-slate-300 border-zinc-700 hover:border-uma-pink hover:text-uma-pink'
+                  : 'bg-white text-slate-500 border-slate-200 hover:border-uma-pink hover:text-uma-pink'
               )}
             >
               {d}
@@ -298,7 +298,7 @@ const Characters = () => {
       </div>
 
       {filtered.length === 0 && (
-        <div className="py-12 text-center text-slate-300 bg-zinc-900 rounded-3xl border-2 border-dashed border-pink-900/50">
+        <div className="py-12 text-center text-slate-400 bg-white rounded-3xl border-2 border-dashed border-pink-200">
           <p className="text-xl font-bold">Nenhum personagem encontrado.</p>
         </div>
       )}

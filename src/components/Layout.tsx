@@ -14,7 +14,7 @@ const Layout = () => {
   return (
     <div className="flex flex-col min-h-screen">
       {/* Top Navbar */}
-      <header className="bg-zinc-900 border-b-4 border-uma-pink sticky top-0 z-50 shadow-sm">
+      <header className="bg-white border-b-4 border-uma-pink sticky top-0 z-50 shadow-sm">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center justify-between h-20">
             <div className="flex items-center">
@@ -22,11 +22,11 @@ const Layout = () => {
                 className="flex items-center group cursor-pointer" 
                 onClick={() => window.location.href = '/'}
               >
-                <div className="w-12 h-12 bg-uma-pink rounded-xl flex items-center justify-center text-white font-black text-2xl rotate-3 group-hover:rotate-6 transition-transform shadow-md border-2 border-pink-900/50">
+                <div className="w-12 h-12 bg-uma-pink rounded-xl flex items-center justify-center text-white font-black text-2xl rotate-3 group-hover:rotate-6 transition-transform shadow-md border-2 border-pink-200">
                   U
                 </div>
                 <div className="ml-3 flex flex-col">
-                  <span className="text-2xl font-black text-gray-100 leading-none">
+                  <span className="text-2xl font-black text-gray-800 leading-none">
                     Umamusume
                   </span>
                   <span className="text-xs font-bold text-uma-pink tracking-widest uppercase mt-0.5">
@@ -49,7 +49,7 @@ const Layout = () => {
                             'group relative flex items-center space-x-2 px-5 py-2.5 rounded-full font-bold transition-all duration-200',
                             isActive 
                               ? 'text-white bg-uma-pink shadow-md' 
-                              : 'text-slate-300 hover:text-uma-pink hover:bg-pink-950/40'
+                              : 'text-slate-500 hover:text-uma-pink hover:bg-pink-50'
                           )
                         )
                       }
@@ -71,7 +71,7 @@ const Layout = () => {
       </main>
 
       {/* Mobile Navigation Bar */}
-      <nav className="md:hidden fixed bottom-0 left-0 right-0 bg-zinc-900 border-t-2 border-pink-900/30 pb-safe z-50 shadow-[0_-5px_15px_rgba(0,0,0,0.05)]">
+      <nav className="md:hidden fixed bottom-0 left-0 right-0 bg-white border-t-2 border-pink-100 pb-safe z-50 shadow-[0_-5px_15px_rgba(0,0,0,0.05)]">
         <ul className="flex justify-around items-center h-16">
           {navItems.map((item) => (
             <li key={item.to} className="w-full">
@@ -81,14 +81,14 @@ const Layout = () => {
                   twMerge(
                     clsx(
                       'flex flex-col items-center justify-center w-full h-full p-2 text-[10px] font-bold transition-all',
-                      isActive ? 'text-uma-pink' : 'text-slate-300 hover:text-uma-pink'
+                      isActive ? 'text-uma-pink' : 'text-slate-400 hover:text-uma-pink'
                     )
                   )
                 }
               >
                 {({ isActive }) => (
                   <>
-                    <div className={clsx("p-1.5 rounded-full", isActive && "bg-pink-900/40 mb-0.5")}>
+                    <div className={clsx("p-1.5 rounded-full", isActive && "bg-pink-100 mb-0.5")}>
                       {item.icon}
                     </div>
                     <span>{item.label}</span>
