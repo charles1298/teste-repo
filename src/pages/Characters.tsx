@@ -1,6 +1,7 @@
 import { useState } from 'react';
-import { PLAYABLE_CHARACTERS, type PlayableCharacter, getCardById } from '../data/characters';
-import { Search, ChevronDown, ChevronUp, Trophy, MapPin, Zap, Sparkles } from 'lucide-react';
+import { PLAYABLE_CHARACTERS, getCardById } from '../data/characters';
+import type { PlayableCharacter, RecommendedCard } from '../data/characters';
+import { Search, ChevronDown, ChevronUp, Trophy, MapPin, Zap } from 'lucide-react';
 import clsx from 'clsx';
 import { motion, AnimatePresence } from 'framer-motion';
 
@@ -28,17 +29,34 @@ const styleEmoji: Record<string, string> = {
   'Chaser': '🎯',
 };
 
-const RecommendedCardItem = ({ item, isAlternative = false, isOwned = false }: { item: { id: string, reason: string }, isAlternative?: boolean, isOwned?: boolean }) => {
+const typeNames: Record<string, string> = {
+  'Speed': 'Velocidade',
+  'Stamina': 'Estamina',
+  'Power': 'Poder',
+  'Guts': 'Determinação',
+  'Intelligence': 'Inteligência',
+  'Friend': 'Amigo/Grupo',
+};
+
+const typeIcons: Record<string, string> = {
+  'Speed': '/assets/icons/icon-type-0.png',
+  'Stamina': '/assets/icons/icon-type-1.png',
+  'Power': '/assets/icons/icon-type-2.png',
+  'Guts': '/assets/icons/icon-type-3.png',
+  'Intelligence': '/assets/icons/icon-type-4.png',
+  'Friend': '/assets/icons/icon-type-5.png',
+};
+
+const RecommendedCardItem = ({ item, isOwned = false }: { item: RecommendedCard, isOwned?: boolean }) => {
   const card = getCardById(item.id);
   if (!card) return null;
 
   return (
     <div className={clsx(
-      "flex flex-col items-center group relative p-1.5 rounded-xl transition-all",
-      isAlternative ? "bg-slate-50/50 hover:bg-slate-100" : "bg-white hover:shadow-md",
-      isOwned && "ring-2 ring-uma-pink ring-offset-2"
+      "flex flex-col items-center group relative p-1 rounded-lg transition-all bg-white hover:shadow-md border border-slate-100",
+      isOwned && "ring-2 ring-uma-pink ring-offset-1"
     )}>
-      <div className="w-full aspect-[5/7] rounded-lg overflow-hidden bg-white border border-pink-200 shadow-sm relative group-hover:scale-[1.02] transition-transform">
+      <div className="w-full aspect-[5/7] rounded-md overflow-hidden bg-white border border-pink-100 relative group-hover:scale-[1.02] transition-transform">
         <img
           src={card.imageUrl}
           alt={card.name}
@@ -49,28 +67,15 @@ const RecommendedCardItem = ({ item, isAlternative = false, isOwned = false }: {
             target.src = 'https://upload.wikimedia.org/wikipedia/en/thumb/8/87/Uma_Musume_Pretty_Derby_logo.png/400px-Uma_Musume_Pretty_Derby_logo.png';
           }}
         />
-        <div className="absolute top-1 left-1 flex flex-col gap-1">
-          {card.typeIconUrl && (
-            <img src={card.typeIconUrl} alt={card.type} className="w-4 h-4 rounded-full bg-white/70 p-0.5" />
-          )}
-          {card.hasUniqueSkill && (
-            <div className="bg-amber-400 text-white p-0.5 rounded-full shadow-sm w-fit border border-white">
-              <Sparkles size={10} fill="currentColor" />
-            </div>
-          )}
-        </div>
         {isOwned && (
-          <div className="absolute bottom-0 inset-x-0 bg-uma-pink/90 text-white text-[7px] font-black py-0.5 text-center uppercase tracking-tighter">
+          <div className="absolute bottom-0 inset-x-0 bg-uma-pink/90 text-white text-[6px] font-black py-0.5 text-center uppercase tracking-tighter">
             Você tem!
           </div>
         )}
       </div>
       <div className="mt-1 w-full flex flex-col items-center">
-        <span className="text-[9px] font-bold text-slate-600 truncate w-full text-center">{card.name}</span>
-        <span className={clsx(
-          "text-[8px] px-1 rounded-sm font-medium mt-0.5 whitespace-nowrap overflow-hidden text-ellipsis w-full text-center",
-          isAlternative ? "text-slate-400" : "text-uma-pink bg-pink-50"
-        )}>
+        <span className="text-[8px] font-bold text-slate-700 truncate w-full text-center">{card.name}</span>
+        <span className="text-[7px] font-medium text-uma-pink bg-pink-50 px-1 rounded-sm truncate w-full text-center mt-0.5">
           {item.reason}
         </span>
       </div>
@@ -83,8 +88,17 @@ const CharacterCard = ({ character, index, ownedDeck }: { character: PlayableCha
   const [activeScenario, setActiveScenario] = useState(0);
 
   const currentDeck = character.scenarioDecks[activeScenario];
-  const mainCards = currentDeck.cards.filter(c => !c.isAlternative);
-  const altCards = currentDeck.cards.filter(c => c.isAlternative);
+  
+  // Group cards by type
+  const categories: Record<string, RecommendedCard[]> = {
+    'Speed': [], 'Stamina': [], 'Power': [], 'Guts': [], 'Intelligence': [], 'Friend': []
+  };
+  
+  currentDeck.cards.forEach(card => {
+    if (categories[card.type]) {
+      categories[card.type].push(card);
+    }
+  });
 
   return (
     <motion.div
@@ -158,34 +172,63 @@ const CharacterCard = ({ character, index, ownedDeck }: { character: PlayableCha
                 ))}
               </div>
 
-              <div className="space-y-4">
-                {/* Main Deck */}
-                <div className="bg-gradient-to-br from-pink-50/50 to-purple-50/50 rounded-2xl p-4 border border-pink-100/50">
-                  <p className="text-[10px] font-black text-slate-400 mb-3 uppercase tracking-wider flex items-center gap-2">
-                    <Zap size={14} className="text-amber-400 fill-amber-400" /> 
-                    Composição Ideal - {currentDeck.scenario}
-                  </p>
+              <div className="space-y-6">
+                {/* Recommended Deck - 6 Cards */}
+                <div className="bg-gradient-to-br from-pink-50/50 to-purple-50/50 rounded-2xl p-4 border border-pink-100/50 shadow-inner">
+                  <div className="flex items-center justify-between mb-4">
+                    <p className="text-[10px] font-black text-slate-500 uppercase tracking-widest flex items-center gap-2">
+                      <Zap size={14} className="text-amber-400 fill-amber-400" /> 
+                      Deck Recomendado - {currentDeck.scenario}
+                    </p>
+                    <span className="text-[8px] font-bold text-uma-pink bg-white px-2 py-0.5 rounded-full border border-pink-100 shadow-sm">
+                      Padrão Meta (6 Cartas)
+                    </span>
+                  </div>
                   <div className="grid grid-cols-3 sm:grid-cols-6 gap-3">
-                    {mainCards.map(item => (
-                      <RecommendedCardItem key={item.id} item={item} isOwned={ownedDeck.includes(item.id)} />
-                    ))}
+                    {currentDeck.recommendedIds.map(id => {
+                      const card = getCardById(id);
+                      if (!card) return null;
+                      return (
+                        <div key={id} className="relative group">
+                          <RecommendedCardItem 
+                            item={{ id, reason: card.type, type: card.type as any }} 
+                            isOwned={ownedDeck.includes(id)} 
+                          />
+                        </div>
+                      );
+                    })}
                   </div>
                 </div>
 
-                {/* Alternatives */}
-                {altCards.length > 0 && (
-                  <div className="bg-slate-50/50 rounded-2xl p-4 border border-slate-100">
-                    <p className="text-[10px] font-black text-slate-400 mb-3 uppercase tracking-wider flex items-center gap-2">
-                      <Sparkles size={14} className="text-blue-400" />
-                      Alternativas Viáveis
-                    </p>
-                    <div className="grid grid-cols-3 sm:grid-cols-6 gap-3 opacity-80 hover:opacity-100 transition-opacity">
-                      {altCards.map(item => (
-                        <RecommendedCardItem key={item.id} item={item} isAlternative isOwned={ownedDeck.includes(item.id)} />
-                      ))}
-                    </div>
+                {/* Categorized Options */}
+                <div>
+                  <p className="text-[10px] font-black text-slate-400 mb-3 uppercase tracking-wider flex items-center gap-2 px-2">
+                    <Search size={12} />
+                    Mais Opções por Categoria
+                  </p>
+                  <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3">
+                    {Object.entries(categories).map(([type, cards]) => (
+                      <div key={type} className="bg-slate-50/50 rounded-xl p-3 border border-slate-100">
+                        <div className="flex items-center gap-1.5 mb-2 border-b border-slate-200/50 pb-1">
+                          <img src={typeIcons[type]} alt={type} className="w-4 h-4" />
+                          <span className="text-[10px] font-black text-slate-500 uppercase tracking-wider">
+                            {typeNames[type]}
+                          </span>
+                        </div>
+                        <div className="grid grid-cols-3 gap-2">
+                          {cards.map(item => (
+                            <RecommendedCardItem key={item.id} item={item} isOwned={ownedDeck.includes(item.id)} />
+                          ))}
+                          {cards.length === 0 && (
+                            <div className="col-span-3 py-2 text-center text-[8px] text-slate-400 font-medium italic">
+                              Nenhuma recomendação meta
+                            </div>
+                          )}
+                        </div>
+                      </div>
+                    ))}
                   </div>
-                )}
+                </div>
               </div>
             </div>
           </motion.div>
