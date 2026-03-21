@@ -4,9 +4,15 @@ import { NavLink } from 'react-router-dom';
 const Dashboard = () => {
   return (
     <div className="space-y-8 animate-in fade-in duration-500 pb-10">
-      <div className="relative overflow-hidden rounded-3xl bg-gradient-to-br from-uma-pink to-pink-400 p-8 md:p-12 shadow-xl border-4 border-pink-200">
-        <div className="absolute top-0 right-0 w-64 h-64 bg-white/20 rounded-full -translate-y-1/4 translate-x-1/4 blur-3xl"></div>
-        <div className="absolute bottom-0 left-0 w-48 h-48 bg-yellow-300/20 rounded-full translate-y-1/4 -translate-x-1/4 blur-2xl"></div>
+      <div className="relative mt-8">
+        <img 
+          src="/assets/oguri-peeking.png" 
+          alt="Oguri Cap" 
+          className="absolute -top-16 right-4 md:right-12 w-32 md:w-40 h-auto object-contain drop-shadow-lg z-20 hover:-translate-y-2 transition-transform duration-300"
+        />
+        <div className="relative overflow-hidden rounded-3xl bg-gradient-to-br from-uma-pink to-pink-400 p-8 md:p-12 shadow-xl border-4 border-pink-200">
+          <div className="absolute top-0 right-0 w-64 h-64 bg-white/20 rounded-full -translate-y-1/4 translate-x-1/4 blur-3xl"></div>
+          <div className="absolute bottom-0 left-0 w-48 h-48 bg-yellow-300/20 rounded-full translate-y-1/4 -translate-x-1/4 blur-2xl"></div>
         
         <div className="relative z-10 flex flex-col md:flex-row items-center gap-8 text-white">
           <div className="flex-1 text-center md:text-left">
@@ -23,6 +29,7 @@ const Dashboard = () => {
           <div className="hidden md:flex w-64 h-64 bg-white/10 rounded-full border-4 border-white/20 items-center justify-center p-8 backdrop-blur-sm shadow-inner rotate-3">
              <Star className="w-full h-full text-yellow-300 drop-shadow-lg" fill="currentColor" />
           </div>
+        </div>
         </div>
       </div>
 
