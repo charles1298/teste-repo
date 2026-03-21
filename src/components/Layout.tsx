@@ -22,8 +22,8 @@ const Layout = () => {
                 className="flex items-center group cursor-pointer" 
                 onClick={() => window.location.href = '/'}
               >
-                <div className="w-12 h-12 bg-uma-pink rounded-xl flex items-center justify-center text-white font-black text-2xl rotate-3 group-hover:rotate-6 transition-transform shadow-md border-2 border-pink-200">
-                  U
+                <div className="w-12 h-12 rounded-full overflow-hidden flex items-center justify-center rotate-3 group-hover:rotate-6 transition-transform shadow-md border-2 border-pink-200 bg-white">
+                  <img src="https://img.game8.co/4215120/b88f532cf2ad5d92e2cba38d4e3e1967.png/show" alt="Logo" className="w-full h-full object-cover" />
                 </div>
                 <div className="ml-3 flex flex-col">
                   <span className="text-2xl font-black text-gray-800 leading-none">

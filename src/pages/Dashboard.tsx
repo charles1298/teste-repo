@@ -6,9 +6,9 @@ const Dashboard = () => {
     <div className="space-y-8 animate-in fade-in duration-500 pb-10">
       <div className="relative mt-8">
         <img 
-          src="/assets/oguri-peeking.png" 
+          src="https://img.game8.co/4215120/b88f532cf2ad5d92e2cba38d4e3e1967.png/show" 
           alt="Oguri Cap" 
-          className="absolute -top-16 right-4 md:right-12 w-32 md:w-40 h-auto object-contain drop-shadow-lg z-20 hover:-translate-y-2 transition-transform duration-300"
+          className="absolute -top-16 right-4 md:right-12 w-32 md:w-40 h-auto object-contain drop-shadow-[0_10px_10px_rgba(236,72,153,0.3)] z-20 hover:-translate-y-2 transition-transform duration-300 rounded-full bg-white p-1 border-2 border-pink-200"
         />
         <div className="relative overflow-hidden rounded-3xl bg-gradient-to-br from-uma-pink to-pink-400 p-8 md:p-12 shadow-xl border-4 border-pink-200">
           <div className="absolute top-0 right-0 w-64 h-64 bg-white/20 rounded-full -translate-y-1/4 translate-x-1/4 blur-3xl"></div>
