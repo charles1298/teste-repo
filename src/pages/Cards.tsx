@@ -87,11 +87,19 @@ const CardItem = ({ card, isOwned, onToggleOwn }: { card: SupportCard, isOwned: 
 
 const Cards = () => {
   const [searchTerm, setSearchTerm] = useState('');
+  const [category, setCategory] = useState('Todas');
   const { deck, toggleCard } = useDeck();
 
-  const filteredCards = SUPPORT_CARDS.filter(card => 
-    card.name.toLowerCase().includes(searchTerm.toLowerCase())
-  );
+  const categories = ['Todas', 'Econômicas', 'SSR', 'SR'];
+
+  const filteredCards = SUPPORT_CARDS.filter(card => {
+    const matchSearch = card.name.toLowerCase().includes(searchTerm.toLowerCase());
+    let matchCategory = true;
+    if (category === 'SSR') matchCategory = card.rarity === 'SSR';
+    else if (category === 'SR') matchCategory = card.rarity === 'SR';
+    else if (category === 'Econômicas') matchCategory = !!card.isEconomic;
+    return matchSearch && matchCategory;
+  });
 
   return (
     <div className="space-y-6 pb-10">
@@ -111,6 +119,23 @@ const Cards = () => {
             onChange={(e) => setSearchTerm(e.target.value)}
           />
         </div>
+      </div>
+
+      <div className="flex flex-wrap gap-2">
+        {categories.map(cat => (
+          <button
+            key={cat}
+            onClick={() => setCategory(cat)}
+            className={clsx(
+              "px-4 py-1.5 rounded-full text-xs font-bold transition-all border",
+              category === cat
+                ? "bg-uma-pink text-white border-uma-pink shadow-md"
+                : "bg-white text-slate-500 border-slate-200 hover:text-uma-pink hover:border-uma-pink"
+            )}
+          >
+            {cat}
+          </button>
+        ))}
       </div>
 
       <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4 lg:gap-6">

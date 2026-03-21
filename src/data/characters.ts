@@ -13,13 +13,20 @@ export interface ScenarioDeck {
   cards: RecommendedCard[];
 }
 
+export interface CharacterVersion {
+  id: string;
+  name: string;
+  iconUrl: string;
+  imageUrl: string;
+}
+
 export interface PlayableCharacter {
   id: string;
   name: string;
   nameJp: string;
   distance: string;
   style: string;
-  imageUrl: string;
+  versions: CharacterVersion[];
   scenarioDecks: ScenarioDeck[];
 }
 
@@ -287,8 +294,51 @@ const deckMap: Record<string, ScenarioDeck[]> = {
   'Média': MED_DECKS, 'Longa': LONG_DECKS,
 };
 
-export const PLAYABLE_CHARACTERS: PlayableCharacter[] = RAW.map(([id,name,nameJp,distance,style]) => ({
-  id: `chara-${id}`, name, nameJp, distance, style,
-  imageUrl: `/assets/characters/${id}.png?v=1`,
-  scenarioDecks: deckMap[distance] || MED_DECKS,
-}));
+export const PLAYABLE_CHARACTERS: PlayableCharacter[] = RAW.map(([id,name,nameJp,distance,style], index) => {
+  // Mock some variations. E.g. every 3rd gets a Christmas version, every 5th a Summer version.
+  const hasChristmas = index % 3 === 0;
+  const hasSummer = index % 5 === 0;
+
+  const versions: CharacterVersion[] = [
+    {
+      id: 'base',
+      name: 'Padrão',
+      iconUrl: `/assets/icons/char-${id}.png`,
+      imageUrl: `/assets/characters/${id}.png?v=1`
+    }
+  ];
+
+  if (hasChristmas) {
+    versions.push({
+      id: 'event-christmas',
+      name: 'Natal',
+      iconUrl: `/assets/icons/char-${id}-xmas.png`,
+      imageUrl: `/assets/characters/${id}.png?variant=xmas` // We reuse base image as mock
+    });
+  }
+
+  if (hasSummer) {
+    versions.push({
+      id: 'event-summer',
+      name: 'Verão',
+      iconUrl: `/assets/icons/char-${id}-summer.png`,
+      imageUrl: `/assets/characters/${id}.png?variant=summer`
+    });
+  }
+
+  // If no mocks added, add a generic alternate version.
+  if (versions.length === 1) {
+    versions.push({
+      id: 'event-gala',
+      name: 'Gala',
+      iconUrl: `/assets/icons/char-${id}-gala.png`,
+      imageUrl: `/assets/characters/${id}.png?variant=gala`
+    });
+  }
+
+  return {
+    id: `chara-${id}`, name, nameJp, distance, style,
+    versions,
+    scenarioDecks: deckMap[distance] || MED_DECKS,
+  };
+});

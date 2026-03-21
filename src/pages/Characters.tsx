@@ -86,7 +86,9 @@ const RecommendedCardItem = ({ item, isOwned = false }: { item: RecommendedCard,
 const CharacterCard = ({ character, index, ownedDeck }: { character: PlayableCharacter; index: number; ownedDeck: string[] }) => {
   const [expanded, setExpanded] = useState(false);
   const [activeScenario, setActiveScenario] = useState(0);
+  const [activeVersionId, setActiveVersionId] = useState(character.versions[0].id);
 
+  const activeVersion = character.versions.find(v => v.id === activeVersionId) || character.versions[0];
   const currentDeck = character.scenarioDecks[activeScenario];
   
   // Group cards by type
@@ -112,15 +114,15 @@ const CharacterCard = ({ character, index, ownedDeck }: { character: PlayableCha
         className="flex items-center gap-4 p-4 cursor-pointer hover:bg-pink-50/50 transition-colors"
         onClick={() => setExpanded(!expanded)}
       >
-        <div className="w-16 h-16 rounded-xl overflow-hidden bg-pink-50 border-2 border-pink-200 flex-shrink-0 shadow-sm">
+        <div className="w-16 h-16 rounded-full overflow-hidden bg-pink-100 border-2 border-pink-200 flex-shrink-0 shadow-sm relative">
           <img
-            src={character.imageUrl}
-            alt={character.name}
-            className="w-full h-full object-contain"
+            src={activeVersion.iconUrl}
+            alt={activeVersion.name}
+            className="w-full h-full object-cover"
             onError={(e) => {
               const target = e.target as HTMLImageElement;
               target.onerror = null;
-              target.style.display = 'none';
+              target.src = `https://ui-avatars.com/api/?name=${encodeURIComponent(character.name)}&background=fce7f3&color=db2777&bold=true`;
             }}
           />
         </div>
@@ -154,6 +156,48 @@ const CharacterCard = ({ character, index, ownedDeck }: { character: PlayableCha
             className="overflow-hidden"
           >
             <div className="px-4 pb-4 space-y-4">
+              
+              {/* Variações de Evento e Imagem Oficial */}
+              <div className="bg-gradient-to-br from-pink-50/30 to-purple-50/30 rounded-2xl border border-pink-100/50 p-4 flex flex-col md:flex-row gap-4 items-center">
+                <div className="flex-shrink-0 w-32 h-44 rounded-xl overflow-hidden shadow-sm bg-white border border-pink-200">
+                  <img
+                    src={activeVersion.imageUrl}
+                    alt={activeVersion.name}
+                    className="w-full h-full object-cover object-top"
+                    onError={(e) => {
+                      const target = e.target as HTMLImageElement;
+                      target.onerror = null;
+                      target.src = 'https://upload.wikimedia.org/wikipedia/en/thumb/8/87/Uma_Musume_Pretty_Derby_logo.png/400px-Uma_Musume_Pretty_Derby_logo.png';
+                    }}
+                  />
+                </div>
+                <div className="flex-grow flex flex-col items-center md:items-start w-full">
+                  <h4 className="text-sm font-black text-uma-pink uppercase tracking-wider mb-2">
+                    Versões Disponíveis
+                  </h4>
+                  <div className="flex flex-wrap gap-2 justify-center md:justify-start">
+                    {character.versions.map((ver) => (
+                      <button
+                        key={ver.id}
+                        onClick={() => setActiveVersionId(ver.id)}
+                        className={clsx(
+                          "px-3 py-1.5 rounded-full text-xs font-bold transition-all border",
+                          activeVersionId === ver.id
+                            ? "bg-uma-pink text-white border-uma-pink shadow-md scale-105"
+                            : "bg-white text-slate-500 border-slate-200 hover:text-uma-pink hover:border-uma-pink"
+                        )}
+                      >
+                        {ver.name}
+                      </button>
+                    ))}
+                  </div>
+                  <p className="text-[10px] text-slate-400 font-medium mt-3 text-center md:text-left">
+                    Selecione uma versão para visualizar seu traje e ícone correspondente.
+                  </p>
+                </div>
+              </div>
+
+              {/* Scenarios */}
               <div className="flex flex-wrap gap-2">
                 {character.scenarioDecks.map((deck, i) => (
                   <button

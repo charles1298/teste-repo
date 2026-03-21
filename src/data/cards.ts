@@ -9,6 +9,7 @@ export interface SupportCard {
   typeIconUrl: string;
   imageUrl: string;
   hasUniqueSkill?: boolean;
+  isEconomic?: boolean;
 }
 
 export const SUPPORT_CARDS: SupportCard[] = [
@@ -415,7 +416,8 @@ export const SUPPORT_CARDS: SupportCard[] = [
     "type": "Unknown",
     "typeIconUrl": "/assets/icons/icon-type-5.png",
     "imageUrl": "/assets/cards/uma-30036.png?v=3",
-    "hasUniqueSkill": true
+    "hasUniqueSkill": true,
+    "isEconomic": true
   },
   {
     "id": "uma-30034",
@@ -478,7 +480,8 @@ export const SUPPORT_CARDS: SupportCard[] = [
     "type": "Speed",
     "typeIconUrl": "/assets/icons/icon-type-0.png",
     "imageUrl": "/assets/cards/uma-30028.png?v=3",
-    "hasUniqueSkill": true
+    "hasUniqueSkill": true,
+    "isEconomic": true
   },
   {
     "id": "uma-30027",
@@ -541,7 +544,8 @@ export const SUPPORT_CARDS: SupportCard[] = [
     "type": "Unknown",
     "typeIconUrl": "/assets/icons/icon-type-5.png",
     "imageUrl": "/assets/cards/uma-30021.png?v=3",
-    "hasUniqueSkill": true
+    "hasUniqueSkill": true,
+    "isEconomic": true
   },
   {
     "id": "uma-30020",
@@ -559,7 +563,8 @@ export const SUPPORT_CARDS: SupportCard[] = [
     "type": "Guts",
     "typeIconUrl": "/assets/icons/icon-type-3.png",
     "imageUrl": "/assets/cards/uma-30019.png?v=3",
-    "hasUniqueSkill": true
+    "hasUniqueSkill": true,
+    "isEconomic": true
   },
   {
     "id": "uma-30018",
@@ -729,7 +734,8 @@ export const SUPPORT_CARDS: SupportCard[] = [
     "rarity": "SR",
     "type": "Power",
     "typeIconUrl": "/assets/icons/icon-type-2.png",
-    "imageUrl": "/assets/cards/uma-20043.png?v=3"
+    "imageUrl": "/assets/cards/uma-20043.png?v=3",
+    "isEconomic": true
   },
   {
     "id": "uma-20042",
@@ -745,7 +751,8 @@ export const SUPPORT_CARDS: SupportCard[] = [
     "rarity": "SR",
     "type": "Guts",
     "typeIconUrl": "/assets/icons/icon-type-3.png",
-    "imageUrl": "/assets/cards/uma-20041.png?v=3"
+    "imageUrl": "/assets/cards/uma-20041.png?v=3",
+    "isEconomic": true
   },
   {
     "id": "uma-20040",
@@ -753,7 +760,8 @@ export const SUPPORT_CARDS: SupportCard[] = [
     "rarity": "SR",
     "type": "Stamina",
     "typeIconUrl": "/assets/icons/icon-type-1.png",
-    "imageUrl": "/assets/cards/uma-20040.png?v=3"
+    "imageUrl": "/assets/cards/uma-20040.png?v=3",
+    "isEconomic": true
   },
   {
     "id": "uma-20039",
@@ -761,7 +769,8 @@ export const SUPPORT_CARDS: SupportCard[] = [
     "rarity": "SR",
     "type": "Speed",
     "typeIconUrl": "/assets/icons/icon-type-0.png",
-    "imageUrl": "/assets/cards/uma-20039.png?v=3"
+    "imageUrl": "/assets/cards/uma-20039.png?v=3",
+    "isEconomic": true
   },
   {
     "id": "uma-20038",
@@ -769,7 +778,8 @@ export const SUPPORT_CARDS: SupportCard[] = [
     "rarity": "SR",
     "type": "Guts",
     "typeIconUrl": "/assets/icons/icon-type-3.png",
-    "imageUrl": "/assets/cards/uma-20038.png?v=3"
+    "imageUrl": "/assets/cards/uma-20038.png?v=3",
+    "isEconomic": true
   },
   {
     "id": "uma-20037",
@@ -777,7 +787,8 @@ export const SUPPORT_CARDS: SupportCard[] = [
     "rarity": "SR",
     "type": "Power",
     "typeIconUrl": "/assets/icons/icon-type-2.png",
-    "imageUrl": "/assets/cards/uma-20037.png?v=3"
+    "imageUrl": "/assets/cards/uma-20037.png?v=3",
+    "isEconomic": true
   },
   {
     "id": "uma-20035",
@@ -785,7 +796,8 @@ export const SUPPORT_CARDS: SupportCard[] = [
     "rarity": "SR",
     "type": "Stamina",
     "typeIconUrl": "/assets/icons/icon-type-1.png",
-    "imageUrl": "/assets/cards/uma-20035.png?v=3"
+    "imageUrl": "/assets/cards/uma-20035.png?v=3",
+    "isEconomic": true
   },
   {
     "id": "uma-20034",
@@ -793,7 +805,8 @@ export const SUPPORT_CARDS: SupportCard[] = [
     "rarity": "SR",
     "type": "Intelligence",
     "typeIconUrl": "/assets/icons/icon-type-4.png",
-    "imageUrl": "/assets/cards/uma-20034.png?v=3"
+    "imageUrl": "/assets/cards/uma-20034.png?v=3",
+    "isEconomic": true
   },
   {
     "id": "uma-20032",
@@ -873,7 +886,8 @@ export const SUPPORT_CARDS: SupportCard[] = [
     "rarity": "SR",
     "type": "Speed",
     "typeIconUrl": "/assets/icons/icon-type-0.png",
-    "imageUrl": "/assets/cards/uma-20023.png?v=3"
+    "imageUrl": "/assets/cards/uma-20023.png?v=3",
+    "isEconomic": true
   },
   {
     "id": "uma-20022",
@@ -897,7 +911,8 @@ export const SUPPORT_CARDS: SupportCard[] = [
     "rarity": "SR",
     "type": "Speed",
     "typeIconUrl": "/assets/icons/icon-type-0.png",
-    "imageUrl": "/assets/cards/uma-20020.png?v=3"
+    "imageUrl": "/assets/cards/uma-20020.png?v=3",
+    "isEconomic": true
   },
   {
     "id": "uma-20019",
@@ -905,7 +920,8 @@ export const SUPPORT_CARDS: SupportCard[] = [
     "rarity": "SR",
     "type": "Guts",
     "typeIconUrl": "/assets/icons/icon-type-3.png",
-    "imageUrl": "/assets/cards/uma-20019.png?v=3"
+    "imageUrl": "/assets/cards/uma-20019.png?v=3",
+    "isEconomic": true
   },
   {
     "id": "uma-20018",
@@ -913,7 +929,8 @@ export const SUPPORT_CARDS: SupportCard[] = [
     "rarity": "SR",
     "type": "Intelligence",
     "typeIconUrl": "/assets/icons/icon-type-4.png",
-    "imageUrl": "/assets/cards/uma-20018.png?v=3"
+    "imageUrl": "/assets/cards/uma-20018.png?v=3",
+    "isEconomic": true
   },
   {
     "id": "uma-20017",
@@ -969,7 +986,8 @@ export const SUPPORT_CARDS: SupportCard[] = [
     "rarity": "SR",
     "type": "Guts",
     "typeIconUrl": "/assets/icons/icon-type-3.png",
-    "imageUrl": "/assets/cards/uma-20011.png?v=3"
+    "imageUrl": "/assets/cards/uma-20011.png?v=3",
+    "isEconomic": true
   },
   {
     "id": "uma-20010",
@@ -1009,7 +1027,8 @@ export const SUPPORT_CARDS: SupportCard[] = [
     "rarity": "SR",
     "type": "Power",
     "typeIconUrl": "/assets/icons/icon-type-2.png",
-    "imageUrl": "/assets/cards/uma-20006.png?v=3"
+    "imageUrl": "/assets/cards/uma-20006.png?v=3",
+    "isEconomic": true
   },
   {
     "id": "uma-20005",
@@ -1025,7 +1044,8 @@ export const SUPPORT_CARDS: SupportCard[] = [
     "rarity": "SR",
     "type": "Guts",
     "typeIconUrl": "/assets/icons/icon-type-3.png",
-    "imageUrl": "/assets/cards/uma-20004.png?v=3"
+    "imageUrl": "/assets/cards/uma-20004.png?v=3",
+    "isEconomic": true
   },
   {
     "id": "uma-20003",
@@ -1041,7 +1061,8 @@ export const SUPPORT_CARDS: SupportCard[] = [
     "rarity": "SR",
     "type": "Intelligence",
     "typeIconUrl": "/assets/icons/icon-type-4.png",
-    "imageUrl": "/assets/cards/uma-20002.png?v=3"
+    "imageUrl": "/assets/cards/uma-20002.png?v=3",
+    "isEconomic": true
   },
   {
     "id": "uma-20001",
