@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { PLAYABLE_CHARACTERS, getCardById } from '../data/characters';
+import { PLAYABLE_CHARACTERS, getCardById, getCharacterIconByName } from '../data/characters';
 import type { PlayableCharacter, RecommendedCard } from '../data/characters';
 import { Search, ChevronDown, ChevronUp, Trophy, MapPin, Zap } from 'lucide-react';
 import clsx from 'clsx';
@@ -8,11 +8,9 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { useDeck } from '../hooks/useDeck';
 
 const scenarioColors: Record<string, string> = {
-  'URA Finals': 'bg-blue-500',
-  'Aoharu Cup': 'bg-green-500',
-  "L'Arc": 'bg-purple-500',
-  'Grand Masters': 'bg-amber-500',
-  'Deck Econômico': 'bg-rose-400',
+  'URA Finale': 'bg-blue-500',
+  'Unity Cup': 'bg-green-500',
+  'Trackblazer': 'bg-purple-500',
 };
 
 const distanceColors: Record<string, string> = {
@@ -56,20 +54,20 @@ const RecommendedCardItem = ({ item, isOwned = false }: { item: RecommendedCard,
       "flex flex-col items-center group relative p-1 rounded-lg transition-all bg-white hover:shadow-md border border-slate-100",
       isOwned && "ring-2 ring-uma-pink ring-offset-1"
     )}>
-      <div className="w-full aspect-[5/7] rounded-md overflow-hidden bg-white border border-pink-100 relative group-hover:scale-[1.02] transition-transform">
+      <div className="w-full aspect-square rounded-full overflow-hidden bg-white border border-pink-100 p-0.5 relative group-hover:scale-[1.05] transition-transform shadow-sm">
         <img
-          src={card.imageUrl}
+          src={getCharacterIconByName(card.name)}
           alt={card.name}
-          className="w-full h-full object-contain"
+          className="w-full h-full object-cover rounded-full"
           onError={(e) => {
             const target = e.target as HTMLImageElement;
             target.onerror = null;
-            target.src = 'https://upload.wikimedia.org/wikipedia/en/thumb/8/87/Uma_Musume_Pretty_Derby_logo.png/400px-Uma_Musume_Pretty_Derby_logo.png';
+            target.src = `https://ui-avatars.com/api/?name=${encodeURIComponent(card.name)}&background=fce7f3&color=db2777&bold=true`;
           }}
         />
         {isOwned && (
-          <div className="absolute bottom-0 inset-x-0 bg-uma-pink/90 text-white text-[8px] font-black py-0.5 text-center uppercase tracking-tighter">
-            Você tem!
+          <div className="absolute -bottom-1 inset-x-auto left-1/2 -translate-x-1/2 rounded-full px-1.5 bg-uma-pink/90 text-white text-[8px] font-black py-0.5 text-center uppercase tracking-tighter whitespace-nowrap shadow-sm">
+            Tem!
           </div>
         )}
       </div>
@@ -217,31 +215,36 @@ const CharacterCard = ({ character, index, ownedDeck }: { character: PlayableCha
               </div>
 
               <div className="space-y-6">
-                {/* Recommended Deck - 6 Cards */}
-                <div className="bg-gradient-to-br from-pink-50/50 to-purple-50/50 rounded-2xl p-4 border border-pink-100/50 shadow-inner">
-                  <div className="flex items-center justify-between mb-4">
-                    <p className="text-xs font-black text-slate-500 uppercase flex items-center gap-2">
-                      <Zap size={16} className="text-amber-400 fill-amber-400" /> 
-                      Deck Recomendado - {currentDeck.scenario}
-                    </p>
-                    <span className="text-[10px] font-bold text-uma-pink bg-white px-2 py-0.5 rounded-full border border-pink-100 shadow-sm">
-                      Padrão Meta (6 Cartas)
-                    </span>
-                  </div>
-                  <div className="grid grid-cols-3 sm:grid-cols-6 gap-3">
-                    {currentDeck.recommendedIds.map(id => {
-                      const card = getCardById(id);
-                      if (!card) return null;
-                      return (
-                        <div key={id} className="relative group">
-                          <RecommendedCardItem 
-                            item={{ id, reason: card.type, type: card.type as any }} 
-                            isOwned={ownedDeck.includes(id)} 
-                          />
-                        </div>
-                      );
-                    })}
-                  </div>
+                {/* Decks - Multiple Variations */}
+                <div className="space-y-4">
+                  {currentDeck.decks.map((deckVar, dIdx) => (
+                    <div key={dIdx} className="bg-gradient-to-br from-pink-50/50 to-purple-50/50 rounded-2xl p-4 border border-pink-100/50 shadow-inner">
+                      <div className="flex items-center justify-between mb-4">
+                        <p className="text-xs font-black text-slate-500 uppercase flex items-center gap-2">
+                          <Zap size={16} className={dIdx === 0 ? "text-amber-400 fill-amber-400" : "text-purple-400 fill-purple-400"} /> 
+                          {deckVar.name}
+                        </p>
+                        <span className="text-[10px] font-bold text-uma-pink bg-white px-2 py-0.5 rounded-full border border-pink-100 shadow-sm hidden sm:block">
+                          {deckVar.recommendedIds.length} Cartas
+                        </span>
+                      </div>
+                      <div className="grid grid-cols-3 sm:grid-cols-6 gap-3">
+                        {deckVar.recommendedIds.map(id => {
+                          const card = getCardById(id);
+                          if (!card) return null;
+                          const poolCard = currentDeck.cards.find(c => c.id === id);
+                          return (
+                            <div key={id} className="relative group flex justify-center w-full">
+                              <RecommendedCardItem 
+                                item={{ id, reason: poolCard?.reason || card.type, type: poolCard?.type || (card.type as any) }} 
+                                isOwned={ownedDeck.includes(id)} 
+                              />
+                            </div>
+                          );
+                        })}
+                      </div>
+                    </div>
+                  ))}
                 </div>
 
                 {/* Categorized Options */}
