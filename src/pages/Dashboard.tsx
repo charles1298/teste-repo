@@ -4,8 +4,8 @@ import { NavLink } from 'react-router-dom';
 const Dashboard = () => {
   return (
     <div className="space-y-8 animate-in fade-in duration-500 pb-10">
-      <div className="relative overflow-hidden rounded-3xl bg-gradient-to-br from-uma-pink to-pink-400 p-8 md:p-12 shadow-xl border-4 border-pink-200">
-        <div className="absolute top-0 right-0 w-64 h-64 bg-white/20 rounded-full -translate-y-1/4 translate-x-1/4 blur-3xl"></div>
+      <div className="relative overflow-hidden rounded-3xl bg-gradient-to-br from-uma-pink to-pink-400 p-8 md:p-12 shadow-xl border-4 border-pink-900/50">
+        <div className="absolute top-0 right-0 w-64 h-64 bg-zinc-900/20 rounded-full -translate-y-1/4 translate-x-1/4 blur-3xl"></div>
         <div className="absolute bottom-0 left-0 w-48 h-48 bg-yellow-300/20 rounded-full translate-y-1/4 -translate-x-1/4 blur-2xl"></div>
         
         <div className="relative z-10 flex flex-col md:flex-row items-center gap-8 text-white">
@@ -16,23 +16,23 @@ const Dashboard = () => {
             <p className="text-pink-50 text-lg md:text-xl font-medium max-w-xl mb-8 leading-relaxed">
               Prepare suas garotas cavalo (Umamusume) para a glória no Twinkle Series. Monte o melhor deck de cartas de suporte e conquiste a vitória!
             </p>
-            <NavLink to="/cards" className="inline-block bg-white text-uma-pink font-bold text-lg px-8 py-3 rounded-full hover:bg-pink-50 hover:scale-105 active:scale-95 transition-all shadow-lg border-2 border-white">
+            <NavLink to="/cards" className="inline-block bg-zinc-900 text-uma-pink font-bold text-lg px-8 py-3 rounded-full hover:bg-pink-950/40 hover:scale-105 active:scale-95 transition-all shadow-lg border-2 border-white">
               Ver Cartas de Suporte
             </NavLink>
           </div>
-          <div className="hidden md:flex w-64 h-64 bg-white/10 rounded-full border-4 border-white/20 items-center justify-center p-8 backdrop-blur-sm shadow-inner rotate-3">
+          <div className="hidden md:flex w-64 h-64 bg-zinc-900/10 rounded-full border-4 border-white/20 items-center justify-center p-8 backdrop-blur-sm shadow-inner rotate-3">
              <Star className="w-full h-full text-yellow-300 drop-shadow-lg" fill="currentColor" />
           </div>
         </div>
       </div>
 
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-        <div className="bg-white rounded-3xl p-6 shadow-md border-2 border-pink-100 hover:border-uma-pink hover:shadow-xl transition-all duration-300 group">
-          <div className="w-12 h-12 bg-pink-100 text-uma-pink rounded-xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
+        <div className="bg-zinc-900 rounded-3xl p-6 shadow-md border-2 border-pink-900/30 hover:border-uma-pink hover:shadow-xl transition-all duration-300 group">
+          <div className="w-12 h-12 bg-pink-900/40 text-uma-pink rounded-xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
             <Heart size={24} fill="currentColor" />
           </div>
-          <h2 className="text-2xl font-bold text-gray-800 mb-2">Construa Laços</h2>
-          <p className="text-gray-500 mb-4 font-medium leading-relaxed">
+          <h2 className="text-2xl font-bold text-gray-100 mb-2">Construa Laços</h2>
+          <p className="text-gray-400 mb-4 font-medium leading-relaxed">
             As cartas de suporte são essenciais para treinar os atributos das suas Umamusume de forma eficaz.
           </p>
           <NavLink to="/cards" className="text-uma-pink font-bold flex items-center gap-2 group-hover:gap-3 transition-all">
@@ -40,12 +40,12 @@ const Dashboard = () => {
           </NavLink>
         </div>
 
-        <div className="bg-white rounded-3xl p-6 shadow-md border-2 border-blue-100 hover:border-blue-400 hover:shadow-xl transition-all duration-300 group">
+        <div className="bg-zinc-900 rounded-3xl p-6 shadow-md border-2 border-blue-100 hover:border-blue-400 hover:shadow-xl transition-all duration-300 group">
           <div className="w-12 h-12 bg-blue-100 text-blue-500 rounded-xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
             <Star size={24} fill="currentColor" />
           </div>
-          <h2 className="text-2xl font-bold text-gray-800 mb-2">Monte seu Deck</h2>
-          <p className="text-gray-500 mb-4 font-medium leading-relaxed">
+          <h2 className="text-2xl font-bold text-gray-100 mb-2">Monte seu Deck</h2>
+          <p className="text-gray-400 mb-4 font-medium leading-relaxed">
             Selecione até 6 cartas para preencher seu deck perfeito de treinamento e participar de eventos.
           </p>
           <NavLink to="/deck" className="text-blue-500 font-bold flex items-center gap-2 group-hover:gap-3 transition-all">

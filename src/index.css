@@ -22,8 +22,8 @@
     font-family: var(--font-sans);
     overflow-x: hidden;
     min-height: 100vh;
-    /* Soft aesthetically pleasing background */
-    background: linear-gradient(135deg, #fff5f7 0%, #fdf2f8 50%, #f8fafc 100%);
+    /* Deep dark rich background */
+    background: linear-gradient(135deg, #09090b 0%, #171113 50%, #0c0a0f 100%);
     background-attachment: fixed;
   }
 }
