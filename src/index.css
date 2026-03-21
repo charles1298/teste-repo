@@ -1,13 +1,13 @@
 @import "tailwindcss";
 
 @theme {
-  --color-uma-pink: #ec4899;
-  --color-uma-pink-hover: #db2777;
+  --color-uma-pink: #f472b6;
+  --color-uma-pink-hover: #ec4899;
   --color-uma-pink-light: #fdf2f8;
   --color-uma-green: #10b981;
   --color-uma-white: #ffffff;
-  --color-uma-bg: #fff1f2;
-  --color-uma-text: #334155;
+  --color-uma-bg: #fafafa;
+  --color-uma-text: #475569;
   
   --color-rarity-ssr: #f59e0b;
   --color-rarity-sr: #a855f7;
@@ -18,13 +18,13 @@
 
 @layer base {
   body {
-    background-color: var(--color-uma-bg);
     color: var(--color-uma-text);
     font-family: var(--font-sans);
     overflow-x: hidden;
-    /* Cute polka dot background */
-    background-image: radial-gradient(#fbcfe8 2px, transparent 2px);
-    background-size: 30px 30px;
+    min-height: 100vh;
+    /* Soft aesthetically pleasing background */
+    background: linear-gradient(135deg, #fff5f7 0%, #fdf2f8 50%, #f8fafc 100%);
+    background-attachment: fixed;
   }
 }
 
@@ -54,7 +54,7 @@
   background: var(--color-uma-pink-light);
 }
 ::-webkit-scrollbar-thumb {
-  background: #fbcfe8;
+  background: #f8a5c2;
   border-radius: 5px;
   border: 2px solid var(--color-uma-pink-light);
 }
