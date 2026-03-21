@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { PLAYABLE_CHARACTERS, getCardById, getCharacterIconByName } from '../data/characters';
+import { PLAYABLE_CHARACTERS, getCardById } from '../data/characters';
 import type { PlayableCharacter, RecommendedCard } from '../data/characters';
 import { Search, ChevronDown, ChevronUp, Trophy, MapPin, Zap } from 'lucide-react';
 import clsx from 'clsx';
@@ -54,20 +54,20 @@ const RecommendedCardItem = ({ item, isOwned = false }: { item: RecommendedCard,
       "flex flex-col items-center group relative p-1 rounded-lg transition-all bg-white hover:shadow-md border border-slate-100",
       isOwned && "ring-2 ring-uma-pink ring-offset-1"
     )}>
-      <div className="w-full aspect-square rounded-full overflow-hidden bg-white border border-pink-100 p-0.5 relative group-hover:scale-[1.05] transition-transform shadow-sm">
+      <div className="w-full aspect-[5/7] rounded-md overflow-hidden bg-white border border-pink-100 relative group-hover:scale-[1.02] transition-transform">
         <img
-          src={getCharacterIconByName(card.name)}
+          src={card.imageUrl}
           alt={card.name}
-          className="w-full h-full object-cover rounded-full"
+          className="w-full h-full object-contain"
           onError={(e) => {
             const target = e.target as HTMLImageElement;
             target.onerror = null;
-            target.src = `https://ui-avatars.com/api/?name=${encodeURIComponent(card.name)}&background=fce7f3&color=db2777&bold=true`;
+            target.src = 'https://upload.wikimedia.org/wikipedia/en/thumb/8/87/Uma_Musume_Pretty_Derby_logo.png/400px-Uma_Musume_Pretty_Derby_logo.png';
           }}
         />
         {isOwned && (
-          <div className="absolute -bottom-1 inset-x-auto left-1/2 -translate-x-1/2 rounded-full px-1.5 bg-uma-pink/90 text-white text-[8px] font-black py-0.5 text-center uppercase tracking-tighter whitespace-nowrap shadow-sm">
-            Tem!
+          <div className="absolute bottom-0 inset-x-0 bg-uma-pink/90 text-white text-[8px] font-black py-0.5 text-center uppercase tracking-tighter">
+            Você tem!
           </div>
         )}
       </div>
