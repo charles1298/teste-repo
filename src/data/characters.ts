@@ -187,30 +187,44 @@ const deckMap: Record<string, ScenarioDeck[]> = {
 };
 
 export const PLAYABLE_CHARACTERS: PlayableCharacter[] = RAW.map(([id,name,nameJp,distance,style]) => {
-  let charIcons = GAME8_ICONS[name];
-  if (!charIcons) {
-    const key = Object.keys(GAME8_ICONS).find(k => k.includes(name));
-    if (key) charIcons = GAME8_ICONS[key];
+  const matchingKeys = Object.keys(GAME8_ICONS).filter(k => k.startsWith(name));
+  
+  let allVersions: CharacterVersion[] = [];
+  
+  if (matchingKeys.length > 0) {
+    matchingKeys.forEach((key, idx) => {
+      const icons = GAME8_ICONS[key];
+      if (icons && icons.length > 0) {
+        let versionName = 'Padrão';
+        const match = key.match(/\((.*?)\)/);
+        if (match) {
+          versionName = match[1];
+        }
+        
+        allVersions.push({
+          id: `v${idx}`,
+          name: versionName,
+          iconUrl: icons[0].iconUrl,
+          imageUrl: `/assets/characters/${id}.png?v=${idx}`
+        });
+      }
+    });
   }
-  charIcons = charIcons || [];
 
-  const versions: CharacterVersion[] = charIcons.length > 0 ? charIcons.map((icon, i) => ({
-    id: icon.id || `v${i}`,
-    name: icon.name,
-    iconUrl: icon.iconUrl,
-    imageUrl: `/assets/characters/${id}.png?v=${i}`
-  })) : [
-    {
-      id: 'base',
-      name: 'Padrão',
-      iconUrl: `https://ui-avatars.com/api/?name=${encodeURIComponent(name)}&background=fce7f3&color=db2777&bold=true`,
-      imageUrl: `/assets/characters/${id}.png?v=1`
-    }
-  ];
+  if (allVersions.length === 0) {
+    allVersions = [
+      {
+        id: 'base',
+        name: 'Padrão',
+        iconUrl: `https://ui-avatars.com/api/?name=${encodeURIComponent(name)}&background=fce7f3&color=db2777&bold=true`,
+        imageUrl: `/assets/characters/${id}.png?v=1`
+      }
+    ];
+  }
 
   return {
     id: `chara-${id}`, name, nameJp, distance, style,
-    versions,
+    versions: allVersions,
     scenarioDecks: deckMap[distance] || MED_DECKS,
   };
 });
