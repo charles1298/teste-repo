@@ -20,7 +20,13 @@ export interface ScenarioDeck {
 }
 
 export function getCharacterIconByName(name: string): string {
-  const iconInfo = GAME8_ICONS[name];
+  // Fuzzy match base name
+  let iconInfo = GAME8_ICONS[name];
+  if (!iconInfo) {
+    const key = Object.keys(GAME8_ICONS).find(k => k.includes(name));
+    if (key) iconInfo = GAME8_ICONS[key];
+  }
+
   if (iconInfo && iconInfo.length > 0) {
     return iconInfo[0].iconUrl;
   }
@@ -181,7 +187,12 @@ const deckMap: Record<string, ScenarioDeck[]> = {
 };
 
 export const PLAYABLE_CHARACTERS: PlayableCharacter[] = RAW.map(([id,name,nameJp,distance,style]) => {
-  const charIcons = GAME8_ICONS[name] || [];
+  let charIcons = GAME8_ICONS[name];
+  if (!charIcons) {
+    const key = Object.keys(GAME8_ICONS).find(k => k.includes(name));
+    if (key) charIcons = GAME8_ICONS[key];
+  }
+  charIcons = charIcons || [];
 
   const versions: CharacterVersion[] = charIcons.length > 0 ? charIcons.map((icon, i) => ({
     id: icon.id || `v${i}`,
