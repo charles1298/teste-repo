@@ -1,8 +1,14 @@
 import { SUPPORT_CARDS } from './cards';
 
+export interface RecommendedCard {
+  id: string;
+  reason: string;
+  isAlternative?: boolean;
+}
+
 export interface ScenarioDeck {
   scenario: string;
-  cards: string[];
+  cards: RecommendedCard[];
 }
 
 export interface PlayableCharacter {
@@ -21,32 +27,99 @@ export function getCardById(id: string) {
 
 // Meta deck templates by distance
 const SHORT_DECKS: ScenarioDeck[] = [
-  { scenario: 'URA Finals', cards: ['uma-30078','uma-30028','uma-30004','uma-30010','uma-30021','uma-30024'] },
-  { scenario: 'Aoharu Cup', cards: ['uma-30077','uma-30028','uma-30004','uma-30085','uma-30024','uma-30005'] },
-  { scenario: "L'Arc", cards: ['uma-30078','uma-30028','uma-30010','uma-30004','uma-30024','uma-30021'] },
-  { scenario: 'Grand Masters', cards: ['uma-30028','uma-30078','uma-30042','uma-30010','uma-30004','uma-30085'] },
-  { scenario: 'Deck Econômico', cards: ['uma-20018','uma-20004','uma-20008','uma-20023','uma-20013','uma-30028'] },
+  { scenario: 'URA Finals', cards: [
+    { id: 'uma-30078', reason: 'Velocidade Elite' },
+    { id: 'uma-30028', reason: 'Bônus de Treino' },
+    { id: 'uma-30004', reason: 'Habilidade de Sprint' },
+    { id: 'uma-30010', reason: 'Ganho de Skill Points' },
+    { id: 'uma-30021', reason: 'Suporte Flexível' },
+    { id: 'uma-30013', reason: 'Poder de Curta' },
+    { id: 'uma-30024', reason: 'Meta Speed', isAlternative: true },
+    { id: 'uma-30005', reason: 'Opção de Agilidade', isAlternative: true }
+  ]},
+  { scenario: 'Aoharu Cup', cards: [
+    { id: 'uma-30077', reason: 'Sinergia de Time' },
+    { id: 'uma-30028', reason: 'Bônus Estatístico' },
+    { id: 'uma-30004', reason: 'Potência de Curta' },
+    { id: 'uma-30085', reason: 'Skill Arrojada' },
+    { id: 'uma-30024', reason: 'Aceleração Meta' },
+    { id: 'uma-30016', reason: 'Recuperação Est' },
+    { id: 'uma-30005', reason: 'Velocidade Máxima', isAlternative: true },
+    { id: 'uma-30016', reason: 'Suporte de Energia', isAlternative: true }
+  ]},
+  { scenario: 'Deck Econômico', cards: [
+    { id: 'uma-20018', reason: 'Baixo Custo / Alta Vel' },
+    { id: 'uma-20004', reason: 'Eficiência de SR' },
+    { id: 'uma-20008', reason: 'Básico Curta Distância' },
+    { id: 'uma-20023', reason: 'Fácil de Maximizar' },
+    { id: 'uma-20013', reason: 'Bônus de Evento' },
+    { id: 'uma-20003', reason: 'Suporte SR Versátil' },
+    { id: 'uma-30028', reason: 'Coringa SSR Ativo', isAlternative: true }
+  ]},
 ];
+
 const MILE_DECKS: ScenarioDeck[] = [
-  { scenario: 'URA Finals', cards: ['uma-30078','uma-30028','uma-30010','uma-30024','uma-30021','uma-30016'] },
-  { scenario: 'Aoharu Cup', cards: ['uma-30077','uma-30028','uma-30085','uma-30024','uma-30005','uma-30016'] },
-  { scenario: "L'Arc", cards: ['uma-30078','uma-30028','uma-30016','uma-30010','uma-30024','uma-30021'] },
-  { scenario: 'Grand Masters', cards: ['uma-30028','uma-30078','uma-30010','uma-30042','uma-30016','uma-30085'] },
-  { scenario: 'Deck Econômico', cards: ['uma-20004','uma-20008','uma-20023','uma-20019','uma-20028','uma-30028'] },
+  { scenario: 'Grand Masters', cards: [
+    { id: 'uma-30028', reason: 'Velocidade Absoluta' },
+    { id: 'uma-30078', reason: 'Poder de Ultrapassagem' },
+    { id: 'uma-30010', reason: 'Estamina Equilibrada' },
+    { id: 'uma-30042', reason: 'Habilidades Chave' },
+    { id: 'uma-30016', reason: 'Recuperação de Fadiga' },
+    { id: 'uma-30075', reason: 'Força de Milha' },
+    { id: 'uma-30085', reason: 'Finalização Forte', isAlternative: true }
+  ]},
+  { scenario: 'Deck Econômico', cards: [
+    { id: 'uma-20004', reason: 'SR de Alta Performance' },
+    { id: 'uma-20008', reason: 'Milha Básica' },
+    { id: 'uma-20023', reason: 'Bônus de Amizade' },
+    { id: 'uma-20019', reason: 'Energia Sustentada' },
+    { id: 'uma-20028', reason: 'Habilidade de Milha' },
+    { id: 'uma-20011', reason: 'SR de Inteligência' },
+    { id: 'uma-30028', reason: 'Peça Central SSR', isAlternative: true }
+  ]},
 ];
+
 const MED_DECKS: ScenarioDeck[] = [
-  { scenario: 'URA Finals', cards: ['uma-30078','uma-30028','uma-30016','uma-30010','uma-30021','uma-30024'] },
-  { scenario: 'Aoharu Cup', cards: ['uma-30077','uma-30028','uma-30016','uma-30085','uma-30024','uma-30005'] },
-  { scenario: "L'Arc", cards: ['uma-30078','uma-30016','uma-30075','uma-30010','uma-30028','uma-30021'] },
-  { scenario: 'Grand Masters', cards: ['uma-30028','uma-30077','uma-30016','uma-30042','uma-30010','uma-30085'] },
-  { scenario: 'Deck Econômico', cards: ['uma-20004','uma-20019','uma-20011','uma-20023','uma-20028','uma-30010'] },
+  { scenario: "L'Arc", cards: [
+    { id: 'uma-30078', reason: 'Meta de Velocidade' },
+    { id: 'uma-30016', reason: 'Cura de Estamina' },
+    { id: 'uma-30075', reason: 'Habilidade Média' },
+    { id: 'uma-30010', reason: 'Equilíbrio Total' },
+    { id: 'uma-30028', reason: 'Bônus Global' },
+    { id: 'uma-30058', reason: 'Poder Técnico' },
+    { id: 'uma-30021', reason: 'Suporte Versátil', isAlternative: true },
+    { id: 'uma-30024', reason: 'Alternativa de Força', isAlternative: true }
+  ]},
+  { scenario: 'Deck Econômico', cards: [
+    { id: 'uma-20004', reason: 'Melhor SR de Vel' },
+    { id: 'uma-20019', reason: 'Estamina Barata/Boa' },
+    { id: 'uma-20011', reason: 'Bônus de Inteligência' },
+    { id: 'uma-20023', reason: 'Fácil de Usar' },
+    { id: 'uma-20028', reason: 'Skill de Distância' },
+    { id: 'uma-20027', reason: 'Equilíbrio SR' },
+    { id: 'uma-30010', reason: 'SSR Acessível', isAlternative: true }
+  ]},
 ];
+
 const LONG_DECKS: ScenarioDeck[] = [
-  { scenario: 'URA Finals', cards: ['uma-30078','uma-30028','uma-30016','uma-30075','uma-30021','uma-30010'] },
-  { scenario: 'Aoharu Cup', cards: ['uma-30077','uma-30028','uma-30016','uma-30075','uma-30085','uma-30024'] },
-  { scenario: "L'Arc", cards: ['uma-30078','uma-30016','uma-30075','uma-30010','uma-30028','uma-30021'] },
-  { scenario: 'Grand Masters', cards: ['uma-30028','uma-30016','uma-30075','uma-30042','uma-30010','uma-30085'] },
-  { scenario: 'Deck Econômico', cards: ['uma-20019','uma-20010','uma-20015','uma-20023','uma-20027','uma-30016'] },
+  { scenario: 'Grand Masters', cards: [
+    { id: 'uma-30028', reason: 'Velocidade Nec.' },
+    { id: 'uma-30016', reason: 'Cura Mestra' },
+    { id: 'uma-30075', reason: 'Potência em Longa' },
+    { id: 'uma-30042', reason: 'Skill de Vitória' },
+    { id: 'uma-30010', reason: 'Resistência Máxima' },
+    { id: 'uma-30018', reason: 'Meta Energia' },
+    { id: 'uma-30085', reason: 'Suporte de Força', isAlternative: true }
+  ]},
+  { scenario: 'Deck Econômico', cards: [
+    { id: 'uma-20019', reason: 'Estamina Indispensável' },
+    { id: 'uma-20010', reason: 'Bônus de Longa' },
+    { id: 'uma-20015', reason: 'Recuperação SR' },
+    { id: 'uma-20023', reason: 'Ganhos Constantes' },
+    { id: 'uma-20027', reason: 'Habilidade Defensiva' },
+    { id: 'uma-20011', reason: 'Inteligência SR' },
+    { id: 'uma-30016', reason: 'Cura SSR Essencial', isAlternative: true }
+  ]},
 ];
 
 type CharDef = [string, string, string, string, string];

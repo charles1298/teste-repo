@@ -4,6 +4,8 @@ import { Search, ChevronDown, ChevronUp, Trophy, MapPin, Zap, Sparkles } from 'l
 import clsx from 'clsx';
 import { motion, AnimatePresence } from 'framer-motion';
 
+import { useDeck } from '../hooks/useDeck';
+
 const scenarioColors: Record<string, string> = {
   'URA Finals': 'bg-blue-500',
   'Aoharu Cup': 'bg-green-500',
@@ -26,12 +28,63 @@ const styleEmoji: Record<string, string> = {
   'Chaser': '🎯',
 };
 
-const CharacterCard = ({ character, index }: { character: PlayableCharacter; index: number }) => {
+const RecommendedCardItem = ({ item, isAlternative = false, isOwned = false }: { item: { id: string, reason: string }, isAlternative?: boolean, isOwned?: boolean }) => {
+  const card = getCardById(item.id);
+  if (!card) return null;
+
+  return (
+    <div className={clsx(
+      "flex flex-col items-center group relative p-1.5 rounded-xl transition-all",
+      isAlternative ? "bg-slate-50/50 hover:bg-slate-100" : "bg-white hover:shadow-md",
+      isOwned && "ring-2 ring-uma-pink ring-offset-2"
+    )}>
+      <div className="w-full aspect-[5/7] rounded-lg overflow-hidden bg-white border border-pink-200 shadow-sm relative group-hover:scale-[1.02] transition-transform">
+        <img
+          src={card.imageUrl}
+          alt={card.name}
+          className="w-full h-full object-contain"
+          onError={(e) => {
+            const target = e.target as HTMLImageElement;
+            target.onerror = null;
+            target.src = 'https://upload.wikimedia.org/wikipedia/en/thumb/8/87/Uma_Musume_Pretty_Derby_logo.png/400px-Uma_Musume_Pretty_Derby_logo.png';
+          }}
+        />
+        <div className="absolute top-1 left-1 flex flex-col gap-1">
+          {card.typeIconUrl && (
+            <img src={card.typeIconUrl} alt={card.type} className="w-4 h-4 rounded-full bg-white/70 p-0.5" />
+          )}
+          {card.hasUniqueSkill && (
+            <div className="bg-amber-400 text-white p-0.5 rounded-full shadow-sm w-fit border border-white">
+              <Sparkles size={10} fill="currentColor" />
+            </div>
+          )}
+        </div>
+        {isOwned && (
+          <div className="absolute bottom-0 inset-x-0 bg-uma-pink/90 text-white text-[7px] font-black py-0.5 text-center uppercase tracking-tighter">
+            Você tem!
+          </div>
+        )}
+      </div>
+      <div className="mt-1 w-full flex flex-col items-center">
+        <span className="text-[9px] font-bold text-slate-600 truncate w-full text-center">{card.name}</span>
+        <span className={clsx(
+          "text-[8px] px-1 rounded-sm font-medium mt-0.5 whitespace-nowrap overflow-hidden text-ellipsis w-full text-center",
+          isAlternative ? "text-slate-400" : "text-uma-pink bg-pink-50"
+        )}>
+          {item.reason}
+        </span>
+      </div>
+    </div>
+  );
+};
+
+const CharacterCard = ({ character, index, ownedDeck }: { character: PlayableCharacter; index: number; ownedDeck: string[] }) => {
   const [expanded, setExpanded] = useState(false);
   const [activeScenario, setActiveScenario] = useState(0);
 
   const currentDeck = character.scenarioDecks[activeScenario];
-  const deckCards = currentDeck.cards.map(id => getCardById(id)).filter(Boolean);
+  const mainCards = currentDeck.cards.filter(c => !c.isAlternative);
+  const altCards = currentDeck.cards.filter(c => c.isAlternative);
 
   return (
     <motion.div
@@ -86,58 +139,53 @@ const CharacterCard = ({ character, index }: { character: PlayableCharacter; ind
             transition={{ duration: 0.3 }}
             className="overflow-hidden"
           >
-            <div className="px-4 pb-4 space-y-3">
+            <div className="px-4 pb-4 space-y-4">
               <div className="flex flex-wrap gap-2">
                 {character.scenarioDecks.map((deck, i) => (
                   <button
                     key={deck.scenario}
                     onClick={() => setActiveScenario(i)}
                     className={clsx(
-                      "px-3 py-1.5 rounded-full text-xs font-bold transition-all",
+                      "px-3 py-1.5 rounded-full text-[10px] font-bold transition-all",
                       activeScenario === i
                         ? `${scenarioColors[deck.scenario] || 'bg-uma-pink'} text-white shadow-md scale-105`
-                        : "bg-gray-100 text-gray-500 hover:bg-gray-200"
+                        : "bg-gray-100 text-gray-400 hover:bg-gray-200"
                     )}
                   >
-                    <Trophy size={12} className="inline mr-1" />
+                    <Trophy size={10} className="inline mr-1" />
                     {deck.scenario}
                   </button>
                 ))}
               </div>
 
-              <div className="bg-gradient-to-br from-pink-50 to-purple-50 rounded-xl p-3 border border-pink-100">
-                <p className="text-xs font-bold text-slate-500 mb-2 uppercase tracking-wide flex items-center gap-1">
-                  <Zap size={12} /> Melhor Deck - {currentDeck.scenario}
-                </p>
-                <div className="grid grid-cols-3 sm:grid-cols-6 gap-2">
-                  {deckCards.map(card => card && (
-                    <div key={card.id} className="flex flex-col items-center">
-                      <div className="w-full aspect-[5/7] rounded-lg overflow-hidden bg-white border border-pink-200 shadow-sm relative">
-                        <img
-                          src={card.imageUrl}
-                          alt={card.name}
-                          className="w-full h-full object-contain"
-                          onError={(e) => {
-                            const target = e.target as HTMLImageElement;
-                            target.onerror = null;
-                            target.src = 'https://upload.wikimedia.org/wikipedia/en/thumb/8/87/Uma_Musume_Pretty_Derby_logo.png/400px-Uma_Musume_Pretty_Derby_logo.png';
-                          }}
-                        />
-                        <div className="absolute top-1 left-1 flex flex-col gap-1">
-                          {card.typeIconUrl && (
-                            <img src={card.typeIconUrl} alt={card.type} className="w-4 h-4 rounded-full bg-white/70 p-0.5" />
-                          )}
-                          {card.hasUniqueSkill && (
-                            <div className="bg-amber-400 text-white p-0.5 rounded-full shadow-sm w-fit border border-white">
-                              <Sparkles size={10} fill="currentColor" />
-                            </div>
-                          )}
-                        </div>
-                      </div>
-                      <span className="text-[9px] font-bold text-slate-500 mt-1 text-center line-clamp-1 w-full">{card.name}</span>
-                    </div>
-                  ))}
+              <div className="space-y-4">
+                {/* Main Deck */}
+                <div className="bg-gradient-to-br from-pink-50/50 to-purple-50/50 rounded-2xl p-4 border border-pink-100/50">
+                  <p className="text-[10px] font-black text-slate-400 mb-3 uppercase tracking-wider flex items-center gap-2">
+                    <Zap size={14} className="text-amber-400 fill-amber-400" /> 
+                    Composição Ideal - {currentDeck.scenario}
+                  </p>
+                  <div className="grid grid-cols-3 sm:grid-cols-6 gap-3">
+                    {mainCards.map(item => (
+                      <RecommendedCardItem key={item.id} item={item} isOwned={ownedDeck.includes(item.id)} />
+                    ))}
+                  </div>
                 </div>
+
+                {/* Alternatives */}
+                {altCards.length > 0 && (
+                  <div className="bg-slate-50/50 rounded-2xl p-4 border border-slate-100">
+                    <p className="text-[10px] font-black text-slate-400 mb-3 uppercase tracking-wider flex items-center gap-2">
+                      <Sparkles size={14} className="text-blue-400" />
+                      Alternativas Viáveis
+                    </p>
+                    <div className="grid grid-cols-3 sm:grid-cols-6 gap-3 opacity-80 hover:opacity-100 transition-opacity">
+                      {altCards.map(item => (
+                        <RecommendedCardItem key={item.id} item={item} isAlternative isOwned={ownedDeck.includes(item.id)} />
+                      ))}
+                    </div>
+                  </div>
+                )}
               </div>
             </div>
           </motion.div>
@@ -150,6 +198,7 @@ const CharacterCard = ({ character, index }: { character: PlayableCharacter; ind
 const Characters = () => {
   const [searchTerm, setSearchTerm] = useState('');
   const [distanceFilter, setDistanceFilter] = useState('Todas');
+  const { deck: ownedDeck } = useDeck();
 
   const distances = ['Todas', 'Curta', 'Milha', 'Média', 'Longa'];
 
@@ -201,7 +250,7 @@ const Characters = () => {
 
       <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
         {filtered.map((character, i) => (
-          <CharacterCard key={character.id} character={character} index={i} />
+          <CharacterCard key={character.id} character={character} index={i} ownedDeck={ownedDeck} />
         ))}
       </div>
 
