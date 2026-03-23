@@ -1,11 +1,11 @@
 import { useState } from 'react';
 import { SUPPORT_CARDS, type SupportCard } from '../data/cards';
-import { useDeck } from '../hooks/useDeck';
-import { Search, Plus, Minus, Star, Sparkles } from 'lucide-react';
+import { useDeck, type Deck } from '../hooks/useDeck';
+import { Search, Star, Sparkles, X, Layers } from 'lucide-react';
 import clsx from 'clsx';
 import { motion, AnimatePresence } from 'framer-motion';
 
-const CardItem = ({ card, isOwned, onToggleOwn }: { card: SupportCard, isOwned: boolean, onToggleOwn: () => void }) => {
+const CardItem = ({ card, isOwned, onManage }: { card: SupportCard, isOwned: boolean, onManage: () => void }) => {
   const getRarityColor = (rarity: string) => {
     switch(rarity) {
       case 'SSR': return 'text-amber-500 bg-amber-100 border-amber-500';
@@ -62,7 +62,7 @@ const CardItem = ({ card, isOwned, onToggleOwn }: { card: SupportCard, isOwned: 
       <div className="flex flex-col flex-grow text-center">
         <h3 className="text-sm font-bold text-gray-800 line-clamp-2 h-10 mb-2">{card.name}</h3>
         <button
-          onClick={onToggleOwn}
+          onClick={onManage}
           className={clsx(
             "mt-auto w-full py-2 rounded-lg font-bold text-sm flex items-center justify-center gap-2 transition-colors",
             isOwned 
@@ -72,11 +72,11 @@ const CardItem = ({ card, isOwned, onToggleOwn }: { card: SupportCard, isOwned: 
         >
           {isOwned ? (
             <>
-              <Minus size={16} /> Remover
+              <Layers size={16} /> Gerenciar
             </>
           ) : (
             <>
-              <Plus size={16} /> Adicionar
+              <Layers size={16} /> Adicionar
             </>
           )}
         </button>
@@ -85,10 +85,74 @@ const CardItem = ({ card, isOwned, onToggleOwn }: { card: SupportCard, isOwned: 
   );
 };
 
+const DeckSelectionModal = ({ card, decks, onToggle, onClose }: { card: SupportCard, decks: Deck[], onToggle: (deckId: string) => void, onClose: () => void }) => {
+  return (
+    <div className="fixed inset-0 z-[100] flex items-center justify-center p-4 bg-slate-900/60 backdrop-blur-sm" onClick={onClose}>
+      <motion.div 
+        initial={{ scale: 0.95, opacity: 0, y: 10 }}
+        animate={{ scale: 1, opacity: 1, y: 0 }}
+        exit={{ scale: 0.95, opacity: 0, y: 10 }}
+        className="bg-white rounded-3xl p-6 shadow-2xl w-full max-w-md relative border border-pink-100"
+        onClick={e => e.stopPropagation()}
+      >
+        <button onClick={onClose} className="absolute top-4 right-4 text-slate-400 hover:text-slate-600 bg-slate-100 hover:bg-slate-200 p-1.5 rounded-full transition-colors">
+          <X size={18} />
+        </button>
+        
+        <div className="flex gap-4 items-center mb-6">
+          <div className="w-16 h-16 shrink-0 rounded-lg overflow-hidden border border-slate-200 shadow-sm bg-pink-50 flex items-center justify-center p-1">
+            <img src={card.imageUrl} alt={card.name} className="w-full h-full object-contain" />
+          </div>
+          <div>
+            <h3 className="text-lg font-black text-slate-800 leading-tight">Configurar Decks</h3>
+            <p className="text-sm font-medium text-slate-500 line-clamp-1">{card.name}</p>
+          </div>
+        </div>
+
+        <div className="space-y-2">
+          {decks.map(deck => {
+            const isOwned = deck.cards.includes(card.id);
+            const isFull = deck.cards.length >= 6;
+            
+            return (
+              <div key={deck.id} className={clsx(
+                "flex justify-between items-center p-3 rounded-xl border-2 transition-colors",
+                isOwned ? "bg-pink-50 border-pink-200" : "bg-white border-slate-100 hover:border-pink-100"
+              )}>
+                <div className="flex flex-col">
+                  <span className="font-bold text-slate-800">{deck.name}</span>
+                  <span className={clsx(
+                    "text-xs font-bold", 
+                    isFull && !isOwned ? "text-red-500" : "text-slate-500"
+                  )}>
+                    {deck.cards.length}/6 cartas {isFull && !isOwned && "(Lotado)"}
+                  </span>
+                </div>
+                <button
+                  disabled={!isOwned && isFull}
+                  onClick={() => onToggle(deck.id)}
+                  className={clsx(
+                    "px-4 py-1.5 rounded-full text-xs font-bold transition-all disabled:opacity-50",
+                    isOwned ? "bg-red-100 text-red-600 hover:bg-red-200 border border-red-200 text-shadow-sm" :
+                    "bg-uma-pink text-white border border-pink-500 hover:bg-uma-pink-hover shadow-sm"
+                  )}
+                >
+                  {isOwned ? "Remover" : "Adicionar"}
+                </button>
+              </div>
+            );
+          })}
+        </div>
+      </motion.div>
+    </div>
+  );
+};
+
 const Cards = () => {
   const [searchTerm, setSearchTerm] = useState('');
   const [category, setCategory] = useState('Todas');
-  const { deck, toggleCard } = useDeck();
+  const { decks, toggleCardInDeck } = useDeck();
+  const [managingCard, setManagingCard] = useState<SupportCard | null>(null);
 
   const categories = ['Todas', 'Econômicas', 'SSR', 'SR'];
 
@@ -140,14 +204,17 @@ const Cards = () => {
 
       <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4 lg:gap-6">
         <AnimatePresence>
-          {filteredCards.map(card => (
-            <CardItem 
-              key={card.id} 
-              card={card} 
-              isOwned={deck.includes(card.id)} 
-              onToggleOwn={() => toggleCard(card.id)} 
-            />
-          ))}
+          {filteredCards.map(card => {
+            const isInAnyDeck = decks.some(d => d.cards.includes(card.id));
+            return (
+              <CardItem 
+                key={card.id} 
+                card={card} 
+                isOwned={isInAnyDeck} 
+                onManage={() => setManagingCard(card)} 
+              />
+            )
+          })}
         </AnimatePresence>
         
         {filteredCards.length === 0 && (
@@ -156,6 +223,16 @@ const Cards = () => {
           </div>
         )}
       </div>
+      <AnimatePresence>
+        {managingCard && (
+          <DeckSelectionModal
+            card={managingCard}
+            decks={decks}
+            onToggle={(deckId) => toggleCardInDeck(deckId, managingCard.id)}
+            onClose={() => setManagingCard(null)}
+          />
+        )}
+      </AnimatePresence>
     </div>
   );
 };

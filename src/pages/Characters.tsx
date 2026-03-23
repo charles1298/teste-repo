@@ -449,7 +449,8 @@ const Characters = () => {
   const [searchTerm, setSearchTerm] = useState('');
   const [distanceFilter, setDistanceFilter] = useState('Todas');
   const [selectedCardInfo, setSelectedCardInfo] = useState<{card: any, reason: string} | null>(null);
-  const { deck: ownedDeck } = useDeck();
+  const { decks } = useDeck();
+  const ownedDeck = decks ? decks.flatMap(d => d.cards) : [];
 
   const distances = ['Todas', 'Curta', 'Milha', 'Média', 'Longa'];
 

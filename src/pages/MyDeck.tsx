@@ -1,24 +1,117 @@
+import { useState, useRef, useEffect } from 'react';
 import { SUPPORT_CARDS } from '../data/cards';
 import { useDeck } from '../hooks/useDeck';
-import { Star, Sparkles } from 'lucide-react';
+import { Star, Sparkles, Edit2, Check } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
+import clsx from 'clsx';
 
 const MyDeck = () => {
-  const { deck, toggleCard } = useDeck();
-  const ownedCards = SUPPORT_CARDS.filter(c => deck.includes(c.id));
+  const { decks, renameDeck, toggleCardInDeck } = useDeck();
+  const [activeDeckId, setActiveDeckId] = useState(decks[0]?.id || 'deck-1');
+  const [isEditingName, setIsEditingName] = useState(false);
+  const [editNameValue, setEditNameValue] = useState('');
+  const inputRef = useRef<HTMLInputElement>(null);
+
+  const activeDeck = decks.find(d => d.id === activeDeckId) || decks[0];
+  const ownedCards = SUPPORT_CARDS.filter(c => activeDeck.cards.includes(c.id));
+
+  useEffect(() => {
+    if (isEditingName && inputRef.current) {
+      inputRef.current.focus();
+    }
+  }, [isEditingName]);
+
+  const handleSaveName = () => {
+    if (editNameValue.trim()) {
+      renameDeck(activeDeckId, editNameValue.trim());
+    }
+    setIsEditingName(false);
+  };
+
+  const handleKeyDown = (e: React.KeyboardEvent) => {
+    if (e.key === 'Enter') handleSaveName();
+    if (e.key === 'Escape') setIsEditingName(false);
+  };
 
   return (
     <div className="space-y-6 pb-10">
-      <div className="bg-white rounded-3xl p-6 shadow-sm border border-pink-100 flex flex-col md:flex-row justify-between items-center gap-4">
-        <div>
-          <h1 className="text-3xl font-black text-uma-pink drop-shadow-sm flex items-center gap-3">
-            Meu Deck <Star className="text-yellow-400 fill-yellow-400" size={28} />
-          </h1>
-          <p className="text-slate-500 font-medium">Suas cartas de suporte favoritas para treino.</p>
+      <div className="bg-white rounded-3xl p-6 shadow-sm border border-pink-100 flex flex-col gap-4">
+        {/* Header and Deck count */}
+        <div className="flex flex-col md:flex-row justify-between items-center gap-4">
+          <div>
+            <h1 className="text-3xl font-black text-uma-pink drop-shadow-sm flex items-center gap-3">
+              Meus Decks <Star className="text-yellow-400 fill-yellow-400" size={28} />
+            </h1>
+            <p className="text-slate-500 font-medium">Organize até 5 decks de suporte diferentes.</p>
+          </div>
+          <div className="bg-pink-50 py-2 px-6 rounded-full border border-pink-200">
+            <span className={clsx("font-bold text-lg", ownedCards.length === 6 ? "text-red-500" : "text-uma-pink")}>{ownedCards.length}</span>
+            <span className="text-uma-pink font-bold text-lg">/6</span>
+            <span className="text-slate-500 font-medium ml-2">cartas salvas</span>
+          </div>
         </div>
-        <div className="bg-pink-50 py-2 px-6 rounded-full border border-pink-200">
-          <span className="font-bold text-uma-pink text-lg">{ownedCards.length}</span>
-          <span className="text-slate-500 font-medium ml-2">cartas salvas</span>
+
+        {/* Deck Tabs */}
+        <div className="flex gap-2 overflow-x-auto pb-2 scrollbar-none mt-2">
+          {decks.map(deck => (
+            <button
+              key={deck.id}
+              onClick={() => {
+                setActiveDeckId(deck.id);
+                setIsEditingName(false);
+              }}
+              className={clsx(
+                "flex-shrink-0 px-5 py-2.5 text-sm font-black rounded-xl border-2 transition-all",
+                activeDeckId === deck.id
+                  ? "bg-pink-50 border-uma-pink text-uma-pink shadow-sm transform scale-105"
+                  : "bg-white border-slate-200 text-slate-500 hover:border-pink-300 hover:text-pink-600 hover:bg-pink-50/30"
+              )}
+            >
+              <div className="flex items-center gap-2">
+                {deck.name}
+                <span className="text-[10px] font-bold text-white bg-slate-300 px-1.5 py-0.5 rounded-full ml-1">
+                  {deck.cards.length}
+                </span>
+              </div>
+            </button>
+          ))}
+        </div>
+
+        {/* Active Deck Editor */}
+        <div className="flex justify-between items-center bg-pink-50/50 p-4 rounded-2xl border border-pink-100">
+          <div className="flex items-center gap-3 w-full max-w-sm">
+            {isEditingName ? (
+              <div className="flex items-center w-full gap-2">
+                <input 
+                  ref={inputRef}
+                  type="text" 
+                  value={editNameValue}
+                  onChange={e => setEditNameValue(e.target.value)}
+                  onKeyDown={handleKeyDown}
+                  onBlur={handleSaveName}
+                  maxLength={20}
+                  className="flex-grow bg-white border-2 border-uma-pink rounded-lg px-3 py-1.5 text-slate-700 font-bold focus:outline-none"
+                />
+                <button onMouseDown={e => e.preventDefault()} onClick={handleSaveName} className="p-2 bg-uma-pink text-white rounded-lg hover:bg-uma-pink-hover">
+                  <Check size={18} />
+                </button>
+              </div>
+            ) : (
+              <div className="flex items-center gap-3">
+                <h3 className="text-xl font-bold text-slate-700">{activeDeck.name}</h3>
+                <button 
+                  onClick={() => {
+                    setEditNameValue(activeDeck.name);
+                    setIsEditingName(true);
+                  }}
+                  className="text-slate-400 hover:text-uma-pink transition-colors"
+                  title="Renomear Deck"
+                >
+                  <Edit2 size={16} />
+                </button>
+              </div>
+            )}
+          </div>
         </div>
       </div>
 
@@ -59,7 +152,7 @@ const MyDeck = () => {
                   )}
                 </div>
                 <button 
-                  onClick={() => toggleCard(card.id)}
+                  onClick={() => toggleCardInDeck(activeDeckId, card.id)}
                   className="absolute top-2 right-2 bg-white/90 text-red-500 p-1.5 rounded-full shadow-md hover:bg-red-50 transition-colors"
                   title="Remover do deck"
                 >
@@ -76,8 +169,8 @@ const MyDeck = () => {
         {ownedCards.length === 0 && (
           <div className="col-span-full py-16 text-center text-slate-400 bg-white rounded-3xl border-2 border-dashed border-pink-200">
             <Star size={48} className="mx-auto text-pink-200 mb-4" />
-            <p className="text-xl font-bold text-slate-500 mb-2">Seu deck está vazio.</p>
-            <p>Vá até a aba de Cartas de Suporte para preencher seu deck.</p>
+            <p className="text-xl font-bold text-slate-500 mb-2">Este deck está vazio.</p>
+            <p>Vá até a aba de Cartas de Suporte para adicionar cartas em "{activeDeck.name}".</p>
           </div>
         )}
       </div>
