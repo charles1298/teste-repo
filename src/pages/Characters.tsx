@@ -45,14 +45,6 @@ const typeIcons: Record<string, string> = {
   'Friend': '/assets/icons/icon-type-5.png',
 };
 
-const getTierStyle = (tier?: string) => {
-  switch(tier) {
-    case 'S': return 'bg-gradient-to-b from-amber-300 to-amber-500 text-amber-950 border-amber-600 shadow-md ring-1 ring-amber-300 drop-shadow-sm';
-    case 'A': return 'bg-gradient-to-b from-rose-300 to-rose-400 text-rose-950 border-rose-500 shadow-sm';
-    case 'B': return 'bg-gradient-to-b from-blue-300 to-blue-400 text-blue-950 border-blue-500 shadow-sm';
-    default: return 'bg-slate-200 text-slate-700 border-slate-300';
-  }
-};
 
 const getMockCardEffect = (card: any, reason: string) => {
   const effects = [];
