@@ -172,6 +172,8 @@ const RecommendedCardItem = ({ item, isOwned = false, onClick }: { item: Recomme
 const CharacterCard = ({ character, index, ownedDeck, onCardClick }: { character: PlayableCharacter; index: number; ownedDeck: string[]; onCardClick: (card: any, reason: string) => void }) => {
   const [expanded, setExpanded] = useState(false);
   const [activeScenario, setActiveScenario] = useState(0);
+  const [activeDeckIdx, setActiveDeckIdx] = useState(0);
+  const [showCategories, setShowCategories] = useState(false);
   const [activeVersionId, setActiveVersionId] = useState(character.versions[0].id);
 
   const activeVersion = character.versions.find(v => v.id === activeVersionId) || character.versions[0];
@@ -280,20 +282,18 @@ const CharacterCard = ({ character, index, ownedDeck, onCardClick }: { character
                   <p className="text-[10px] text-slate-400 font-medium mt-3 text-center md:text-left">
                     Selecione uma versão para visualizar seu traje e ícone correspondente.
                   </p>
-                </div>
-              </div>
-
-              {/* Scenarios */}
-              <div className="flex flex-wrap gap-2">
+               {/* Scenarios */}
+              <div className="flex flex-wrap gap-2 items-center bg-slate-50 p-2 rounded-2xl border border-slate-100">
+                <span className="text-[10px] font-black uppercase text-slate-400 mr-1 pl-2">Cenário:</span>
                 {character.scenarioDecks.map((deck, i) => (
                   <button
                     key={deck.scenario}
-                    onClick={() => setActiveScenario(i)}
+                    onClick={() => { setActiveScenario(i); setActiveDeckIdx(0); }}
                     className={clsx(
-                      "px-3 py-1.5 rounded-full text-xs font-bold transition-all",
+                      "px-3 py-1.5 rounded-xl text-xs font-bold transition-all",
                       activeScenario === i
-                        ? `${scenarioColors[deck.scenario] || 'bg-uma-pink'} text-white shadow-md scale-105`
-                        : "bg-gray-100 text-gray-400 hover:bg-gray-200"
+                        ? `${scenarioColors[deck.scenario] || 'bg-uma-pink'} text-white shadow-sm`
+                        : "bg-white text-slate-500 hover:bg-slate-200 border border-slate-200"
                     )}
                   >
                     <Trophy size={12} className="inline mr-1" />
@@ -303,91 +303,145 @@ const CharacterCard = ({ character, index, ownedDeck, onCardClick }: { character
               </div>
 
               <div className="space-y-6">
-                {/* Decks - Multiple Variations */}
-                <div className="space-y-5">
-                  {currentDeck.decks.map((deckVar, dIdx) => (
-                    <div key={dIdx} className={clsx(
-                      "rounded-xl p-4 sm:p-5 border transition-all relative overflow-hidden",
-                      deckVar.tier === 'S' ? "bg-amber-50 border-amber-200 shadow-md" :
-                      deckVar.tier === 'A' ? "bg-rose-50/50 border-rose-200 shadow-sm" :
-                      "bg-white border-slate-200 shadow-sm"
-                    )}>
-                      {deckVar.tier === 'S' && <div className="absolute top-0 right-0 w-32 h-32 bg-gradient-to-bl from-amber-200 to-transparent opacity-30 pointer-events-none rounded-bl-full" />}
-                      <div className="flex flex-col mb-4 border-b border-slate-200 pb-3 relative z-10">
-                        <div className="flex items-center gap-3">
-                          {deckVar.tier && (
-                            <div className={clsx("px-2.5 py-1 rounded text-[11px] font-black border uppercase tracking-wider min-w-[3.5rem] text-center", getTierStyle(deckVar.tier))}>
-                              Tier {deckVar.tier}
-                            </div>
-                          )}
-                          <h4 className="text-sm sm:text-base font-black text-slate-800 flex items-center gap-1.5">
-                            {deckVar.tier === 'S' && <Trophy size={16} className="text-amber-500 fill-amber-500" />}
-                            {deckVar.name}
-                          </h4>
-                          <span className="ml-auto text-[10px] font-bold text-slate-500 bg-white/80 px-2 py-0.5 rounded-full border border-slate-200 shadow-sm">
-                            {deckVar.recommendedIds.length} Cartas
-                          </span>
-                        </div>
-                        {deckVar.description && (
-                          <p className="text-xs sm:text-sm font-medium text-slate-600 mt-2 leading-relaxed bg-white/60 p-2.5 rounded-lg border border-slate-100 italic">{deckVar.description}</p>
+                {/* Decks System */}
+                <div className="flex flex-col gap-4">
+                  {/* Deck Tabs */}
+                  <div className="flex gap-2 overflow-x-auto pb-2 scrollbar-none snap-x mt-2">
+                    {currentDeck.decks.map((deckVar, dIdx) => (
+                      <button
+                        key={dIdx}
+                        onClick={() => setActiveDeckIdx(dIdx)}
+                        className={clsx(
+                          "flex-shrink-0 px-4 py-2 text-xs font-black rounded-xl border transition-all snap-start",
+                          activeDeckIdx === dIdx
+                            ? (deckVar.tier === 'S' ? 'bg-gradient-to-r from-amber-100 to-yellow-100 border-amber-400 text-amber-900 shadow-sm ring-1 ring-amber-300' : 'bg-pink-50 border-uma-pink text-uma-pink shadow-sm')
+                            : "bg-white border-slate-200 text-slate-500 hover:border-pink-300 hover:text-pink-600 hover:bg-pink-50/30"
                         )}
-                      </div>
-                      <div className="grid grid-cols-4 sm:grid-cols-6 gap-2 sm:gap-3 relative z-10">
-                        {deckVar.recommendedIds.map(id => {
-                          const card = getCardById(id);
-                          if (!card) return null;
-                          const poolCard = currentDeck.cards.find(c => c.id === id);
-                          return (
-                            <div key={id} className="relative group flex justify-center w-full">
-                              <RecommendedCardItem 
-                                item={{ id, reason: poolCard?.reason || card.type, type: poolCard?.type || (card.type as any) }} 
-                                isOwned={ownedDeck.includes(id)} 
-                                onClick={() => onCardClick(card, poolCard?.reason || card.type as string)}
-                              />
-                            </div>
-                          );
-                        })}
-                      </div>
-                    </div>
-                  ))}
-                </div>
-
-                {/* Categorized Options */}
-                <div>
-                  <p className="text-xs font-black text-slate-400 mb-3 uppercase tracking-wider flex items-center gap-2 px-2">
-                    <Search size={14} />
-                    Mais Opções por Categoria
-                  </p>
-                  <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3">
-                    {Object.entries(categories).map(([type, cards]) => (
-                      <div key={type} className="bg-slate-50/50 rounded-xl p-3 border border-slate-100">
-                        <div className="flex items-center gap-1.5 mb-2 border-b border-slate-200/50 pb-1">
-                          <img src={typeIcons[type]} alt={type} className="w-5 h-5" />
-                          <span className="text-xs font-black text-slate-500 uppercase tracking-wider">
-                            {typeNames[type]}
+                      >
+                        {deckVar.tier && (
+                          <span className={clsx(
+                            "mr-1.5 px-1.5 py-0.5 rounded text-[9px] uppercase font-black tracking-wider",
+                            deckVar.tier === 'S' ? 'bg-amber-400 text-amber-950' :
+                            deckVar.tier === 'A' ? 'bg-rose-400 text-white' : 'bg-blue-400 text-white'
+                          )}>
+                            Tier {deckVar.tier}
                           </span>
-                        </div>
-                        <div className="grid grid-cols-3 gap-2">
-                          {cards.map(item => (
-                            <RecommendedCardItem 
-                              key={item.id} 
-                              item={item} 
-                              isOwned={ownedDeck.includes(item.id)} 
-                              onClick={() => {
-                                const card = getCardById(item.id);
-                                if (card) onCardClick(card, item.reason);
-                              }}
-                            />
-                          ))}
-                          {cards.length === 0 && (
-                            <div className="col-span-3 py-2 text-center text-[10px] text-slate-400 font-medium italic">
-                              Nenhuma recomendação meta
-                            </div>
-                          )}
-                        </div>
-                      </div>
+                        )}
+                        {deckVar.name}
+                      </button>
                     ))}
                   </div>
+
+                  {/* Active Deck Content */}
+                  {(() => {
+                    const deckVar = currentDeck.decks[activeDeckIdx];
+                    return (
+                      <motion.div
+                        key={`${activeScenario}-${activeDeckIdx}`}
+                        initial={{ opacity: 0, y: 5 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        className={clsx(
+                          "rounded-2xl p-4 sm:p-5 border relative overflow-hidden",
+                          deckVar.tier === 'S' ? "bg-gradient-to-br from-amber-50/50 to-orange-50/30 border-amber-300 shadow-md ring-1 ring-amber-100" :
+                          deckVar.tier === 'A' ? "bg-gradient-to-br from-rose-50/50 to-pink-50/30 border-rose-200 shadow-sm" :
+                          "bg-white border-slate-200 shadow-sm"
+                        )}
+                      >
+                        {deckVar.tier === 'S' && <div className="absolute top-0 right-0 w-32 h-32 bg-gradient-to-bl from-amber-300 to-transparent opacity-20 pointer-events-none rounded-bl-full" />}
+                        <div className="flex flex-col mb-4 border-b border-black/5 pb-4 relative z-10">
+                          <div className="flex items-center gap-3">
+                            <h4 className="text-sm sm:text-base font-black text-slate-800 flex items-center gap-1.5">
+                              {deckVar.tier === 'S' && <Trophy size={18} className="text-amber-500 fill-amber-500 drop-shadow-sm" />}
+                              {deckVar.name}
+                            </h4>
+                            <span className="ml-auto text-[10px] font-bold text-slate-500 bg-white/80 px-2 py-0.5 rounded-full border border-slate-200 shadow-sm">
+                              {deckVar.recommendedIds.length} Cartas
+                            </span>
+                          </div>
+                          {deckVar.description && (
+                            <p className="text-[13px] font-medium text-slate-600 mt-2.5 leading-relaxed bg-white/70 p-3 rounded-xl border border-white shadow-sm inline-block italic">
+                              {deckVar.description}
+                            </p>
+                          )}
+                        </div>
+                        <div className="grid grid-cols-3 sm:grid-cols-6 gap-3 sm:gap-4 relative z-10">
+                          {deckVar.recommendedIds.map(id => {
+                            const card = getCardById(id);
+                            if (!card) return null;
+                            const poolCard = currentDeck.cards.find(c => c.id === id);
+                            return (
+                              <div key={id} className="relative group flex justify-center w-full">
+                                <RecommendedCardItem 
+                                  item={{ id, reason: poolCard?.reason || card.type, type: poolCard?.type || (card.type as any) }} 
+                                  isOwned={ownedDeck.includes(id)} 
+                                  onClick={() => onCardClick(card, poolCard?.reason || card.type as string)}
+                                />
+                              </div>
+                            );
+                          })}
+                        </div>
+                      </motion.div>
+                    );
+                  })()}
+                </div>
+
+                {/* Categorized Options Toggle */}
+                <div className="pt-2 border-t border-dashed border-slate-200 mt-6">
+                  <button
+                    onClick={() => setShowCategories(!showCategories)}
+                    className="w-full py-3 flex items-center justify-center gap-2 text-xs font-black text-slate-500 hover:text-uma-pink bg-slate-50 hover:bg-pink-50 rounded-xl transition-colors border border-slate-100 hover:border-pink-200"
+                  >
+                    <Search size={14} />
+                    {showCategories ? 'Ocultar Opções Extras por Categoria' : 'Ver Opções Extras por Categoria'}
+                    {showCategories ? <ChevronUp size={14} /> : <ChevronDown size={14} />}
+                  </button>
+                  
+                  <AnimatePresence>
+                    {showCategories && (
+                      <motion.div
+                        initial={{ height: 0, opacity: 0 }}
+                        animate={{ height: 'auto', opacity: 1 }}
+                        exit={{ height: 0, opacity: 0 }}
+                        className="overflow-hidden"
+                      >
+                        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3 pt-4">
+                          {Object.entries(categories).map(([type, cards]) => (
+                            <div key={type} className="bg-slate-50/80 rounded-2xl p-3 border border-slate-100">
+                              <div className="flex items-center gap-1.5 mb-3 border-b border-slate-200/50 pb-2 pl-1">
+                                <img src={typeIcons[type]} alt={type} className="w-5 h-5 drop-shadow-sm" />
+                                <span className="text-[11px] font-black text-slate-600 uppercase tracking-wider">
+                                  {typeNames[type]}
+                                </span>
+                                <span className="ml-auto text-[9px] font-bold text-slate-400 bg-white px-1.5 py-0.5 rounded-full border border-slate-100">
+                                  {cards.length}
+                                </span>
+                              </div>
+                              <div className="grid grid-cols-3 gap-2">
+                                {cards.map(item => (
+                                  <RecommendedCardItem 
+                                    key={item.id} 
+                                    item={item} 
+                                    isOwned={ownedDeck.includes(item.id)} 
+                                    onClick={() => {
+                                      const card = getCardById(item.id);
+                                      if (card) onCardClick(card, item.reason);
+                                    }}
+                                  />
+                                ))}
+                                {cards.length === 0 && (
+                                  <div className="col-span-3 py-3 text-center text-[10px] text-slate-400 font-medium italic bg-white rounded-lg border border-dashed border-slate-200">
+                                    Nenhuma recomendação meta
+                                  </div>
+                                )}
+                              </div>
+                            </div>
+                          ))}
+                        </div>
+                      </motion.div>
+                    )}
+                  </AnimatePresence>
+                </div>
+              </div>
                 </div>
               </div>
             </div>
