@@ -4,6 +4,7 @@ import Dashboard from './pages/Dashboard';
 import Cards from './pages/Cards';
 import MyDeck from './pages/MyDeck';
 import Characters from './pages/Characters';
+import News from './pages/News';
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
           <Route path="cards" element={<Cards />} />
           <Route path="deck" element={<MyDeck />} />
           <Route path="characters" element={<Characters />} />
+          <Route path="news" element={<News />} />
         </Route>
       </Routes>
     </Router>
