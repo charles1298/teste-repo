@@ -274,8 +274,11 @@ const CharacterCard = ({ character, index, ownedDeck, onCardClick }: { character
                   <p className="text-[10px] text-slate-400 font-medium mt-3 text-center md:text-left">
                     Selecione uma versão para visualizar seu traje e ícone correspondente.
                   </p>
-               {/* Scenarios */}
-              <div className="flex flex-wrap gap-2 items-center bg-slate-50 p-2 rounded-2xl border border-slate-100">
+                </div>
+              </div>
+
+              {/* Scenarios */}
+              <div className="flex flex-wrap gap-2 items-center bg-slate-50 p-2 rounded-2xl border border-slate-100 mt-2">
                 <span className="text-[10px] font-black uppercase text-slate-400 mr-1 pl-2">Cenário:</span>
                 {character.scenarioDecks.map((deck, i) => (
                   <button
@@ -432,8 +435,6 @@ const CharacterCard = ({ character, index, ownedDeck, onCardClick }: { character
                       </motion.div>
                     )}
                   </AnimatePresence>
-                </div>
-              </div>
                 </div>
               </div>
             </div>
