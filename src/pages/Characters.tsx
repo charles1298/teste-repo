@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { PLAYABLE_CHARACTERS, getCardById } from '../data/characters';
 import type { PlayableCharacter, RecommendedCard } from '../data/characters';
-import { Search, ChevronDown, ChevronUp, Trophy, MapPin } from 'lucide-react';
+import { Search, ChevronDown, ChevronUp, Trophy, MapPin, X, Info } from 'lucide-react';
 import clsx from 'clsx';
 import { motion, AnimatePresence } from 'framer-motion';
 
@@ -54,16 +54,94 @@ const getTierStyle = (tier?: string) => {
   }
 };
 
+const getMockCardEffect = (card: any, reason: string) => {
+  const effects = [];
+  if (card.type === 'Speed') effects.push('Aumenta significativamente a Velocidade (Speed) durante os treinos.');
+  else if (card.type === 'Stamina') effects.push('Focado no ganho de Estamina (Stamina) e bônus de recuperação máxima.');
+  else if (card.type === 'Power') effects.push('Melhora o ganho de Poder (Power) e oferece melhores bônus de corrida.');
+  else if (card.type === 'Guts') effects.push('Fornece bônus vitais de Guts (Determinação) e bônus de motivação.');
+  else if (card.type === 'Intelligence') effects.push('Garante maior recuperação de energia e atributos de Inteligência.');
+  else if (card.type === 'Friend') effects.push('Reduz o consumo de energia e previne falhas em treinamentos.');
 
-const RecommendedCardItem = ({ item, isOwned = false }: { item: RecommendedCard, isOwned?: boolean }) => {
+  effects.push(`Foco principal desta carta: ${reason}.`);
+  if (card.hasUniqueSkill) effects.push('Possui Habilidade Única (Gold Skill) que tem ótimo desempenho na corrida.');
+  if (card.isEconomic) effects.push('Carta com excelente custo-benefício para jogadores F2P.');
+  
+  return effects;
+};
+
+const CardModal = ({ card, reason, onClose }: { card: any, reason: string, onClose: () => void }) => {
+  if (!card) return null;
+  const effects = getMockCardEffect(card, reason);
+
+  return (
+    <div className="fixed inset-0 z-[100] flex items-center justify-center p-4 bg-slate-900/40 backdrop-blur-sm" onClick={onClose}>
+      <motion.div 
+        initial={{ scale: 0.95, opacity: 0, y: 10 }}
+        animate={{ scale: 1, opacity: 1, y: 0 }}
+        exit={{ scale: 0.95, opacity: 0, y: 10 }}
+        className="bg-white rounded-3xl p-6 shadow-2xl max-w-sm w-full relative border border-pink-100"
+        onClick={e => e.stopPropagation()}
+      >
+        <button onClick={onClose} className="absolute top-4 right-4 text-slate-400 hover:text-slate-600 bg-slate-100 hover:bg-slate-200 p-1.5 rounded-full transition-colors">
+          <X size={18} />
+        </button>
+        
+        <div className="flex gap-4 items-start pr-8">
+          <div className="w-24 shrink-0 rounded-xl overflow-hidden border border-slate-200 shadow-sm bg-pink-50">
+            <img src={card.imageUrl} alt={card.name} className="w-full h-auto object-contain" />
+          </div>
+          <div className="flex flex-col pt-1">
+            <div className="flex items-center gap-2 mb-1">
+              <span className={clsx(
+                "px-2 py-0.5 rounded-md text-[10px] font-black",
+                card.rarity === 'SSR' ? 'bg-gradient-to-r from-amber-200 to-yellow-400 text-yellow-900' :
+                card.rarity === 'SR' ? 'bg-slate-200 text-slate-700' : 'bg-orange-200 text-orange-900'
+              )}>
+                {card.rarity || 'SSR'}
+              </span>
+              <img src={typeIcons[card.type]} alt={card.type} className="w-4 h-4 object-contain" />
+            </div>
+            <h3 className="text-base font-black text-slate-800 leading-tight">{card.name}</h3>
+            <p className="text-xs font-bold text-uma-pink mt-1">{card.type}</p>
+          </div>
+        </div>
+
+        <div className="mt-5 space-y-3">
+          <div className="bg-pink-50/50 rounded-xl p-3 border border-pink-100">
+            <h4 className="text-xs font-black text-slate-700 flex items-center gap-1.5 mb-2 uppercase tracking-wider">
+              <Info size={14} className="text-uma-pink" /> 
+              Detalhes e Efeitos
+            </h4>
+            <ul className="text-xs text-slate-600 space-y-2 font-medium">
+              {effects.map((ef, i) => (
+                <li key={i} className="flex gap-2 items-start">
+                  <span className="text-uma-pink mt-0.5">•</span>
+                  <span>{ef}</span>
+                </li>
+              ))}
+            </ul>
+          </div>
+        </div>
+      </motion.div>
+    </div>
+  );
+};
+
+
+const RecommendedCardItem = ({ item, isOwned = false, onClick }: { item: RecommendedCard, isOwned?: boolean, onClick?: () => void }) => {
   const card = getCardById(item.id);
   if (!card) return null;
 
   return (
-    <div className={clsx(
-      "flex flex-col items-center group relative p-1 rounded-lg transition-all bg-white hover:shadow-md border border-slate-100",
-      isOwned && "ring-2 ring-uma-pink ring-offset-1"
-    )}>
+    <div 
+      className={clsx(
+        "flex flex-col items-center group relative p-1 rounded-lg transition-all bg-white hover:shadow-md border border-slate-100",
+        onClick && "cursor-pointer hover:-translate-y-1 hover:border-pink-300 hover:shadow-pink-100",
+        isOwned && "ring-2 ring-uma-pink ring-offset-1"
+      )}
+      onClick={onClick}
+    >
       <div className="w-full aspect-[5/7] rounded-md overflow-hidden bg-white border border-pink-100 relative group-hover:scale-[1.02] transition-transform">
         <img
           src={card.imageUrl}
@@ -91,7 +169,7 @@ const RecommendedCardItem = ({ item, isOwned = false }: { item: RecommendedCard,
   );
 };
 
-const CharacterCard = ({ character, index, ownedDeck }: { character: PlayableCharacter; index: number; ownedDeck: string[] }) => {
+const CharacterCard = ({ character, index, ownedDeck, onCardClick }: { character: PlayableCharacter; index: number; ownedDeck: string[]; onCardClick: (card: any, reason: string) => void }) => {
   const [expanded, setExpanded] = useState(false);
   const [activeScenario, setActiveScenario] = useState(0);
   const [activeVersionId, setActiveVersionId] = useState(character.versions[0].id);
@@ -264,6 +342,7 @@ const CharacterCard = ({ character, index, ownedDeck }: { character: PlayableCha
                               <RecommendedCardItem 
                                 item={{ id, reason: poolCard?.reason || card.type, type: poolCard?.type || (card.type as any) }} 
                                 isOwned={ownedDeck.includes(id)} 
+                                onClick={() => onCardClick(card, poolCard?.reason || card.type as string)}
                               />
                             </div>
                           );
@@ -290,7 +369,15 @@ const CharacterCard = ({ character, index, ownedDeck }: { character: PlayableCha
                         </div>
                         <div className="grid grid-cols-3 gap-2">
                           {cards.map(item => (
-                            <RecommendedCardItem key={item.id} item={item} isOwned={ownedDeck.includes(item.id)} />
+                            <RecommendedCardItem 
+                              key={item.id} 
+                              item={item} 
+                              isOwned={ownedDeck.includes(item.id)} 
+                              onClick={() => {
+                                const card = getCardById(item.id);
+                                if (card) onCardClick(card, item.reason);
+                              }}
+                            />
                           ))}
                           {cards.length === 0 && (
                             <div className="col-span-3 py-2 text-center text-[10px] text-slate-400 font-medium italic">
@@ -314,6 +401,7 @@ const CharacterCard = ({ character, index, ownedDeck }: { character: PlayableCha
 const Characters = () => {
   const [searchTerm, setSearchTerm] = useState('');
   const [distanceFilter, setDistanceFilter] = useState('Todas');
+  const [selectedCardInfo, setSelectedCardInfo] = useState<{card: any, reason: string} | null>(null);
   const { deck: ownedDeck } = useDeck();
 
   const distances = ['Todas', 'Curta', 'Milha', 'Média', 'Longa'];
@@ -366,7 +454,13 @@ const Characters = () => {
 
       <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
         {filtered.map((character, i) => (
-          <CharacterCard key={character.id} character={character} index={i} ownedDeck={ownedDeck} />
+          <CharacterCard 
+            key={character.id} 
+            character={character} 
+            index={i} 
+            ownedDeck={ownedDeck} 
+            onCardClick={(card, reason) => setSelectedCardInfo({ card, reason })}
+          />
         ))}
       </div>
 
@@ -375,6 +469,16 @@ const Characters = () => {
           <p className="text-xl font-bold">Nenhum personagem encontrado.</p>
         </div>
       )}
+
+      <AnimatePresence>
+        {selectedCardInfo && (
+          <CardModal 
+            card={selectedCardInfo.card} 
+            reason={selectedCardInfo.reason} 
+            onClose={() => setSelectedCardInfo(null)} 
+          />
+        )}
+      </AnimatePresence>
     </div>
   );
 };
