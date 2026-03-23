@@ -11,6 +11,7 @@ const Dashboard = () => {
           className="absolute -top-16 right-4 md:right-12 w-32 md:w-40 h-auto object-contain drop-shadow-[0_10px_10px_rgba(236,72,153,0.3)] z-20 hover:-translate-y-2 transition-transform duration-300 rounded-full bg-white p-1 border-2 border-pink-200"
         />
         <div className="relative overflow-hidden rounded-3xl bg-gradient-to-br from-uma-pink to-pink-400 p-8 md:p-12 shadow-xl border-4 border-pink-200">
+          <div className="absolute inset-0 opacity-20 pointer-events-none mix-blend-overlay" style={{ backgroundImage: "url('/assets/uma-pattern.png')", backgroundSize: "200px", animation: "scroll-pattern 20s linear infinite" }}></div>
           <div className="absolute top-0 right-0 w-64 h-64 bg-white/20 rounded-full -translate-y-1/4 translate-x-1/4 blur-3xl"></div>
           <div className="absolute bottom-0 left-0 w-48 h-48 bg-yellow-300/20 rounded-full translate-y-1/4 -translate-x-1/4 blur-2xl"></div>
         
