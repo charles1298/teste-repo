@@ -1,5 +1,5 @@
 import { NavLink, Outlet } from 'react-router-dom';
-import { Home, Layers, Star, Users, Newspaper } from 'lucide-react';
+import { Home, Layers, Star, Users, Newspaper, Calendar } from 'lucide-react';
 import clsx from 'clsx';
 import { twMerge } from 'tailwind-merge';
 
@@ -10,6 +10,7 @@ const Layout = () => {
     { to: '/deck', label: 'Meu Deck', icon: <Star size={20} /> },
     { to: '/characters', label: 'Personagens', icon: <Users size={20} /> },
     { to: '/news', label: 'Notícias', icon: <Newspaper size={20} /> },
+    { to: '/timeline', label: 'Timeline', icon: <Calendar size={20} /> },
   ];
 
   return (
