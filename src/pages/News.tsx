@@ -24,7 +24,7 @@ const News = () => {
     try {
       // Using rss2json to convert Google News RSS to JSON easily on the client side
       // The rss_url parameter MUST be URL-encoded to properly pass the "&hl=pt-BR" parameters
-      const gameRss = encodeURIComponent('https://news.google.com/rss/search?q="Uma+Musume"+Global+OR+"Uma+Musume"&hl=pt-BR&gl=BR&ceid=BR:pt-419');
+      const gameRss = encodeURIComponent('https://news.google.com/rss/search?q="Uma+Musume"+2026+OR+Uma+Musume+2026&hl=pt-BR&gl=BR&ceid=BR:pt-419');
       const realRss = encodeURIComponent('https://news.google.com/rss/search?q=Corrida+de+Cavalos+OR+Turfe&hl=pt-BR&gl=BR&ceid=BR:pt-419');
       
       const urls = {
