@@ -23,9 +23,13 @@ const News = () => {
     setError(null);
     try {
       // Using rss2json to convert Google News RSS to JSON easily on the client side
+      // The rss_url parameter MUST be URL-encoded to properly pass the "&hl=pt-BR" parameters
+      const gameRss = encodeURIComponent('https://news.google.com/rss/search?q="Uma Musume" Global OR "Uma Musume"&hl=pt-BR&gl=BR&ceid=BR:pt-419');
+      const realRss = encodeURIComponent('https://news.google.com/rss/search?q=Corrida de Cavalos OR Turfe&hl=pt-BR&gl=BR&ceid=BR:pt-419');
+      
       const urls = {
-        game: 'https://api.rss2json.com/v1/api.json?rss_url=https://news.google.com/rss/search?q=%22Uma+Musume%22+Global+OR+%22Uma+Musume%22&hl=pt-BR&gl=BR&ceid=BR:pt-419',
-        real: 'https://api.rss2json.com/v1/api.json?rss_url=https://news.google.com/rss/search?q=Corrida+de+Cavalos+OR+Turfe&hl=pt-BR&gl=BR&ceid=BR:pt-419'
+        game: `https://api.rss2json.com/v1/api.json?rss_url=${gameRss}`,
+        real: `https://api.rss2json.com/v1/api.json?rss_url=${realRss}`
       };
 
       const [gameRes, realRes] = await Promise.all([
@@ -53,8 +57,8 @@ const News = () => {
         });
 
         setNews({
-          game: processItems(gameJson.items),
-          real: processItems(realJson.items)
+          game: processItems(gameJson.items || []),
+          real: processItems(realJson.items || [])
         });
       } else {
         throw new Error('Falha ao comunicar com o servidor de notícias.');
