@@ -24,8 +24,8 @@ const News = () => {
     try {
       // Using rss2json to convert Google News RSS to JSON easily on the client side
       const urls = {
-        game: 'https://api.rss2json.com/v1/api.json?rss_url=https://news.google.com/rss/search?q=%E3%82%A6%E3%83%9E%E5%A8%98&hl=ja&gl=JP&ceid=JP:ja',
-        real: 'https://api.rss2json.com/v1/api.json?rss_url=https://news.google.com/rss/search?q=%E7%AB%B6%E9%A6%AC&hl=ja&gl=JP&ceid=JP:ja'
+        game: 'https://api.rss2json.com/v1/api.json?rss_url=https://news.google.com/rss/search?q=%22Uma+Musume%22+Global+OR+%22Uma+Musume%22&hl=pt-BR&gl=BR&ceid=BR:pt-419',
+        real: 'https://api.rss2json.com/v1/api.json?rss_url=https://news.google.com/rss/search?q=Corrida+de+Cavalos+OR+Turfe&hl=pt-BR&gl=BR&ceid=BR:pt-419'
       };
 
       const [gameRes, realRes] = await Promise.all([
@@ -38,10 +38,11 @@ const News = () => {
 
       if (gameJson.status === 'ok' && realJson.status === 'ok') {
         const processItems = (items: any[]) => items.map((item: any) => {
-          // Try to extract image from content if thumbnail is missing
+          // Try to extract image from content or description if thumbnail is missing
           let thumb = item.thumbnail;
-          if (!thumb && item.content) {
-            const imgMatch = item.content.match(/<img[^>]+src="([^">]+)"/);
+          const htmlContent = item.content || item.description || '';
+          if (!thumb && htmlContent) {
+            const imgMatch = htmlContent.match(/<img[^>]+src="([^">]+)"/i);
             if (imgMatch) thumb = imgMatch[1];
           }
           
