@@ -23,8 +23,8 @@
     overflow-x: hidden;
     min-height: 100vh;
     /* Soft aesthetically pleasing background with scrolling pattern */
-    background: linear-gradient(135deg, rgba(255, 245, 247, 0.9) 0%, rgba(253, 242, 248, 0.9) 50%, rgba(248, 250, 252, 0.9) 100%), url('/assets/uma-pattern.png');
-    background-size: cover, 300px;
+    background: linear-gradient(135deg, rgba(255, 245, 247, 0.6) 0%, rgba(253, 242, 248, 0.6) 50%, rgba(248, 250, 252, 0.6) 100%), url('/assets/uma-pattern.png');
+    background-size: cover, 600px;
     background-repeat: no-repeat, repeat;
     background-attachment: fixed, fixed;
     animation: scroll-bg 40s linear infinite;
@@ -67,10 +67,10 @@
 
 @keyframes scroll-bg {
   0% { background-position: 0% 0%, 0 0; }
-  100% { background-position: 0% 0%, -300px -300px; }
+  100% { background-position: 0% 0%, -600px -600px; }
 }
 
 @keyframes scroll-pattern {
   0% { background-position: 0 0; }
-  100% { background-position: -300px -300px; }
+  100% { background-position: -600px -600px; }
 }
