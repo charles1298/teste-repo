@@ -50,93 +50,93 @@ export const META_DECKS: Record<string, ScenarioDeck[]> = {
       "cards": [
         {
           "id": "uma-30028",
-          "reason": "Meta Sakura Bakushin O",
+          "reason": "Velocidade",
           "type": "Speed"
         },
         {
           "id": "uma-30056",
-          "reason": "Meta Sakura Bakushin O",
-          "type": "Speed"
+          "reason": "Poder",
+          "type": "Power"
         },
         {
           "id": "uma-30010",
-          "reason": "Meta Sakura Bakushin O",
-          "type": "Speed"
+          "reason": "Inteligência",
+          "type": "Intelligence"
         },
         {
           "id": "uma-30036",
-          "reason": "Meta Sakura Bakushin O",
-          "type": "Speed"
+          "reason": "Amigo/Grupo",
+          "type": "Friend"
         },
         {
           "id": "uma-30076",
-          "reason": "Meta Sakura Bakushin O",
+          "reason": "Velocidade",
           "type": "Speed"
         },
         {
           "id": "uma-30072",
-          "reason": "Meta Sakura Bakushin O",
+          "reason": "Velocidade",
           "type": "Speed"
         },
         {
           "id": "uma-30006",
-          "reason": "Meta Sakura Bakushin O",
-          "type": "Speed"
+          "reason": "Determinação",
+          "type": "Guts"
         },
         {
           "id": "uma-30001",
-          "reason": "Meta Sakura Bakushin O",
-          "type": "Speed"
+          "reason": "Determinação",
+          "type": "Guts"
         },
         {
           "id": "uma-30066",
-          "reason": "Meta Sakura Bakushin O",
-          "type": "Speed"
+          "reason": "Inteligência",
+          "type": "Intelligence"
         },
         {
           "id": "uma-30026",
-          "reason": "Meta Sakura Bakushin O",
+          "reason": "Velocidade",
           "type": "Speed"
         },
         {
           "id": "uma-20042",
-          "reason": "Meta Sakura Bakushin O",
-          "type": "Speed"
+          "reason": "Poder",
+          "type": "Power"
         },
         {
           "id": "uma-20039",
-          "reason": "Meta Sakura Bakushin O",
+          "reason": "Velocidade",
           "type": "Speed"
         },
         {
           "id": "uma-20035",
-          "reason": "Meta Sakura Bakushin O",
-          "type": "Speed"
+          "reason": "Estamina",
+          "type": "Stamina"
         },
         {
           "id": "uma-20043",
-          "reason": "Meta Sakura Bakushin O",
-          "type": "Speed"
+          "reason": "Poder",
+          "type": "Power"
         },
         {
           "id": "uma-20040",
-          "reason": "Meta Sakura Bakushin O",
-          "type": "Speed"
+          "reason": "Estamina",
+          "type": "Stamina"
         },
         {
           "id": "uma-20038",
-          "reason": "Meta Sakura Bakushin O",
-          "type": "Speed"
+          "reason": "Determinação",
+          "type": "Guts"
         },
         {
           "id": "uma-30084",
-          "reason": "Meta Sakura Bakushin O",
+          "reason": "Velocidade",
           "type": "Speed"
         },
         {
           "id": "uma-30007",
-          "reason": "Meta Sakura Bakushin O",
-          "type": "Speed"
+          "reason": "Poder",
+          "type": "Power"
         }
       ]
     },
@@ -173,93 +173,93 @@ export const META_DECKS: Record<string, ScenarioDeck[]> = {
       "cards": [
         {
           "id": "uma-30028",
-          "reason": "Meta Sakura Bakushin O",
+          "reason": "Velocidade",
           "type": "Speed"
         },
         {
           "id": "uma-30056",
-          "reason": "Meta Sakura Bakushin O",
-          "type": "Speed"
+          "reason": "Poder",
+          "type": "Power"
         },
         {
           "id": "uma-30010",
-          "reason": "Meta Sakura Bakushin O",
-          "type": "Speed"
+          "reason": "Inteligência",
+          "type": "Intelligence"
         },
         {
           "id": "uma-30036",
-          "reason": "Meta Sakura Bakushin O",
-          "type": "Speed"
+          "reason": "Amigo/Grupo",
+          "type": "Friend"
         },
         {
           "id": "uma-30076",
-          "reason": "Meta Sakura Bakushin O",
+          "reason": "Velocidade",
           "type": "Speed"
         },
         {
           "id": "uma-30072",
-          "reason": "Meta Sakura Bakushin O",
+          "reason": "Velocidade",
           "type": "Speed"
         },
         {
           "id": "uma-30006",
-          "reason": "Meta Sakura Bakushin O",
-          "type": "Speed"
+          "reason": "Determinação",
+          "type": "Guts"
         },
         {
           "id": "uma-30001",
-          "reason": "Meta Sakura Bakushin O",
-          "type": "Speed"
+          "reason": "Determinação",
+          "type": "Guts"
         },
         {
           "id": "uma-30066",
-          "reason": "Meta Sakura Bakushin O",
-          "type": "Speed"
+          "reason": "Inteligência",
+          "type": "Intelligence"
         },
         {
           "id": "uma-30026",
-          "reason": "Meta Sakura Bakushin O",
+          "reason": "Velocidade",
           "type": "Speed"
         },
         {
           "id": "uma-20042",
-          "reason": "Meta Sakura Bakushin O",
-          "type": "Speed"
+          "reason": "Poder",
+          "type": "Power"
         },
         {
           "id": "uma-20039",
-          "reason": "Meta Sakura Bakushin O",
+          "reason": "Velocidade",
           "type": "Speed"
         },
         {
           "id": "uma-20035",
-          "reason": "Meta Sakura Bakushin O",
-          "type": "Speed"
+          "reason": "Estamina",
+          "type": "Stamina"
         },
         {
           "id": "uma-20043",
-          "reason": "Meta Sakura Bakushin O",
-          "type": "Speed"
+          "reason": "Poder",
+          "type": "Power"
         },
         {
           "id": "uma-20040",
-          "reason": "Meta Sakura Bakushin O",
-          "type": "Speed"
+          "reason": "Estamina",
+          "type": "Stamina"
         },
         {
           "id": "uma-20038",
-          "reason": "Meta Sakura Bakushin O",
-          "type": "Speed"
+          "reason": "Determinação",
+          "type": "Guts"
         },
         {
           "id": "uma-30084",
-          "reason": "Meta Sakura Bakushin O",
+          "reason": "Velocidade",
           "type": "Speed"
         },
         {
           "id": "uma-30007",
-          "reason": "Meta Sakura Bakushin O",
-          "type": "Speed"
+          "reason": "Poder",
+          "type": "Power"
         }
       ]
     },
@@ -296,93 +296,93 @@ export const META_DECKS: Record<string, ScenarioDeck[]> = {
       "cards": [
         {
           "id": "uma-30028",
-          "reason": "Meta Sakura Bakushin O",
+          "reason": "Velocidade",
           "type": "Speed"
         },
         {
           "id": "uma-30056",
-          "reason": "Meta Sakura Bakushin O",
-          "type": "Speed"
+          "reason": "Poder",
+          "type": "Power"
         },
         {
           "id": "uma-30010",
-          "reason": "Meta Sakura Bakushin O",
-          "type": "Speed"
+          "reason": "Inteligência",
+          "type": "Intelligence"
         },
         {
           "id": "uma-30036",
-          "reason": "Meta Sakura Bakushin O",
-          "type": "Speed"
+          "reason": "Amigo/Grupo",
+          "type": "Friend"
         },
         {
           "id": "uma-30076",
-          "reason": "Meta Sakura Bakushin O",
+          "reason": "Velocidade",
           "type": "Speed"
         },
         {
           "id": "uma-30072",
-          "reason": "Meta Sakura Bakushin O",
+          "reason": "Velocidade",
           "type": "Speed"
         },
         {
           "id": "uma-30006",
-          "reason": "Meta Sakura Bakushin O",
-          "type": "Speed"
+          "reason": "Determinação",
+          "type": "Guts"
         },
         {
           "id": "uma-30001",
-          "reason": "Meta Sakura Bakushin O",
-          "type": "Speed"
+          "reason": "Determinação",
+          "type": "Guts"
         },
         {
           "id": "uma-30066",
-          "reason": "Meta Sakura Bakushin O",
-          "type": "Speed"
+          "reason": "Inteligência",
+          "type": "Intelligence"
         },
         {
           "id": "uma-30026",
-          "reason": "Meta Sakura Bakushin O",
+          "reason": "Velocidade",
           "type": "Speed"
         },
         {
           "id": "uma-20042",
-          "reason": "Meta Sakura Bakushin O",
-          "type": "Speed"
+          "reason": "Poder",
+          "type": "Power"
         },
         {
           "id": "uma-20039",
-          "reason": "Meta Sakura Bakushin O",
+          "reason": "Velocidade",
           "type": "Speed"
         },
         {
           "id": "uma-20035",
-          "reason": "Meta Sakura Bakushin O",
-          "type": "Speed"
+          "reason": "Estamina",
+          "type": "Stamina"
         },
         {
           "id": "uma-20043",
-          "reason": "Meta Sakura Bakushin O",
-          "type": "Speed"
+          "reason": "Poder",
+          "type": "Power"
         },
         {
           "id": "uma-20040",
-          "reason": "Meta Sakura Bakushin O",
-          "type": "Speed"
+          "reason": "Estamina",
+          "type": "Stamina"
         },
         {
           "id": "uma-20038",
-          "reason": "Meta Sakura Bakushin O",
-          "type": "Speed"
+          "reason": "Determinação",
+          "type": "Guts"
         },
         {
           "id": "uma-30084",
-          "reason": "Meta Sakura Bakushin O",
+          "reason": "Velocidade",
           "type": "Speed"
         },
         {
           "id": "uma-30007",
-          "reason": "Meta Sakura Bakushin O",
-          "type": "Speed"
+          "reason": "Poder",
+          "type": "Power"
         }
       ]
     }
@@ -434,93 +434,93 @@ export const META_DECKS: Record<string, ScenarioDeck[]> = {
       "cards": [
         {
           "id": "uma-30028",
-          "reason": "Meta King Halo",
+          "reason": "Velocidade",
           "type": "Speed"
         },
         {
           "id": "uma-30085",
-          "reason": "Meta King Halo",
-          "type": "Speed"
+          "reason": "Poder",
+          "type": "Power"
         },
         {
           "id": "uma-30010",
-          "reason": "Meta King Halo",
-          "type": "Speed"
+          "reason": "Inteligência",
+          "type": "Intelligence"
         },
         {
           "id": "uma-30036",
-          "reason": "Meta King Halo",
-          "type": "Speed"
+          "reason": "Amigo/Grupo",
+          "type": "Friend"
         },
         {
           "id": "uma-30007",
-          "reason": "Meta King Halo",
-          "type": "Speed"
+          "reason": "Poder",
+          "type": "Power"
         },
         {
           "id": "uma-30042",
-          "reason": "Meta King Halo",
-          "type": "Speed"
+          "reason": "Poder",
+          "type": "Power"
         },
         {
           "id": "uma-30001",
-          "reason": "Meta King Halo",
-          "type": "Speed"
+          "reason": "Determinação",
+          "type": "Guts"
         },
         {
           "id": "uma-30083",
-          "reason": "Meta King Halo",
-          "type": "Speed"
+          "reason": "Determinação",
+          "type": "Guts"
         },
         {
           "id": "uma-30013",
-          "reason": "Meta King Halo",
-          "type": "Speed"
+          "reason": "Inteligência",
+          "type": "Intelligence"
         },
         {
           "id": "uma-30026",
-          "reason": "Meta King Halo",
+          "reason": "Velocidade",
           "type": "Speed"
         },
         {
           "id": "uma-20035",
-          "reason": "Meta King Halo",
-          "type": "Speed"
+          "reason": "Estamina",
+          "type": "Stamina"
         },
         {
           "id": "uma-20043",
-          "reason": "Meta King Halo",
-          "type": "Speed"
+          "reason": "Poder",
+          "type": "Power"
         },
         {
           "id": "uma-20040",
-          "reason": "Meta King Halo",
-          "type": "Speed"
+          "reason": "Estamina",
+          "type": "Stamina"
         },
         {
           "id": "uma-20038",
-          "reason": "Meta King Halo",
-          "type": "Speed"
+          "reason": "Determinação",
+          "type": "Guts"
         },
         {
           "id": "uma-20041",
-          "reason": "Meta King Halo",
-          "type": "Speed"
+          "reason": "Determinação",
+          "type": "Guts"
         },
         {
           "id": "uma-20037",
-          "reason": "Meta King Halo",
-          "type": "Speed"
+          "reason": "Poder",
+          "type": "Power"
         },
         {
           "id": "uma-30084",
-          "reason": "Meta King Halo",
+          "reason": "Velocidade",
           "type": "Speed"
         },
         {
           "id": "uma-30061",
-          "reason": "Meta King Halo",
-          "type": "Speed"
+          "reason": "Inteligência",
+          "type": "Intelligence"
         }
       ]
     },
@@ -557,93 +557,93 @@ export const META_DECKS: Record<string, ScenarioDeck[]> = {
       "cards": [
         {
           "id": "uma-30028",
-          "reason": "Meta King Halo",
+          "reason": "Velocidade",
           "type": "Speed"
         },
         {
           "id": "uma-30085",
-          "reason": "Meta King Halo",
-          "type": "Speed"
+          "reason": "Poder",
+          "type": "Power"
         },
         {
           "id": "uma-30010",
-          "reason": "Meta King Halo",
-          "type": "Speed"
+          "reason": "Inteligência",
+          "type": "Intelligence"
         },
         {
           "id": "uma-30036",
-          "reason": "Meta King Halo",
-          "type": "Speed"
+          "reason": "Amigo/Grupo",
+          "type": "Friend"
         },
         {
           "id": "uma-30007",
-          "reason": "Meta King Halo",
-          "type": "Speed"
+          "reason": "Poder",
+          "type": "Power"
         },
         {
           "id": "uma-30042",
-          "reason": "Meta King Halo",
-          "type": "Speed"
+          "reason": "Poder",
+          "type": "Power"
         },
         {
           "id": "uma-30001",
-          "reason": "Meta King Halo",
-          "type": "Speed"
+          "reason": "Determinação",
+          "type": "Guts"
         },
         {
           "id": "uma-30083",
-          "reason": "Meta King Halo",
-          "type": "Speed"
+          "reason": "Determinação",
+          "type": "Guts"
         },
         {
           "id": "uma-30013",
-          "reason": "Meta King Halo",
-          "type": "Speed"
+          "reason": "Inteligência",
+          "type": "Intelligence"
         },
         {
           "id": "uma-30026",
-          "reason": "Meta King Halo",
+          "reason": "Velocidade",
           "type": "Speed"
         },
         {
           "id": "uma-20035",
-          "reason": "Meta King Halo",
-          "type": "Speed"
+          "reason": "Estamina",
+          "type": "Stamina"
         },
         {
           "id": "uma-20043",
-          "reason": "Meta King Halo",
-          "type": "Speed"
+          "reason": "Poder",
+          "type": "Power"
         },
         {
           "id": "uma-20040",
-          "reason": "Meta King Halo",
-          "type": "Speed"
+          "reason": "Estamina",
+          "type": "Stamina"
         },
         {
           "id": "uma-20038",
-          "reason": "Meta King Halo",
-          "type": "Speed"
+          "reason": "Determinação",
+          "type": "Guts"
         },
         {
           "id": "uma-20041",
-          "reason": "Meta King Halo",
-          "type": "Speed"
+          "reason": "Determinação",
+          "type": "Guts"
         },
         {
           "id": "uma-20037",
-          "reason": "Meta King Halo",
-          "type": "Speed"
+          "reason": "Poder",
+          "type": "Power"
         },
         {
           "id": "uma-30084",
-          "reason": "Meta King Halo",
+          "reason": "Velocidade",
           "type": "Speed"
         },
         {
           "id": "uma-30061",
-          "reason": "Meta King Halo",
-          "type": "Speed"
+          "reason": "Inteligência",
+          "type": "Intelligence"
         }
       ]
     },
@@ -680,93 +680,93 @@ export const META_DECKS: Record<string, ScenarioDeck[]> = {
       "cards": [
         {
           "id": "uma-30028",
-          "reason": "Meta King Halo",
+          "reason": "Velocidade",
           "type": "Speed"
         },
         {
           "id": "uma-30085",
-          "reason": "Meta King Halo",
-          "type": "Speed"
+          "reason": "Poder",
+          "type": "Power"
         },
         {
           "id": "uma-30010",
-          "reason": "Meta King Halo",
-          "type": "Speed"
+          "reason": "Inteligência",
+          "type": "Intelligence"
         },
         {
           "id": "uma-30036",
-          "reason": "Meta King Halo",
-          "type": "Speed"
+          "reason": "Amigo/Grupo",
+          "type": "Friend"
         },
         {
           "id": "uma-30007",
-          "reason": "Meta King Halo",
-          "type": "Speed"
+          "reason": "Poder",
+          "type": "Power"
         },
         {
           "id": "uma-30042",
-          "reason": "Meta King Halo",
-          "type": "Speed"
+          "reason": "Poder",
+          "type": "Power"
         },
         {
           "id": "uma-30001",
-          "reason": "Meta King Halo",
-          "type": "Speed"
+          "reason": "Determinação",
+          "type": "Guts"
         },
         {
           "id": "uma-30083",
-          "reason": "Meta King Halo",
-          "type": "Speed"
+          "reason": "Determinação",
+          "type": "Guts"
         },
         {
           "id": "uma-30013",
-          "reason": "Meta King Halo",
-          "type": "Speed"
+          "reason": "Inteligência",
+          "type": "Intelligence"
         },
         {
           "id": "uma-30026",
-          "reason": "Meta King Halo",
+          "reason": "Velocidade",
           "type": "Speed"
         },
         {
           "id": "uma-20035",
-          "reason": "Meta King Halo",
-          "type": "Speed"
+          "reason": "Estamina",
+          "type": "Stamina"
         },
         {
           "id": "uma-20043",
-          "reason": "Meta King Halo",
-          "type": "Speed"
+          "reason": "Poder",
+          "type": "Power"
         },
         {
           "id": "uma-20040",
-          "reason": "Meta King Halo",
-          "type": "Speed"
+          "reason": "Estamina",
+          "type": "Stamina"
         },
         {
           "id": "uma-20038",
-          "reason": "Meta King Halo",
-          "type": "Speed"
+          "reason": "Determinação",
+          "type": "Guts"
         },
         {
           "id": "uma-20041",
-          "reason": "Meta King Halo",
-          "type": "Speed"
+          "reason": "Determinação",
+          "type": "Guts"
         },
         {
           "id": "uma-20037",
-          "reason": "Meta King Halo",
-          "type": "Speed"
+          "reason": "Poder",
+          "type": "Power"
         },
         {
           "id": "uma-30084",
-          "reason": "Meta King Halo",
+          "reason": "Velocidade",
           "type": "Speed"
         },
         {
           "id": "uma-30061",
-          "reason": "Meta King Halo",
-          "type": "Speed"
+          "reason": "Inteligência",
+          "type": "Intelligence"
         }
       ]
     }
@@ -818,88 +818,88 @@ export const META_DECKS: Record<string, ScenarioDeck[]> = {
       "cards": [
         {
           "id": "uma-30028",
-          "reason": "Meta Haru Urara",
+          "reason": "Velocidade",
           "type": "Speed"
         },
         {
           "id": "uma-30007",
-          "reason": "Meta Haru Urara",
-          "type": "Speed"
+          "reason": "Poder",
+          "type": "Power"
         },
         {
           "id": "uma-30010",
-          "reason": "Meta Haru Urara",
-          "type": "Speed"
+          "reason": "Inteligência",
+          "type": "Intelligence"
         },
         {
           "id": "uma-30036",
-          "reason": "Meta Haru Urara",
-          "type": "Speed"
+          "reason": "Amigo/Grupo",
+          "type": "Friend"
         },
         {
           "id": "uma-30073",
-          "reason": "Meta Haru Urara",
-          "type": "Speed"
+          "reason": "Inteligência",
+          "type": "Intelligence"
         },
         {
           "id": "uma-30064",
-          "reason": "Meta Haru Urara",
-          "type": "Speed"
+          "reason": "Poder",
+          "type": "Power"
         },
         {
           "id": "uma-30019",
-          "reason": "Meta Haru Urara",
-          "type": "Speed"
+          "reason": "Determinação",
+          "type": "Guts"
         },
         {
           "id": "uma-30012",
-          "reason": "Meta Haru Urara",
-          "type": "Speed"
+          "reason": "Determinação",
+          "type": "Guts"
         },
         {
           "id": "uma-30066",
-          "reason": "Meta Haru Urara",
-          "type": "Speed"
+          "reason": "Inteligência",
+          "type": "Intelligence"
         },
         {
           "id": "uma-30072",
-          "reason": "Meta Haru Urara",
+          "reason": "Velocidade",
           "type": "Speed"
         },
         {
           "id": "uma-20042",
-          "reason": "Meta Haru Urara",
-          "type": "Speed"
+          "reason": "Poder",
+          "type": "Power"
         },
         {
           "id": "uma-20039",
-          "reason": "Meta Haru Urara",
+          "reason": "Velocidade",
           "type": "Speed"
         },
         {
           "id": "uma-20035",
-          "reason": "Meta Haru Urara",
-          "type": "Speed"
+          "reason": "Estamina",
+          "type": "Stamina"
         },
         {
           "id": "uma-20043",
-          "reason": "Meta Haru Urara",
-          "type": "Speed"
+          "reason": "Poder",
+          "type": "Power"
         },
         {
           "id": "uma-20040",
-          "reason": "Meta Haru Urara",
-          "type": "Speed"
+          "reason": "Estamina",
+          "type": "Stamina"
         },
         {
           "id": "uma-20038",
-          "reason": "Meta Haru Urara",
-          "type": "Speed"
+          "reason": "Determinação",
+          "type": "Guts"
         },
         {
           "id": "uma-30056",
-          "reason": "Meta Haru Urara",
-          "type": "Speed"
+          "reason": "Poder",
+          "type": "Power"
         }
       ]
     },
@@ -936,88 +936,88 @@ export const META_DECKS: Record<string, ScenarioDeck[]> = {
       "cards": [
         {
           "id": "uma-30028",
-          "reason": "Meta Haru Urara",
+          "reason": "Velocidade",
           "type": "Speed"
         },
         {
           "id": "uma-30007",
-          "reason": "Meta Haru Urara",
-          "type": "Speed"
+          "reason": "Poder",
+          "type": "Power"
         },
         {
           "id": "uma-30010",
-          "reason": "Meta Haru Urara",
-          "type": "Speed"
+          "reason": "Inteligência",
+          "type": "Intelligence"
         },
         {
           "id": "uma-30036",
-          "reason": "Meta Haru Urara",
-          "type": "Speed"
+          "reason": "Amigo/Grupo",
+          "type": "Friend"
         },
         {
           "id": "uma-30073",
-          "reason": "Meta Haru Urara",
-          "type": "Speed"
+          "reason": "Inteligência",
+          "type": "Intelligence"
         },
         {
           "id": "uma-30064",
-          "reason": "Meta Haru Urara",
-          "type": "Speed"
+          "reason": "Poder",
+          "type": "Power"
         },
         {
           "id": "uma-30019",
-          "reason": "Meta Haru Urara",
-          "type": "Speed"
+          "reason": "Determinação",
+          "type": "Guts"
         },
         {
           "id": "uma-30012",
-          "reason": "Meta Haru Urara",
-          "type": "Speed"
+          "reason": "Determinação",
+          "type": "Guts"
         },
         {
           "id": "uma-30066",
-          "reason": "Meta Haru Urara",
-          "type": "Speed"
+          "reason": "Inteligência",
+          "type": "Intelligence"
         },
         {
           "id": "uma-30072",
-          "reason": "Meta Haru Urara",
+          "reason": "Velocidade",
           "type": "Speed"
         },
         {
           "id": "uma-20042",
-          "reason": "Meta Haru Urara",
-          "type": "Speed"
+          "reason": "Poder",
+          "type": "Power"
         },
         {
           "id": "uma-20039",
-          "reason": "Meta Haru Urara",
+          "reason": "Velocidade",
           "type": "Speed"
         },
         {
           "id": "uma-20035",
-          "reason": "Meta Haru Urara",
-          "type": "Speed"
+          "reason": "Estamina",
+          "type": "Stamina"
         },
         {
           "id": "uma-20043",
-          "reason": "Meta Haru Urara",
-          "type": "Speed"
+          "reason": "Poder",
+          "type": "Power"
         },
         {
           "id": "uma-20040",
-          "reason": "Meta Haru Urara",
-          "type": "Speed"
+          "reason": "Estamina",
+          "type": "Stamina"
         },
         {
           "id": "uma-20038",
-          "reason": "Meta Haru Urara",
-          "type": "Speed"
+          "reason": "Determinação",
+          "type": "Guts"
         },
         {
           "id": "uma-30056",
-          "reason": "Meta Haru Urara",
-          "type": "Speed"
+          "reason": "Poder",
+          "type": "Power"
         }
       ]
     },
@@ -1054,88 +1054,88 @@ export const META_DECKS: Record<string, ScenarioDeck[]> = {
       "cards": [
         {
           "id": "uma-30028",
-          "reason": "Meta Haru Urara",
+          "reason": "Velocidade",
           "type": "Speed"
         },
         {
           "id": "uma-30007",
-          "reason": "Meta Haru Urara",
-          "type": "Speed"
+          "reason": "Poder",
+          "type": "Power"
         },
         {
           "id": "uma-30010",
-          "reason": "Meta Haru Urara",
-          "type": "Speed"
+          "reason": "Inteligência",
+          "type": "Intelligence"
         },
         {
           "id": "uma-30036",
-          "reason": "Meta Haru Urara",
-          "type": "Speed"
+          "reason": "Amigo/Grupo",
+          "type": "Friend"
         },
         {
           "id": "uma-30073",
-          "reason": "Meta Haru Urara",
-          "type": "Speed"
+          "reason": "Inteligência",
+          "type": "Intelligence"
         },
         {
           "id": "uma-30064",
-          "reason": "Meta Haru Urara",
-          "type": "Speed"
+          "reason": "Poder",
+          "type": "Power"
         },
         {
           "id": "uma-30019",
-          "reason": "Meta Haru Urara",
-          "type": "Speed"
+          "reason": "Determinação",
+          "type": "Guts"
         },
         {
           "id": "uma-30012",
-          "reason": "Meta Haru Urara",
-          "type": "Speed"
+          "reason": "Determinação",
+          "type": "Guts"
         },
         {
           "id": "uma-30066",
-          "reason": "Meta Haru Urara",
-          "type": "Speed"
+          "reason": "Inteligência",
+          "type": "Intelligence"
         },
         {
           "id": "uma-30072",
-          "reason": "Meta Haru Urara",
+          "reason": "Velocidade",
           "type": "Speed"
         },
         {
           "id": "uma-20042",
-          "reason": "Meta Haru Urara",
-          "type": "Speed"
+          "reason": "Poder",
+          "type": "Power"
         },
         {
           "id": "uma-20039",
-          "reason": "Meta Haru Urara",
+          "reason": "Velocidade",
           "type": "Speed"
         },
         {
           "id": "uma-20035",
-          "reason": "Meta Haru Urara",
-          "type": "Speed"
+          "reason": "Estamina",
+          "type": "Stamina"
         },
         {
           "id": "uma-20043",
-          "reason": "Meta Haru Urara",
-          "type": "Speed"
+          "reason": "Poder",
+          "type": "Power"
         },
         {
           "id": "uma-20040",
-          "reason": "Meta Haru Urara",
-          "type": "Speed"
+          "reason": "Estamina",
+          "type": "Stamina"
         },
         {
           "id": "uma-20038",
-          "reason": "Meta Haru Urara",
-          "type": "Speed"
+          "reason": "Determinação",
+          "type": "Guts"
         },
         {
           "id": "uma-30056",
-          "reason": "Meta Haru Urara",
-          "type": "Speed"
+          "reason": "Poder",
+          "type": "Power"
         }
       ]
     }
@@ -1187,88 +1187,88 @@ export const META_DECKS: Record<string, ScenarioDeck[]> = {
       "cards": [
         {
           "id": "uma-30028",
-          "reason": "Meta Taiki Shuttle",
+          "reason": "Velocidade",
           "type": "Speed"
         },
         {
           "id": "uma-30007",
-          "reason": "Meta Taiki Shuttle",
-          "type": "Speed"
+          "reason": "Poder",
+          "type": "Power"
         },
         {
           "id": "uma-30010",
-          "reason": "Meta Taiki Shuttle",
-          "type": "Speed"
+          "reason": "Inteligência",
+          "type": "Intelligence"
         },
         {
           "id": "uma-30036",
-          "reason": "Meta Taiki Shuttle",
-          "type": "Speed"
+          "reason": "Amigo/Grupo",
+          "type": "Friend"
         },
         {
           "id": "uma-30057",
-          "reason": "Meta Taiki Shuttle",
+          "reason": "Velocidade",
           "type": "Speed"
         },
         {
           "id": "uma-30030",
-          "reason": "Meta Taiki Shuttle",
-          "type": "Speed"
+          "reason": "Determinação",
+          "type": "Guts"
         },
         {
           "id": "uma-30027",
-          "reason": "Meta Taiki Shuttle",
-          "type": "Speed"
+          "reason": "Determinação",
+          "type": "Guts"
         },
         {
           "id": "uma-30066",
-          "reason": "Meta Taiki Shuttle",
-          "type": "Speed"
+          "reason": "Inteligência",
+          "type": "Intelligence"
         },
         {
           "id": "uma-30086",
-          "reason": "Meta Taiki Shuttle",
+          "reason": "Velocidade",
           "type": "Speed"
         },
         {
           "id": "uma-20042",
-          "reason": "Meta Taiki Shuttle",
-          "type": "Speed"
+          "reason": "Poder",
+          "type": "Power"
         },
         {
           "id": "uma-20039",
-          "reason": "Meta Taiki Shuttle",
+          "reason": "Velocidade",
           "type": "Speed"
         },
         {
           "id": "uma-20035",
-          "reason": "Meta Taiki Shuttle",
-          "type": "Speed"
+          "reason": "Estamina",
+          "type": "Stamina"
         },
         {
           "id": "uma-20043",
-          "reason": "Meta Taiki Shuttle",
-          "type": "Speed"
+          "reason": "Poder",
+          "type": "Power"
         },
         {
           "id": "uma-20040",
-          "reason": "Meta Taiki Shuttle",
-          "type": "Speed"
+          "reason": "Estamina",
+          "type": "Stamina"
         },
         {
           "id": "uma-20038",
-          "reason": "Meta Taiki Shuttle",
-          "type": "Speed"
+          "reason": "Determinação",
+          "type": "Guts"
         },
         {
           "id": "uma-30076",
-          "reason": "Meta Taiki Shuttle",
+          "reason": "Velocidade",
           "type": "Speed"
         },
         {
           "id": "uma-30056",
-          "reason": "Meta Taiki Shuttle",
-          "type": "Speed"
+          "reason": "Poder",
+          "type": "Power"
         }
       ]
     },
@@ -1305,88 +1305,88 @@ export const META_DECKS: Record<string, ScenarioDeck[]> = {
       "cards": [
         {
           "id": "uma-30028",
-          "reason": "Meta Taiki Shuttle",
+          "reason": "Velocidade",
           "type": "Speed"
         },
         {
           "id": "uma-30007",
-          "reason": "Meta Taiki Shuttle",
-          "type": "Speed"
+          "reason": "Poder",
+          "type": "Power"
         },
         {
           "id": "uma-30010",
-          "reason": "Meta Taiki Shuttle",
-          "type": "Speed"
+          "reason": "Inteligência",
+          "type": "Intelligence"
         },
         {
           "id": "uma-30036",
-          "reason": "Meta Taiki Shuttle",
-          "type": "Speed"
+          "reason": "Amigo/Grupo",
+          "type": "Friend"
         },
         {
           "id": "uma-30057",
-          "reason": "Meta Taiki Shuttle",
+          "reason": "Velocidade",
           "type": "Speed"
         },
         {
           "id": "uma-30030",
-          "reason": "Meta Taiki Shuttle",
-          "type": "Speed"
+          "reason": "Determinação",
+          "type": "Guts"
         },
         {
           "id": "uma-30027",
-          "reason": "Meta Taiki Shuttle",
-          "type": "Speed"
+          "reason": "Determinação",
+          "type": "Guts"
         },
         {
           "id": "uma-30066",
-          "reason": "Meta Taiki Shuttle",
-          "type": "Speed"
+          "reason": "Inteligência",
+          "type": "Intelligence"
         },
         {
           "id": "uma-30086",
-          "reason": "Meta Taiki Shuttle",
+          "reason": "Velocidade",
           "type": "Speed"
         },
         {
           "id": "uma-20042",
-          "reason": "Meta Taiki Shuttle",
-          "type": "Speed"
+          "reason": "Poder",
+          "type": "Power"
         },
         {
           "id": "uma-20039",
-          "reason": "Meta Taiki Shuttle",
+          "reason": "Velocidade",
           "type": "Speed"
         },
         {
           "id": "uma-20035",
-          "reason": "Meta Taiki Shuttle",
-          "type": "Speed"
+          "reason": "Estamina",
+          "type": "Stamina"
         },
         {
           "id": "uma-20043",
-          "reason": "Meta Taiki Shuttle",
-          "type": "Speed"
+          "reason": "Poder",
+          "type": "Power"
         },
         {
           "id": "uma-20040",
-          "reason": "Meta Taiki Shuttle",
-          "type": "Speed"
+          "reason": "Estamina",
+          "type": "Stamina"
         },
         {
           "id": "uma-20038",
-          "reason": "Meta Taiki Shuttle",
-          "type": "Speed"
+          "reason": "Determinação",
+          "type": "Guts"
         },
         {
           "id": "uma-30076",
-          "reason": "Meta Taiki Shuttle",
+          "reason": "Velocidade",
           "type": "Speed"
         },
         {
           "id": "uma-30056",
-          "reason": "Meta Taiki Shuttle",
-          "type": "Speed"
+          "reason": "Poder",
+          "type": "Power"
         }
       ]
     },
@@ -1423,88 +1423,88 @@ export const META_DECKS: Record<string, ScenarioDeck[]> = {
       "cards": [
         {
           "id": "uma-30028",
-          "reason": "Meta Taiki Shuttle",
+          "reason": "Velocidade",
           "type": "Speed"
         },
         {
           "id": "uma-30007",
-          "reason": "Meta Taiki Shuttle",
-          "type": "Speed"
+          "reason": "Poder",
+          "type": "Power"
         },
         {
           "id": "uma-30010",
-          "reason": "Meta Taiki Shuttle",
-          "type": "Speed"
+          "reason": "Inteligência",
+          "type": "Intelligence"
         },
         {
           "id": "uma-30036",
-          "reason": "Meta Taiki Shuttle",
-          "type": "Speed"
+          "reason": "Amigo/Grupo",
+          "type": "Friend"
         },
         {
           "id": "uma-30057",
-          "reason": "Meta Taiki Shuttle",
+          "reason": "Velocidade",
           "type": "Speed"
         },
         {
           "id": "uma-30030",
-          "reason": "Meta Taiki Shuttle",
-          "type": "Speed"
+          "reason": "Determinação",
+          "type": "Guts"
         },
         {
           "id": "uma-30027",
-          "reason": "Meta Taiki Shuttle",
-          "type": "Speed"
+          "reason": "Determinação",
+          "type": "Guts"
         },
         {
           "id": "uma-30066",
-          "reason": "Meta Taiki Shuttle",
-          "type": "Speed"
+          "reason": "Inteligência",
+          "type": "Intelligence"
         },
         {
           "id": "uma-30086",
-          "reason": "Meta Taiki Shuttle",
+          "reason": "Velocidade",
           "type": "Speed"
         },
         {
           "id": "uma-20042",
-          "reason": "Meta Taiki Shuttle",
-          "type": "Speed"
+          "reason": "Poder",
+          "type": "Power"
         },
         {
           "id": "uma-20039",
-          "reason": "Meta Taiki Shuttle",
+          "reason": "Velocidade",
           "type": "Speed"
         },
         {
           "id": "uma-20035",
-          "reason": "Meta Taiki Shuttle",
-          "type": "Speed"
+          "reason": "Estamina",
+          "type": "Stamina"
         },
         {
           "id": "uma-20043",
-          "reason": "Meta Taiki Shuttle",
-          "type": "Speed"
+          "reason": "Poder",
+          "type": "Power"
         },
         {
           "id": "uma-20040",
-          "reason": "Meta Taiki Shuttle",
-          "type": "Speed"
+          "reason": "Estamina",
+          "type": "Stamina"
         },
         {
           "id": "uma-20038",
-          "reason": "Meta Taiki Shuttle",
-          "type": "Speed"
+          "reason": "Determinação",
+          "type": "Guts"
         },
         {
           "id": "uma-30076",
-          "reason": "Meta Taiki Shuttle",
+          "reason": "Velocidade",
           "type": "Speed"
         },
         {
           "id": "uma-30056",
-          "reason": "Meta Taiki Shuttle",
-          "type": "Speed"
+          "reason": "Poder",
+          "type": "Power"
         }
       ]
     }
@@ -1556,93 +1556,93 @@ export const META_DECKS: Record<string, ScenarioDeck[]> = {
       "cards": [
         {
           "id": "uma-30028",
-          "reason": "Meta Daiwa Scarlet",
+          "reason": "Velocidade",
           "type": "Speed"
         },
         {
           "id": "uma-30047",
-          "reason": "Meta Daiwa Scarlet",
-          "type": "Speed"
+          "reason": "Poder",
+          "type": "Power"
         },
         {
           "id": "uma-30010",
-          "reason": "Meta Daiwa Scarlet",
-          "type": "Speed"
+          "reason": "Inteligência",
+          "type": "Intelligence"
         },
         {
           "id": "uma-30036",
-          "reason": "Meta Daiwa Scarlet",
-          "type": "Speed"
+          "reason": "Amigo/Grupo",
+          "type": "Friend"
         },
         {
           "id": "uma-30007",
-          "reason": "Meta Daiwa Scarlet",
-          "type": "Speed"
+          "reason": "Poder",
+          "type": "Power"
         },
         {
           "id": "uma-30082",
-          "reason": "Meta Daiwa Scarlet",
-          "type": "Speed"
+          "reason": "Inteligência",
+          "type": "Intelligence"
         },
         {
           "id": "uma-30030",
-          "reason": "Meta Daiwa Scarlet",
-          "type": "Speed"
+          "reason": "Determinação",
+          "type": "Guts"
         },
         {
           "id": "uma-30027",
-          "reason": "Meta Daiwa Scarlet",
-          "type": "Speed"
+          "reason": "Determinação",
+          "type": "Guts"
         },
         {
           "id": "uma-30084",
-          "reason": "Meta Daiwa Scarlet",
+          "reason": "Velocidade",
           "type": "Speed"
         },
         {
           "id": "uma-20039",
-          "reason": "Meta Daiwa Scarlet",
+          "reason": "Velocidade",
           "type": "Speed"
         },
         {
           "id": "uma-20035",
-          "reason": "Meta Daiwa Scarlet",
-          "type": "Speed"
+          "reason": "Estamina",
+          "type": "Stamina"
         },
         {
           "id": "uma-20043",
-          "reason": "Meta Daiwa Scarlet",
-          "type": "Speed"
+          "reason": "Poder",
+          "type": "Power"
         },
         {
           "id": "uma-20040",
-          "reason": "Meta Daiwa Scarlet",
-          "type": "Speed"
+          "reason": "Estamina",
+          "type": "Stamina"
         },
         {
           "id": "uma-20038",
-          "reason": "Meta Daiwa Scarlet",
-          "type": "Speed"
+          "reason": "Determinação",
+          "type": "Guts"
         },
         {
           "id": "uma-20041",
-          "reason": "Meta Daiwa Scarlet",
-          "type": "Speed"
+          "reason": "Determinação",
+          "type": "Guts"
         },
         {
           "id": "uma-30072",
-          "reason": "Meta Daiwa Scarlet",
+          "reason": "Velocidade",
           "type": "Speed"
         },
         {
           "id": "uma-30005",
-          "reason": "Meta Daiwa Scarlet",
-          "type": "Speed"
+          "reason": "Poder",
+          "type": "Power"
         },
         {
           "id": "uma-30041",
-          "reason": "Meta Daiwa Scarlet",
-          "type": "Speed"
+          "reason": "Inteligência",
+          "type": "Intelligence"
         }
       ]
     },
@@ -1679,93 +1679,93 @@ export const META_DECKS: Record<string, ScenarioDeck[]> = {
       "cards": [
         {
           "id": "uma-30028",
-          "reason": "Meta Daiwa Scarlet",
+          "reason": "Velocidade",
           "type": "Speed"
         },
         {
           "id": "uma-30047",
-          "reason": "Meta Daiwa Scarlet",
-          "type": "Speed"
+          "reason": "Poder",
+          "type": "Power"
         },
         {
           "id": "uma-30010",
-          "reason": "Meta Daiwa Scarlet",
-          "type": "Speed"
+          "reason": "Inteligência",
+          "type": "Intelligence"
         },
         {
           "id": "uma-30036",
-          "reason": "Meta Daiwa Scarlet",
-          "type": "Speed"
+          "reason": "Amigo/Grupo",
+          "type": "Friend"
         },
         {
           "id": "uma-30007",
-          "reason": "Meta Daiwa Scarlet",
-          "type": "Speed"
+          "reason": "Poder",
+          "type": "Power"
         },
         {
           "id": "uma-30082",
-          "reason": "Meta Daiwa Scarlet",
-          "type": "Speed"
+          "reason": "Inteligência",
+          "type": "Intelligence"
         },
         {
           "id": "uma-30030",
-          "reason": "Meta Daiwa Scarlet",
-          "type": "Speed"
+          "reason": "Determinação",
+          "type": "Guts"
         },
         {
           "id": "uma-30027",
-          "reason": "Meta Daiwa Scarlet",
-          "type": "Speed"
+          "reason": "Determinação",
+          "type": "Guts"
         },
         {
           "id": "uma-30084",
-          "reason": "Meta Daiwa Scarlet",
+          "reason": "Velocidade",
           "type": "Speed"
         },
         {
           "id": "uma-20039",
-          "reason": "Meta Daiwa Scarlet",
+          "reason": "Velocidade",
           "type": "Speed"
         },
         {
           "id": "uma-20035",
-          "reason": "Meta Daiwa Scarlet",
-          "type": "Speed"
+          "reason": "Estamina",
+          "type": "Stamina"
         },
         {
           "id": "uma-20043",
-          "reason": "Meta Daiwa Scarlet",
-          "type": "Speed"
+          "reason": "Poder",
+          "type": "Power"
         },
         {
           "id": "uma-20040",
-          "reason": "Meta Daiwa Scarlet",
-          "type": "Speed"
+          "reason": "Estamina",
+          "type": "Stamina"
         },
         {
           "id": "uma-20038",
-          "reason": "Meta Daiwa Scarlet",
-          "type": "Speed"
+          "reason": "Determinação",
+          "type": "Guts"
         },
         {
           "id": "uma-20041",
-          "reason": "Meta Daiwa Scarlet",
-          "type": "Speed"
+          "reason": "Determinação",
+          "type": "Guts"
         },
         {
           "id": "uma-30072",
-          "reason": "Meta Daiwa Scarlet",
+          "reason": "Velocidade",
           "type": "Speed"
         },
         {
           "id": "uma-30005",
-          "reason": "Meta Daiwa Scarlet",
-          "type": "Speed"
+          "reason": "Poder",
+          "type": "Power"
         },
         {
           "id": "uma-30041",
-          "reason": "Meta Daiwa Scarlet",
-          "type": "Speed"
+          "reason": "Inteligência",
+          "type": "Intelligence"
         }
       ]
     },
@@ -1802,93 +1802,93 @@ export const META_DECKS: Record<string, ScenarioDeck[]> = {
       "cards": [
         {
           "id": "uma-30028",
-          "reason": "Meta Daiwa Scarlet",
+          "reason": "Velocidade",
           "type": "Speed"
         },
         {
           "id": "uma-30047",
-          "reason": "Meta Daiwa Scarlet",
-          "type": "Speed"
+          "reason": "Poder",
+          "type": "Power"
         },
         {
           "id": "uma-30010",
-          "reason": "Meta Daiwa Scarlet",
-          "type": "Speed"
+          "reason": "Inteligência",
+          "type": "Intelligence"
         },
         {
           "id": "uma-30036",
-          "reason": "Meta Daiwa Scarlet",
-          "type": "Speed"
+          "reason": "Amigo/Grupo",
+          "type": "Friend"
         },
         {
           "id": "uma-30007",
-          "reason": "Meta Daiwa Scarlet",
-          "type": "Speed"
+          "reason": "Poder",
+          "type": "Power"
         },
         {
           "id": "uma-30082",
-          "reason": "Meta Daiwa Scarlet",
-          "type": "Speed"
+          "reason": "Inteligência",
+          "type": "Intelligence"
         },
         {
           "id": "uma-30030",
-          "reason": "Meta Daiwa Scarlet",
-          "type": "Speed"
+          "reason": "Determinação",
+          "type": "Guts"
         },
         {
           "id": "uma-30027",
-          "reason": "Meta Daiwa Scarlet",
-          "type": "Speed"
+          "reason": "Determinação",
+          "type": "Guts"
         },
         {
           "id": "uma-30084",
-          "reason": "Meta Daiwa Scarlet",
+          "reason": "Velocidade",
           "type": "Speed"
         },
         {
           "id": "uma-20039",
-          "reason": "Meta Daiwa Scarlet",
+          "reason": "Velocidade",
           "type": "Speed"
         },
         {
           "id": "uma-20035",
-          "reason": "Meta Daiwa Scarlet",
-          "type": "Speed"
+          "reason": "Estamina",
+          "type": "Stamina"
         },
         {
           "id": "uma-20043",
-          "reason": "Meta Daiwa Scarlet",
-          "type": "Speed"
+          "reason": "Poder",
+          "type": "Power"
         },
         {
           "id": "uma-20040",
-          "reason": "Meta Daiwa Scarlet",
-          "type": "Speed"
+          "reason": "Estamina",
+          "type": "Stamina"
         },
         {
           "id": "uma-20038",
-          "reason": "Meta Daiwa Scarlet",
-          "type": "Speed"
+          "reason": "Determinação",
+          "type": "Guts"
         },
         {
           "id": "uma-20041",
-          "reason": "Meta Daiwa Scarlet",
-          "type": "Speed"
+          "reason": "Determinação",
+          "type": "Guts"
         },
         {
           "id": "uma-30072",
-          "reason": "Meta Daiwa Scarlet",
+          "reason": "Velocidade",
           "type": "Speed"
         },
         {
           "id": "uma-30005",
-          "reason": "Meta Daiwa Scarlet",
-          "type": "Speed"
+          "reason": "Poder",
+          "type": "Power"
         },
         {
           "id": "uma-30041",
-          "reason": "Meta Daiwa Scarlet",
-          "type": "Speed"
+          "reason": "Inteligência",
+          "type": "Intelligence"
         }
       ]
     }
@@ -1940,93 +1940,93 @@ export const META_DECKS: Record<string, ScenarioDeck[]> = {
       "cards": [
         {
           "id": "uma-30028",
-          "reason": "Meta Oguri Cap",
+          "reason": "Velocidade",
           "type": "Speed"
         },
         {
           "id": "uma-30017",
-          "reason": "Meta Oguri Cap",
-          "type": "Speed"
+          "reason": "Poder",
+          "type": "Power"
         },
         {
           "id": "uma-30010",
-          "reason": "Meta Oguri Cap",
-          "type": "Speed"
+          "reason": "Inteligência",
+          "type": "Intelligence"
         },
         {
           "id": "uma-30021",
-          "reason": "Meta Oguri Cap",
-          "type": "Speed"
+          "reason": "Amigo/Grupo",
+          "type": "Friend"
         },
         {
           "id": "uma-30005",
-          "reason": "Meta Oguri Cap",
-          "type": "Speed"
+          "reason": "Poder",
+          "type": "Power"
         },
         {
           "id": "uma-30031",
-          "reason": "Meta Oguri Cap",
-          "type": "Speed"
+          "reason": "Inteligência",
+          "type": "Intelligence"
         },
         {
           "id": "uma-30001",
-          "reason": "Meta Oguri Cap",
-          "type": "Speed"
+          "reason": "Determinação",
+          "type": "Guts"
         },
         {
           "id": "uma-30083",
-          "reason": "Meta Oguri Cap",
-          "type": "Speed"
+          "reason": "Determinação",
+          "type": "Guts"
         },
         {
           "id": "uma-30084",
-          "reason": "Meta Oguri Cap",
+          "reason": "Velocidade",
           "type": "Speed"
         },
         {
           "id": "uma-20037",
-          "reason": "Meta Oguri Cap",
-          "type": "Speed"
+          "reason": "Poder",
+          "type": "Power"
         },
         {
           "id": "uma-20042",
-          "reason": "Meta Oguri Cap",
-          "type": "Speed"
+          "reason": "Poder",
+          "type": "Power"
         },
         {
           "id": "uma-20039",
-          "reason": "Meta Oguri Cap",
+          "reason": "Velocidade",
           "type": "Speed"
         },
         {
           "id": "uma-20035",
-          "reason": "Meta Oguri Cap",
-          "type": "Speed"
+          "reason": "Estamina",
+          "type": "Stamina"
         },
         {
           "id": "uma-20043",
-          "reason": "Meta Oguri Cap",
-          "type": "Speed"
+          "reason": "Poder",
+          "type": "Power"
         },
         {
           "id": "uma-20040",
-          "reason": "Meta Oguri Cap",
-          "type": "Speed"
+          "reason": "Estamina",
+          "type": "Stamina"
         },
         {
           "id": "uma-30072",
-          "reason": "Meta Oguri Cap",
+          "reason": "Velocidade",
           "type": "Speed"
         },
         {
           "id": "uma-30058",
-          "reason": "Meta Oguri Cap",
-          "type": "Speed"
+          "reason": "Poder",
+          "type": "Power"
         },
         {
           "id": "uma-30055",
-          "reason": "Meta Oguri Cap",
-          "type": "Speed"
+          "reason": "Inteligência",
+          "type": "Intelligence"
         }
       ]
     },
@@ -2063,93 +2063,93 @@ export const META_DECKS: Record<string, ScenarioDeck[]> = {
       "cards": [
         {
           "id": "uma-30028",
-          "reason": "Meta Oguri Cap",
+          "reason": "Velocidade",
           "type": "Speed"
         },
         {
           "id": "uma-30017",
-          "reason": "Meta Oguri Cap",
-          "type": "Speed"
+          "reason": "Poder",
+          "type": "Power"
         },
         {
           "id": "uma-30010",
-          "reason": "Meta Oguri Cap",
-          "type": "Speed"
+          "reason": "Inteligência",
+          "type": "Intelligence"
         },
         {
           "id": "uma-30021",
-          "reason": "Meta Oguri Cap",
-          "type": "Speed"
+          "reason": "Amigo/Grupo",
+          "type": "Friend"
         },
         {
           "id": "uma-30005",
-          "reason": "Meta Oguri Cap",
-          "type": "Speed"
+          "reason": "Poder",
+          "type": "Power"
         },
         {
           "id": "uma-30031",
-          "reason": "Meta Oguri Cap",
-          "type": "Speed"
+          "reason": "Inteligência",
+          "type": "Intelligence"
         },
         {
           "id": "uma-30001",
-          "reason": "Meta Oguri Cap",
-          "type": "Speed"
+          "reason": "Determinação",
+          "type": "Guts"
         },
         {
           "id": "uma-30083",
-          "reason": "Meta Oguri Cap",
-          "type": "Speed"
+          "reason": "Determinação",
+          "type": "Guts"
         },
         {
           "id": "uma-30084",
-          "reason": "Meta Oguri Cap",
+          "reason": "Velocidade",
           "type": "Speed"
         },
         {
           "id": "uma-20037",
-          "reason": "Meta Oguri Cap",
-          "type": "Speed"
+          "reason": "Poder",
+          "type": "Power"
         },
         {
           "id": "uma-20042",
-          "reason": "Meta Oguri Cap",
-          "type": "Speed"
+          "reason": "Poder",
+          "type": "Power"
         },
         {
           "id": "uma-20039",
-          "reason": "Meta Oguri Cap",
+          "reason": "Velocidade",
           "type": "Speed"
         },
         {
           "id": "uma-20035",
-          "reason": "Meta Oguri Cap",
-          "type": "Speed"
+          "reason": "Estamina",
+          "type": "Stamina"
         },
         {
           "id": "uma-20043",
-          "reason": "Meta Oguri Cap",
-          "type": "Speed"
+          "reason": "Poder",
+          "type": "Power"
         },
         {
           "id": "uma-20040",
-          "reason": "Meta Oguri Cap",
-          "type": "Speed"
+          "reason": "Estamina",
+          "type": "Stamina"
         },
         {
           "id": "uma-30072",
-          "reason": "Meta Oguri Cap",
+          "reason": "Velocidade",
           "type": "Speed"
         },
         {
           "id": "uma-30058",
-          "reason": "Meta Oguri Cap",
-          "type": "Speed"
+          "reason": "Poder",
+          "type": "Power"
         },
         {
           "id": "uma-30055",
-          "reason": "Meta Oguri Cap",
-          "type": "Speed"
+          "reason": "Inteligência",
+          "type": "Intelligence"
         }
       ]
     },
@@ -2186,93 +2186,93 @@ export const META_DECKS: Record<string, ScenarioDeck[]> = {
       "cards": [
         {
           "id": "uma-30028",
-          "reason": "Meta Oguri Cap",
+          "reason": "Velocidade",
           "type": "Speed"
         },
         {
           "id": "uma-30017",
-          "reason": "Meta Oguri Cap",
-          "type": "Speed"
+          "reason": "Poder",
+          "type": "Power"
         },
         {
           "id": "uma-30010",
-          "reason": "Meta Oguri Cap",
-          "type": "Speed"
+          "reason": "Inteligência",
+          "type": "Intelligence"
         },
         {
           "id": "uma-30021",
-          "reason": "Meta Oguri Cap",
-          "type": "Speed"
+          "reason": "Amigo/Grupo",
+          "type": "Friend"
         },
         {
           "id": "uma-30005",
-          "reason": "Meta Oguri Cap",
-          "type": "Speed"
+          "reason": "Poder",
+          "type": "Power"
         },
         {
           "id": "uma-30031",
-          "reason": "Meta Oguri Cap",
-          "type": "Speed"
+          "reason": "Inteligência",
+          "type": "Intelligence"
         },
         {
           "id": "uma-30001",
-          "reason": "Meta Oguri Cap",
-          "type": "Speed"
+          "reason": "Determinação",
+          "type": "Guts"
         },
         {
           "id": "uma-30083",
-          "reason": "Meta Oguri Cap",
-          "type": "Speed"
+          "reason": "Determinação",
+          "type": "Guts"
         },
         {
           "id": "uma-30084",
-          "reason": "Meta Oguri Cap",
+          "reason": "Velocidade",
           "type": "Speed"
         },
         {
           "id": "uma-20037",
-          "reason": "Meta Oguri Cap",
-          "type": "Speed"
+          "reason": "Poder",
+          "type": "Power"
         },
         {
           "id": "uma-20042",
-          "reason": "Meta Oguri Cap",
-          "type": "Speed"
+          "reason": "Poder",
+          "type": "Power"
         },
         {
           "id": "uma-20039",
-          "reason": "Meta Oguri Cap",
+          "reason": "Velocidade",
           "type": "Speed"
         },
         {
           "id": "uma-20035",
-          "reason": "Meta Oguri Cap",
-          "type": "Speed"
+          "reason": "Estamina",
+          "type": "Stamina"
         },
         {
           "id": "uma-20043",
-          "reason": "Meta Oguri Cap",
-          "type": "Speed"
+          "reason": "Poder",
+          "type": "Power"
         },
         {
           "id": "uma-20040",
-          "reason": "Meta Oguri Cap",
-          "type": "Speed"
+          "reason": "Estamina",
+          "type": "Stamina"
         },
         {
           "id": "uma-30072",
-          "reason": "Meta Oguri Cap",
+          "reason": "Velocidade",
           "type": "Speed"
         },
         {
           "id": "uma-30058",
-          "reason": "Meta Oguri Cap",
-          "type": "Speed"
+          "reason": "Poder",
+          "type": "Power"
         },
         {
           "id": "uma-30055",
-          "reason": "Meta Oguri Cap",
-          "type": "Speed"
+          "reason": "Inteligência",
+          "type": "Intelligence"
         }
       ]
     }
@@ -2324,93 +2324,93 @@ export const META_DECKS: Record<string, ScenarioDeck[]> = {
       "cards": [
         {
           "id": "uma-30028",
-          "reason": "Meta Vodka",
+          "reason": "Velocidade",
           "type": "Speed"
         },
         {
           "id": "uma-30032",
-          "reason": "Meta Vodka",
-          "type": "Speed"
+          "reason": "Poder",
+          "type": "Power"
         },
         {
           "id": "uma-30010",
-          "reason": "Meta Vodka",
-          "type": "Speed"
+          "reason": "Inteligência",
+          "type": "Intelligence"
         },
         {
           "id": "uma-30036",
-          "reason": "Meta Vodka",
-          "type": "Speed"
+          "reason": "Amigo/Grupo",
+          "type": "Friend"
         },
         {
           "id": "uma-30005",
-          "reason": "Meta Vodka",
-          "type": "Speed"
+          "reason": "Poder",
+          "type": "Power"
         },
         {
           "id": "uma-30084",
-          "reason": "Meta Vodka",
+          "reason": "Velocidade",
           "type": "Speed"
         },
         {
           "id": "uma-30030",
-          "reason": "Meta Vodka",
-          "type": "Speed"
+          "reason": "Determinação",
+          "type": "Guts"
         },
         {
           "id": "uma-30027",
-          "reason": "Meta Vodka",
-          "type": "Speed"
+          "reason": "Determinação",
+          "type": "Guts"
         },
         {
           "id": "uma-30082",
-          "reason": "Meta Vodka",
-          "type": "Speed"
+          "reason": "Inteligência",
+          "type": "Intelligence"
         },
         {
           "id": "uma-20038",
-          "reason": "Meta Vodka",
-          "type": "Speed"
+          "reason": "Determinação",
+          "type": "Guts"
         },
         {
           "id": "uma-20041",
-          "reason": "Meta Vodka",
-          "type": "Speed"
+          "reason": "Determinação",
+          "type": "Guts"
         },
         {
           "id": "uma-20037",
-          "reason": "Meta Vodka",
-          "type": "Speed"
+          "reason": "Poder",
+          "type": "Power"
         },
         {
           "id": "uma-20042",
-          "reason": "Meta Vodka",
-          "type": "Speed"
+          "reason": "Poder",
+          "type": "Power"
         },
         {
           "id": "uma-20039",
-          "reason": "Meta Vodka",
+          "reason": "Velocidade",
           "type": "Speed"
         },
         {
           "id": "uma-20035",
-          "reason": "Meta Vodka",
-          "type": "Speed"
+          "reason": "Estamina",
+          "type": "Stamina"
         },
         {
           "id": "uma-30072",
-          "reason": "Meta Vodka",
+          "reason": "Velocidade",
           "type": "Speed"
         },
         {
           "id": "uma-30071",
-          "reason": "Meta Vodka",
-          "type": "Speed"
+          "reason": "Poder",
+          "type": "Power"
         },
         {
           "id": "uma-30041",
-          "reason": "Meta Vodka",
-          "type": "Speed"
+          "reason": "Inteligência",
+          "type": "Intelligence"
         }
       ]
     },
@@ -2447,93 +2447,93 @@ export const META_DECKS: Record<string, ScenarioDeck[]> = {
       "cards": [
         {
           "id": "uma-30028",
-          "reason": "Meta Vodka",
+          "reason": "Velocidade",
           "type": "Speed"
         },
         {
           "id": "uma-30032",
-          "reason": "Meta Vodka",
-          "type": "Speed"
+          "reason": "Poder",
+          "type": "Power"
         },
         {
           "id": "uma-30010",
-          "reason": "Meta Vodka",
-          "type": "Speed"
+          "reason": "Inteligência",
+          "type": "Intelligence"
         },
         {
           "id": "uma-30036",
-          "reason": "Meta Vodka",
-          "type": "Speed"
+          "reason": "Amigo/Grupo",
+          "type": "Friend"
         },
         {
           "id": "uma-30005",
-          "reason": "Meta Vodka",
-          "type": "Speed"
+          "reason": "Poder",
+          "type": "Power"
         },
         {
           "id": "uma-30084",
-          "reason": "Meta Vodka",
+          "reason": "Velocidade",
           "type": "Speed"
         },
         {
           "id": "uma-30030",
-          "reason": "Meta Vodka",
-          "type": "Speed"
+          "reason": "Determinação",
+          "type": "Guts"
         },
         {
           "id": "uma-30027",
-          "reason": "Meta Vodka",
-          "type": "Speed"
+          "reason": "Determinação",
+          "type": "Guts"
         },
         {
           "id": "uma-30082",
-          "reason": "Meta Vodka",
-          "type": "Speed"
+          "reason": "Inteligência",
+          "type": "Intelligence"
         },
         {
           "id": "uma-20038",
-          "reason": "Meta Vodka",
-          "type": "Speed"
+          "reason": "Determinação",
+          "type": "Guts"
         },
         {
           "id": "uma-20041",
-          "reason": "Meta Vodka",
-          "type": "Speed"
+          "reason": "Determinação",
+          "type": "Guts"
         },
         {
           "id": "uma-20037",
-          "reason": "Meta Vodka",
-          "type": "Speed"
+          "reason": "Poder",
+          "type": "Power"
         },
         {
           "id": "uma-20042",
-          "reason": "Meta Vodka",
-          "type": "Speed"
+          "reason": "Poder",
+          "type": "Power"
         },
         {
           "id": "uma-20039",
-          "reason": "Meta Vodka",
+          "reason": "Velocidade",
           "type": "Speed"
         },
         {
           "id": "uma-20035",
-          "reason": "Meta Vodka",
-          "type": "Speed"
+          "reason": "Estamina",
+          "type": "Stamina"
         },
         {
           "id": "uma-30072",
-          "reason": "Meta Vodka",
+          "reason": "Velocidade",
           "type": "Speed"
         },
         {
           "id": "uma-30071",
-          "reason": "Meta Vodka",
-          "type": "Speed"
+          "reason": "Poder",
+          "type": "Power"
         },
         {
           "id": "uma-30041",
-          "reason": "Meta Vodka",
-          "type": "Speed"
+          "reason": "Inteligência",
+          "type": "Intelligence"
         }
       ]
     },
@@ -2570,93 +2570,93 @@ export const META_DECKS: Record<string, ScenarioDeck[]> = {
       "cards": [
         {
           "id": "uma-30028",
-          "reason": "Meta Vodka",
+          "reason": "Velocidade",
           "type": "Speed"
         },
         {
           "id": "uma-30032",
-          "reason": "Meta Vodka",
-          "type": "Speed"
+          "reason": "Poder",
+          "type": "Power"
         },
         {
           "id": "uma-30010",
-          "reason": "Meta Vodka",
-          "type": "Speed"
+          "reason": "Inteligência",
+          "type": "Intelligence"
         },
         {
           "id": "uma-30036",
-          "reason": "Meta Vodka",
-          "type": "Speed"
+          "reason": "Amigo/Grupo",
+          "type": "Friend"
         },
         {
           "id": "uma-30005",
-          "reason": "Meta Vodka",
-          "type": "Speed"
+          "reason": "Poder",
+          "type": "Power"
         },
         {
           "id": "uma-30084",
-          "reason": "Meta Vodka",
+          "reason": "Velocidade",
           "type": "Speed"
         },
         {
           "id": "uma-30030",
-          "reason": "Meta Vodka",
-          "type": "Speed"
+          "reason": "Determinação",
+          "type": "Guts"
         },
         {
           "id": "uma-30027",
-          "reason": "Meta Vodka",
-          "type": "Speed"
+          "reason": "Determinação",
+          "type": "Guts"
         },
         {
           "id": "uma-30082",
-          "reason": "Meta Vodka",
-          "type": "Speed"
+          "reason": "Inteligência",
+          "type": "Intelligence"
         },
         {
           "id": "uma-20038",
-          "reason": "Meta Vodka",
-          "type": "Speed"
+          "reason": "Determinação",
+          "type": "Guts"
         },
         {
           "id": "uma-20041",
-          "reason": "Meta Vodka",
-          "type": "Speed"
+          "reason": "Determinação",
+          "type": "Guts"
         },
         {
           "id": "uma-20037",
-          "reason": "Meta Vodka",
-          "type": "Speed"
+          "reason": "Poder",
+          "type": "Power"
         },
         {
           "id": "uma-20042",
-          "reason": "Meta Vodka",
-          "type": "Speed"
+          "reason": "Poder",
+          "type": "Power"
         },
         {
           "id": "uma-20039",
-          "reason": "Meta Vodka",
+          "reason": "Velocidade",
           "type": "Speed"
         },
         {
           "id": "uma-20035",
-          "reason": "Meta Vodka",
-          "type": "Speed"
+          "reason": "Estamina",
+          "type": "Stamina"
         },
         {
           "id": "uma-30072",
-          "reason": "Meta Vodka",
+          "reason": "Velocidade",
           "type": "Speed"
         },
         {
           "id": "uma-30071",
-          "reason": "Meta Vodka",
-          "type": "Speed"
+          "reason": "Poder",
+          "type": "Power"
         },
         {
           "id": "uma-30041",
-          "reason": "Meta Vodka",
-          "type": "Speed"
+          "reason": "Inteligência",
+          "type": "Intelligence"
         }
       ]
     }
@@ -2708,93 +2708,93 @@ export const META_DECKS: Record<string, ScenarioDeck[]> = {
       "cards": [
         {
           "id": "uma-30028",
-          "reason": "Meta Nishino Flower",
+          "reason": "Velocidade",
           "type": "Speed"
         },
         {
           "id": "uma-30033",
-          "reason": "Meta Nishino Flower",
-          "type": "Speed"
+          "reason": "Poder",
+          "type": "Power"
         },
         {
           "id": "uma-30010",
-          "reason": "Meta Nishino Flower",
-          "type": "Speed"
+          "reason": "Inteligência",
+          "type": "Intelligence"
         },
         {
           "id": "uma-30036",
-          "reason": "Meta Nishino Flower",
-          "type": "Speed"
+          "reason": "Amigo/Grupo",
+          "type": "Friend"
         },
         {
           "id": "uma-30073",
-          "reason": "Meta Nishino Flower",
-          "type": "Speed"
+          "reason": "Inteligência",
+          "type": "Intelligence"
         },
         {
           "id": "uma-30072",
-          "reason": "Meta Nishino Flower",
+          "reason": "Velocidade",
           "type": "Speed"
         },
         {
           "id": "uma-30011",
-          "reason": "Meta Nishino Flower",
-          "type": "Speed"
+          "reason": "Determinação",
+          "type": "Guts"
         },
         {
           "id": "uma-30006",
-          "reason": "Meta Nishino Flower",
-          "type": "Speed"
+          "reason": "Determinação",
+          "type": "Guts"
         },
         {
           "id": "uma-30066",
-          "reason": "Meta Nishino Flower",
-          "type": "Speed"
+          "reason": "Inteligência",
+          "type": "Intelligence"
         },
         {
           "id": "uma-30026",
-          "reason": "Meta Nishino Flower",
+          "reason": "Velocidade",
           "type": "Speed"
         },
         {
           "id": "uma-20040",
-          "reason": "Meta Nishino Flower",
-          "type": "Speed"
+          "reason": "Estamina",
+          "type": "Stamina"
         },
         {
           "id": "uma-20038",
-          "reason": "Meta Nishino Flower",
-          "type": "Speed"
+          "reason": "Determinação",
+          "type": "Guts"
         },
         {
           "id": "uma-20041",
-          "reason": "Meta Nishino Flower",
-          "type": "Speed"
+          "reason": "Determinação",
+          "type": "Guts"
         },
         {
           "id": "uma-20037",
-          "reason": "Meta Nishino Flower",
-          "type": "Speed"
+          "reason": "Poder",
+          "type": "Power"
         },
         {
           "id": "uma-20042",
-          "reason": "Meta Nishino Flower",
-          "type": "Speed"
+          "reason": "Poder",
+          "type": "Power"
         },
         {
           "id": "uma-20039",
-          "reason": "Meta Nishino Flower",
+          "reason": "Velocidade",
           "type": "Speed"
         },
         {
           "id": "uma-30084",
-          "reason": "Meta Nishino Flower",
+          "reason": "Velocidade",
           "type": "Speed"
         },
         {
           "id": "uma-30074",
-          "reason": "Meta Nishino Flower",
-          "type": "Speed"
+          "reason": "Poder",
+          "type": "Power"
         }
       ]
     },
@@ -2831,93 +2831,93 @@ export const META_DECKS: Record<string, ScenarioDeck[]> = {
       "cards": [
         {
           "id": "uma-30028",
-          "reason": "Meta Nishino Flower",
+          "reason": "Velocidade",
           "type": "Speed"
         },
         {
           "id": "uma-30033",
-          "reason": "Meta Nishino Flower",
-          "type": "Speed"
+          "reason": "Poder",
+          "type": "Power"
         },
         {
           "id": "uma-30010",
-          "reason": "Meta Nishino Flower",
-          "type": "Speed"
+          "reason": "Inteligência",
+          "type": "Intelligence"
         },
         {
           "id": "uma-30036",
-          "reason": "Meta Nishino Flower",
-          "type": "Speed"
+          "reason": "Amigo/Grupo",
+          "type": "Friend"
         },
         {
           "id": "uma-30073",
-          "reason": "Meta Nishino Flower",
-          "type": "Speed"
+          "reason": "Inteligência",
+          "type": "Intelligence"
         },
         {
           "id": "uma-30072",
-          "reason": "Meta Nishino Flower",
+          "reason": "Velocidade",
           "type": "Speed"
         },
         {
           "id": "uma-30011",
-          "reason": "Meta Nishino Flower",
-          "type": "Speed"
+          "reason": "Determinação",
+          "type": "Guts"
         },
         {
           "id": "uma-30006",
-          "reason": "Meta Nishino Flower",
-          "type": "Speed"
+          "reason": "Determinação",
+          "type": "Guts"
         },
         {
           "id": "uma-30066",
-          "reason": "Meta Nishino Flower",
-          "type": "Speed"
+          "reason": "Inteligência",
+          "type": "Intelligence"
         },
         {
           "id": "uma-30026",
-          "reason": "Meta Nishino Flower",
+          "reason": "Velocidade",
           "type": "Speed"
         },
         {
           "id": "uma-20040",
-          "reason": "Meta Nishino Flower",
-          "type": "Speed"
+          "reason": "Estamina",
+          "type": "Stamina"
         },
         {
           "id": "uma-20038",
-          "reason": "Meta Nishino Flower",
-          "type": "Speed"
+          "reason": "Determinação",
+          "type": "Guts"
         },
         {
           "id": "uma-20041",
-          "reason": "Meta Nishino Flower",
-          "type": "Speed"
+          "reason": "Determinação",
+          "type": "Guts"
         },
         {
           "id": "uma-20037",
-          "reason": "Meta Nishino Flower",
-          "type": "Speed"
+          "reason": "Poder",
+          "type": "Power"
         },
         {
           "id": "uma-20042",
-          "reason": "Meta Nishino Flower",
-          "type": "Speed"
+          "reason": "Poder",
+          "type": "Power"
         },
         {
           "id": "uma-20039",
-          "reason": "Meta Nishino Flower",
+          "reason": "Velocidade",
           "type": "Speed"
         },
         {
           "id": "uma-30084",
-          "reason": "Meta Nishino Flower",
+          "reason": "Velocidade",
           "type": "Speed"
         },
         {
           "id": "uma-30074",
-          "reason": "Meta Nishino Flower",
-          "type": "Speed"
+          "reason": "Poder",
+          "type": "Power"
         }
       ]
     },
@@ -2954,93 +2954,93 @@ export const META_DECKS: Record<string, ScenarioDeck[]> = {
       "cards": [
         {
           "id": "uma-30028",
-          "reason": "Meta Nishino Flower",
+          "reason": "Velocidade",
           "type": "Speed"
         },
         {
           "id": "uma-30033",
-          "reason": "Meta Nishino Flower",
-          "type": "Speed"
+          "reason": "Poder",
+          "type": "Power"
         },
         {
           "id": "uma-30010",
-          "reason": "Meta Nishino Flower",
-          "type": "Speed"
+          "reason": "Inteligência",
+          "type": "Intelligence"
         },
         {
           "id": "uma-30036",
-          "reason": "Meta Nishino Flower",
-          "type": "Speed"
+          "reason": "Amigo/Grupo",
+          "type": "Friend"
         },
         {
           "id": "uma-30073",
-          "reason": "Meta Nishino Flower",
-          "type": "Speed"
+          "reason": "Inteligência",
+          "type": "Intelligence"
         },
         {
           "id": "uma-30072",
-          "reason": "Meta Nishino Flower",
+          "reason": "Velocidade",
           "type": "Speed"
         },
         {
           "id": "uma-30011",
-          "reason": "Meta Nishino Flower",
-          "type": "Speed"
+          "reason": "Determinação",
+          "type": "Guts"
         },
         {
           "id": "uma-30006",
-          "reason": "Meta Nishino Flower",
-          "type": "Speed"
+          "reason": "Determinação",
+          "type": "Guts"
         },
         {
           "id": "uma-30066",
-          "reason": "Meta Nishino Flower",
-          "type": "Speed"
+          "reason": "Inteligência",
+          "type": "Intelligence"
         },
         {
           "id": "uma-30026",
-          "reason": "Meta Nishino Flower",
+          "reason": "Velocidade",
           "type": "Speed"
         },
         {
           "id": "uma-20040",
-          "reason": "Meta Nishino Flower",
-          "type": "Speed"
+          "reason": "Estamina",
+          "type": "Stamina"
         },
         {
           "id": "uma-20038",
-          "reason": "Meta Nishino Flower",
-          "type": "Speed"
+          "reason": "Determinação",
+          "type": "Guts"
         },
         {
           "id": "uma-20041",
-          "reason": "Meta Nishino Flower",
-          "type": "Speed"
+          "reason": "Determinação",
+          "type": "Guts"
         },
         {
           "id": "uma-20037",
-          "reason": "Meta Nishino Flower",
-          "type": "Speed"
+          "reason": "Poder",
+          "type": "Power"
         },
         {
           "id": "uma-20042",
-          "reason": "Meta Nishino Flower",
-          "type": "Speed"
+          "reason": "Poder",
+          "type": "Power"
         },
         {
           "id": "uma-20039",
-          "reason": "Meta Nishino Flower",
+          "reason": "Velocidade",
           "type": "Speed"
         },
         {
           "id": "uma-30084",
-          "reason": "Meta Nishino Flower",
+          "reason": "Velocidade",
           "type": "Speed"
         },
         {
           "id": "uma-30074",
-          "reason": "Meta Nishino Flower",
-          "type": "Speed"
+          "reason": "Poder",
+          "type": "Power"
         }
       ]
     }
@@ -3092,98 +3092,98 @@ export const META_DECKS: Record<string, ScenarioDeck[]> = {
       "cards": [
         {
           "id": "uma-30028",
-          "reason": "Meta Maruzensky",
+          "reason": "Velocidade",
           "type": "Speed"
         },
         {
           "id": "uma-30005",
-          "reason": "Meta Maruzensky",
-          "type": "Speed"
+          "reason": "Poder",
+          "type": "Power"
         },
         {
           "id": "uma-30010",
-          "reason": "Meta Maruzensky",
-          "type": "Speed"
+          "reason": "Inteligência",
+          "type": "Intelligence"
         },
         {
           "id": "uma-30021",
-          "reason": "Meta Maruzensky",
-          "type": "Speed"
+          "reason": "Amigo/Grupo",
+          "type": "Friend"
         },
         {
           "id": "uma-30076",
-          "reason": "Meta Maruzensky",
+          "reason": "Velocidade",
           "type": "Speed"
         },
         {
           "id": "uma-30025",
-          "reason": "Meta Maruzensky",
+          "reason": "Velocidade",
           "type": "Speed"
         },
         {
           "id": "uma-30070",
-          "reason": "Meta Maruzensky",
-          "type": "Speed"
+          "reason": "Determinação",
+          "type": "Guts"
         },
         {
           "id": "uma-30063",
-          "reason": "Meta Maruzensky",
-          "type": "Speed"
+          "reason": "Determinação",
+          "type": "Guts"
         },
         {
           "id": "uma-30061",
-          "reason": "Meta Maruzensky",
-          "type": "Speed"
+          "reason": "Inteligência",
+          "type": "Intelligence"
         },
         {
           "id": "uma-30084",
-          "reason": "Meta Maruzensky",
+          "reason": "Velocidade",
           "type": "Speed"
         },
         {
           "id": "uma-20039",
-          "reason": "Meta Maruzensky",
+          "reason": "Velocidade",
           "type": "Speed"
         },
         {
           "id": "uma-20035",
-          "reason": "Meta Maruzensky",
-          "type": "Speed"
+          "reason": "Estamina",
+          "type": "Stamina"
         },
         {
           "id": "uma-20043",
-          "reason": "Meta Maruzensky",
-          "type": "Speed"
+          "reason": "Poder",
+          "type": "Power"
         },
         {
           "id": "uma-20040",
-          "reason": "Meta Maruzensky",
-          "type": "Speed"
+          "reason": "Estamina",
+          "type": "Stamina"
         },
         {
           "id": "uma-20038",
-          "reason": "Meta Maruzensky",
-          "type": "Speed"
+          "reason": "Determinação",
+          "type": "Guts"
         },
         {
           "id": "uma-20041",
-          "reason": "Meta Maruzensky",
-          "type": "Speed"
+          "reason": "Determinação",
+          "type": "Guts"
         },
         {
           "id": "uma-30072",
-          "reason": "Meta Maruzensky",
+          "reason": "Velocidade",
           "type": "Speed"
         },
         {
           "id": "uma-30047",
-          "reason": "Meta Maruzensky",
-          "type": "Speed"
+          "reason": "Poder",
+          "type": "Power"
         },
         {
           "id": "uma-30088",
-          "reason": "Meta Maruzensky",
-          "type": "Speed"
+          "reason": "Inteligência",
+          "type": "Intelligence"
         }
       ]
     },
@@ -3220,98 +3220,98 @@ export const META_DECKS: Record<string, ScenarioDeck[]> = {
       "cards": [
         {
           "id": "uma-30028",
-          "reason": "Meta Maruzensky",
+          "reason": "Velocidade",
           "type": "Speed"
         },
         {
           "id": "uma-30005",
-          "reason": "Meta Maruzensky",
-          "type": "Speed"
+          "reason": "Poder",
+          "type": "Power"
         },
         {
           "id": "uma-30010",
-          "reason": "Meta Maruzensky",
-          "type": "Speed"
+          "reason": "Inteligência",
+          "type": "Intelligence"
         },
         {
           "id": "uma-30021",
-          "reason": "Meta Maruzensky",
-          "type": "Speed"
+          "reason": "Amigo/Grupo",
+          "type": "Friend"
         },
         {
           "id": "uma-30076",
-          "reason": "Meta Maruzensky",
+          "reason": "Velocidade",
           "type": "Speed"
         },
         {
           "id": "uma-30025",
-          "reason": "Meta Maruzensky",
+          "reason": "Velocidade",
           "type": "Speed"
         },
         {
           "id": "uma-30070",
-          "reason": "Meta Maruzensky",
-          "type": "Speed"
+          "reason": "Determinação",
+          "type": "Guts"
         },
         {
           "id": "uma-30063",
-          "reason": "Meta Maruzensky",
-          "type": "Speed"
+          "reason": "Determinação",
+          "type": "Guts"
         },
         {
           "id": "uma-30061",
-          "reason": "Meta Maruzensky",
-          "type": "Speed"
+          "reason": "Inteligência",
+          "type": "Intelligence"
         },
         {
           "id": "uma-30084",
-          "reason": "Meta Maruzensky",
+          "reason": "Velocidade",
           "type": "Speed"
         },
         {
           "id": "uma-20039",
-          "reason": "Meta Maruzensky",
+          "reason": "Velocidade",
           "type": "Speed"
         },
         {
           "id": "uma-20035",
-          "reason": "Meta Maruzensky",
-          "type": "Speed"
+          "reason": "Estamina",
+          "type": "Stamina"
         },
         {
           "id": "uma-20043",
-          "reason": "Meta Maruzensky",
-          "type": "Speed"
+          "reason": "Poder",
+          "type": "Power"
         },
         {
           "id": "uma-20040",
-          "reason": "Meta Maruzensky",
-          "type": "Speed"
+          "reason": "Estamina",
+          "type": "Stamina"
         },
         {
           "id": "uma-20038",
-          "reason": "Meta Maruzensky",
-          "type": "Speed"
+          "reason": "Determinação",
+          "type": "Guts"
         },
         {
           "id": "uma-20041",
-          "reason": "Meta Maruzensky",
-          "type": "Speed"
+          "reason": "Determinação",
+          "type": "Guts"
         },
         {
           "id": "uma-30072",
-          "reason": "Meta Maruzensky",
+          "reason": "Velocidade",
           "type": "Speed"
         },
         {
           "id": "uma-30047",
-          "reason": "Meta Maruzensky",
-          "type": "Speed"
+          "reason": "Poder",
+          "type": "Power"
         },
         {
           "id": "uma-30088",
-          "reason": "Meta Maruzensky",
-          "type": "Speed"
+          "reason": "Inteligência",
+          "type": "Intelligence"
         }
       ]
     },
@@ -3348,98 +3348,98 @@ export const META_DECKS: Record<string, ScenarioDeck[]> = {
       "cards": [
         {
           "id": "uma-30028",
-          "reason": "Meta Maruzensky",
+          "reason": "Velocidade",
           "type": "Speed"
         },
         {
           "id": "uma-30005",
-          "reason": "Meta Maruzensky",
-          "type": "Speed"
+          "reason": "Poder",
+          "type": "Power"
         },
         {
           "id": "uma-30010",
-          "reason": "Meta Maruzensky",
-          "type": "Speed"
+          "reason": "Inteligência",
+          "type": "Intelligence"
         },
         {
           "id": "uma-30021",
-          "reason": "Meta Maruzensky",
-          "type": "Speed"
+          "reason": "Amigo/Grupo",
+          "type": "Friend"
         },
         {
           "id": "uma-30076",
-          "reason": "Meta Maruzensky",
+          "reason": "Velocidade",
           "type": "Speed"
         },
         {
           "id": "uma-30025",
-          "reason": "Meta Maruzensky",
+          "reason": "Velocidade",
           "type": "Speed"
         },
         {
           "id": "uma-30070",
-          "reason": "Meta Maruzensky",
-          "type": "Speed"
+          "reason": "Determinação",
+          "type": "Guts"
         },
         {
           "id": "uma-30063",
-          "reason": "Meta Maruzensky",
-          "type": "Speed"
+          "reason": "Determinação",
+          "type": "Guts"
         },
         {
           "id": "uma-30061",
-          "reason": "Meta Maruzensky",
-          "type": "Speed"
+          "reason": "Inteligência",
+          "type": "Intelligence"
         },
         {
           "id": "uma-30084",
-          "reason": "Meta Maruzensky",
+          "reason": "Velocidade",
           "type": "Speed"
         },
         {
           "id": "uma-20039",
-          "reason": "Meta Maruzensky",
+          "reason": "Velocidade",
           "type": "Speed"
         },
         {
           "id": "uma-20035",
-          "reason": "Meta Maruzensky",
-          "type": "Speed"
+          "reason": "Estamina",
+          "type": "Stamina"
         },
         {
           "id": "uma-20043",
-          "reason": "Meta Maruzensky",
-          "type": "Speed"
+          "reason": "Poder",
+          "type": "Power"
         },
         {
           "id": "uma-20040",
-          "reason": "Meta Maruzensky",
-          "type": "Speed"
+          "reason": "Estamina",
+          "type": "Stamina"
         },
         {
           "id": "uma-20038",
-          "reason": "Meta Maruzensky",
-          "type": "Speed"
+          "reason": "Determinação",
+          "type": "Guts"
         },
         {
           "id": "uma-20041",
-          "reason": "Meta Maruzensky",
-          "type": "Speed"
+          "reason": "Determinação",
+          "type": "Guts"
         },
         {
           "id": "uma-30072",
-          "reason": "Meta Maruzensky",
+          "reason": "Velocidade",
           "type": "Speed"
         },
         {
           "id": "uma-30047",
-          "reason": "Meta Maruzensky",
-          "type": "Speed"
+          "reason": "Poder",
+          "type": "Power"
         },
         {
           "id": "uma-30088",
-          "reason": "Meta Maruzensky",
-          "type": "Speed"
+          "reason": "Inteligência",
+          "type": "Intelligence"
         }
       ]
     }
@@ -3491,98 +3491,98 @@ export const META_DECKS: Record<string, ScenarioDeck[]> = {
       "cards": [
         {
           "id": "uma-30028",
-          "reason": "Meta Smart Falcon",
+          "reason": "Velocidade",
           "type": "Speed"
         },
         {
           "id": "uma-30017",
-          "reason": "Meta Smart Falcon",
-          "type": "Speed"
+          "reason": "Poder",
+          "type": "Power"
         },
         {
           "id": "uma-30010",
-          "reason": "Meta Smart Falcon",
-          "type": "Speed"
+          "reason": "Inteligência",
+          "type": "Intelligence"
         },
         {
           "id": "uma-30036",
-          "reason": "Meta Smart Falcon",
-          "type": "Speed"
+          "reason": "Amigo/Grupo",
+          "type": "Friend"
         },
         {
           "id": "uma-30076",
-          "reason": "Meta Smart Falcon",
+          "reason": "Velocidade",
           "type": "Speed"
         },
         {
           "id": "uma-30025",
-          "reason": "Meta Smart Falcon",
+          "reason": "Velocidade",
           "type": "Speed"
         },
         {
           "id": "uma-30027",
-          "reason": "Meta Smart Falcon",
-          "type": "Speed"
+          "reason": "Determinação",
+          "type": "Guts"
         },
         {
           "id": "uma-30019",
-          "reason": "Meta Smart Falcon",
-          "type": "Speed"
+          "reason": "Determinação",
+          "type": "Guts"
         },
         {
           "id": "uma-30054",
-          "reason": "Meta Smart Falcon",
-          "type": "Speed"
+          "reason": "Inteligência",
+          "type": "Intelligence"
         },
         {
           "id": "uma-30084",
-          "reason": "Meta Smart Falcon",
+          "reason": "Velocidade",
           "type": "Speed"
         },
         {
           "id": "uma-20037",
-          "reason": "Meta Smart Falcon",
-          "type": "Speed"
+          "reason": "Poder",
+          "type": "Power"
         },
         {
           "id": "uma-20042",
-          "reason": "Meta Smart Falcon",
-          "type": "Speed"
+          "reason": "Poder",
+          "type": "Power"
         },
         {
           "id": "uma-20039",
-          "reason": "Meta Smart Falcon",
+          "reason": "Velocidade",
           "type": "Speed"
         },
         {
           "id": "uma-20035",
-          "reason": "Meta Smart Falcon",
-          "type": "Speed"
+          "reason": "Estamina",
+          "type": "Stamina"
         },
         {
           "id": "uma-20043",
-          "reason": "Meta Smart Falcon",
-          "type": "Speed"
+          "reason": "Poder",
+          "type": "Power"
         },
         {
           "id": "uma-20040",
-          "reason": "Meta Smart Falcon",
-          "type": "Speed"
+          "reason": "Estamina",
+          "type": "Stamina"
         },
         {
           "id": "uma-30072",
-          "reason": "Meta Smart Falcon",
+          "reason": "Velocidade",
           "type": "Speed"
         },
         {
           "id": "uma-30058",
-          "reason": "Meta Smart Falcon",
-          "type": "Speed"
+          "reason": "Poder",
+          "type": "Power"
         },
         {
           "id": "uma-30073",
-          "reason": "Meta Smart Falcon",
-          "type": "Speed"
+          "reason": "Inteligência",
+          "type": "Intelligence"
         }
       ]
     },
@@ -3619,98 +3619,98 @@ export const META_DECKS: Record<string, ScenarioDeck[]> = {
       "cards": [
         {
           "id": "uma-30028",
-          "reason": "Meta Smart Falcon",
+          "reason": "Velocidade",
           "type": "Speed"
         },
         {
           "id": "uma-30017",
-          "reason": "Meta Smart Falcon",
-          "type": "Speed"
+          "reason": "Poder",
+          "type": "Power"
         },
         {
           "id": "uma-30010",
-          "reason": "Meta Smart Falcon",
-          "type": "Speed"
+          "reason": "Inteligência",
+          "type": "Intelligence"
         },
         {
           "id": "uma-30036",
-          "reason": "Meta Smart Falcon",
-          "type": "Speed"
+          "reason": "Amigo/Grupo",
+          "type": "Friend"
         },
         {
           "id": "uma-30076",
-          "reason": "Meta Smart Falcon",
+          "reason": "Velocidade",
           "type": "Speed"
         },
         {
           "id": "uma-30025",
-          "reason": "Meta Smart Falcon",
+          "reason": "Velocidade",
           "type": "Speed"
         },
         {
           "id": "uma-30027",
-          "reason": "Meta Smart Falcon",
-          "type": "Speed"
+          "reason": "Determinação",
+          "type": "Guts"
         },
         {
           "id": "uma-30019",
-          "reason": "Meta Smart Falcon",
-          "type": "Speed"
+          "reason": "Determinação",
+          "type": "Guts"
         },
         {
           "id": "uma-30054",
-          "reason": "Meta Smart Falcon",
-          "type": "Speed"
+          "reason": "Inteligência",
+          "type": "Intelligence"
         },
         {
           "id": "uma-30084",
-          "reason": "Meta Smart Falcon",
+          "reason": "Velocidade",
           "type": "Speed"
         },
         {
           "id": "uma-20037",
-          "reason": "Meta Smart Falcon",
-          "type": "Speed"
+          "reason": "Poder",
+          "type": "Power"
         },
         {
           "id": "uma-20042",
-          "reason": "Meta Smart Falcon",
-          "type": "Speed"
+          "reason": "Poder",
+          "type": "Power"
         },
         {
           "id": "uma-20039",
-          "reason": "Meta Smart Falcon",
+          "reason": "Velocidade",
           "type": "Speed"
         },
         {
           "id": "uma-20035",
-          "reason": "Meta Smart Falcon",
-          "type": "Speed"
+          "reason": "Estamina",
+          "type": "Stamina"
         },
         {
           "id": "uma-20043",
-          "reason": "Meta Smart Falcon",
-          "type": "Speed"
+          "reason": "Poder",
+          "type": "Power"
         },
         {
           "id": "uma-20040",
-          "reason": "Meta Smart Falcon",
-          "type": "Speed"
+          "reason": "Estamina",
+          "type": "Stamina"
         },
         {
           "id": "uma-30072",
-          "reason": "Meta Smart Falcon",
+          "reason": "Velocidade",
           "type": "Speed"
         },
         {
           "id": "uma-30058",
-          "reason": "Meta Smart Falcon",
-          "type": "Speed"
+          "reason": "Poder",
+          "type": "Power"
         },
         {
           "id": "uma-30073",
-          "reason": "Meta Smart Falcon",
-          "type": "Speed"
+          "reason": "Inteligência",
+          "type": "Intelligence"
         }
       ]
     },
@@ -3747,98 +3747,98 @@ export const META_DECKS: Record<string, ScenarioDeck[]> = {
       "cards": [
         {
           "id": "uma-30028",
-          "reason": "Meta Smart Falcon",
+          "reason": "Velocidade",
           "type": "Speed"
         },
         {
           "id": "uma-30017",
-          "reason": "Meta Smart Falcon",
-          "type": "Speed"
+          "reason": "Poder",
+          "type": "Power"
         },
         {
           "id": "uma-30010",
-          "reason": "Meta Smart Falcon",
-          "type": "Speed"
+          "reason": "Inteligência",
+          "type": "Intelligence"
         },
         {
           "id": "uma-30036",
-          "reason": "Meta Smart Falcon",
-          "type": "Speed"
+          "reason": "Amigo/Grupo",
+          "type": "Friend"
         },
         {
           "id": "uma-30076",
-          "reason": "Meta Smart Falcon",
+          "reason": "Velocidade",
           "type": "Speed"
         },
         {
           "id": "uma-30025",
-          "reason": "Meta Smart Falcon",
+          "reason": "Velocidade",
           "type": "Speed"
         },
         {
           "id": "uma-30027",
-          "reason": "Meta Smart Falcon",
-          "type": "Speed"
+          "reason": "Determinação",
+          "type": "Guts"
         },
         {
           "id": "uma-30019",
-          "reason": "Meta Smart Falcon",
-          "type": "Speed"
+          "reason": "Determinação",
+          "type": "Guts"
         },
         {
           "id": "uma-30054",
-          "reason": "Meta Smart Falcon",
-          "type": "Speed"
+          "reason": "Inteligência",
+          "type": "Intelligence"
         },
         {
           "id": "uma-30084",
-          "reason": "Meta Smart Falcon",
+          "reason": "Velocidade",
           "type": "Speed"
         },
         {
           "id": "uma-20037",
-          "reason": "Meta Smart Falcon",
-          "type": "Speed"
+          "reason": "Poder",
+          "type": "Power"
         },
         {
           "id": "uma-20042",
-          "reason": "Meta Smart Falcon",
-          "type": "Speed"
+          "reason": "Poder",
+          "type": "Power"
         },
         {
           "id": "uma-20039",
-          "reason": "Meta Smart Falcon",
+          "reason": "Velocidade",
           "type": "Speed"
         },
         {
           "id": "uma-20035",
-          "reason": "Meta Smart Falcon",
-          "type": "Speed"
+          "reason": "Estamina",
+          "type": "Stamina"
         },
         {
           "id": "uma-20043",
-          "reason": "Meta Smart Falcon",
-          "type": "Speed"
+          "reason": "Poder",
+          "type": "Power"
         },
         {
           "id": "uma-20040",
-          "reason": "Meta Smart Falcon",
-          "type": "Speed"
+          "reason": "Estamina",
+          "type": "Stamina"
         },
         {
           "id": "uma-30072",
-          "reason": "Meta Smart Falcon",
+          "reason": "Velocidade",
           "type": "Speed"
         },
         {
           "id": "uma-30058",
-          "reason": "Meta Smart Falcon",
-          "type": "Speed"
+          "reason": "Poder",
+          "type": "Power"
         },
         {
           "id": "uma-30073",
-          "reason": "Meta Smart Falcon",
-          "type": "Speed"
+          "reason": "Inteligência",
+          "type": "Intelligence"
         }
       ]
     }
@@ -3890,98 +3890,98 @@ export const META_DECKS: Record<string, ScenarioDeck[]> = {
       "cards": [
         {
           "id": "uma-30028",
-          "reason": "Meta Hishi Amazon",
+          "reason": "Velocidade",
           "type": "Speed"
         },
         {
           "id": "uma-30007",
-          "reason": "Meta Hishi Amazon",
-          "type": "Speed"
+          "reason": "Poder",
+          "type": "Power"
         },
         {
           "id": "uma-30010",
-          "reason": "Meta Hishi Amazon",
-          "type": "Speed"
+          "reason": "Inteligência",
+          "type": "Intelligence"
         },
         {
           "id": "uma-30021",
-          "reason": "Meta Hishi Amazon",
-          "type": "Speed"
+          "reason": "Amigo/Grupo",
+          "type": "Friend"
         },
         {
           "id": "uma-30073",
-          "reason": "Meta Hishi Amazon",
-          "type": "Speed"
+          "reason": "Inteligência",
+          "type": "Intelligence"
         },
         {
           "id": "uma-30088",
-          "reason": "Meta Hishi Amazon",
-          "type": "Speed"
+          "reason": "Inteligência",
+          "type": "Intelligence"
         },
         {
           "id": "uma-30019",
-          "reason": "Meta Hishi Amazon",
-          "type": "Speed"
+          "reason": "Determinação",
+          "type": "Guts"
         },
         {
           "id": "uma-30012",
-          "reason": "Meta Hishi Amazon",
-          "type": "Speed"
+          "reason": "Determinação",
+          "type": "Guts"
         },
         {
           "id": "uma-30041",
-          "reason": "Meta Hishi Amazon",
-          "type": "Speed"
+          "reason": "Inteligência",
+          "type": "Intelligence"
         },
         {
           "id": "uma-30078",
-          "reason": "Meta Hishi Amazon",
+          "reason": "Velocidade",
           "type": "Speed"
         },
         {
           "id": "uma-20042",
-          "reason": "Meta Hishi Amazon",
-          "type": "Speed"
+          "reason": "Poder",
+          "type": "Power"
         },
         {
           "id": "uma-20039",
-          "reason": "Meta Hishi Amazon",
+          "reason": "Velocidade",
           "type": "Speed"
         },
         {
           "id": "uma-20035",
-          "reason": "Meta Hishi Amazon",
-          "type": "Speed"
+          "reason": "Estamina",
+          "type": "Stamina"
         },
         {
           "id": "uma-20043",
-          "reason": "Meta Hishi Amazon",
-          "type": "Speed"
+          "reason": "Poder",
+          "type": "Power"
         },
         {
           "id": "uma-20040",
-          "reason": "Meta Hishi Amazon",
-          "type": "Speed"
+          "reason": "Estamina",
+          "type": "Stamina"
         },
         {
           "id": "uma-20038",
-          "reason": "Meta Hishi Amazon",
-          "type": "Speed"
+          "reason": "Determinação",
+          "type": "Guts"
         },
         {
           "id": "uma-30065",
-          "reason": "Meta Hishi Amazon",
+          "reason": "Velocidade",
           "type": "Speed"
         },
         {
           "id": "uma-30056",
-          "reason": "Meta Hishi Amazon",
-          "type": "Speed"
+          "reason": "Poder",
+          "type": "Power"
         },
         {
           "id": "uma-30068",
-          "reason": "Meta Hishi Amazon",
-          "type": "Speed"
+          "reason": "Inteligência",
+          "type": "Intelligence"
         }
       ]
     },
@@ -4018,98 +4018,98 @@ export const META_DECKS: Record<string, ScenarioDeck[]> = {
       "cards": [
         {
           "id": "uma-30028",
-          "reason": "Meta Hishi Amazon",
+          "reason": "Velocidade",
           "type": "Speed"
         },
         {
           "id": "uma-30007",
-          "reason": "Meta Hishi Amazon",
-          "type": "Speed"
+          "reason": "Poder",
+          "type": "Power"
         },
         {
           "id": "uma-30010",
-          "reason": "Meta Hishi Amazon",
-          "type": "Speed"
+          "reason": "Inteligência",
+          "type": "Intelligence"
         },
         {
           "id": "uma-30021",
-          "reason": "Meta Hishi Amazon",
-          "type": "Speed"
+          "reason": "Amigo/Grupo",
+          "type": "Friend"
         },
         {
           "id": "uma-30073",
-          "reason": "Meta Hishi Amazon",
-          "type": "Speed"
+          "reason": "Inteligência",
+          "type": "Intelligence"
         },
         {
           "id": "uma-30088",
-          "reason": "Meta Hishi Amazon",
-          "type": "Speed"
+          "reason": "Inteligência",
+          "type": "Intelligence"
         },
         {
           "id": "uma-30019",
-          "reason": "Meta Hishi Amazon",
-          "type": "Speed"
+          "reason": "Determinação",
+          "type": "Guts"
         },
         {
           "id": "uma-30012",
-          "reason": "Meta Hishi Amazon",
-          "type": "Speed"
+          "reason": "Determinação",
+          "type": "Guts"
         },
         {
           "id": "uma-30041",
-          "reason": "Meta Hishi Amazon",
-          "type": "Speed"
+          "reason": "Inteligência",
+          "type": "Intelligence"
         },
         {
           "id": "uma-30078",
-          "reason": "Meta Hishi Amazon",
+          "reason": "Velocidade",
           "type": "Speed"
         },
         {
           "id": "uma-20042",
-          "reason": "Meta Hishi Amazon",
-          "type": "Speed"
+          "reason": "Poder",
+          "type": "Power"
         },
         {
           "id": "uma-20039",
-          "reason": "Meta Hishi Amazon",
+          "reason": "Velocidade",
           "type": "Speed"
         },
         {
           "id": "uma-20035",
-          "reason": "Meta Hishi Amazon",
-          "type": "Speed"
+          "reason": "Estamina",
+          "type": "Stamina"
         },
         {
           "id": "uma-20043",
-          "reason": "Meta Hishi Amazon",
-          "type": "Speed"
+          "reason": "Poder",
+          "type": "Power"
         },
         {
           "id": "uma-20040",
-          "reason": "Meta Hishi Amazon",
-          "type": "Speed"
+          "reason": "Estamina",
+          "type": "Stamina"
         },
         {
           "id": "uma-20038",
-          "reason": "Meta Hishi Amazon",
-          "type": "Speed"
+          "reason": "Determinação",
+          "type": "Guts"
         },
         {
           "id": "uma-30065",
-          "reason": "Meta Hishi Amazon",
+          "reason": "Velocidade",
           "type": "Speed"
         },
         {
           "id": "uma-30056",
-          "reason": "Meta Hishi Amazon",
-          "type": "Speed"
+          "reason": "Poder",
+          "type": "Power"
         },
         {
           "id": "uma-30068",
-          "reason": "Meta Hishi Amazon",
-          "type": "Speed"
+          "reason": "Inteligência",
+          "type": "Intelligence"
         }
       ]
     },
@@ -4146,98 +4146,98 @@ export const META_DECKS: Record<string, ScenarioDeck[]> = {
       "cards": [
         {
           "id": "uma-30028",
-          "reason": "Meta Hishi Amazon",
+          "reason": "Velocidade",
           "type": "Speed"
         },
         {
           "id": "uma-30007",
-          "reason": "Meta Hishi Amazon",
-          "type": "Speed"
+          "reason": "Poder",
+          "type": "Power"
         },
         {
           "id": "uma-30010",
-          "reason": "Meta Hishi Amazon",
-          "type": "Speed"
+          "reason": "Inteligência",
+          "type": "Intelligence"
         },
         {
           "id": "uma-30021",
-          "reason": "Meta Hishi Amazon",
-          "type": "Speed"
+          "reason": "Amigo/Grupo",
+          "type": "Friend"
         },
         {
           "id": "uma-30073",
-          "reason": "Meta Hishi Amazon",
-          "type": "Speed"
+          "reason": "Inteligência",
+          "type": "Intelligence"
         },
         {
           "id": "uma-30088",
-          "reason": "Meta Hishi Amazon",
-          "type": "Speed"
+          "reason": "Inteligência",
+          "type": "Intelligence"
         },
         {
           "id": "uma-30019",
-          "reason": "Meta Hishi Amazon",
-          "type": "Speed"
+          "reason": "Determinação",
+          "type": "Guts"
         },
         {
           "id": "uma-30012",
-          "reason": "Meta Hishi Amazon",
-          "type": "Speed"
+          "reason": "Determinação",
+          "type": "Guts"
         },
         {
           "id": "uma-30041",
-          "reason": "Meta Hishi Amazon",
-          "type": "Speed"
+          "reason": "Inteligência",
+          "type": "Intelligence"
         },
         {
           "id": "uma-30078",
-          "reason": "Meta Hishi Amazon",
+          "reason": "Velocidade",
           "type": "Speed"
         },
         {
           "id": "uma-20042",
-          "reason": "Meta Hishi Amazon",
-          "type": "Speed"
+          "reason": "Poder",
+          "type": "Power"
         },
         {
           "id": "uma-20039",
-          "reason": "Meta Hishi Amazon",
+          "reason": "Velocidade",
           "type": "Speed"
         },
         {
           "id": "uma-20035",
-          "reason": "Meta Hishi Amazon",
-          "type": "Speed"
+          "reason": "Estamina",
+          "type": "Stamina"
         },
         {
           "id": "uma-20043",
-          "reason": "Meta Hishi Amazon",
-          "type": "Speed"
+          "reason": "Poder",
+          "type": "Power"
         },
         {
           "id": "uma-20040",
-          "reason": "Meta Hishi Amazon",
-          "type": "Speed"
+          "reason": "Estamina",
+          "type": "Stamina"
         },
         {
           "id": "uma-20038",
-          "reason": "Meta Hishi Amazon",
-          "type": "Speed"
+          "reason": "Determinação",
+          "type": "Guts"
         },
         {
           "id": "uma-30065",
-          "reason": "Meta Hishi Amazon",
+          "reason": "Velocidade",
           "type": "Speed"
         },
         {
           "id": "uma-30056",
-          "reason": "Meta Hishi Amazon",
-          "type": "Speed"
+          "reason": "Poder",
+          "type": "Power"
         },
         {
           "id": "uma-30068",
-          "reason": "Meta Hishi Amazon",
-          "type": "Speed"
+          "reason": "Inteligência",
+          "type": "Intelligence"
         }
       ]
     }
@@ -4289,88 +4289,88 @@ export const META_DECKS: Record<string, ScenarioDeck[]> = {
       "cards": [
         {
           "id": "uma-30028",
-          "reason": "Meta Agnes Digital",
+          "reason": "Velocidade",
           "type": "Speed"
         },
         {
           "id": "uma-30005",
-          "reason": "Meta Agnes Digital",
-          "type": "Speed"
+          "reason": "Poder",
+          "type": "Power"
         },
         {
           "id": "uma-30010",
-          "reason": "Meta Agnes Digital",
-          "type": "Speed"
+          "reason": "Inteligência",
+          "type": "Intelligence"
         },
         {
           "id": "uma-30021",
-          "reason": "Meta Agnes Digital",
-          "type": "Speed"
+          "reason": "Amigo/Grupo",
+          "type": "Friend"
         },
         {
           "id": "uma-30076",
-          "reason": "Meta Agnes Digital",
+          "reason": "Velocidade",
           "type": "Speed"
         },
         {
           "id": "uma-30006",
-          "reason": "Meta Agnes Digital",
-          "type": "Speed"
+          "reason": "Determinação",
+          "type": "Guts"
         },
         {
           "id": "uma-30001",
-          "reason": "Meta Agnes Digital",
-          "type": "Speed"
+          "reason": "Determinação",
+          "type": "Guts"
         },
         {
           "id": "uma-30061",
-          "reason": "Meta Agnes Digital",
-          "type": "Speed"
+          "reason": "Inteligência",
+          "type": "Intelligence"
         },
         {
           "id": "uma-20039",
-          "reason": "Meta Agnes Digital",
+          "reason": "Velocidade",
           "type": "Speed"
         },
         {
           "id": "uma-20035",
-          "reason": "Meta Agnes Digital",
-          "type": "Speed"
+          "reason": "Estamina",
+          "type": "Stamina"
         },
         {
           "id": "uma-20043",
-          "reason": "Meta Agnes Digital",
-          "type": "Speed"
+          "reason": "Poder",
+          "type": "Power"
         },
         {
           "id": "uma-20040",
-          "reason": "Meta Agnes Digital",
-          "type": "Speed"
+          "reason": "Estamina",
+          "type": "Stamina"
         },
         {
           "id": "uma-20038",
-          "reason": "Meta Agnes Digital",
-          "type": "Speed"
+          "reason": "Determinação",
+          "type": "Guts"
         },
         {
           "id": "uma-20041",
-          "reason": "Meta Agnes Digital",
-          "type": "Speed"
+          "reason": "Determinação",
+          "type": "Guts"
         },
         {
           "id": "uma-30057",
-          "reason": "Meta Agnes Digital",
+          "reason": "Velocidade",
           "type": "Speed"
         },
         {
           "id": "uma-30047",
-          "reason": "Meta Agnes Digital",
-          "type": "Speed"
+          "reason": "Poder",
+          "type": "Power"
         },
         {
           "id": "uma-30088",
-          "reason": "Meta Agnes Digital",
-          "type": "Speed"
+          "reason": "Inteligência",
+          "type": "Intelligence"
         }
       ]
     },
@@ -4407,88 +4407,88 @@ export const META_DECKS: Record<string, ScenarioDeck[]> = {
       "cards": [
         {
           "id": "uma-30028",
-          "reason": "Meta Agnes Digital",
+          "reason": "Velocidade",
           "type": "Speed"
         },
         {
           "id": "uma-30005",
-          "reason": "Meta Agnes Digital",
-          "type": "Speed"
+          "reason": "Poder",
+          "type": "Power"
         },
         {
           "id": "uma-30010",
-          "reason": "Meta Agnes Digital",
-          "type": "Speed"
+          "reason": "Inteligência",
+          "type": "Intelligence"
         },
         {
           "id": "uma-30021",
-          "reason": "Meta Agnes Digital",
-          "type": "Speed"
+          "reason": "Amigo/Grupo",
+          "type": "Friend"
         },
         {
           "id": "uma-30076",
-          "reason": "Meta Agnes Digital",
+          "reason": "Velocidade",
           "type": "Speed"
         },
         {
           "id": "uma-30006",
-          "reason": "Meta Agnes Digital",
-          "type": "Speed"
+          "reason": "Determinação",
+          "type": "Guts"
         },
         {
           "id": "uma-30001",
-          "reason": "Meta Agnes Digital",
-          "type": "Speed"
+          "reason": "Determinação",
+          "type": "Guts"
         },
         {
           "id": "uma-30061",
-          "reason": "Meta Agnes Digital",
-          "type": "Speed"
+          "reason": "Inteligência",
+          "type": "Intelligence"
         },
         {
           "id": "uma-20039",
-          "reason": "Meta Agnes Digital",
+          "reason": "Velocidade",
           "type": "Speed"
         },
         {
           "id": "uma-20035",
-          "reason": "Meta Agnes Digital",
-          "type": "Speed"
+          "reason": "Estamina",
+          "type": "Stamina"
         },
         {
           "id": "uma-20043",
-          "reason": "Meta Agnes Digital",
-          "type": "Speed"
+          "reason": "Poder",
+          "type": "Power"
         },
         {
           "id": "uma-20040",
-          "reason": "Meta Agnes Digital",
-          "type": "Speed"
+          "reason": "Estamina",
+          "type": "Stamina"
         },
         {
           "id": "uma-20038",
-          "reason": "Meta Agnes Digital",
-          "type": "Speed"
+          "reason": "Determinação",
+          "type": "Guts"
         },
         {
           "id": "uma-20041",
-          "reason": "Meta Agnes Digital",
-          "type": "Speed"
+          "reason": "Determinação",
+          "type": "Guts"
         },
         {
           "id": "uma-30057",
-          "reason": "Meta Agnes Digital",
+          "reason": "Velocidade",
           "type": "Speed"
         },
         {
           "id": "uma-30047",
-          "reason": "Meta Agnes Digital",
-          "type": "Speed"
+          "reason": "Poder",
+          "type": "Power"
         },
         {
           "id": "uma-30088",
-          "reason": "Meta Agnes Digital",
-          "type": "Speed"
+          "reason": "Inteligência",
+          "type": "Intelligence"
         }
       ]
     },
@@ -4525,88 +4525,88 @@ export const META_DECKS: Record<string, ScenarioDeck[]> = {
       "cards": [
         {
           "id": "uma-30028",
-          "reason": "Meta Agnes Digital",
+          "reason": "Velocidade",
           "type": "Speed"
         },
         {
           "id": "uma-30005",
-          "reason": "Meta Agnes Digital",
-          "type": "Speed"
+          "reason": "Poder",
+          "type": "Power"
         },
         {
           "id": "uma-30010",
-          "reason": "Meta Agnes Digital",
-          "type": "Speed"
+          "reason": "Inteligência",
+          "type": "Intelligence"
         },
         {
           "id": "uma-30021",
-          "reason": "Meta Agnes Digital",
-          "type": "Speed"
+          "reason": "Amigo/Grupo",
+          "type": "Friend"
         },
         {
           "id": "uma-30076",
-          "reason": "Meta Agnes Digital",
+          "reason": "Velocidade",
           "type": "Speed"
         },
         {
           "id": "uma-30006",
-          "reason": "Meta Agnes Digital",
-          "type": "Speed"
+          "reason": "Determinação",
+          "type": "Guts"
         },
         {
           "id": "uma-30001",
-          "reason": "Meta Agnes Digital",
-          "type": "Speed"
+          "reason": "Determinação",
+          "type": "Guts"
         },
         {
           "id": "uma-30061",
-          "reason": "Meta Agnes Digital",
-          "type": "Speed"
+          "reason": "Inteligência",
+          "type": "Intelligence"
         },
         {
           "id": "uma-20039",
-          "reason": "Meta Agnes Digital",
+          "reason": "Velocidade",
           "type": "Speed"
         },
         {
           "id": "uma-20035",
-          "reason": "Meta Agnes Digital",
-          "type": "Speed"
+          "reason": "Estamina",
+          "type": "Stamina"
         },
         {
           "id": "uma-20043",
-          "reason": "Meta Agnes Digital",
-          "type": "Speed"
+          "reason": "Poder",
+          "type": "Power"
         },
         {
           "id": "uma-20040",
-          "reason": "Meta Agnes Digital",
-          "type": "Speed"
+          "reason": "Estamina",
+          "type": "Stamina"
         },
         {
           "id": "uma-20038",
-          "reason": "Meta Agnes Digital",
-          "type": "Speed"
+          "reason": "Determinação",
+          "type": "Guts"
         },
         {
           "id": "uma-20041",
-          "reason": "Meta Agnes Digital",
-          "type": "Speed"
+          "reason": "Determinação",
+          "type": "Guts"
         },
         {
           "id": "uma-30057",
-          "reason": "Meta Agnes Digital",
+          "reason": "Velocidade",
           "type": "Speed"
         },
         {
           "id": "uma-30047",
-          "reason": "Meta Agnes Digital",
-          "type": "Speed"
+          "reason": "Poder",
+          "type": "Power"
         },
         {
           "id": "uma-30088",
-          "reason": "Meta Agnes Digital",
-          "type": "Speed"
+          "reason": "Inteligência",
+          "type": "Intelligence"
         }
       ]
     }
@@ -4658,93 +4658,93 @@ export const META_DECKS: Record<string, ScenarioDeck[]> = {
       "cards": [
         {
           "id": "uma-30028",
-          "reason": "Meta Gold City",
+          "reason": "Velocidade",
           "type": "Speed"
         },
         {
           "id": "uma-30074",
-          "reason": "Meta Gold City",
-          "type": "Speed"
+          "reason": "Poder",
+          "type": "Power"
         },
         {
           "id": "uma-30010",
-          "reason": "Meta Gold City",
-          "type": "Speed"
+          "reason": "Inteligência",
+          "type": "Intelligence"
         },
         {
           "id": "uma-30036",
-          "reason": "Meta Gold City",
-          "type": "Speed"
+          "reason": "Amigo/Grupo",
+          "type": "Friend"
         },
         {
           "id": "uma-30005",
-          "reason": "Meta Gold City",
-          "type": "Speed"
+          "reason": "Poder",
+          "type": "Power"
         },
         {
           "id": "uma-30078",
-          "reason": "Meta Gold City",
+          "reason": "Velocidade",
           "type": "Speed"
         },
         {
           "id": "uma-30048",
-          "reason": "Meta Gold City",
-          "type": "Speed"
+          "reason": "Determinação",
+          "type": "Guts"
         },
         {
           "id": "uma-30040",
-          "reason": "Meta Gold City",
-          "type": "Speed"
+          "reason": "Determinação",
+          "type": "Guts"
         },
         {
           "id": "uma-30066",
-          "reason": "Meta Gold City",
-          "type": "Speed"
+          "reason": "Inteligência",
+          "type": "Intelligence"
         },
         {
           "id": "uma-30057",
-          "reason": "Meta Gold City",
+          "reason": "Velocidade",
           "type": "Speed"
         },
         {
           "id": "uma-20040",
-          "reason": "Meta Gold City",
-          "type": "Speed"
+          "reason": "Estamina",
+          "type": "Stamina"
         },
         {
           "id": "uma-20038",
-          "reason": "Meta Gold City",
-          "type": "Speed"
+          "reason": "Determinação",
+          "type": "Guts"
         },
         {
           "id": "uma-20041",
-          "reason": "Meta Gold City",
-          "type": "Speed"
+          "reason": "Determinação",
+          "type": "Guts"
         },
         {
           "id": "uma-20037",
-          "reason": "Meta Gold City",
-          "type": "Speed"
+          "reason": "Poder",
+          "type": "Power"
         },
         {
           "id": "uma-20042",
-          "reason": "Meta Gold City",
-          "type": "Speed"
+          "reason": "Poder",
+          "type": "Power"
         },
         {
           "id": "uma-20039",
-          "reason": "Meta Gold City",
+          "reason": "Velocidade",
           "type": "Speed"
         },
         {
           "id": "uma-30025",
-          "reason": "Meta Gold City",
+          "reason": "Velocidade",
           "type": "Speed"
         },
         {
           "id": "uma-30033",
-          "reason": "Meta Gold City",
-          "type": "Speed"
+          "reason": "Poder",
+          "type": "Power"
         }
       ]
     },
@@ -4781,93 +4781,93 @@ export const META_DECKS: Record<string, ScenarioDeck[]> = {
       "cards": [
         {
           "id": "uma-30028",
-          "reason": "Meta Gold City",
+          "reason": "Velocidade",
           "type": "Speed"
         },
         {
           "id": "uma-30074",
-          "reason": "Meta Gold City",
-          "type": "Speed"
+          "reason": "Poder",
+          "type": "Power"
         },
         {
           "id": "uma-30010",
-          "reason": "Meta Gold City",
-          "type": "Speed"
+          "reason": "Inteligência",
+          "type": "Intelligence"
         },
         {
           "id": "uma-30036",
-          "reason": "Meta Gold City",
-          "type": "Speed"
+          "reason": "Amigo/Grupo",
+          "type": "Friend"
         },
         {
           "id": "uma-30005",
-          "reason": "Meta Gold City",
-          "type": "Speed"
+          "reason": "Poder",
+          "type": "Power"
         },
         {
           "id": "uma-30078",
-          "reason": "Meta Gold City",
+          "reason": "Velocidade",
           "type": "Speed"
         },
         {
           "id": "uma-30048",
-          "reason": "Meta Gold City",
-          "type": "Speed"
+          "reason": "Determinação",
+          "type": "Guts"
         },
         {
           "id": "uma-30040",
-          "reason": "Meta Gold City",
-          "type": "Speed"
+          "reason": "Determinação",
+          "type": "Guts"
         },
         {
           "id": "uma-30066",
-          "reason": "Meta Gold City",
-          "type": "Speed"
+          "reason": "Inteligência",
+          "type": "Intelligence"
         },
         {
           "id": "uma-30057",
-          "reason": "Meta Gold City",
+          "reason": "Velocidade",
           "type": "Speed"
         },
         {
           "id": "uma-20040",
-          "reason": "Meta Gold City",
-          "type": "Speed"
+          "reason": "Estamina",
+          "type": "Stamina"
         },
         {
           "id": "uma-20038",
-          "reason": "Meta Gold City",
-          "type": "Speed"
+          "reason": "Determinação",
+          "type": "Guts"
         },
         {
           "id": "uma-20041",
-          "reason": "Meta Gold City",
-          "type": "Speed"
+          "reason": "Determinação",
+          "type": "Guts"
         },
         {
           "id": "uma-20037",
-          "reason": "Meta Gold City",
-          "type": "Speed"
+          "reason": "Poder",
+          "type": "Power"
         },
         {
           "id": "uma-20042",
-          "reason": "Meta Gold City",
-          "type": "Speed"
+          "reason": "Poder",
+          "type": "Power"
         },
         {
           "id": "uma-20039",
-          "reason": "Meta Gold City",
+          "reason": "Velocidade",
           "type": "Speed"
         },
         {
           "id": "uma-30025",
-          "reason": "Meta Gold City",
+          "reason": "Velocidade",
           "type": "Speed"
         },
         {
           "id": "uma-30033",
-          "reason": "Meta Gold City",
-          "type": "Speed"
+          "reason": "Poder",
+          "type": "Power"
         }
       ]
     },
@@ -4904,93 +4904,93 @@ export const META_DECKS: Record<string, ScenarioDeck[]> = {
       "cards": [
         {
           "id": "uma-30028",
-          "reason": "Meta Gold City",
+          "reason": "Velocidade",
           "type": "Speed"
         },
         {
           "id": "uma-30074",
-          "reason": "Meta Gold City",
-          "type": "Speed"
+          "reason": "Poder",
+          "type": "Power"
         },
         {
           "id": "uma-30010",
-          "reason": "Meta Gold City",
-          "type": "Speed"
+          "reason": "Inteligência",
+          "type": "Intelligence"
         },
         {
           "id": "uma-30036",
-          "reason": "Meta Gold City",
-          "type": "Speed"
+          "reason": "Amigo/Grupo",
+          "type": "Friend"
         },
         {
           "id": "uma-30005",
-          "reason": "Meta Gold City",
-          "type": "Speed"
+          "reason": "Poder",
+          "type": "Power"
         },
         {
           "id": "uma-30078",
-          "reason": "Meta Gold City",
+          "reason": "Velocidade",
           "type": "Speed"
         },
         {
           "id": "uma-30048",
-          "reason": "Meta Gold City",
-          "type": "Speed"
+          "reason": "Determinação",
+          "type": "Guts"
         },
         {
           "id": "uma-30040",
-          "reason": "Meta Gold City",
-          "type": "Speed"
+          "reason": "Determinação",
+          "type": "Guts"
         },
         {
           "id": "uma-30066",
-          "reason": "Meta Gold City",
-          "type": "Speed"
+          "reason": "Inteligência",
+          "type": "Intelligence"
         },
         {
           "id": "uma-30057",
-          "reason": "Meta Gold City",
+          "reason": "Velocidade",
           "type": "Speed"
         },
         {
           "id": "uma-20040",
-          "reason": "Meta Gold City",
-          "type": "Speed"
+          "reason": "Estamina",
+          "type": "Stamina"
         },
         {
           "id": "uma-20038",
-          "reason": "Meta Gold City",
-          "type": "Speed"
+          "reason": "Determinação",
+          "type": "Guts"
         },
         {
           "id": "uma-20041",
-          "reason": "Meta Gold City",
-          "type": "Speed"
+          "reason": "Determinação",
+          "type": "Guts"
         },
         {
           "id": "uma-20037",
-          "reason": "Meta Gold City",
-          "type": "Speed"
+          "reason": "Poder",
+          "type": "Power"
         },
         {
           "id": "uma-20042",
-          "reason": "Meta Gold City",
-          "type": "Speed"
+          "reason": "Poder",
+          "type": "Power"
         },
         {
           "id": "uma-20039",
-          "reason": "Meta Gold City",
+          "reason": "Velocidade",
           "type": "Speed"
         },
         {
           "id": "uma-30025",
-          "reason": "Meta Gold City",
+          "reason": "Velocidade",
           "type": "Speed"
         },
         {
           "id": "uma-30033",
-          "reason": "Meta Gold City",
-          "type": "Speed"
+          "reason": "Poder",
+          "type": "Power"
         }
       ]
     }
@@ -5042,98 +5042,98 @@ export const META_DECKS: Record<string, ScenarioDeck[]> = {
       "cards": [
         {
           "id": "uma-30028",
-          "reason": "Meta Yukino Bijin",
+          "reason": "Velocidade",
           "type": "Speed"
         },
         {
           "id": "uma-30007",
-          "reason": "Meta Yukino Bijin",
-          "type": "Speed"
+          "reason": "Poder",
+          "type": "Power"
         },
         {
           "id": "uma-30010",
-          "reason": "Meta Yukino Bijin",
-          "type": "Speed"
+          "reason": "Inteligência",
+          "type": "Intelligence"
         },
         {
           "id": "uma-30080",
-          "reason": "Meta Yukino Bijin",
-          "type": "Speed"
+          "reason": "Amigo/Grupo",
+          "type": "Friend"
         },
         {
           "id": "uma-30073",
-          "reason": "Meta Yukino Bijin",
-          "type": "Speed"
+          "reason": "Inteligência",
+          "type": "Intelligence"
         },
         {
           "id": "uma-30072",
-          "reason": "Meta Yukino Bijin",
+          "reason": "Velocidade",
           "type": "Speed"
         },
         {
           "id": "uma-30006",
-          "reason": "Meta Yukino Bijin",
-          "type": "Speed"
+          "reason": "Determinação",
+          "type": "Guts"
         },
         {
           "id": "uma-30001",
-          "reason": "Meta Yukino Bijin",
-          "type": "Speed"
+          "reason": "Determinação",
+          "type": "Guts"
         },
         {
           "id": "uma-30088",
-          "reason": "Meta Yukino Bijin",
-          "type": "Speed"
+          "reason": "Inteligência",
+          "type": "Intelligence"
         },
         {
           "id": "uma-30026",
-          "reason": "Meta Yukino Bijin",
+          "reason": "Velocidade",
           "type": "Speed"
         },
         {
           "id": "uma-20042",
-          "reason": "Meta Yukino Bijin",
-          "type": "Speed"
+          "reason": "Poder",
+          "type": "Power"
         },
         {
           "id": "uma-20039",
-          "reason": "Meta Yukino Bijin",
+          "reason": "Velocidade",
           "type": "Speed"
         },
         {
           "id": "uma-20035",
-          "reason": "Meta Yukino Bijin",
-          "type": "Speed"
+          "reason": "Estamina",
+          "type": "Stamina"
         },
         {
           "id": "uma-20043",
-          "reason": "Meta Yukino Bijin",
-          "type": "Speed"
+          "reason": "Poder",
+          "type": "Power"
         },
         {
           "id": "uma-20040",
-          "reason": "Meta Yukino Bijin",
-          "type": "Speed"
+          "reason": "Estamina",
+          "type": "Stamina"
         },
         {
           "id": "uma-20038",
-          "reason": "Meta Yukino Bijin",
-          "type": "Speed"
+          "reason": "Determinação",
+          "type": "Guts"
         },
         {
           "id": "uma-30084",
-          "reason": "Meta Yukino Bijin",
+          "reason": "Velocidade",
           "type": "Speed"
         },
         {
           "id": "uma-30056",
-          "reason": "Meta Yukino Bijin",
-          "type": "Speed"
+          "reason": "Poder",
+          "type": "Power"
         },
         {
           "id": "uma-30054",
-          "reason": "Meta Yukino Bijin",
-          "type": "Speed"
+          "reason": "Inteligência",
+          "type": "Intelligence"
         }
       ]
     },
@@ -5170,98 +5170,98 @@ export const META_DECKS: Record<string, ScenarioDeck[]> = {
       "cards": [
         {
           "id": "uma-30028",
-          "reason": "Meta Yukino Bijin",
+          "reason": "Velocidade",
           "type": "Speed"
         },
         {
           "id": "uma-30007",
-          "reason": "Meta Yukino Bijin",
-          "type": "Speed"
+          "reason": "Poder",
+          "type": "Power"
         },
         {
           "id": "uma-30010",
-          "reason": "Meta Yukino Bijin",
-          "type": "Speed"
+          "reason": "Inteligência",
+          "type": "Intelligence"
         },
         {
           "id": "uma-30080",
-          "reason": "Meta Yukino Bijin",
-          "type": "Speed"
+          "reason": "Amigo/Grupo",
+          "type": "Friend"
         },
         {
           "id": "uma-30073",
-          "reason": "Meta Yukino Bijin",
-          "type": "Speed"
+          "reason": "Inteligência",
+          "type": "Intelligence"
         },
         {
           "id": "uma-30072",
-          "reason": "Meta Yukino Bijin",
+          "reason": "Velocidade",
           "type": "Speed"
         },
         {
           "id": "uma-30006",
-          "reason": "Meta Yukino Bijin",
-          "type": "Speed"
+          "reason": "Determinação",
+          "type": "Guts"
         },
         {
           "id": "uma-30001",
-          "reason": "Meta Yukino Bijin",
-          "type": "Speed"
+          "reason": "Determinação",
+          "type": "Guts"
         },
         {
           "id": "uma-30088",
-          "reason": "Meta Yukino Bijin",
-          "type": "Speed"
+          "reason": "Inteligência",
+          "type": "Intelligence"
         },
         {
           "id": "uma-30026",
-          "reason": "Meta Yukino Bijin",
+          "reason": "Velocidade",
           "type": "Speed"
         },
         {
           "id": "uma-20042",
-          "reason": "Meta Yukino Bijin",
-          "type": "Speed"
+          "reason": "Poder",
+          "type": "Power"
         },
         {
           "id": "uma-20039",
-          "reason": "Meta Yukino Bijin",
+          "reason": "Velocidade",
           "type": "Speed"
         },
         {
           "id": "uma-20035",
-          "reason": "Meta Yukino Bijin",
-          "type": "Speed"
+          "reason": "Estamina",
+          "type": "Stamina"
         },
         {
           "id": "uma-20043",
-          "reason": "Meta Yukino Bijin",
-          "type": "Speed"
+          "reason": "Poder",
+          "type": "Power"
         },
         {
           "id": "uma-20040",
-          "reason": "Meta Yukino Bijin",
-          "type": "Speed"
+          "reason": "Estamina",
+          "type": "Stamina"
         },
         {
           "id": "uma-20038",
-          "reason": "Meta Yukino Bijin",
-          "type": "Speed"
+          "reason": "Determinação",
+          "type": "Guts"
         },
         {
           "id": "uma-30084",
-          "reason": "Meta Yukino Bijin",
+          "reason": "Velocidade",
           "type": "Speed"
         },
         {
           "id": "uma-30056",
-          "reason": "Meta Yukino Bijin",
-          "type": "Speed"
+          "reason": "Poder",
+          "type": "Power"
         },
         {
           "id": "uma-30054",
-          "reason": "Meta Yukino Bijin",
-          "type": "Speed"
+          "reason": "Inteligência",
+          "type": "Intelligence"
         }
       ]
     },
@@ -5298,98 +5298,98 @@ export const META_DECKS: Record<string, ScenarioDeck[]> = {
       "cards": [
         {
           "id": "uma-30028",
-          "reason": "Meta Yukino Bijin",
+          "reason": "Velocidade",
           "type": "Speed"
         },
         {
           "id": "uma-30007",
-          "reason": "Meta Yukino Bijin",
-          "type": "Speed"
+          "reason": "Poder",
+          "type": "Power"
         },
         {
           "id": "uma-30010",
-          "reason": "Meta Yukino Bijin",
-          "type": "Speed"
+          "reason": "Inteligência",
+          "type": "Intelligence"
         },
         {
           "id": "uma-30080",
-          "reason": "Meta Yukino Bijin",
-          "type": "Speed"
+          "reason": "Amigo/Grupo",
+          "type": "Friend"
         },
         {
           "id": "uma-30073",
-          "reason": "Meta Yukino Bijin",
-          "type": "Speed"
+          "reason": "Inteligência",
+          "type": "Intelligence"
         },
         {
           "id": "uma-30072",
-          "reason": "Meta Yukino Bijin",
+          "reason": "Velocidade",
           "type": "Speed"
         },
         {
           "id": "uma-30006",
-          "reason": "Meta Yukino Bijin",
-          "type": "Speed"
+          "reason": "Determinação",
+          "type": "Guts"
         },
         {
           "id": "uma-30001",
-          "reason": "Meta Yukino Bijin",
-          "type": "Speed"
+          "reason": "Determinação",
+          "type": "Guts"
         },
         {
           "id": "uma-30088",
-          "reason": "Meta Yukino Bijin",
-          "type": "Speed"
+          "reason": "Inteligência",
+          "type": "Intelligence"
         },
         {
           "id": "uma-30026",
-          "reason": "Meta Yukino Bijin",
+          "reason": "Velocidade",
           "type": "Speed"
         },
         {
           "id": "uma-20042",
-          "reason": "Meta Yukino Bijin",
-          "type": "Speed"
+          "reason": "Poder",
+          "type": "Power"
         },
         {
           "id": "uma-20039",
-          "reason": "Meta Yukino Bijin",
+          "reason": "Velocidade",
           "type": "Speed"
         },
         {
           "id": "uma-20035",
-          "reason": "Meta Yukino Bijin",
-          "type": "Speed"
+          "reason": "Estamina",
+          "type": "Stamina"
         },
         {
           "id": "uma-20043",
-          "reason": "Meta Yukino Bijin",
-          "type": "Speed"
+          "reason": "Poder",
+          "type": "Power"
         },
         {
           "id": "uma-20040",
-          "reason": "Meta Yukino Bijin",
-          "type": "Speed"
+          "reason": "Estamina",
+          "type": "Stamina"
         },
         {
           "id": "uma-20038",
-          "reason": "Meta Yukino Bijin",
-          "type": "Speed"
+          "reason": "Determinação",
+          "type": "Guts"
         },
         {
           "id": "uma-30084",
-          "reason": "Meta Yukino Bijin",
+          "reason": "Velocidade",
           "type": "Speed"
         },
         {
           "id": "uma-30056",
-          "reason": "Meta Yukino Bijin",
-          "type": "Speed"
+          "reason": "Poder",
+          "type": "Power"
         },
         {
           "id": "uma-30054",
-          "reason": "Meta Yukino Bijin",
-          "type": "Speed"
+          "reason": "Inteligência",
+          "type": "Intelligence"
         }
       ]
     }
@@ -5441,93 +5441,93 @@ export const META_DECKS: Record<string, ScenarioDeck[]> = {
       "cards": [
         {
           "id": "uma-30028",
-          "reason": "Meta Biko Pegasus",
+          "reason": "Velocidade",
           "type": "Speed"
         },
         {
           "id": "uma-30085",
-          "reason": "Meta Biko Pegasus",
-          "type": "Speed"
+          "reason": "Poder",
+          "type": "Power"
         },
         {
           "id": "uma-30010",
-          "reason": "Meta Biko Pegasus",
-          "type": "Speed"
+          "reason": "Inteligência",
+          "type": "Intelligence"
         },
         {
           "id": "uma-30036",
-          "reason": "Meta Biko Pegasus",
-          "type": "Speed"
+          "reason": "Amigo/Grupo",
+          "type": "Friend"
         },
         {
           "id": "uma-30076",
-          "reason": "Meta Biko Pegasus",
+          "reason": "Velocidade",
           "type": "Speed"
         },
         {
           "id": "uma-30073",
-          "reason": "Meta Biko Pegasus",
-          "type": "Speed"
+          "reason": "Inteligência",
+          "type": "Intelligence"
         },
         {
           "id": "uma-30011",
-          "reason": "Meta Biko Pegasus",
-          "type": "Speed"
+          "reason": "Determinação",
+          "type": "Guts"
         },
         {
           "id": "uma-30006",
-          "reason": "Meta Biko Pegasus",
-          "type": "Speed"
+          "reason": "Determinação",
+          "type": "Guts"
         },
         {
           "id": "uma-30013",
-          "reason": "Meta Biko Pegasus",
-          "type": "Speed"
+          "reason": "Inteligência",
+          "type": "Intelligence"
         },
         {
           "id": "uma-30072",
-          "reason": "Meta Biko Pegasus",
+          "reason": "Velocidade",
           "type": "Speed"
         },
         {
           "id": "uma-20035",
-          "reason": "Meta Biko Pegasus",
-          "type": "Speed"
+          "reason": "Estamina",
+          "type": "Stamina"
         },
         {
           "id": "uma-20043",
-          "reason": "Meta Biko Pegasus",
-          "type": "Speed"
+          "reason": "Poder",
+          "type": "Power"
         },
         {
           "id": "uma-20040",
-          "reason": "Meta Biko Pegasus",
-          "type": "Speed"
+          "reason": "Estamina",
+          "type": "Stamina"
         },
         {
           "id": "uma-20038",
-          "reason": "Meta Biko Pegasus",
-          "type": "Speed"
+          "reason": "Determinação",
+          "type": "Guts"
         },
         {
           "id": "uma-20041",
-          "reason": "Meta Biko Pegasus",
-          "type": "Speed"
+          "reason": "Determinação",
+          "type": "Guts"
         },
         {
           "id": "uma-20037",
-          "reason": "Meta Biko Pegasus",
-          "type": "Speed"
+          "reason": "Poder",
+          "type": "Power"
         },
         {
           "id": "uma-30042",
-          "reason": "Meta Biko Pegasus",
-          "type": "Speed"
+          "reason": "Poder",
+          "type": "Power"
         },
         {
           "id": "uma-30061",
-          "reason": "Meta Biko Pegasus",
-          "type": "Speed"
+          "reason": "Inteligência",
+          "type": "Intelligence"
         }
       ]
     },
@@ -5564,93 +5564,93 @@ export const META_DECKS: Record<string, ScenarioDeck[]> = {
       "cards": [
         {
           "id": "uma-30028",
-          "reason": "Meta Biko Pegasus",
+          "reason": "Velocidade",
           "type": "Speed"
         },
         {
           "id": "uma-30085",
-          "reason": "Meta Biko Pegasus",
-          "type": "Speed"
+          "reason": "Poder",
+          "type": "Power"
         },
         {
           "id": "uma-30010",
-          "reason": "Meta Biko Pegasus",
-          "type": "Speed"
+          "reason": "Inteligência",
+          "type": "Intelligence"
         },
         {
           "id": "uma-30036",
-          "reason": "Meta Biko Pegasus",
-          "type": "Speed"
+          "reason": "Amigo/Grupo",
+          "type": "Friend"
         },
         {
           "id": "uma-30076",
-          "reason": "Meta Biko Pegasus",
+          "reason": "Velocidade",
           "type": "Speed"
         },
         {
           "id": "uma-30073",
-          "reason": "Meta Biko Pegasus",
-          "type": "Speed"
+          "reason": "Inteligência",
+          "type": "Intelligence"
         },
         {
           "id": "uma-30011",
-          "reason": "Meta Biko Pegasus",
-          "type": "Speed"
+          "reason": "Determinação",
+          "type": "Guts"
         },
         {
           "id": "uma-30006",
-          "reason": "Meta Biko Pegasus",
-          "type": "Speed"
+          "reason": "Determinação",
+          "type": "Guts"
         },
         {
           "id": "uma-30013",
-          "reason": "Meta Biko Pegasus",
-          "type": "Speed"
+          "reason": "Inteligência",
+          "type": "Intelligence"
         },
         {
           "id": "uma-30072",
-          "reason": "Meta Biko Pegasus",
+          "reason": "Velocidade",
           "type": "Speed"
         },
         {
           "id": "uma-20035",
-          "reason": "Meta Biko Pegasus",
-          "type": "Speed"
+          "reason": "Estamina",
+          "type": "Stamina"
         },
         {
           "id": "uma-20043",
-          "reason": "Meta Biko Pegasus",
-          "type": "Speed"
+          "reason": "Poder",
+          "type": "Power"
         },
         {
           "id": "uma-20040",
-          "reason": "Meta Biko Pegasus",
-          "type": "Speed"
+          "reason": "Estamina",
+          "type": "Stamina"
         },
         {
           "id": "uma-20038",
-          "reason": "Meta Biko Pegasus",
-          "type": "Speed"
+          "reason": "Determinação",
+          "type": "Guts"
         },
         {
           "id": "uma-20041",
-          "reason": "Meta Biko Pegasus",
-          "type": "Speed"
+          "reason": "Determinação",
+          "type": "Guts"
         },
         {
           "id": "uma-20037",
-          "reason": "Meta Biko Pegasus",
-          "type": "Speed"
+          "reason": "Poder",
+          "type": "Power"
         },
         {
           "id": "uma-30042",
-          "reason": "Meta Biko Pegasus",
-          "type": "Speed"
+          "reason": "Poder",
+          "type": "Power"
         },
         {
           "id": "uma-30061",
-          "reason": "Meta Biko Pegasus",
-          "type": "Speed"
+          "reason": "Inteligência",
+          "type": "Intelligence"
         }
       ]
     },
@@ -5687,93 +5687,93 @@ export const META_DECKS: Record<string, ScenarioDeck[]> = {
       "cards": [
         {
           "id": "uma-30028",
-          "reason": "Meta Biko Pegasus",
+          "reason": "Velocidade",
           "type": "Speed"
         },
         {
           "id": "uma-30085",
-          "reason": "Meta Biko Pegasus",
-          "type": "Speed"
+          "reason": "Poder",
+          "type": "Power"
         },
         {
           "id": "uma-30010",
-          "reason": "Meta Biko Pegasus",
-          "type": "Speed"
+          "reason": "Inteligência",
+          "type": "Intelligence"
         },
         {
           "id": "uma-30036",
-          "reason": "Meta Biko Pegasus",
-          "type": "Speed"
+          "reason": "Amigo/Grupo",
+          "type": "Friend"
         },
         {
           "id": "uma-30076",
-          "reason": "Meta Biko Pegasus",
+          "reason": "Velocidade",
           "type": "Speed"
         },
         {
           "id": "uma-30073",
-          "reason": "Meta Biko Pegasus",
-          "type": "Speed"
+          "reason": "Inteligência",
+          "type": "Intelligence"
         },
         {
           "id": "uma-30011",
-          "reason": "Meta Biko Pegasus",
-          "type": "Speed"
+          "reason": "Determinação",
+          "type": "Guts"
         },
         {
           "id": "uma-30006",
-          "reason": "Meta Biko Pegasus",
-          "type": "Speed"
+          "reason": "Determinação",
+          "type": "Guts"
         },
         {
           "id": "uma-30013",
-          "reason": "Meta Biko Pegasus",
-          "type": "Speed"
+          "reason": "Inteligência",
+          "type": "Intelligence"
         },
         {
           "id": "uma-30072",
-          "reason": "Meta Biko Pegasus",
+          "reason": "Velocidade",
           "type": "Speed"
         },
         {
           "id": "uma-20035",
-          "reason": "Meta Biko Pegasus",
-          "type": "Speed"
+          "reason": "Estamina",
+          "type": "Stamina"
         },
         {
           "id": "uma-20043",
-          "reason": "Meta Biko Pegasus",
-          "type": "Speed"
+          "reason": "Poder",
+          "type": "Power"
         },
         {
           "id": "uma-20040",
-          "reason": "Meta Biko Pegasus",
-          "type": "Speed"
+          "reason": "Estamina",
+          "type": "Stamina"
         },
         {
           "id": "uma-20038",
-          "reason": "Meta Biko Pegasus",
-          "type": "Speed"
+          "reason": "Determinação",
+          "type": "Guts"
         },
         {
           "id": "uma-20041",
-          "reason": "Meta Biko Pegasus",
-          "type": "Speed"
+          "reason": "Determinação",
+          "type": "Guts"
         },
         {
           "id": "uma-20037",
-          "reason": "Meta Biko Pegasus",
-          "type": "Speed"
+          "reason": "Poder",
+          "type": "Power"
         },
         {
           "id": "uma-30042",
-          "reason": "Meta Biko Pegasus",
-          "type": "Speed"
+          "reason": "Poder",
+          "type": "Power"
         },
         {
           "id": "uma-30061",
-          "reason": "Meta Biko Pegasus",
-          "type": "Speed"
+          "reason": "Inteligência",
+          "type": "Intelligence"
         }
       ]
     }
@@ -5825,98 +5825,98 @@ export const META_DECKS: Record<string, ScenarioDeck[]> = {
       "cards": [
         {
           "id": "uma-30028",
-          "reason": "Meta Special Week",
+          "reason": "Velocidade",
           "type": "Speed"
         },
         {
           "id": "uma-30016",
-          "reason": "Meta Special Week",
-          "type": "Speed"
+          "reason": "Estamina",
+          "type": "Stamina"
         },
         {
           "id": "uma-30010",
-          "reason": "Meta Special Week",
-          "type": "Speed"
+          "reason": "Inteligência",
+          "type": "Intelligence"
         },
         {
           "id": "uma-30080",
-          "reason": "Meta Special Week",
-          "type": "Speed"
+          "reason": "Amigo/Grupo",
+          "type": "Friend"
         },
         {
           "id": "uma-30005",
-          "reason": "Meta Special Week",
-          "type": "Speed"
+          "reason": "Poder",
+          "type": "Power"
         },
         {
           "id": "uma-30086",
-          "reason": "Meta Special Week",
+          "reason": "Velocidade",
           "type": "Speed"
         },
         {
           "id": "uma-30027",
-          "reason": "Meta Special Week",
-          "type": "Speed"
+          "reason": "Determinação",
+          "type": "Guts"
         },
         {
           "id": "uma-30019",
-          "reason": "Meta Special Week",
-          "type": "Speed"
+          "reason": "Determinação",
+          "type": "Guts"
         },
         {
           "id": "uma-30055",
-          "reason": "Meta Special Week",
-          "type": "Speed"
+          "reason": "Inteligência",
+          "type": "Intelligence"
         },
         {
           "id": "uma-30026",
-          "reason": "Meta Special Week",
+          "reason": "Velocidade",
           "type": "Speed"
         },
         {
           "id": "uma-20035",
-          "reason": "Meta Special Week",
-          "type": "Speed"
+          "reason": "Estamina",
+          "type": "Stamina"
         },
         {
           "id": "uma-20043",
-          "reason": "Meta Special Week",
-          "type": "Speed"
+          "reason": "Poder",
+          "type": "Power"
         },
         {
           "id": "uma-20040",
-          "reason": "Meta Special Week",
-          "type": "Speed"
+          "reason": "Estamina",
+          "type": "Stamina"
         },
         {
           "id": "uma-20038",
-          "reason": "Meta Special Week",
-          "type": "Speed"
+          "reason": "Determinação",
+          "type": "Guts"
         },
         {
           "id": "uma-20041",
-          "reason": "Meta Special Week",
-          "type": "Speed"
+          "reason": "Determinação",
+          "type": "Guts"
         },
         {
           "id": "uma-20037",
-          "reason": "Meta Special Week",
-          "type": "Speed"
+          "reason": "Poder",
+          "type": "Power"
         },
         {
           "id": "uma-30084",
-          "reason": "Meta Special Week",
+          "reason": "Velocidade",
           "type": "Speed"
         },
         {
           "id": "uma-30042",
-          "reason": "Meta Special Week",
-          "type": "Speed"
+          "reason": "Poder",
+          "type": "Power"
         },
         {
           "id": "uma-30082",
-          "reason": "Meta Special Week",
-          "type": "Speed"
+          "reason": "Inteligência",
+          "type": "Intelligence"
         }
       ]
     },
@@ -5953,98 +5953,98 @@ export const META_DECKS: Record<string, ScenarioDeck[]> = {
       "cards": [
         {
           "id": "uma-30028",
-          "reason": "Meta Special Week",
+          "reason": "Velocidade",
           "type": "Speed"
         },
         {
           "id": "uma-30016",
-          "reason": "Meta Special Week",
-          "type": "Speed"
+          "reason": "Estamina",
+          "type": "Stamina"
         },
         {
           "id": "uma-30010",
-          "reason": "Meta Special Week",
-          "type": "Speed"
+          "reason": "Inteligência",
+          "type": "Intelligence"
         },
         {
           "id": "uma-30080",
-          "reason": "Meta Special Week",
-          "type": "Speed"
+          "reason": "Amigo/Grupo",
+          "type": "Friend"
         },
         {
           "id": "uma-30005",
-          "reason": "Meta Special Week",
-          "type": "Speed"
+          "reason": "Poder",
+          "type": "Power"
         },
         {
           "id": "uma-30086",
-          "reason": "Meta Special Week",
+          "reason": "Velocidade",
           "type": "Speed"
         },
         {
           "id": "uma-30027",
-          "reason": "Meta Special Week",
-          "type": "Speed"
+          "reason": "Determinação",
+          "type": "Guts"
         },
         {
           "id": "uma-30019",
-          "reason": "Meta Special Week",
-          "type": "Speed"
+          "reason": "Determinação",
+          "type": "Guts"
         },
         {
           "id": "uma-30055",
-          "reason": "Meta Special Week",
-          "type": "Speed"
+          "reason": "Inteligência",
+          "type": "Intelligence"
         },
         {
           "id": "uma-30026",
-          "reason": "Meta Special Week",
+          "reason": "Velocidade",
           "type": "Speed"
         },
         {
           "id": "uma-20035",
-          "reason": "Meta Special Week",
-          "type": "Speed"
+          "reason": "Estamina",
+          "type": "Stamina"
         },
         {
           "id": "uma-20043",
-          "reason": "Meta Special Week",
-          "type": "Speed"
+          "reason": "Poder",
+          "type": "Power"
         },
         {
           "id": "uma-20040",
-          "reason": "Meta Special Week",
-          "type": "Speed"
+          "reason": "Estamina",
+          "type": "Stamina"
         },
         {
           "id": "uma-20038",
-          "reason": "Meta Special Week",
-          "type": "Speed"
+          "reason": "Determinação",
+          "type": "Guts"
         },
         {
           "id": "uma-20041",
-          "reason": "Meta Special Week",
-          "type": "Speed"
+          "reason": "Determinação",
+          "type": "Guts"
         },
         {
           "id": "uma-20037",
-          "reason": "Meta Special Week",
-          "type": "Speed"
+          "reason": "Poder",
+          "type": "Power"
         },
         {
           "id": "uma-30084",
-          "reason": "Meta Special Week",
+          "reason": "Velocidade",
           "type": "Speed"
         },
         {
           "id": "uma-30042",
-          "reason": "Meta Special Week",
-          "type": "Speed"
+          "reason": "Poder",
+          "type": "Power"
         },
         {
           "id": "uma-30082",
-          "reason": "Meta Special Week",
-          "type": "Speed"
+          "reason": "Inteligência",
+          "type": "Intelligence"
         }
       ]
     },
@@ -6081,98 +6081,98 @@ export const META_DECKS: Record<string, ScenarioDeck[]> = {
       "cards": [
         {
           "id": "uma-30028",
-          "reason": "Meta Special Week",
+          "reason": "Velocidade",
           "type": "Speed"
         },
         {
           "id": "uma-30016",
-          "reason": "Meta Special Week",
-          "type": "Speed"
+          "reason": "Estamina",
+          "type": "Stamina"
         },
         {
           "id": "uma-30010",
-          "reason": "Meta Special Week",
-          "type": "Speed"
+          "reason": "Inteligência",
+          "type": "Intelligence"
         },
         {
           "id": "uma-30080",
-          "reason": "Meta Special Week",
-          "type": "Speed"
+          "reason": "Amigo/Grupo",
+          "type": "Friend"
         },
         {
           "id": "uma-30005",
-          "reason": "Meta Special Week",
-          "type": "Speed"
+          "reason": "Poder",
+          "type": "Power"
         },
         {
           "id": "uma-30086",
-          "reason": "Meta Special Week",
+          "reason": "Velocidade",
           "type": "Speed"
         },
         {
           "id": "uma-30027",
-          "reason": "Meta Special Week",
-          "type": "Speed"
+          "reason": "Determinação",
+          "type": "Guts"
         },
         {
           "id": "uma-30019",
-          "reason": "Meta Special Week",
-          "type": "Speed"
+          "reason": "Determinação",
+          "type": "Guts"
         },
         {
           "id": "uma-30055",
-          "reason": "Meta Special Week",
-          "type": "Speed"
+          "reason": "Inteligência",
+          "type": "Intelligence"
         },
         {
           "id": "uma-30026",
-          "reason": "Meta Special Week",
+          "reason": "Velocidade",
           "type": "Speed"
         },
         {
           "id": "uma-20035",
-          "reason": "Meta Special Week",
-          "type": "Speed"
+          "reason": "Estamina",
+          "type": "Stamina"
         },
         {
           "id": "uma-20043",
-          "reason": "Meta Special Week",
-          "type": "Speed"
+          "reason": "Poder",
+          "type": "Power"
         },
         {
           "id": "uma-20040",
-          "reason": "Meta Special Week",
-          "type": "Speed"
+          "reason": "Estamina",
+          "type": "Stamina"
         },
         {
           "id": "uma-20038",
-          "reason": "Meta Special Week",
-          "type": "Speed"
+          "reason": "Determinação",
+          "type": "Guts"
         },
         {
           "id": "uma-20041",
-          "reason": "Meta Special Week",
-          "type": "Speed"
+          "reason": "Determinação",
+          "type": "Guts"
         },
         {
           "id": "uma-20037",
-          "reason": "Meta Special Week",
-          "type": "Speed"
+          "reason": "Poder",
+          "type": "Power"
         },
         {
           "id": "uma-30084",
-          "reason": "Meta Special Week",
+          "reason": "Velocidade",
           "type": "Speed"
         },
         {
           "id": "uma-30042",
-          "reason": "Meta Special Week",
-          "type": "Speed"
+          "reason": "Poder",
+          "type": "Power"
         },
         {
           "id": "uma-30082",
-          "reason": "Meta Special Week",
-          "type": "Speed"
+          "reason": "Inteligência",
+          "type": "Intelligence"
         }
       ]
     }
@@ -6224,98 +6224,98 @@ export const META_DECKS: Record<string, ScenarioDeck[]> = {
       "cards": [
         {
           "id": "uma-30028",
-          "reason": "Meta Tokai Teio",
+          "reason": "Velocidade",
           "type": "Speed"
         },
         {
           "id": "uma-30016",
-          "reason": "Meta Tokai Teio",
-          "type": "Speed"
+          "reason": "Estamina",
+          "type": "Stamina"
         },
         {
           "id": "uma-30010",
-          "reason": "Meta Tokai Teio",
-          "type": "Speed"
+          "reason": "Inteligência",
+          "type": "Intelligence"
         },
         {
           "id": "uma-30021",
-          "reason": "Meta Tokai Teio",
-          "type": "Speed"
+          "reason": "Amigo/Grupo",
+          "type": "Friend"
         },
         {
           "id": "uma-30007",
-          "reason": "Meta Tokai Teio",
-          "type": "Speed"
+          "reason": "Poder",
+          "type": "Power"
         },
         {
           "id": "uma-30075",
-          "reason": "Meta Tokai Teio",
-          "type": "Speed"
+          "reason": "Estamina",
+          "type": "Stamina"
         },
         {
           "id": "uma-30030",
-          "reason": "Meta Tokai Teio",
-          "type": "Speed"
+          "reason": "Determinação",
+          "type": "Guts"
         },
         {
           "id": "uma-30027",
-          "reason": "Meta Tokai Teio",
-          "type": "Speed"
+          "reason": "Determinação",
+          "type": "Guts"
         },
         {
           "id": "uma-30073",
-          "reason": "Meta Tokai Teio",
-          "type": "Speed"
+          "reason": "Inteligência",
+          "type": "Intelligence"
         },
         {
           "id": "uma-30078",
-          "reason": "Meta Tokai Teio",
+          "reason": "Velocidade",
           "type": "Speed"
         },
         {
           "id": "uma-20041",
-          "reason": "Meta Tokai Teio",
-          "type": "Speed"
+          "reason": "Determinação",
+          "type": "Guts"
         },
         {
           "id": "uma-20037",
-          "reason": "Meta Tokai Teio",
-          "type": "Speed"
+          "reason": "Poder",
+          "type": "Power"
         },
         {
           "id": "uma-20042",
-          "reason": "Meta Tokai Teio",
-          "type": "Speed"
+          "reason": "Poder",
+          "type": "Power"
         },
         {
           "id": "uma-20039",
-          "reason": "Meta Tokai Teio",
+          "reason": "Velocidade",
           "type": "Speed"
         },
         {
           "id": "uma-20035",
-          "reason": "Meta Tokai Teio",
-          "type": "Speed"
+          "reason": "Estamina",
+          "type": "Stamina"
         },
         {
           "id": "uma-20043",
-          "reason": "Meta Tokai Teio",
-          "type": "Speed"
+          "reason": "Poder",
+          "type": "Power"
         },
         {
           "id": "uma-30065",
-          "reason": "Meta Tokai Teio",
+          "reason": "Velocidade",
           "type": "Speed"
         },
         {
           "id": "uma-30064",
-          "reason": "Meta Tokai Teio",
-          "type": "Speed"
+          "reason": "Poder",
+          "type": "Power"
         },
         {
           "id": "uma-30031",
-          "reason": "Meta Tokai Teio",
-          "type": "Speed"
+          "reason": "Inteligência",
+          "type": "Intelligence"
         }
       ]
     },
@@ -6352,98 +6352,98 @@ export const META_DECKS: Record<string, ScenarioDeck[]> = {
       "cards": [
         {
           "id": "uma-30028",
-          "reason": "Meta Tokai Teio",
+          "reason": "Velocidade",
           "type": "Speed"
         },
         {
           "id": "uma-30016",
-          "reason": "Meta Tokai Teio",
-          "type": "Speed"
+          "reason": "Estamina",
+          "type": "Stamina"
         },
         {
           "id": "uma-30010",
-          "reason": "Meta Tokai Teio",
-          "type": "Speed"
+          "reason": "Inteligência",
+          "type": "Intelligence"
         },
         {
           "id": "uma-30021",
-          "reason": "Meta Tokai Teio",
-          "type": "Speed"
+          "reason": "Amigo/Grupo",
+          "type": "Friend"
         },
         {
           "id": "uma-30007",
-          "reason": "Meta Tokai Teio",
-          "type": "Speed"
+          "reason": "Poder",
+          "type": "Power"
         },
         {
           "id": "uma-30075",
-          "reason": "Meta Tokai Teio",
-          "type": "Speed"
+          "reason": "Estamina",
+          "type": "Stamina"
         },
         {
           "id": "uma-30030",
-          "reason": "Meta Tokai Teio",
-          "type": "Speed"
+          "reason": "Determinação",
+          "type": "Guts"
         },
         {
           "id": "uma-30027",
-          "reason": "Meta Tokai Teio",
-          "type": "Speed"
+          "reason": "Determinação",
+          "type": "Guts"
         },
         {
           "id": "uma-30073",
-          "reason": "Meta Tokai Teio",
-          "type": "Speed"
+          "reason": "Inteligência",
+          "type": "Intelligence"
         },
         {
           "id": "uma-30078",
-          "reason": "Meta Tokai Teio",
+          "reason": "Velocidade",
           "type": "Speed"
         },
         {
           "id": "uma-20041",
-          "reason": "Meta Tokai Teio",
-          "type": "Speed"
+          "reason": "Determinação",
+          "type": "Guts"
         },
         {
           "id": "uma-20037",
-          "reason": "Meta Tokai Teio",
-          "type": "Speed"
+          "reason": "Poder",
+          "type": "Power"
         },
         {
           "id": "uma-20042",
-          "reason": "Meta Tokai Teio",
-          "type": "Speed"
+          "reason": "Poder",
+          "type": "Power"
         },
         {
           "id": "uma-20039",
-          "reason": "Meta Tokai Teio",
+          "reason": "Velocidade",
           "type": "Speed"
         },
         {
           "id": "uma-20035",
-          "reason": "Meta Tokai Teio",
-          "type": "Speed"
+          "reason": "Estamina",
+          "type": "Stamina"
         },
         {
           "id": "uma-20043",
-          "reason": "Meta Tokai Teio",
-          "type": "Speed"
+          "reason": "Poder",
+          "type": "Power"
         },
         {
           "id": "uma-30065",
-          "reason": "Meta Tokai Teio",
+          "reason": "Velocidade",
           "type": "Speed"
         },
         {
           "id": "uma-30064",
-          "reason": "Meta Tokai Teio",
-          "type": "Speed"
+          "reason": "Poder",
+          "type": "Power"
         },
         {
           "id": "uma-30031",
-          "reason": "Meta Tokai Teio",
-          "type": "Speed"
+          "reason": "Inteligência",
+          "type": "Intelligence"
         }
       ]
     },
@@ -6480,98 +6480,98 @@ export const META_DECKS: Record<string, ScenarioDeck[]> = {
       "cards": [
         {
           "id": "uma-30028",
-          "reason": "Meta Tokai Teio",
+          "reason": "Velocidade",
           "type": "Speed"
         },
         {
           "id": "uma-30016",
-          "reason": "Meta Tokai Teio",
-          "type": "Speed"
+          "reason": "Estamina",
+          "type": "Stamina"
         },
         {
           "id": "uma-30010",
-          "reason": "Meta Tokai Teio",
-          "type": "Speed"
+          "reason": "Inteligência",
+          "type": "Intelligence"
         },
         {
           "id": "uma-30021",
-          "reason": "Meta Tokai Teio",
-          "type": "Speed"
+          "reason": "Amigo/Grupo",
+          "type": "Friend"
         },
         {
           "id": "uma-30007",
-          "reason": "Meta Tokai Teio",
-          "type": "Speed"
+          "reason": "Poder",
+          "type": "Power"
         },
         {
           "id": "uma-30075",
-          "reason": "Meta Tokai Teio",
-          "type": "Speed"
+          "reason": "Estamina",
+          "type": "Stamina"
         },
         {
           "id": "uma-30030",
-          "reason": "Meta Tokai Teio",
-          "type": "Speed"
+          "reason": "Determinação",
+          "type": "Guts"
         },
         {
           "id": "uma-30027",
-          "reason": "Meta Tokai Teio",
-          "type": "Speed"
+          "reason": "Determinação",
+          "type": "Guts"
         },
         {
           "id": "uma-30073",
-          "reason": "Meta Tokai Teio",
-          "type": "Speed"
+          "reason": "Inteligência",
+          "type": "Intelligence"
         },
         {
           "id": "uma-30078",
-          "reason": "Meta Tokai Teio",
+          "reason": "Velocidade",
           "type": "Speed"
         },
         {
           "id": "uma-20041",
-          "reason": "Meta Tokai Teio",
-          "type": "Speed"
+          "reason": "Determinação",
+          "type": "Guts"
         },
         {
           "id": "uma-20037",
-          "reason": "Meta Tokai Teio",
-          "type": "Speed"
+          "reason": "Poder",
+          "type": "Power"
         },
         {
           "id": "uma-20042",
-          "reason": "Meta Tokai Teio",
-          "type": "Speed"
+          "reason": "Poder",
+          "type": "Power"
         },
         {
           "id": "uma-20039",
-          "reason": "Meta Tokai Teio",
+          "reason": "Velocidade",
           "type": "Speed"
         },
         {
           "id": "uma-20035",
-          "reason": "Meta Tokai Teio",
-          "type": "Speed"
+          "reason": "Estamina",
+          "type": "Stamina"
         },
         {
           "id": "uma-20043",
-          "reason": "Meta Tokai Teio",
-          "type": "Speed"
+          "reason": "Poder",
+          "type": "Power"
         },
         {
           "id": "uma-30065",
-          "reason": "Meta Tokai Teio",
+          "reason": "Velocidade",
           "type": "Speed"
         },
         {
           "id": "uma-30064",
-          "reason": "Meta Tokai Teio",
-          "type": "Speed"
+          "reason": "Poder",
+          "type": "Power"
         },
         {
           "id": "uma-30031",
-          "reason": "Meta Tokai Teio",
-          "type": "Speed"
+          "reason": "Inteligência",
+          "type": "Intelligence"
         }
       ]
     }
@@ -6623,93 +6623,93 @@ export const META_DECKS: Record<string, ScenarioDeck[]> = {
       "cards": [
         {
           "id": "uma-30028",
-          "reason": "Meta Silence Suzuka",
+          "reason": "Velocidade",
           "type": "Speed"
         },
         {
           "id": "uma-30016",
-          "reason": "Meta Silence Suzuka",
-          "type": "Speed"
+          "reason": "Estamina",
+          "type": "Stamina"
         },
         {
           "id": "uma-30010",
-          "reason": "Meta Silence Suzuka",
-          "type": "Speed"
+          "reason": "Inteligência",
+          "type": "Intelligence"
         },
         {
           "id": "uma-30080",
-          "reason": "Meta Silence Suzuka",
-          "type": "Speed"
+          "reason": "Amigo/Grupo",
+          "type": "Friend"
         },
         {
           "id": "uma-30076",
-          "reason": "Meta Silence Suzuka",
+          "reason": "Velocidade",
           "type": "Speed"
         },
         {
           "id": "uma-30059",
-          "reason": "Meta Silence Suzuka",
-          "type": "Speed"
+          "reason": "Estamina",
+          "type": "Stamina"
         },
         {
           "id": "uma-30012",
-          "reason": "Meta Silence Suzuka",
-          "type": "Speed"
+          "reason": "Determinação",
+          "type": "Guts"
         },
         {
           "id": "uma-30011",
-          "reason": "Meta Silence Suzuka",
-          "type": "Speed"
+          "reason": "Determinação",
+          "type": "Guts"
         },
         {
           "id": "uma-30068",
-          "reason": "Meta Silence Suzuka",
-          "type": "Speed"
+          "reason": "Inteligência",
+          "type": "Intelligence"
         },
         {
           "id": "uma-20043",
-          "reason": "Meta Silence Suzuka",
-          "type": "Speed"
+          "reason": "Poder",
+          "type": "Power"
         },
         {
           "id": "uma-20040",
-          "reason": "Meta Silence Suzuka",
-          "type": "Speed"
+          "reason": "Estamina",
+          "type": "Stamina"
         },
         {
           "id": "uma-20038",
-          "reason": "Meta Silence Suzuka",
-          "type": "Speed"
+          "reason": "Determinação",
+          "type": "Guts"
         },
         {
           "id": "uma-20041",
-          "reason": "Meta Silence Suzuka",
-          "type": "Speed"
+          "reason": "Determinação",
+          "type": "Guts"
         },
         {
           "id": "uma-20037",
-          "reason": "Meta Silence Suzuka",
-          "type": "Speed"
+          "reason": "Poder",
+          "type": "Power"
         },
         {
           "id": "uma-20042",
-          "reason": "Meta Silence Suzuka",
-          "type": "Speed"
+          "reason": "Poder",
+          "type": "Power"
         },
         {
           "id": "uma-30086",
-          "reason": "Meta Silence Suzuka",
+          "reason": "Velocidade",
           "type": "Speed"
         },
         {
           "id": "uma-30077",
-          "reason": "Meta Silence Suzuka",
-          "type": "Speed"
+          "reason": "Poder",
+          "type": "Power"
         },
         {
           "id": "uma-30013",
-          "reason": "Meta Silence Suzuka",
-          "type": "Speed"
+          "reason": "Inteligência",
+          "type": "Intelligence"
         }
       ]
     },
@@ -6746,93 +6746,93 @@ export const META_DECKS: Record<string, ScenarioDeck[]> = {
       "cards": [
         {
           "id": "uma-30028",
-          "reason": "Meta Silence Suzuka",
+          "reason": "Velocidade",
           "type": "Speed"
         },
         {
           "id": "uma-30016",
-          "reason": "Meta Silence Suzuka",
-          "type": "Speed"
+          "reason": "Estamina",
+          "type": "Stamina"
         },
         {
           "id": "uma-30010",
-          "reason": "Meta Silence Suzuka",
-          "type": "Speed"
+          "reason": "Inteligência",
+          "type": "Intelligence"
         },
         {
           "id": "uma-30080",
-          "reason": "Meta Silence Suzuka",
-          "type": "Speed"
+          "reason": "Amigo/Grupo",
+          "type": "Friend"
         },
         {
           "id": "uma-30076",
-          "reason": "Meta Silence Suzuka",
+          "reason": "Velocidade",
           "type": "Speed"
         },
         {
           "id": "uma-30059",
-          "reason": "Meta Silence Suzuka",
-          "type": "Speed"
+          "reason": "Estamina",
+          "type": "Stamina"
         },
         {
           "id": "uma-30012",
-          "reason": "Meta Silence Suzuka",
-          "type": "Speed"
+          "reason": "Determinação",
+          "type": "Guts"
         },
         {
           "id": "uma-30011",
-          "reason": "Meta Silence Suzuka",
-          "type": "Speed"
+          "reason": "Determinação",
+          "type": "Guts"
         },
         {
           "id": "uma-30068",
-          "reason": "Meta Silence Suzuka",
-          "type": "Speed"
+          "reason": "Inteligência",
+          "type": "Intelligence"
         },
         {
           "id": "uma-20043",
-          "reason": "Meta Silence Suzuka",
-          "type": "Speed"
+          "reason": "Poder",
+          "type": "Power"
         },
         {
           "id": "uma-20040",
-          "reason": "Meta Silence Suzuka",
-          "type": "Speed"
+          "reason": "Estamina",
+          "type": "Stamina"
         },
         {
           "id": "uma-20038",
-          "reason": "Meta Silence Suzuka",
-          "type": "Speed"
+          "reason": "Determinação",
+          "type": "Guts"
         },
         {
           "id": "uma-20041",
-          "reason": "Meta Silence Suzuka",
-          "type": "Speed"
+          "reason": "Determinação",
+          "type": "Guts"
         },
         {
           "id": "uma-20037",
-          "reason": "Meta Silence Suzuka",
-          "type": "Speed"
+          "reason": "Poder",
+          "type": "Power"
         },
         {
           "id": "uma-20042",
-          "reason": "Meta Silence Suzuka",
-          "type": "Speed"
+          "reason": "Poder",
+          "type": "Power"
         },
         {
           "id": "uma-30086",
-          "reason": "Meta Silence Suzuka",
+          "reason": "Velocidade",
           "type": "Speed"
         },
         {
           "id": "uma-30077",
-          "reason": "Meta Silence Suzuka",
-          "type": "Speed"
+          "reason": "Poder",
+          "type": "Power"
         },
         {
           "id": "uma-30013",
-          "reason": "Meta Silence Suzuka",
-          "type": "Speed"
+          "reason": "Inteligência",
+          "type": "Intelligence"
         }
       ]
     },
@@ -6869,93 +6869,93 @@ export const META_DECKS: Record<string, ScenarioDeck[]> = {
       "cards": [
         {
           "id": "uma-30028",
-          "reason": "Meta Silence Suzuka",
+          "reason": "Velocidade",
           "type": "Speed"
         },
         {
           "id": "uma-30016",
-          "reason": "Meta Silence Suzuka",
-          "type": "Speed"
+          "reason": "Estamina",
+          "type": "Stamina"
         },
         {
           "id": "uma-30010",
-          "reason": "Meta Silence Suzuka",
-          "type": "Speed"
+          "reason": "Inteligência",
+          "type": "Intelligence"
         },
         {
           "id": "uma-30080",
-          "reason": "Meta Silence Suzuka",
-          "type": "Speed"
+          "reason": "Amigo/Grupo",
+          "type": "Friend"
         },
         {
           "id": "uma-30076",
-          "reason": "Meta Silence Suzuka",
+          "reason": "Velocidade",
           "type": "Speed"
         },
         {
           "id": "uma-30059",
-          "reason": "Meta Silence Suzuka",
-          "type": "Speed"
+          "reason": "Estamina",
+          "type": "Stamina"
         },
         {
           "id": "uma-30012",
-          "reason": "Meta Silence Suzuka",
-          "type": "Speed"
+          "reason": "Determinação",
+          "type": "Guts"
         },
         {
           "id": "uma-30011",
-          "reason": "Meta Silence Suzuka",
-          "type": "Speed"
+          "reason": "Determinação",
+          "type": "Guts"
         },
         {
           "id": "uma-30068",
-          "reason": "Meta Silence Suzuka",
-          "type": "Speed"
+          "reason": "Inteligência",
+          "type": "Intelligence"
         },
         {
           "id": "uma-20043",
-          "reason": "Meta Silence Suzuka",
-          "type": "Speed"
+          "reason": "Poder",
+          "type": "Power"
         },
         {
           "id": "uma-20040",
-          "reason": "Meta Silence Suzuka",
-          "type": "Speed"
+          "reason": "Estamina",
+          "type": "Stamina"
         },
         {
           "id": "uma-20038",
-          "reason": "Meta Silence Suzuka",
-          "type": "Speed"
+          "reason": "Determinação",
+          "type": "Guts"
         },
         {
           "id": "uma-20041",
-          "reason": "Meta Silence Suzuka",
-          "type": "Speed"
+          "reason": "Determinação",
+          "type": "Guts"
         },
         {
           "id": "uma-20037",
-          "reason": "Meta Silence Suzuka",
-          "type": "Speed"
+          "reason": "Poder",
+          "type": "Power"
         },
         {
           "id": "uma-20042",
-          "reason": "Meta Silence Suzuka",
-          "type": "Speed"
+          "reason": "Poder",
+          "type": "Power"
         },
         {
           "id": "uma-30086",
-          "reason": "Meta Silence Suzuka",
+          "reason": "Velocidade",
           "type": "Speed"
         },
         {
           "id": "uma-30077",
-          "reason": "Meta Silence Suzuka",
-          "type": "Speed"
+          "reason": "Poder",
+          "type": "Power"
         },
         {
           "id": "uma-30013",
-          "reason": "Meta Silence Suzuka",
-          "type": "Speed"
+          "reason": "Inteligência",
+          "type": "Intelligence"
         }
       ]
     }
@@ -7007,93 +7007,93 @@ export const META_DECKS: Record<string, ScenarioDeck[]> = {
       "cards": [
         {
           "id": "uma-30028",
-          "reason": "Meta Grass Wonder",
+          "reason": "Velocidade",
           "type": "Speed"
         },
         {
           "id": "uma-30016",
-          "reason": "Meta Grass Wonder",
-          "type": "Speed"
+          "reason": "Estamina",
+          "type": "Stamina"
         },
         {
           "id": "uma-30010",
-          "reason": "Meta Grass Wonder",
-          "type": "Speed"
+          "reason": "Inteligência",
+          "type": "Intelligence"
         },
         {
           "id": "uma-30036",
-          "reason": "Meta Grass Wonder",
-          "type": "Speed"
+          "reason": "Amigo/Grupo",
+          "type": "Friend"
         },
         {
           "id": "uma-30005",
-          "reason": "Meta Grass Wonder",
-          "type": "Speed"
+          "reason": "Poder",
+          "type": "Power"
         },
         {
           "id": "uma-30026",
-          "reason": "Meta Grass Wonder",
+          "reason": "Velocidade",
           "type": "Speed"
         },
         {
           "id": "uma-30063",
-          "reason": "Meta Grass Wonder",
-          "type": "Speed"
+          "reason": "Determinação",
+          "type": "Guts"
         },
         {
           "id": "uma-30060",
-          "reason": "Meta Grass Wonder",
-          "type": "Speed"
+          "reason": "Determinação",
+          "type": "Guts"
         },
         {
           "id": "uma-30066",
-          "reason": "Meta Grass Wonder",
-          "type": "Speed"
+          "reason": "Inteligência",
+          "type": "Intelligence"
         },
         {
           "id": "uma-30078",
-          "reason": "Meta Grass Wonder",
+          "reason": "Velocidade",
           "type": "Speed"
         },
         {
           "id": "uma-20040",
-          "reason": "Meta Grass Wonder",
-          "type": "Speed"
+          "reason": "Estamina",
+          "type": "Stamina"
         },
         {
           "id": "uma-20038",
-          "reason": "Meta Grass Wonder",
-          "type": "Speed"
+          "reason": "Determinação",
+          "type": "Guts"
         },
         {
           "id": "uma-20041",
-          "reason": "Meta Grass Wonder",
-          "type": "Speed"
+          "reason": "Determinação",
+          "type": "Guts"
         },
         {
           "id": "uma-20037",
-          "reason": "Meta Grass Wonder",
-          "type": "Speed"
+          "reason": "Poder",
+          "type": "Power"
         },
         {
           "id": "uma-20042",
-          "reason": "Meta Grass Wonder",
-          "type": "Speed"
+          "reason": "Poder",
+          "type": "Power"
         },
         {
           "id": "uma-20039",
-          "reason": "Meta Grass Wonder",
+          "reason": "Velocidade",
           "type": "Speed"
         },
         {
           "id": "uma-30065",
-          "reason": "Meta Grass Wonder",
+          "reason": "Velocidade",
           "type": "Speed"
         },
         {
           "id": "uma-30033",
-          "reason": "Meta Grass Wonder",
-          "type": "Speed"
+          "reason": "Poder",
+          "type": "Power"
         }
       ]
     },
@@ -7130,93 +7130,93 @@ export const META_DECKS: Record<string, ScenarioDeck[]> = {
       "cards": [
         {
           "id": "uma-30028",
-          "reason": "Meta Grass Wonder",
+          "reason": "Velocidade",
           "type": "Speed"
         },
         {
           "id": "uma-30016",
-          "reason": "Meta Grass Wonder",
-          "type": "Speed"
+          "reason": "Estamina",
+          "type": "Stamina"
         },
         {
           "id": "uma-30010",
-          "reason": "Meta Grass Wonder",
-          "type": "Speed"
+          "reason": "Inteligência",
+          "type": "Intelligence"
         },
         {
           "id": "uma-30036",
-          "reason": "Meta Grass Wonder",
-          "type": "Speed"
+          "reason": "Amigo/Grupo",
+          "type": "Friend"
         },
         {
           "id": "uma-30005",
-          "reason": "Meta Grass Wonder",
-          "type": "Speed"
+          "reason": "Poder",
+          "type": "Power"
         },
         {
           "id": "uma-30026",
-          "reason": "Meta Grass Wonder",
+          "reason": "Velocidade",
           "type": "Speed"
         },
         {
           "id": "uma-30063",
-          "reason": "Meta Grass Wonder",
-          "type": "Speed"
+          "reason": "Determinação",
+          "type": "Guts"
         },
         {
           "id": "uma-30060",
-          "reason": "Meta Grass Wonder",
-          "type": "Speed"
+          "reason": "Determinação",
+          "type": "Guts"
         },
         {
           "id": "uma-30066",
-          "reason": "Meta Grass Wonder",
-          "type": "Speed"
+          "reason": "Inteligência",
+          "type": "Intelligence"
         },
         {
           "id": "uma-30078",
-          "reason": "Meta Grass Wonder",
+          "reason": "Velocidade",
           "type": "Speed"
         },
         {
           "id": "uma-20040",
-          "reason": "Meta Grass Wonder",
-          "type": "Speed"
+          "reason": "Estamina",
+          "type": "Stamina"
         },
         {
           "id": "uma-20038",
-          "reason": "Meta Grass Wonder",
-          "type": "Speed"
+          "reason": "Determinação",
+          "type": "Guts"
         },
         {
           "id": "uma-20041",
-          "reason": "Meta Grass Wonder",
-          "type": "Speed"
+          "reason": "Determinação",
+          "type": "Guts"
         },
         {
           "id": "uma-20037",
-          "reason": "Meta Grass Wonder",
-          "type": "Speed"
+          "reason": "Poder",
+          "type": "Power"
         },
         {
           "id": "uma-20042",
-          "reason": "Meta Grass Wonder",
-          "type": "Speed"
+          "reason": "Poder",
+          "type": "Power"
         },
         {
           "id": "uma-20039",
-          "reason": "Meta Grass Wonder",
+          "reason": "Velocidade",
           "type": "Speed"
         },
         {
           "id": "uma-30065",
-          "reason": "Meta Grass Wonder",
+          "reason": "Velocidade",
           "type": "Speed"
         },
         {
           "id": "uma-30033",
-          "reason": "Meta Grass Wonder",
-          "type": "Speed"
+          "reason": "Poder",
+          "type": "Power"
         }
       ]
     },
@@ -7253,93 +7253,93 @@ export const META_DECKS: Record<string, ScenarioDeck[]> = {
       "cards": [
         {
           "id": "uma-30028",
-          "reason": "Meta Grass Wonder",
+          "reason": "Velocidade",
           "type": "Speed"
         },
         {
           "id": "uma-30016",
-          "reason": "Meta Grass Wonder",
-          "type": "Speed"
+          "reason": "Estamina",
+          "type": "Stamina"
         },
         {
           "id": "uma-30010",
-          "reason": "Meta Grass Wonder",
-          "type": "Speed"
+          "reason": "Inteligência",
+          "type": "Intelligence"
         },
         {
           "id": "uma-30036",
-          "reason": "Meta Grass Wonder",
-          "type": "Speed"
+          "reason": "Amigo/Grupo",
+          "type": "Friend"
         },
         {
           "id": "uma-30005",
-          "reason": "Meta Grass Wonder",
-          "type": "Speed"
+          "reason": "Poder",
+          "type": "Power"
         },
         {
           "id": "uma-30026",
-          "reason": "Meta Grass Wonder",
+          "reason": "Velocidade",
           "type": "Speed"
         },
         {
           "id": "uma-30063",
-          "reason": "Meta Grass Wonder",
-          "type": "Speed"
+          "reason": "Determinação",
+          "type": "Guts"
         },
         {
           "id": "uma-30060",
-          "reason": "Meta Grass Wonder",
-          "type": "Speed"
+          "reason": "Determinação",
+          "type": "Guts"
         },
         {
           "id": "uma-30066",
-          "reason": "Meta Grass Wonder",
-          "type": "Speed"
+          "reason": "Inteligência",
+          "type": "Intelligence"
         },
         {
           "id": "uma-30078",
-          "reason": "Meta Grass Wonder",
+          "reason": "Velocidade",
           "type": "Speed"
         },
         {
           "id": "uma-20040",
-          "reason": "Meta Grass Wonder",
-          "type": "Speed"
+          "reason": "Estamina",
+          "type": "Stamina"
         },
         {
           "id": "uma-20038",
-          "reason": "Meta Grass Wonder",
-          "type": "Speed"
+          "reason": "Determinação",
+          "type": "Guts"
         },
         {
           "id": "uma-20041",
-          "reason": "Meta Grass Wonder",
-          "type": "Speed"
+          "reason": "Determinação",
+          "type": "Guts"
         },
         {
           "id": "uma-20037",
-          "reason": "Meta Grass Wonder",
-          "type": "Speed"
+          "reason": "Poder",
+          "type": "Power"
         },
         {
           "id": "uma-20042",
-          "reason": "Meta Grass Wonder",
-          "type": "Speed"
+          "reason": "Poder",
+          "type": "Power"
         },
         {
           "id": "uma-20039",
-          "reason": "Meta Grass Wonder",
+          "reason": "Velocidade",
           "type": "Speed"
         },
         {
           "id": "uma-30065",
-          "reason": "Meta Grass Wonder",
+          "reason": "Velocidade",
           "type": "Speed"
         },
         {
           "id": "uma-30033",
-          "reason": "Meta Grass Wonder",
-          "type": "Speed"
+          "reason": "Poder",
+          "type": "Power"
         }
       ]
     }
@@ -7391,98 +7391,98 @@ export const META_DECKS: Record<string, ScenarioDeck[]> = {
       "cards": [
         {
           "id": "uma-30028",
-          "reason": "Meta El Condor Pasa",
+          "reason": "Velocidade",
           "type": "Speed"
         },
         {
           "id": "uma-30016",
-          "reason": "Meta El Condor Pasa",
-          "type": "Speed"
+          "reason": "Estamina",
+          "type": "Stamina"
         },
         {
           "id": "uma-30010",
-          "reason": "Meta El Condor Pasa",
-          "type": "Speed"
+          "reason": "Inteligência",
+          "type": "Intelligence"
         },
         {
           "id": "uma-30021",
-          "reason": "Meta El Condor Pasa",
-          "type": "Speed"
+          "reason": "Amigo/Grupo",
+          "type": "Friend"
         },
         {
           "id": "uma-30005",
-          "reason": "Meta El Condor Pasa",
-          "type": "Speed"
+          "reason": "Poder",
+          "type": "Power"
         },
         {
           "id": "uma-30004",
-          "reason": "Meta El Condor Pasa",
-          "type": "Speed"
+          "reason": "Estamina",
+          "type": "Stamina"
         },
         {
           "id": "uma-30030",
-          "reason": "Meta El Condor Pasa",
-          "type": "Speed"
+          "reason": "Determinação",
+          "type": "Guts"
         },
         {
           "id": "uma-30027",
-          "reason": "Meta El Condor Pasa",
-          "type": "Speed"
+          "reason": "Determinação",
+          "type": "Guts"
         },
         {
           "id": "uma-30061",
-          "reason": "Meta El Condor Pasa",
-          "type": "Speed"
+          "reason": "Inteligência",
+          "type": "Intelligence"
         },
         {
           "id": "uma-30076",
-          "reason": "Meta El Condor Pasa",
+          "reason": "Velocidade",
           "type": "Speed"
         },
         {
           "id": "uma-20038",
-          "reason": "Meta El Condor Pasa",
-          "type": "Speed"
+          "reason": "Determinação",
+          "type": "Guts"
         },
         {
           "id": "uma-20041",
-          "reason": "Meta El Condor Pasa",
-          "type": "Speed"
+          "reason": "Determinação",
+          "type": "Guts"
         },
         {
           "id": "uma-20037",
-          "reason": "Meta El Condor Pasa",
-          "type": "Speed"
+          "reason": "Poder",
+          "type": "Power"
         },
         {
           "id": "uma-20042",
-          "reason": "Meta El Condor Pasa",
-          "type": "Speed"
+          "reason": "Poder",
+          "type": "Power"
         },
         {
           "id": "uma-20039",
-          "reason": "Meta El Condor Pasa",
+          "reason": "Velocidade",
           "type": "Speed"
         },
         {
           "id": "uma-20035",
-          "reason": "Meta El Condor Pasa",
-          "type": "Speed"
+          "reason": "Estamina",
+          "type": "Stamina"
         },
         {
           "id": "uma-30057",
-          "reason": "Meta El Condor Pasa",
+          "reason": "Velocidade",
           "type": "Speed"
         },
         {
           "id": "uma-30071",
-          "reason": "Meta El Condor Pasa",
-          "type": "Speed"
+          "reason": "Poder",
+          "type": "Power"
         },
         {
           "id": "uma-30088",
-          "reason": "Meta El Condor Pasa",
-          "type": "Speed"
+          "reason": "Inteligência",
+          "type": "Intelligence"
         }
       ]
     },
@@ -7519,98 +7519,98 @@ export const META_DECKS: Record<string, ScenarioDeck[]> = {
       "cards": [
         {
           "id": "uma-30028",
-          "reason": "Meta El Condor Pasa",
+          "reason": "Velocidade",
           "type": "Speed"
         },
         {
           "id": "uma-30016",
-          "reason": "Meta El Condor Pasa",
-          "type": "Speed"
+          "reason": "Estamina",
+          "type": "Stamina"
         },
         {
           "id": "uma-30010",
-          "reason": "Meta El Condor Pasa",
-          "type": "Speed"
+          "reason": "Inteligência",
+          "type": "Intelligence"
         },
         {
           "id": "uma-30021",
-          "reason": "Meta El Condor Pasa",
-          "type": "Speed"
+          "reason": "Amigo/Grupo",
+          "type": "Friend"
         },
         {
           "id": "uma-30005",
-          "reason": "Meta El Condor Pasa",
-          "type": "Speed"
+          "reason": "Poder",
+          "type": "Power"
         },
         {
           "id": "uma-30004",
-          "reason": "Meta El Condor Pasa",
-          "type": "Speed"
+          "reason": "Estamina",
+          "type": "Stamina"
         },
         {
           "id": "uma-30030",
-          "reason": "Meta El Condor Pasa",
-          "type": "Speed"
+          "reason": "Determinação",
+          "type": "Guts"
         },
         {
           "id": "uma-30027",
-          "reason": "Meta El Condor Pasa",
-          "type": "Speed"
+          "reason": "Determinação",
+          "type": "Guts"
         },
         {
           "id": "uma-30061",
-          "reason": "Meta El Condor Pasa",
-          "type": "Speed"
+          "reason": "Inteligência",
+          "type": "Intelligence"
         },
         {
           "id": "uma-30076",
-          "reason": "Meta El Condor Pasa",
+          "reason": "Velocidade",
           "type": "Speed"
         },
         {
           "id": "uma-20038",
-          "reason": "Meta El Condor Pasa",
-          "type": "Speed"
+          "reason": "Determinação",
+          "type": "Guts"
         },
         {
           "id": "uma-20041",
-          "reason": "Meta El Condor Pasa",
-          "type": "Speed"
+          "reason": "Determinação",
+          "type": "Guts"
         },
         {
           "id": "uma-20037",
-          "reason": "Meta El Condor Pasa",
-          "type": "Speed"
+          "reason": "Poder",
+          "type": "Power"
         },
         {
           "id": "uma-20042",
-          "reason": "Meta El Condor Pasa",
-          "type": "Speed"
+          "reason": "Poder",
+          "type": "Power"
         },
         {
           "id": "uma-20039",
-          "reason": "Meta El Condor Pasa",
+          "reason": "Velocidade",
           "type": "Speed"
         },
         {
           "id": "uma-20035",
-          "reason": "Meta El Condor Pasa",
-          "type": "Speed"
+          "reason": "Estamina",
+          "type": "Stamina"
         },
         {
           "id": "uma-30057",
-          "reason": "Meta El Condor Pasa",
+          "reason": "Velocidade",
           "type": "Speed"
         },
         {
           "id": "uma-30071",
-          "reason": "Meta El Condor Pasa",
-          "type": "Speed"
+          "reason": "Poder",
+          "type": "Power"
         },
         {
           "id": "uma-30088",
-          "reason": "Meta El Condor Pasa",
-          "type": "Speed"
+          "reason": "Inteligência",
+          "type": "Intelligence"
         }
       ]
     },
@@ -7647,98 +7647,98 @@ export const META_DECKS: Record<string, ScenarioDeck[]> = {
       "cards": [
         {
           "id": "uma-30028",
-          "reason": "Meta El Condor Pasa",
+          "reason": "Velocidade",
           "type": "Speed"
         },
         {
           "id": "uma-30016",
-          "reason": "Meta El Condor Pasa",
-          "type": "Speed"
+          "reason": "Estamina",
+          "type": "Stamina"
         },
         {
           "id": "uma-30010",
-          "reason": "Meta El Condor Pasa",
-          "type": "Speed"
+          "reason": "Inteligência",
+          "type": "Intelligence"
         },
         {
           "id": "uma-30021",
-          "reason": "Meta El Condor Pasa",
-          "type": "Speed"
+          "reason": "Amigo/Grupo",
+          "type": "Friend"
         },
         {
           "id": "uma-30005",
-          "reason": "Meta El Condor Pasa",
-          "type": "Speed"
+          "reason": "Poder",
+          "type": "Power"
         },
         {
           "id": "uma-30004",
-          "reason": "Meta El Condor Pasa",
-          "type": "Speed"
+          "reason": "Estamina",
+          "type": "Stamina"
         },
         {
           "id": "uma-30030",
-          "reason": "Meta El Condor Pasa",
-          "type": "Speed"
+          "reason": "Determinação",
+          "type": "Guts"
         },
         {
           "id": "uma-30027",
-          "reason": "Meta El Condor Pasa",
-          "type": "Speed"
+          "reason": "Determinação",
+          "type": "Guts"
         },
         {
           "id": "uma-30061",
-          "reason": "Meta El Condor Pasa",
-          "type": "Speed"
+          "reason": "Inteligência",
+          "type": "Intelligence"
         },
         {
           "id": "uma-30076",
-          "reason": "Meta El Condor Pasa",
+          "reason": "Velocidade",
           "type": "Speed"
         },
         {
           "id": "uma-20038",
-          "reason": "Meta El Condor Pasa",
-          "type": "Speed"
+          "reason": "Determinação",
+          "type": "Guts"
         },
         {
           "id": "uma-20041",
-          "reason": "Meta El Condor Pasa",
-          "type": "Speed"
+          "reason": "Determinação",
+          "type": "Guts"
         },
         {
           "id": "uma-20037",
-          "reason": "Meta El Condor Pasa",
-          "type": "Speed"
+          "reason": "Poder",
+          "type": "Power"
         },
         {
           "id": "uma-20042",
-          "reason": "Meta El Condor Pasa",
-          "type": "Speed"
+          "reason": "Poder",
+          "type": "Power"
         },
         {
           "id": "uma-20039",
-          "reason": "Meta El Condor Pasa",
+          "reason": "Velocidade",
           "type": "Speed"
         },
         {
           "id": "uma-20035",
-          "reason": "Meta El Condor Pasa",
-          "type": "Speed"
+          "reason": "Estamina",
+          "type": "Stamina"
         },
         {
           "id": "uma-30057",
-          "reason": "Meta El Condor Pasa",
+          "reason": "Velocidade",
           "type": "Speed"
         },
         {
           "id": "uma-30071",
-          "reason": "Meta El Condor Pasa",
-          "type": "Speed"
+          "reason": "Poder",
+          "type": "Power"
         },
         {
           "id": "uma-30088",
-          "reason": "Meta El Condor Pasa",
-          "type": "Speed"
+          "reason": "Inteligência",
+          "type": "Intelligence"
         }
       ]
     }
@@ -7790,98 +7790,98 @@ export const META_DECKS: Record<string, ScenarioDeck[]> = {
       "cards": [
         {
           "id": "uma-30028",
-          "reason": "Meta Symboli Rudolf",
+          "reason": "Velocidade",
           "type": "Speed"
         },
         {
           "id": "uma-30016",
-          "reason": "Meta Symboli Rudolf",
-          "type": "Speed"
+          "reason": "Estamina",
+          "type": "Stamina"
         },
         {
           "id": "uma-30010",
-          "reason": "Meta Symboli Rudolf",
-          "type": "Speed"
+          "reason": "Inteligência",
+          "type": "Intelligence"
         },
         {
           "id": "uma-30021",
-          "reason": "Meta Symboli Rudolf",
-          "type": "Speed"
+          "reason": "Amigo/Grupo",
+          "type": "Friend"
         },
         {
           "id": "uma-30007",
-          "reason": "Meta Symboli Rudolf",
-          "type": "Speed"
+          "reason": "Poder",
+          "type": "Power"
         },
         {
           "id": "uma-30023",
-          "reason": "Meta Symboli Rudolf",
-          "type": "Speed"
+          "reason": "Estamina",
+          "type": "Stamina"
         },
         {
           "id": "uma-30070",
-          "reason": "Meta Symboli Rudolf",
-          "type": "Speed"
+          "reason": "Determinação",
+          "type": "Guts"
         },
         {
           "id": "uma-30063",
-          "reason": "Meta Symboli Rudolf",
-          "type": "Speed"
+          "reason": "Determinação",
+          "type": "Guts"
         },
         {
           "id": "uma-30041",
-          "reason": "Meta Symboli Rudolf",
-          "type": "Speed"
+          "reason": "Inteligência",
+          "type": "Intelligence"
         },
         {
           "id": "uma-30078",
-          "reason": "Meta Symboli Rudolf",
+          "reason": "Velocidade",
           "type": "Speed"
         },
         {
           "id": "uma-20042",
-          "reason": "Meta Symboli Rudolf",
-          "type": "Speed"
+          "reason": "Poder",
+          "type": "Power"
         },
         {
           "id": "uma-20039",
-          "reason": "Meta Symboli Rudolf",
+          "reason": "Velocidade",
           "type": "Speed"
         },
         {
           "id": "uma-20035",
-          "reason": "Meta Symboli Rudolf",
-          "type": "Speed"
+          "reason": "Estamina",
+          "type": "Stamina"
         },
         {
           "id": "uma-20043",
-          "reason": "Meta Symboli Rudolf",
-          "type": "Speed"
+          "reason": "Poder",
+          "type": "Power"
         },
         {
           "id": "uma-20040",
-          "reason": "Meta Symboli Rudolf",
-          "type": "Speed"
+          "reason": "Estamina",
+          "type": "Stamina"
         },
         {
           "id": "uma-20038",
-          "reason": "Meta Symboli Rudolf",
-          "type": "Speed"
+          "reason": "Determinação",
+          "type": "Guts"
         },
         {
           "id": "uma-30065",
-          "reason": "Meta Symboli Rudolf",
+          "reason": "Velocidade",
           "type": "Speed"
         },
         {
           "id": "uma-30056",
-          "reason": "Meta Symboli Rudolf",
-          "type": "Speed"
+          "reason": "Poder",
+          "type": "Power"
         },
         {
           "id": "uma-30068",
-          "reason": "Meta Symboli Rudolf",
-          "type": "Speed"
+          "reason": "Inteligência",
+          "type": "Intelligence"
         }
       ]
     },
@@ -7918,98 +7918,98 @@ export const META_DECKS: Record<string, ScenarioDeck[]> = {
       "cards": [
         {
           "id": "uma-30028",
-          "reason": "Meta Symboli Rudolf",
+          "reason": "Velocidade",
           "type": "Speed"
         },
         {
           "id": "uma-30016",
-          "reason": "Meta Symboli Rudolf",
-          "type": "Speed"
+          "reason": "Estamina",
+          "type": "Stamina"
         },
         {
           "id": "uma-30010",
-          "reason": "Meta Symboli Rudolf",
-          "type": "Speed"
+          "reason": "Inteligência",
+          "type": "Intelligence"
         },
         {
           "id": "uma-30021",
-          "reason": "Meta Symboli Rudolf",
-          "type": "Speed"
+          "reason": "Amigo/Grupo",
+          "type": "Friend"
         },
         {
           "id": "uma-30007",
-          "reason": "Meta Symboli Rudolf",
-          "type": "Speed"
+          "reason": "Poder",
+          "type": "Power"
         },
         {
           "id": "uma-30023",
-          "reason": "Meta Symboli Rudolf",
-          "type": "Speed"
+          "reason": "Estamina",
+          "type": "Stamina"
         },
         {
           "id": "uma-30070",
-          "reason": "Meta Symboli Rudolf",
-          "type": "Speed"
+          "reason": "Determinação",
+          "type": "Guts"
         },
         {
           "id": "uma-30063",
-          "reason": "Meta Symboli Rudolf",
-          "type": "Speed"
+          "reason": "Determinação",
+          "type": "Guts"
         },
         {
           "id": "uma-30041",
-          "reason": "Meta Symboli Rudolf",
-          "type": "Speed"
+          "reason": "Inteligência",
+          "type": "Intelligence"
         },
         {
           "id": "uma-30078",
-          "reason": "Meta Symboli Rudolf",
+          "reason": "Velocidade",
           "type": "Speed"
         },
         {
           "id": "uma-20042",
-          "reason": "Meta Symboli Rudolf",
-          "type": "Speed"
+          "reason": "Poder",
+          "type": "Power"
         },
         {
           "id": "uma-20039",
-          "reason": "Meta Symboli Rudolf",
+          "reason": "Velocidade",
           "type": "Speed"
         },
         {
           "id": "uma-20035",
-          "reason": "Meta Symboli Rudolf",
-          "type": "Speed"
+          "reason": "Estamina",
+          "type": "Stamina"
         },
         {
           "id": "uma-20043",
-          "reason": "Meta Symboli Rudolf",
-          "type": "Speed"
+          "reason": "Poder",
+          "type": "Power"
         },
         {
           "id": "uma-20040",
-          "reason": "Meta Symboli Rudolf",
-          "type": "Speed"
+          "reason": "Estamina",
+          "type": "Stamina"
         },
         {
           "id": "uma-20038",
-          "reason": "Meta Symboli Rudolf",
-          "type": "Speed"
+          "reason": "Determinação",
+          "type": "Guts"
         },
         {
           "id": "uma-30065",
-          "reason": "Meta Symboli Rudolf",
+          "reason": "Velocidade",
           "type": "Speed"
         },
         {
           "id": "uma-30056",
-          "reason": "Meta Symboli Rudolf",
-          "type": "Speed"
+          "reason": "Poder",
+          "type": "Power"
         },
         {
           "id": "uma-30068",
-          "reason": "Meta Symboli Rudolf",
-          "type": "Speed"
+          "reason": "Inteligência",
+          "type": "Intelligence"
         }
       ]
     },
@@ -8046,98 +8046,98 @@ export const META_DECKS: Record<string, ScenarioDeck[]> = {
       "cards": [
         {
           "id": "uma-30028",
-          "reason": "Meta Symboli Rudolf",
+          "reason": "Velocidade",
           "type": "Speed"
         },
         {
           "id": "uma-30016",
-          "reason": "Meta Symboli Rudolf",
-          "type": "Speed"
+          "reason": "Estamina",
+          "type": "Stamina"
         },
         {
           "id": "uma-30010",
-          "reason": "Meta Symboli Rudolf",
-          "type": "Speed"
+          "reason": "Inteligência",
+          "type": "Intelligence"
         },
         {
           "id": "uma-30021",
-          "reason": "Meta Symboli Rudolf",
-          "type": "Speed"
+          "reason": "Amigo/Grupo",
+          "type": "Friend"
         },
         {
           "id": "uma-30007",
-          "reason": "Meta Symboli Rudolf",
-          "type": "Speed"
+          "reason": "Poder",
+          "type": "Power"
         },
         {
           "id": "uma-30023",
-          "reason": "Meta Symboli Rudolf",
-          "type": "Speed"
+          "reason": "Estamina",
+          "type": "Stamina"
         },
         {
           "id": "uma-30070",
-          "reason": "Meta Symboli Rudolf",
-          "type": "Speed"
+          "reason": "Determinação",
+          "type": "Guts"
         },
         {
           "id": "uma-30063",
-          "reason": "Meta Symboli Rudolf",
-          "type": "Speed"
+          "reason": "Determinação",
+          "type": "Guts"
         },
         {
           "id": "uma-30041",
-          "reason": "Meta Symboli Rudolf",
-          "type": "Speed"
+          "reason": "Inteligência",
+          "type": "Intelligence"
         },
         {
           "id": "uma-30078",
-          "reason": "Meta Symboli Rudolf",
+          "reason": "Velocidade",
           "type": "Speed"
         },
         {
           "id": "uma-20042",
-          "reason": "Meta Symboli Rudolf",
-          "type": "Speed"
+          "reason": "Poder",
+          "type": "Power"
         },
         {
           "id": "uma-20039",
-          "reason": "Meta Symboli Rudolf",
+          "reason": "Velocidade",
           "type": "Speed"
         },
         {
           "id": "uma-20035",
-          "reason": "Meta Symboli Rudolf",
-          "type": "Speed"
+          "reason": "Estamina",
+          "type": "Stamina"
         },
         {
           "id": "uma-20043",
-          "reason": "Meta Symboli Rudolf",
-          "type": "Speed"
+          "reason": "Poder",
+          "type": "Power"
         },
         {
           "id": "uma-20040",
-          "reason": "Meta Symboli Rudolf",
-          "type": "Speed"
+          "reason": "Estamina",
+          "type": "Stamina"
         },
         {
           "id": "uma-20038",
-          "reason": "Meta Symboli Rudolf",
-          "type": "Speed"
+          "reason": "Determinação",
+          "type": "Guts"
         },
         {
           "id": "uma-30065",
-          "reason": "Meta Symboli Rudolf",
+          "reason": "Velocidade",
           "type": "Speed"
         },
         {
           "id": "uma-30056",
-          "reason": "Meta Symboli Rudolf",
-          "type": "Speed"
+          "reason": "Poder",
+          "type": "Power"
         },
         {
           "id": "uma-30068",
-          "reason": "Meta Symboli Rudolf",
-          "type": "Speed"
+          "reason": "Inteligência",
+          "type": "Intelligence"
         }
       ]
     }
@@ -8189,98 +8189,98 @@ export const META_DECKS: Record<string, ScenarioDeck[]> = {
       "cards": [
         {
           "id": "uma-30028",
-          "reason": "Meta Winning Ticket",
+          "reason": "Velocidade",
           "type": "Speed"
         },
         {
           "id": "uma-30016",
-          "reason": "Meta Winning Ticket",
-          "type": "Speed"
+          "reason": "Estamina",
+          "type": "Stamina"
         },
         {
           "id": "uma-30010",
-          "reason": "Meta Winning Ticket",
-          "type": "Speed"
+          "reason": "Inteligência",
+          "type": "Intelligence"
         },
         {
           "id": "uma-30036",
-          "reason": "Meta Winning Ticket",
-          "type": "Speed"
+          "reason": "Amigo/Grupo",
+          "type": "Friend"
         },
         {
           "id": "uma-30005",
-          "reason": "Meta Winning Ticket",
-          "type": "Speed"
+          "reason": "Poder",
+          "type": "Power"
         },
         {
           "id": "uma-30026",
-          "reason": "Meta Winning Ticket",
+          "reason": "Velocidade",
           "type": "Speed"
         },
         {
           "id": "uma-30070",
-          "reason": "Meta Winning Ticket",
-          "type": "Speed"
+          "reason": "Determinação",
+          "type": "Guts"
         },
         {
           "id": "uma-30063",
-          "reason": "Meta Winning Ticket",
-          "type": "Speed"
+          "reason": "Determinação",
+          "type": "Guts"
         },
         {
           "id": "uma-30054",
-          "reason": "Meta Winning Ticket",
-          "type": "Speed"
+          "reason": "Inteligência",
+          "type": "Intelligence"
         },
         {
           "id": "uma-30025",
-          "reason": "Meta Winning Ticket",
+          "reason": "Velocidade",
           "type": "Speed"
         },
         {
           "id": "uma-20043",
-          "reason": "Meta Winning Ticket",
-          "type": "Speed"
+          "reason": "Poder",
+          "type": "Power"
         },
         {
           "id": "uma-20040",
-          "reason": "Meta Winning Ticket",
-          "type": "Speed"
+          "reason": "Estamina",
+          "type": "Stamina"
         },
         {
           "id": "uma-20038",
-          "reason": "Meta Winning Ticket",
-          "type": "Speed"
+          "reason": "Determinação",
+          "type": "Guts"
         },
         {
           "id": "uma-20041",
-          "reason": "Meta Winning Ticket",
-          "type": "Speed"
+          "reason": "Determinação",
+          "type": "Guts"
         },
         {
           "id": "uma-20037",
-          "reason": "Meta Winning Ticket",
-          "type": "Speed"
+          "reason": "Poder",
+          "type": "Power"
         },
         {
           "id": "uma-20042",
-          "reason": "Meta Winning Ticket",
-          "type": "Speed"
+          "reason": "Poder",
+          "type": "Power"
         },
         {
           "id": "uma-30078",
-          "reason": "Meta Winning Ticket",
+          "reason": "Velocidade",
           "type": "Speed"
         },
         {
           "id": "uma-30034",
-          "reason": "Meta Winning Ticket",
-          "type": "Speed"
+          "reason": "Poder",
+          "type": "Power"
         },
         {
           "id": "uma-30073",
-          "reason": "Meta Winning Ticket",
-          "type": "Speed"
+          "reason": "Inteligência",
+          "type": "Intelligence"
         }
       ]
     },
@@ -8317,98 +8317,98 @@ export const META_DECKS: Record<string, ScenarioDeck[]> = {
       "cards": [
         {
           "id": "uma-30028",
-          "reason": "Meta Winning Ticket",
+          "reason": "Velocidade",
           "type": "Speed"
         },
         {
           "id": "uma-30016",
-          "reason": "Meta Winning Ticket",
-          "type": "Speed"
+          "reason": "Estamina",
+          "type": "Stamina"
         },
         {
           "id": "uma-30010",
-          "reason": "Meta Winning Ticket",
-          "type": "Speed"
+          "reason": "Inteligência",
+          "type": "Intelligence"
         },
         {
           "id": "uma-30036",
-          "reason": "Meta Winning Ticket",
-          "type": "Speed"
+          "reason": "Amigo/Grupo",
+          "type": "Friend"
         },
         {
           "id": "uma-30005",
-          "reason": "Meta Winning Ticket",
-          "type": "Speed"
+          "reason": "Poder",
+          "type": "Power"
         },
         {
           "id": "uma-30026",
-          "reason": "Meta Winning Ticket",
+          "reason": "Velocidade",
           "type": "Speed"
         },
         {
           "id": "uma-30070",
-          "reason": "Meta Winning Ticket",
-          "type": "Speed"
+          "reason": "Determinação",
+          "type": "Guts"
         },
         {
           "id": "uma-30063",
-          "reason": "Meta Winning Ticket",
-          "type": "Speed"
+          "reason": "Determinação",
+          "type": "Guts"
         },
         {
           "id": "uma-30054",
-          "reason": "Meta Winning Ticket",
-          "type": "Speed"
+          "reason": "Inteligência",
+          "type": "Intelligence"
         },
         {
           "id": "uma-30025",
-          "reason": "Meta Winning Ticket",
+          "reason": "Velocidade",
           "type": "Speed"
         },
         {
           "id": "uma-20043",
-          "reason": "Meta Winning Ticket",
-          "type": "Speed"
+          "reason": "Poder",
+          "type": "Power"
         },
         {
           "id": "uma-20040",
-          "reason": "Meta Winning Ticket",
-          "type": "Speed"
+          "reason": "Estamina",
+          "type": "Stamina"
         },
         {
           "id": "uma-20038",
-          "reason": "Meta Winning Ticket",
-          "type": "Speed"
+          "reason": "Determinação",
+          "type": "Guts"
         },
         {
           "id": "uma-20041",
-          "reason": "Meta Winning Ticket",
-          "type": "Speed"
+          "reason": "Determinação",
+          "type": "Guts"
         },
         {
           "id": "uma-20037",
-          "reason": "Meta Winning Ticket",
-          "type": "Speed"
+          "reason": "Poder",
+          "type": "Power"
         },
         {
           "id": "uma-20042",
-          "reason": "Meta Winning Ticket",
-          "type": "Speed"
+          "reason": "Poder",
+          "type": "Power"
         },
         {
           "id": "uma-30078",
-          "reason": "Meta Winning Ticket",
+          "reason": "Velocidade",
           "type": "Speed"
         },
         {
           "id": "uma-30034",
-          "reason": "Meta Winning Ticket",
-          "type": "Speed"
+          "reason": "Poder",
+          "type": "Power"
         },
         {
           "id": "uma-30073",
-          "reason": "Meta Winning Ticket",
-          "type": "Speed"
+          "reason": "Inteligência",
+          "type": "Intelligence"
         }
       ]
     },
@@ -8445,98 +8445,98 @@ export const META_DECKS: Record<string, ScenarioDeck[]> = {
       "cards": [
         {
           "id": "uma-30028",
-          "reason": "Meta Winning Ticket",
+          "reason": "Velocidade",
           "type": "Speed"
         },
         {
           "id": "uma-30016",
-          "reason": "Meta Winning Ticket",
-          "type": "Speed"
+          "reason": "Estamina",
+          "type": "Stamina"
         },
         {
           "id": "uma-30010",
-          "reason": "Meta Winning Ticket",
-          "type": "Speed"
+          "reason": "Inteligência",
+          "type": "Intelligence"
         },
         {
           "id": "uma-30036",
-          "reason": "Meta Winning Ticket",
-          "type": "Speed"
+          "reason": "Amigo/Grupo",
+          "type": "Friend"
         },
         {
           "id": "uma-30005",
-          "reason": "Meta Winning Ticket",
-          "type": "Speed"
+          "reason": "Poder",
+          "type": "Power"
         },
         {
           "id": "uma-30026",
-          "reason": "Meta Winning Ticket",
+          "reason": "Velocidade",
           "type": "Speed"
         },
         {
           "id": "uma-30070",
-          "reason": "Meta Winning Ticket",
-          "type": "Speed"
+          "reason": "Determinação",
+          "type": "Guts"
         },
         {
           "id": "uma-30063",
-          "reason": "Meta Winning Ticket",
-          "type": "Speed"
+          "reason": "Determinação",
+          "type": "Guts"
         },
         {
           "id": "uma-30054",
-          "reason": "Meta Winning Ticket",
-          "type": "Speed"
+          "reason": "Inteligência",
+          "type": "Intelligence"
         },
         {
           "id": "uma-30025",
-          "reason": "Meta Winning Ticket",
+          "reason": "Velocidade",
           "type": "Speed"
         },
         {
           "id": "uma-20043",
-          "reason": "Meta Winning Ticket",
-          "type": "Speed"
+          "reason": "Poder",
+          "type": "Power"
         },
         {
           "id": "uma-20040",
-          "reason": "Meta Winning Ticket",
-          "type": "Speed"
+          "reason": "Estamina",
+          "type": "Stamina"
         },
         {
           "id": "uma-20038",
-          "reason": "Meta Winning Ticket",
-          "type": "Speed"
+          "reason": "Determinação",
+          "type": "Guts"
         },
         {
           "id": "uma-20041",
-          "reason": "Meta Winning Ticket",
-          "type": "Speed"
+          "reason": "Determinação",
+          "type": "Guts"
         },
         {
           "id": "uma-20037",
-          "reason": "Meta Winning Ticket",
-          "type": "Speed"
+          "reason": "Poder",
+          "type": "Power"
         },
         {
           "id": "uma-20042",
-          "reason": "Meta Winning Ticket",
-          "type": "Speed"
+          "reason": "Poder",
+          "type": "Power"
         },
         {
           "id": "uma-30078",
-          "reason": "Meta Winning Ticket",
+          "reason": "Velocidade",
           "type": "Speed"
         },
         {
           "id": "uma-30034",
-          "reason": "Meta Winning Ticket",
-          "type": "Speed"
+          "reason": "Poder",
+          "type": "Power"
         },
         {
           "id": "uma-30073",
-          "reason": "Meta Winning Ticket",
-          "type": "Speed"
+          "reason": "Inteligência",
+          "type": "Intelligence"
         }
       ]
     }
@@ -8588,98 +8588,98 @@ export const META_DECKS: Record<string, ScenarioDeck[]> = {
       "cards": [
         {
           "id": "uma-30028",
-          "reason": "Meta Eishin Flash",
+          "reason": "Velocidade",
           "type": "Speed"
         },
         {
           "id": "uma-30016",
-          "reason": "Meta Eishin Flash",
-          "type": "Speed"
+          "reason": "Estamina",
+          "type": "Stamina"
         },
         {
           "id": "uma-30010",
-          "reason": "Meta Eishin Flash",
-          "type": "Speed"
+          "reason": "Inteligência",
+          "type": "Intelligence"
         },
         {
           "id": "uma-30036",
-          "reason": "Meta Eishin Flash",
-          "type": "Speed"
+          "reason": "Amigo/Grupo",
+          "type": "Friend"
         },
         {
           "id": "uma-30005",
-          "reason": "Meta Eishin Flash",
-          "type": "Speed"
+          "reason": "Poder",
+          "type": "Power"
         },
         {
           "id": "uma-30084",
-          "reason": "Meta Eishin Flash",
+          "reason": "Velocidade",
           "type": "Speed"
         },
         {
           "id": "uma-30019",
-          "reason": "Meta Eishin Flash",
-          "type": "Speed"
+          "reason": "Determinação",
+          "type": "Guts"
         },
         {
           "id": "uma-30012",
-          "reason": "Meta Eishin Flash",
-          "type": "Speed"
+          "reason": "Determinação",
+          "type": "Guts"
         },
         {
           "id": "uma-30054",
-          "reason": "Meta Eishin Flash",
-          "type": "Speed"
+          "reason": "Inteligência",
+          "type": "Intelligence"
         },
         {
           "id": "uma-30025",
-          "reason": "Meta Eishin Flash",
+          "reason": "Velocidade",
           "type": "Speed"
         },
         {
           "id": "uma-20043",
-          "reason": "Meta Eishin Flash",
-          "type": "Speed"
+          "reason": "Poder",
+          "type": "Power"
         },
         {
           "id": "uma-20040",
-          "reason": "Meta Eishin Flash",
-          "type": "Speed"
+          "reason": "Estamina",
+          "type": "Stamina"
         },
         {
           "id": "uma-20038",
-          "reason": "Meta Eishin Flash",
-          "type": "Speed"
+          "reason": "Determinação",
+          "type": "Guts"
         },
         {
           "id": "uma-20041",
-          "reason": "Meta Eishin Flash",
-          "type": "Speed"
+          "reason": "Determinação",
+          "type": "Guts"
         },
         {
           "id": "uma-20037",
-          "reason": "Meta Eishin Flash",
-          "type": "Speed"
+          "reason": "Poder",
+          "type": "Power"
         },
         {
           "id": "uma-20042",
-          "reason": "Meta Eishin Flash",
-          "type": "Speed"
+          "reason": "Poder",
+          "type": "Power"
         },
         {
           "id": "uma-30078",
-          "reason": "Meta Eishin Flash",
+          "reason": "Velocidade",
           "type": "Speed"
         },
         {
           "id": "uma-30034",
-          "reason": "Meta Eishin Flash",
-          "type": "Speed"
+          "reason": "Poder",
+          "type": "Power"
         },
         {
           "id": "uma-30073",
-          "reason": "Meta Eishin Flash",
-          "type": "Speed"
+          "reason": "Inteligência",
+          "type": "Intelligence"
         }
       ]
     },
@@ -8716,98 +8716,98 @@ export const META_DECKS: Record<string, ScenarioDeck[]> = {
       "cards": [
         {
           "id": "uma-30028",
-          "reason": "Meta Eishin Flash",
+          "reason": "Velocidade",
           "type": "Speed"
         },
         {
           "id": "uma-30016",
-          "reason": "Meta Eishin Flash",
-          "type": "Speed"
+          "reason": "Estamina",
+          "type": "Stamina"
         },
         {
           "id": "uma-30010",
-          "reason": "Meta Eishin Flash",
-          "type": "Speed"
+          "reason": "Inteligência",
+          "type": "Intelligence"
         },
         {
           "id": "uma-30036",
-          "reason": "Meta Eishin Flash",
-          "type": "Speed"
+          "reason": "Amigo/Grupo",
+          "type": "Friend"
         },
         {
           "id": "uma-30005",
-          "reason": "Meta Eishin Flash",
-          "type": "Speed"
+          "reason": "Poder",
+          "type": "Power"
         },
         {
           "id": "uma-30084",
-          "reason": "Meta Eishin Flash",
+          "reason": "Velocidade",
           "type": "Speed"
         },
         {
           "id": "uma-30019",
-          "reason": "Meta Eishin Flash",
-          "type": "Speed"
+          "reason": "Determinação",
+          "type": "Guts"
         },
         {
           "id": "uma-30012",
-          "reason": "Meta Eishin Flash",
-          "type": "Speed"
+          "reason": "Determinação",
+          "type": "Guts"
         },
         {
           "id": "uma-30054",
-          "reason": "Meta Eishin Flash",
-          "type": "Speed"
+          "reason": "Inteligência",
+          "type": "Intelligence"
         },
         {
           "id": "uma-30025",
-          "reason": "Meta Eishin Flash",
+          "reason": "Velocidade",
           "type": "Speed"
         },
         {
           "id": "uma-20043",
-          "reason": "Meta Eishin Flash",
-          "type": "Speed"
+          "reason": "Poder",
+          "type": "Power"
         },
         {
           "id": "uma-20040",
-          "reason": "Meta Eishin Flash",
-          "type": "Speed"
+          "reason": "Estamina",
+          "type": "Stamina"
         },
         {
           "id": "uma-20038",
-          "reason": "Meta Eishin Flash",
-          "type": "Speed"
+          "reason": "Determinação",
+          "type": "Guts"
         },
         {
           "id": "uma-20041",
-          "reason": "Meta Eishin Flash",
-          "type": "Speed"
+          "reason": "Determinação",
+          "type": "Guts"
         },
         {
           "id": "uma-20037",
-          "reason": "Meta Eishin Flash",
-          "type": "Speed"
+          "reason": "Poder",
+          "type": "Power"
         },
         {
           "id": "uma-20042",
-          "reason": "Meta Eishin Flash",
-          "type": "Speed"
+          "reason": "Poder",
+          "type": "Power"
         },
         {
           "id": "uma-30078",
-          "reason": "Meta Eishin Flash",
+          "reason": "Velocidade",
           "type": "Speed"
         },
         {
           "id": "uma-30034",
-          "reason": "Meta Eishin Flash",
-          "type": "Speed"
+          "reason": "Poder",
+          "type": "Power"
         },
         {
           "id": "uma-30073",
-          "reason": "Meta Eishin Flash",
-          "type": "Speed"
+          "reason": "Inteligência",
+          "type": "Intelligence"
         }
       ]
     },
@@ -8844,98 +8844,98 @@ export const META_DECKS: Record<string, ScenarioDeck[]> = {
       "cards": [
         {
           "id": "uma-30028",
-          "reason": "Meta Eishin Flash",
+          "reason": "Velocidade",
           "type": "Speed"
         },
         {
           "id": "uma-30016",
-          "reason": "Meta Eishin Flash",
-          "type": "Speed"
+          "reason": "Estamina",
+          "type": "Stamina"
         },
         {
           "id": "uma-30010",
-          "reason": "Meta Eishin Flash",
-          "type": "Speed"
+          "reason": "Inteligência",
+          "type": "Intelligence"
         },
         {
           "id": "uma-30036",
-          "reason": "Meta Eishin Flash",
-          "type": "Speed"
+          "reason": "Amigo/Grupo",
+          "type": "Friend"
         },
         {
           "id": "uma-30005",
-          "reason": "Meta Eishin Flash",
-          "type": "Speed"
+          "reason": "Poder",
+          "type": "Power"
         },
         {
           "id": "uma-30084",
-          "reason": "Meta Eishin Flash",
+          "reason": "Velocidade",
           "type": "Speed"
         },
         {
           "id": "uma-30019",
-          "reason": "Meta Eishin Flash",
-          "type": "Speed"
+          "reason": "Determinação",
+          "type": "Guts"
         },
         {
           "id": "uma-30012",
-          "reason": "Meta Eishin Flash",
-          "type": "Speed"
+          "reason": "Determinação",
+          "type": "Guts"
         },
         {
           "id": "uma-30054",
-          "reason": "Meta Eishin Flash",
-          "type": "Speed"
+          "reason": "Inteligência",
+          "type": "Intelligence"
         },
         {
           "id": "uma-30025",
-          "reason": "Meta Eishin Flash",
+          "reason": "Velocidade",
           "type": "Speed"
         },
         {
           "id": "uma-20043",
-          "reason": "Meta Eishin Flash",
-          "type": "Speed"
+          "reason": "Poder",
+          "type": "Power"
         },
         {
           "id": "uma-20040",
-          "reason": "Meta Eishin Flash",
-          "type": "Speed"
+          "reason": "Estamina",
+          "type": "Stamina"
         },
         {
           "id": "uma-20038",
-          "reason": "Meta Eishin Flash",
-          "type": "Speed"
+          "reason": "Determinação",
+          "type": "Guts"
         },
         {
           "id": "uma-20041",
-          "reason": "Meta Eishin Flash",
-          "type": "Speed"
+          "reason": "Determinação",
+          "type": "Guts"
         },
         {
           "id": "uma-20037",
-          "reason": "Meta Eishin Flash",
-          "type": "Speed"
+          "reason": "Poder",
+          "type": "Power"
         },
         {
           "id": "uma-20042",
-          "reason": "Meta Eishin Flash",
-          "type": "Speed"
+          "reason": "Poder",
+          "type": "Power"
         },
         {
           "id": "uma-30078",
-          "reason": "Meta Eishin Flash",
+          "reason": "Velocidade",
           "type": "Speed"
         },
         {
           "id": "uma-30034",
-          "reason": "Meta Eishin Flash",
-          "type": "Speed"
+          "reason": "Poder",
+          "type": "Power"
         },
         {
           "id": "uma-30073",
-          "reason": "Meta Eishin Flash",
-          "type": "Speed"
+          "reason": "Inteligência",
+          "type": "Intelligence"
         }
       ]
     }
@@ -8987,93 +8987,93 @@ export const META_DECKS: Record<string, ScenarioDeck[]> = {
       "cards": [
         {
           "id": "uma-30028",
-          "reason": "Meta Air Groove",
+          "reason": "Velocidade",
           "type": "Speed"
         },
         {
           "id": "uma-30016",
-          "reason": "Meta Air Groove",
-          "type": "Speed"
+          "reason": "Estamina",
+          "type": "Stamina"
         },
         {
           "id": "uma-30010",
-          "reason": "Meta Air Groove",
-          "type": "Speed"
+          "reason": "Inteligência",
+          "type": "Intelligence"
         },
         {
           "id": "uma-30036",
-          "reason": "Meta Air Groove",
-          "type": "Speed"
+          "reason": "Amigo/Grupo",
+          "type": "Friend"
         },
         {
           "id": "uma-30007",
-          "reason": "Meta Air Groove",
-          "type": "Speed"
+          "reason": "Poder",
+          "type": "Power"
         },
         {
           "id": "uma-30043",
-          "reason": "Meta Air Groove",
-          "type": "Speed"
+          "reason": "Estamina",
+          "type": "Stamina"
         },
         {
           "id": "uma-30006",
-          "reason": "Meta Air Groove",
-          "type": "Speed"
+          "reason": "Determinação",
+          "type": "Guts"
         },
         {
           "id": "uma-30001",
-          "reason": "Meta Air Groove",
-          "type": "Speed"
+          "reason": "Determinação",
+          "type": "Guts"
         },
         {
           "id": "uma-30054",
-          "reason": "Meta Air Groove",
-          "type": "Speed"
+          "reason": "Inteligência",
+          "type": "Intelligence"
         },
         {
           "id": "uma-20043",
-          "reason": "Meta Air Groove",
-          "type": "Speed"
+          "reason": "Poder",
+          "type": "Power"
         },
         {
           "id": "uma-20040",
-          "reason": "Meta Air Groove",
-          "type": "Speed"
+          "reason": "Estamina",
+          "type": "Stamina"
         },
         {
           "id": "uma-20038",
-          "reason": "Meta Air Groove",
-          "type": "Speed"
+          "reason": "Determinação",
+          "type": "Guts"
         },
         {
           "id": "uma-20041",
-          "reason": "Meta Air Groove",
-          "type": "Speed"
+          "reason": "Determinação",
+          "type": "Guts"
         },
         {
           "id": "uma-20037",
-          "reason": "Meta Air Groove",
-          "type": "Speed"
+          "reason": "Poder",
+          "type": "Power"
         },
         {
           "id": "uma-20042",
-          "reason": "Meta Air Groove",
-          "type": "Speed"
+          "reason": "Poder",
+          "type": "Power"
         },
         {
           "id": "uma-30086",
-          "reason": "Meta Air Groove",
+          "reason": "Velocidade",
           "type": "Speed"
         },
         {
           "id": "uma-30034",
-          "reason": "Meta Air Groove",
-          "type": "Speed"
+          "reason": "Poder",
+          "type": "Power"
         },
         {
           "id": "uma-30073",
-          "reason": "Meta Air Groove",
-          "type": "Speed"
+          "reason": "Inteligência",
+          "type": "Intelligence"
         }
       ]
     },
@@ -9110,93 +9110,93 @@ export const META_DECKS: Record<string, ScenarioDeck[]> = {
       "cards": [
         {
           "id": "uma-30028",
-          "reason": "Meta Air Groove",
+          "reason": "Velocidade",
           "type": "Speed"
         },
         {
           "id": "uma-30016",
-          "reason": "Meta Air Groove",
-          "type": "Speed"
+          "reason": "Estamina",
+          "type": "Stamina"
         },
         {
           "id": "uma-30010",
-          "reason": "Meta Air Groove",
-          "type": "Speed"
+          "reason": "Inteligência",
+          "type": "Intelligence"
         },
         {
           "id": "uma-30036",
-          "reason": "Meta Air Groove",
-          "type": "Speed"
+          "reason": "Amigo/Grupo",
+          "type": "Friend"
         },
         {
           "id": "uma-30007",
-          "reason": "Meta Air Groove",
-          "type": "Speed"
+          "reason": "Poder",
+          "type": "Power"
         },
         {
           "id": "uma-30043",
-          "reason": "Meta Air Groove",
-          "type": "Speed"
+          "reason": "Estamina",
+          "type": "Stamina"
         },
         {
           "id": "uma-30006",
-          "reason": "Meta Air Groove",
-          "type": "Speed"
+          "reason": "Determinação",
+          "type": "Guts"
         },
         {
           "id": "uma-30001",
-          "reason": "Meta Air Groove",
-          "type": "Speed"
+          "reason": "Determinação",
+          "type": "Guts"
         },
         {
           "id": "uma-30054",
-          "reason": "Meta Air Groove",
-          "type": "Speed"
+          "reason": "Inteligência",
+          "type": "Intelligence"
         },
         {
           "id": "uma-20043",
-          "reason": "Meta Air Groove",
-          "type": "Speed"
+          "reason": "Poder",
+          "type": "Power"
         },
         {
           "id": "uma-20040",
-          "reason": "Meta Air Groove",
-          "type": "Speed"
+          "reason": "Estamina",
+          "type": "Stamina"
         },
         {
           "id": "uma-20038",
-          "reason": "Meta Air Groove",
-          "type": "Speed"
+          "reason": "Determinação",
+          "type": "Guts"
         },
         {
           "id": "uma-20041",
-          "reason": "Meta Air Groove",
-          "type": "Speed"
+          "reason": "Determinação",
+          "type": "Guts"
         },
         {
           "id": "uma-20037",
-          "reason": "Meta Air Groove",
-          "type": "Speed"
+          "reason": "Poder",
+          "type": "Power"
         },
         {
           "id": "uma-20042",
-          "reason": "Meta Air Groove",
-          "type": "Speed"
+          "reason": "Poder",
+          "type": "Power"
         },
         {
           "id": "uma-30086",
-          "reason": "Meta Air Groove",
+          "reason": "Velocidade",
           "type": "Speed"
         },
         {
           "id": "uma-30034",
-          "reason": "Meta Air Groove",
-          "type": "Speed"
+          "reason": "Poder",
+          "type": "Power"
         },
         {
           "id": "uma-30073",
-          "reason": "Meta Air Groove",
-          "type": "Speed"
+          "reason": "Inteligência",
+          "type": "Intelligence"
         }
       ]
     },
@@ -9233,93 +9233,93 @@ export const META_DECKS: Record<string, ScenarioDeck[]> = {
       "cards": [
         {
           "id": "uma-30028",
-          "reason": "Meta Air Groove",
+          "reason": "Velocidade",
           "type": "Speed"
         },
         {
           "id": "uma-30016",
-          "reason": "Meta Air Groove",
-          "type": "Speed"
+          "reason": "Estamina",
+          "type": "Stamina"
         },
         {
           "id": "uma-30010",
-          "reason": "Meta Air Groove",
-          "type": "Speed"
+          "reason": "Inteligência",
+          "type": "Intelligence"
         },
         {
           "id": "uma-30036",
-          "reason": "Meta Air Groove",
-          "type": "Speed"
+          "reason": "Amigo/Grupo",
+          "type": "Friend"
         },
         {
           "id": "uma-30007",
-          "reason": "Meta Air Groove",
-          "type": "Speed"
+          "reason": "Poder",
+          "type": "Power"
         },
         {
           "id": "uma-30043",
-          "reason": "Meta Air Groove",
-          "type": "Speed"
+          "reason": "Estamina",
+          "type": "Stamina"
         },
         {
           "id": "uma-30006",
-          "reason": "Meta Air Groove",
-          "type": "Speed"
+          "reason": "Determinação",
+          "type": "Guts"
         },
         {
           "id": "uma-30001",
-          "reason": "Meta Air Groove",
-          "type": "Speed"
+          "reason": "Determinação",
+          "type": "Guts"
         },
         {
           "id": "uma-30054",
-          "reason": "Meta Air Groove",
-          "type": "Speed"
+          "reason": "Inteligência",
+          "type": "Intelligence"
         },
         {
           "id": "uma-20043",
-          "reason": "Meta Air Groove",
-          "type": "Speed"
+          "reason": "Poder",
+          "type": "Power"
         },
         {
           "id": "uma-20040",
-          "reason": "Meta Air Groove",
-          "type": "Speed"
+          "reason": "Estamina",
+          "type": "Stamina"
         },
         {
           "id": "uma-20038",
-          "reason": "Meta Air Groove",
-          "type": "Speed"
+          "reason": "Determinação",
+          "type": "Guts"
         },
         {
           "id": "uma-20041",
-          "reason": "Meta Air Groove",
-          "type": "Speed"
+          "reason": "Determinação",
+          "type": "Guts"
         },
         {
           "id": "uma-20037",
-          "reason": "Meta Air Groove",
-          "type": "Speed"
+          "reason": "Poder",
+          "type": "Power"
         },
         {
           "id": "uma-20042",
-          "reason": "Meta Air Groove",
-          "type": "Speed"
+          "reason": "Poder",
+          "type": "Power"
         },
         {
           "id": "uma-30086",
-          "reason": "Meta Air Groove",
+          "reason": "Velocidade",
           "type": "Speed"
         },
         {
           "id": "uma-30034",
-          "reason": "Meta Air Groove",
-          "type": "Speed"
+          "reason": "Poder",
+          "type": "Power"
         },
         {
           "id": "uma-30073",
-          "reason": "Meta Air Groove",
-          "type": "Speed"
+          "reason": "Inteligência",
+          "type": "Intelligence"
         }
       ]
     }
@@ -9371,88 +9371,88 @@ export const META_DECKS: Record<string, ScenarioDeck[]> = {
       "cards": [
         {
           "id": "uma-30028",
-          "reason": "Meta Agnes Tachyon",
+          "reason": "Velocidade",
           "type": "Speed"
         },
         {
           "id": "uma-30016",
-          "reason": "Meta Agnes Tachyon",
-          "type": "Speed"
+          "reason": "Estamina",
+          "type": "Stamina"
         },
         {
           "id": "uma-30010",
-          "reason": "Meta Agnes Tachyon",
-          "type": "Speed"
+          "reason": "Inteligência",
+          "type": "Intelligence"
         },
         {
           "id": "uma-30021",
-          "reason": "Meta Agnes Tachyon",
-          "type": "Speed"
+          "reason": "Amigo/Grupo",
+          "type": "Friend"
         },
         {
           "id": "uma-30005",
-          "reason": "Meta Agnes Tachyon",
-          "type": "Speed"
+          "reason": "Poder",
+          "type": "Power"
         },
         {
           "id": "uma-30059",
-          "reason": "Meta Agnes Tachyon",
-          "type": "Speed"
+          "reason": "Estamina",
+          "type": "Stamina"
         },
         {
           "id": "uma-30012",
-          "reason": "Meta Agnes Tachyon",
-          "type": "Speed"
+          "reason": "Determinação",
+          "type": "Guts"
         },
         {
           "id": "uma-30011",
-          "reason": "Meta Agnes Tachyon",
-          "type": "Speed"
+          "reason": "Determinação",
+          "type": "Guts"
         },
         {
           "id": "uma-30061",
-          "reason": "Meta Agnes Tachyon",
-          "type": "Speed"
+          "reason": "Inteligência",
+          "type": "Intelligence"
         },
         {
           "id": "uma-20039",
-          "reason": "Meta Agnes Tachyon",
+          "reason": "Velocidade",
           "type": "Speed"
         },
         {
           "id": "uma-20035",
-          "reason": "Meta Agnes Tachyon",
-          "type": "Speed"
+          "reason": "Estamina",
+          "type": "Stamina"
         },
         {
           "id": "uma-20043",
-          "reason": "Meta Agnes Tachyon",
-          "type": "Speed"
+          "reason": "Poder",
+          "type": "Power"
         },
         {
           "id": "uma-20040",
-          "reason": "Meta Agnes Tachyon",
-          "type": "Speed"
+          "reason": "Estamina",
+          "type": "Stamina"
         },
         {
           "id": "uma-20038",
-          "reason": "Meta Agnes Tachyon",
-          "type": "Speed"
+          "reason": "Determinação",
+          "type": "Guts"
         },
         {
           "id": "uma-20041",
-          "reason": "Meta Agnes Tachyon",
-          "type": "Speed"
+          "reason": "Determinação",
+          "type": "Guts"
         },
         {
           "id": "uma-30086",
-          "reason": "Meta Agnes Tachyon",
+          "reason": "Velocidade",
           "type": "Speed"
         },
         {
           "id": "uma-30088",
-          "reason": "Meta Agnes Tachyon",
-          "type": "Speed"
+          "reason": "Inteligência",
+          "type": "Intelligence"
         }
       ]
     },
@@ -9489,88 +9489,88 @@ export const META_DECKS: Record<string, ScenarioDeck[]> = {
       "cards": [
         {
           "id": "uma-30028",
-          "reason": "Meta Agnes Tachyon",
+          "reason": "Velocidade",
           "type": "Speed"
         },
         {
           "id": "uma-30016",
-          "reason": "Meta Agnes Tachyon",
-          "type": "Speed"
+          "reason": "Estamina",
+          "type": "Stamina"
         },
         {
           "id": "uma-30010",
-          "reason": "Meta Agnes Tachyon",
-          "type": "Speed"
+          "reason": "Inteligência",
+          "type": "Intelligence"
         },
         {
           "id": "uma-30021",
-          "reason": "Meta Agnes Tachyon",
-          "type": "Speed"
+          "reason": "Amigo/Grupo",
+          "type": "Friend"
         },
         {
           "id": "uma-30005",
-          "reason": "Meta Agnes Tachyon",
-          "type": "Speed"
+          "reason": "Poder",
+          "type": "Power"
         },
         {
           "id": "uma-30059",
-          "reason": "Meta Agnes Tachyon",
-          "type": "Speed"
+          "reason": "Estamina",
+          "type": "Stamina"
         },
         {
           "id": "uma-30012",
-          "reason": "Meta Agnes Tachyon",
-          "type": "Speed"
+          "reason": "Determinação",
+          "type": "Guts"
         },
         {
           "id": "uma-30011",
-          "reason": "Meta Agnes Tachyon",
-          "type": "Speed"
+          "reason": "Determinação",
+          "type": "Guts"
         },
         {
           "id": "uma-30061",
-          "reason": "Meta Agnes Tachyon",
-          "type": "Speed"
+          "reason": "Inteligência",
+          "type": "Intelligence"
         },
         {
           "id": "uma-20039",
-          "reason": "Meta Agnes Tachyon",
+          "reason": "Velocidade",
           "type": "Speed"
         },
         {
           "id": "uma-20035",
-          "reason": "Meta Agnes Tachyon",
-          "type": "Speed"
+          "reason": "Estamina",
+          "type": "Stamina"
         },
         {
           "id": "uma-20043",
-          "reason": "Meta Agnes Tachyon",
-          "type": "Speed"
+          "reason": "Poder",
+          "type": "Power"
         },
         {
           "id": "uma-20040",
-          "reason": "Meta Agnes Tachyon",
-          "type": "Speed"
+          "reason": "Estamina",
+          "type": "Stamina"
         },
         {
           "id": "uma-20038",
-          "reason": "Meta Agnes Tachyon",
-          "type": "Speed"
+          "reason": "Determinação",
+          "type": "Guts"
         },
         {
           "id": "uma-20041",
-          "reason": "Meta Agnes Tachyon",
-          "type": "Speed"
+          "reason": "Determinação",
+          "type": "Guts"
         },
         {
           "id": "uma-30086",
-          "reason": "Meta Agnes Tachyon",
+          "reason": "Velocidade",
           "type": "Speed"
         },
         {
           "id": "uma-30088",
-          "reason": "Meta Agnes Tachyon",
-          "type": "Speed"
+          "reason": "Inteligência",
+          "type": "Intelligence"
         }
       ]
     },
@@ -9607,88 +9607,88 @@ export const META_DECKS: Record<string, ScenarioDeck[]> = {
       "cards": [
         {
           "id": "uma-30028",
-          "reason": "Meta Agnes Tachyon",
+          "reason": "Velocidade",
           "type": "Speed"
         },
         {
           "id": "uma-30016",
-          "reason": "Meta Agnes Tachyon",
-          "type": "Speed"
+          "reason": "Estamina",
+          "type": "Stamina"
         },
         {
           "id": "uma-30010",
-          "reason": "Meta Agnes Tachyon",
-          "type": "Speed"
+          "reason": "Inteligência",
+          "type": "Intelligence"
         },
         {
           "id": "uma-30021",
-          "reason": "Meta Agnes Tachyon",
-          "type": "Speed"
+          "reason": "Amigo/Grupo",
+          "type": "Friend"
         },
         {
           "id": "uma-30005",
-          "reason": "Meta Agnes Tachyon",
-          "type": "Speed"
+          "reason": "Poder",
+          "type": "Power"
         },
         {
           "id": "uma-30059",
-          "reason": "Meta Agnes Tachyon",
-          "type": "Speed"
+          "reason": "Estamina",
+          "type": "Stamina"
         },
         {
           "id": "uma-30012",
-          "reason": "Meta Agnes Tachyon",
-          "type": "Speed"
+          "reason": "Determinação",
+          "type": "Guts"
         },
         {
           "id": "uma-30011",
-          "reason": "Meta Agnes Tachyon",
-          "type": "Speed"
+          "reason": "Determinação",
+          "type": "Guts"
         },
         {
           "id": "uma-30061",
-          "reason": "Meta Agnes Tachyon",
-          "type": "Speed"
+          "reason": "Inteligência",
+          "type": "Intelligence"
         },
         {
           "id": "uma-20039",
-          "reason": "Meta Agnes Tachyon",
+          "reason": "Velocidade",
           "type": "Speed"
         },
         {
           "id": "uma-20035",
-          "reason": "Meta Agnes Tachyon",
-          "type": "Speed"
+          "reason": "Estamina",
+          "type": "Stamina"
         },
         {
           "id": "uma-20043",
-          "reason": "Meta Agnes Tachyon",
-          "type": "Speed"
+          "reason": "Poder",
+          "type": "Power"
         },
         {
           "id": "uma-20040",
-          "reason": "Meta Agnes Tachyon",
-          "type": "Speed"
+          "reason": "Estamina",
+          "type": "Stamina"
         },
         {
           "id": "uma-20038",
-          "reason": "Meta Agnes Tachyon",
-          "type": "Speed"
+          "reason": "Determinação",
+          "type": "Guts"
         },
         {
           "id": "uma-20041",
-          "reason": "Meta Agnes Tachyon",
-          "type": "Speed"
+          "reason": "Determinação",
+          "type": "Guts"
         },
         {
           "id": "uma-30086",
-          "reason": "Meta Agnes Tachyon",
+          "reason": "Velocidade",
           "type": "Speed"
         },
         {
           "id": "uma-30088",
-          "reason": "Meta Agnes Tachyon",
-          "type": "Speed"
+          "reason": "Inteligência",
+          "type": "Intelligence"
         }
       ]
     }
@@ -9740,98 +9740,98 @@ export const META_DECKS: Record<string, ScenarioDeck[]> = {
       "cards": [
         {
           "id": "uma-30028",
-          "reason": "Meta Tamamo Cross",
+          "reason": "Velocidade",
           "type": "Speed"
         },
         {
           "id": "uma-30016",
-          "reason": "Meta Tamamo Cross",
-          "type": "Speed"
+          "reason": "Estamina",
+          "type": "Stamina"
         },
         {
           "id": "uma-30010",
-          "reason": "Meta Tamamo Cross",
-          "type": "Speed"
+          "reason": "Inteligência",
+          "type": "Intelligence"
         },
         {
           "id": "uma-30036",
-          "reason": "Meta Tamamo Cross",
-          "type": "Speed"
+          "reason": "Amigo/Grupo",
+          "type": "Friend"
         },
         {
           "id": "uma-30073",
-          "reason": "Meta Tamamo Cross",
-          "type": "Speed"
+          "reason": "Inteligência",
+          "type": "Intelligence"
         },
         {
           "id": "uma-30078",
-          "reason": "Meta Tamamo Cross",
+          "reason": "Velocidade",
           "type": "Speed"
         },
         {
           "id": "uma-30012",
-          "reason": "Meta Tamamo Cross",
-          "type": "Speed"
+          "reason": "Determinação",
+          "type": "Guts"
         },
         {
           "id": "uma-30011",
-          "reason": "Meta Tamamo Cross",
-          "type": "Speed"
+          "reason": "Determinação",
+          "type": "Guts"
         },
         {
           "id": "uma-30013",
-          "reason": "Meta Tamamo Cross",
-          "type": "Speed"
+          "reason": "Inteligência",
+          "type": "Intelligence"
         },
         {
           "id": "uma-30057",
-          "reason": "Meta Tamamo Cross",
+          "reason": "Velocidade",
           "type": "Speed"
         },
         {
           "id": "uma-20041",
-          "reason": "Meta Tamamo Cross",
-          "type": "Speed"
+          "reason": "Determinação",
+          "type": "Guts"
         },
         {
           "id": "uma-20037",
-          "reason": "Meta Tamamo Cross",
-          "type": "Speed"
+          "reason": "Poder",
+          "type": "Power"
         },
         {
           "id": "uma-20042",
-          "reason": "Meta Tamamo Cross",
-          "type": "Speed"
+          "reason": "Poder",
+          "type": "Power"
         },
         {
           "id": "uma-20039",
-          "reason": "Meta Tamamo Cross",
+          "reason": "Velocidade",
           "type": "Speed"
         },
         {
           "id": "uma-20035",
-          "reason": "Meta Tamamo Cross",
-          "type": "Speed"
+          "reason": "Estamina",
+          "type": "Stamina"
         },
         {
           "id": "uma-20043",
-          "reason": "Meta Tamamo Cross",
-          "type": "Speed"
+          "reason": "Poder",
+          "type": "Power"
         },
         {
           "id": "uma-30025",
-          "reason": "Meta Tamamo Cross",
+          "reason": "Velocidade",
           "type": "Speed"
         },
         {
           "id": "uma-30064",
-          "reason": "Meta Tamamo Cross",
-          "type": "Speed"
+          "reason": "Poder",
+          "type": "Power"
         },
         {
           "id": "uma-30061",
-          "reason": "Meta Tamamo Cross",
-          "type": "Speed"
+          "reason": "Inteligência",
+          "type": "Intelligence"
         }
       ]
     },
@@ -9868,98 +9868,98 @@ export const META_DECKS: Record<string, ScenarioDeck[]> = {
       "cards": [
         {
           "id": "uma-30028",
-          "reason": "Meta Tamamo Cross",
+          "reason": "Velocidade",
           "type": "Speed"
         },
         {
           "id": "uma-30016",
-          "reason": "Meta Tamamo Cross",
-          "type": "Speed"
+          "reason": "Estamina",
+          "type": "Stamina"
         },
         {
           "id": "uma-30010",
-          "reason": "Meta Tamamo Cross",
-          "type": "Speed"
+          "reason": "Inteligência",
+          "type": "Intelligence"
         },
         {
           "id": "uma-30036",
-          "reason": "Meta Tamamo Cross",
-          "type": "Speed"
+          "reason": "Amigo/Grupo",
+          "type": "Friend"
         },
         {
           "id": "uma-30073",
-          "reason": "Meta Tamamo Cross",
-          "type": "Speed"
+          "reason": "Inteligência",
+          "type": "Intelligence"
         },
         {
           "id": "uma-30078",
-          "reason": "Meta Tamamo Cross",
+          "reason": "Velocidade",
           "type": "Speed"
         },
         {
           "id": "uma-30012",
-          "reason": "Meta Tamamo Cross",
-          "type": "Speed"
+          "reason": "Determinação",
+          "type": "Guts"
         },
         {
           "id": "uma-30011",
-          "reason": "Meta Tamamo Cross",
-          "type": "Speed"
+          "reason": "Determinação",
+          "type": "Guts"
         },
         {
           "id": "uma-30013",
-          "reason": "Meta Tamamo Cross",
-          "type": "Speed"
+          "reason": "Inteligência",
+          "type": "Intelligence"
         },
         {
           "id": "uma-30057",
-          "reason": "Meta Tamamo Cross",
+          "reason": "Velocidade",
           "type": "Speed"
         },
         {
           "id": "uma-20041",
-          "reason": "Meta Tamamo Cross",
-          "type": "Speed"
+          "reason": "Determinação",
+          "type": "Guts"
         },
         {
           "id": "uma-20037",
-          "reason": "Meta Tamamo Cross",
-          "type": "Speed"
+          "reason": "Poder",
+          "type": "Power"
         },
         {
           "id": "uma-20042",
-          "reason": "Meta Tamamo Cross",
-          "type": "Speed"
+          "reason": "Poder",
+          "type": "Power"
         },
         {
           "id": "uma-20039",
-          "reason": "Meta Tamamo Cross",
+          "reason": "Velocidade",
           "type": "Speed"
         },
         {
           "id": "uma-20035",
-          "reason": "Meta Tamamo Cross",
-          "type": "Speed"
+          "reason": "Estamina",
+          "type": "Stamina"
         },
         {
           "id": "uma-20043",
-          "reason": "Meta Tamamo Cross",
-          "type": "Speed"
+          "reason": "Poder",
+          "type": "Power"
         },
         {
           "id": "uma-30025",
-          "reason": "Meta Tamamo Cross",
+          "reason": "Velocidade",
           "type": "Speed"
         },
         {
           "id": "uma-30064",
-          "reason": "Meta Tamamo Cross",
-          "type": "Speed"
+          "reason": "Poder",
+          "type": "Power"
         },
         {
           "id": "uma-30061",
-          "reason": "Meta Tamamo Cross",
-          "type": "Speed"
+          "reason": "Inteligência",
+          "type": "Intelligence"
         }
       ]
     },
@@ -9996,98 +9996,98 @@ export const META_DECKS: Record<string, ScenarioDeck[]> = {
       "cards": [
         {
           "id": "uma-30028",
-          "reason": "Meta Tamamo Cross",
+          "reason": "Velocidade",
           "type": "Speed"
         },
         {
           "id": "uma-30016",
-          "reason": "Meta Tamamo Cross",
-          "type": "Speed"
+          "reason": "Estamina",
+          "type": "Stamina"
         },
         {
           "id": "uma-30010",
-          "reason": "Meta Tamamo Cross",
-          "type": "Speed"
+          "reason": "Inteligência",
+          "type": "Intelligence"
         },
         {
           "id": "uma-30036",
-          "reason": "Meta Tamamo Cross",
-          "type": "Speed"
+          "reason": "Amigo/Grupo",
+          "type": "Friend"
         },
         {
           "id": "uma-30073",
-          "reason": "Meta Tamamo Cross",
-          "type": "Speed"
+          "reason": "Inteligência",
+          "type": "Intelligence"
         },
         {
           "id": "uma-30078",
-          "reason": "Meta Tamamo Cross",
+          "reason": "Velocidade",
           "type": "Speed"
         },
         {
           "id": "uma-30012",
-          "reason": "Meta Tamamo Cross",
-          "type": "Speed"
+          "reason": "Determinação",
+          "type": "Guts"
         },
         {
           "id": "uma-30011",
-          "reason": "Meta Tamamo Cross",
-          "type": "Speed"
+          "reason": "Determinação",
+          "type": "Guts"
         },
         {
           "id": "uma-30013",
-          "reason": "Meta Tamamo Cross",
-          "type": "Speed"
+          "reason": "Inteligência",
+          "type": "Intelligence"
         },
         {
           "id": "uma-30057",
-          "reason": "Meta Tamamo Cross",
+          "reason": "Velocidade",
           "type": "Speed"
         },
         {
           "id": "uma-20041",
-          "reason": "Meta Tamamo Cross",
-          "type": "Speed"
+          "reason": "Determinação",
+          "type": "Guts"
         },
         {
           "id": "uma-20037",
-          "reason": "Meta Tamamo Cross",
-          "type": "Speed"
+          "reason": "Poder",
+          "type": "Power"
         },
         {
           "id": "uma-20042",
-          "reason": "Meta Tamamo Cross",
-          "type": "Speed"
+          "reason": "Poder",
+          "type": "Power"
         },
         {
           "id": "uma-20039",
-          "reason": "Meta Tamamo Cross",
+          "reason": "Velocidade",
           "type": "Speed"
         },
         {
           "id": "uma-20035",
-          "reason": "Meta Tamamo Cross",
-          "type": "Speed"
+          "reason": "Estamina",
+          "type": "Stamina"
         },
         {
           "id": "uma-20043",
-          "reason": "Meta Tamamo Cross",
-          "type": "Speed"
+          "reason": "Poder",
+          "type": "Power"
         },
         {
           "id": "uma-30025",
-          "reason": "Meta Tamamo Cross",
+          "reason": "Velocidade",
           "type": "Speed"
         },
         {
           "id": "uma-30064",
-          "reason": "Meta Tamamo Cross",
-          "type": "Speed"
+          "reason": "Poder",
+          "type": "Power"
         },
         {
           "id": "uma-30061",
-          "reason": "Meta Tamamo Cross",
-          "type": "Speed"
+          "reason": "Inteligência",
+          "type": "Intelligence"
         }
       ]
     }
@@ -10139,98 +10139,98 @@ export const META_DECKS: Record<string, ScenarioDeck[]> = {
       "cards": [
         {
           "id": "uma-30028",
-          "reason": "Meta Fine Motion",
+          "reason": "Velocidade",
           "type": "Speed"
         },
         {
           "id": "uma-30016",
-          "reason": "Meta Fine Motion",
-          "type": "Speed"
+          "reason": "Estamina",
+          "type": "Stamina"
         },
         {
           "id": "uma-30010",
-          "reason": "Meta Fine Motion",
-          "type": "Speed"
+          "reason": "Inteligência",
+          "type": "Intelligence"
         },
         {
           "id": "uma-30021",
-          "reason": "Meta Fine Motion",
-          "type": "Speed"
+          "reason": "Amigo/Grupo",
+          "type": "Friend"
         },
         {
           "id": "uma-30007",
-          "reason": "Meta Fine Motion",
-          "type": "Speed"
+          "reason": "Poder",
+          "type": "Power"
         },
         {
           "id": "uma-30029",
-          "reason": "Meta Fine Motion",
-          "type": "Speed"
+          "reason": "Estamina",
+          "type": "Stamina"
         },
         {
           "id": "uma-30083",
-          "reason": "Meta Fine Motion",
-          "type": "Speed"
+          "reason": "Determinação",
+          "type": "Guts"
         },
         {
           "id": "uma-30070",
-          "reason": "Meta Fine Motion",
-          "type": "Speed"
+          "reason": "Determinação",
+          "type": "Guts"
         },
         {
           "id": "uma-30061",
-          "reason": "Meta Fine Motion",
-          "type": "Speed"
+          "reason": "Inteligência",
+          "type": "Intelligence"
         },
         {
           "id": "uma-30076",
-          "reason": "Meta Fine Motion",
+          "reason": "Velocidade",
           "type": "Speed"
         },
         {
           "id": "uma-20038",
-          "reason": "Meta Fine Motion",
-          "type": "Speed"
+          "reason": "Determinação",
+          "type": "Guts"
         },
         {
           "id": "uma-20041",
-          "reason": "Meta Fine Motion",
-          "type": "Speed"
+          "reason": "Determinação",
+          "type": "Guts"
         },
         {
           "id": "uma-20037",
-          "reason": "Meta Fine Motion",
-          "type": "Speed"
+          "reason": "Poder",
+          "type": "Power"
         },
         {
           "id": "uma-20042",
-          "reason": "Meta Fine Motion",
-          "type": "Speed"
+          "reason": "Poder",
+          "type": "Power"
         },
         {
           "id": "uma-20039",
-          "reason": "Meta Fine Motion",
+          "reason": "Velocidade",
           "type": "Speed"
         },
         {
           "id": "uma-20035",
-          "reason": "Meta Fine Motion",
-          "type": "Speed"
+          "reason": "Estamina",
+          "type": "Stamina"
         },
         {
           "id": "uma-30057",
-          "reason": "Meta Fine Motion",
+          "reason": "Velocidade",
           "type": "Speed"
         },
         {
           "id": "uma-30071",
-          "reason": "Meta Fine Motion",
-          "type": "Speed"
+          "reason": "Poder",
+          "type": "Power"
         },
         {
           "id": "uma-30088",
-          "reason": "Meta Fine Motion",
-          "type": "Speed"
+          "reason": "Inteligência",
+          "type": "Intelligence"
         }
       ]
     },
@@ -10267,98 +10267,98 @@ export const META_DECKS: Record<string, ScenarioDeck[]> = {
       "cards": [
         {
           "id": "uma-30028",
-          "reason": "Meta Fine Motion",
+          "reason": "Velocidade",
           "type": "Speed"
         },
         {
           "id": "uma-30016",
-          "reason": "Meta Fine Motion",
-          "type": "Speed"
+          "reason": "Estamina",
+          "type": "Stamina"
         },
         {
           "id": "uma-30010",
-          "reason": "Meta Fine Motion",
-          "type": "Speed"
+          "reason": "Inteligência",
+          "type": "Intelligence"
         },
         {
           "id": "uma-30021",
-          "reason": "Meta Fine Motion",
-          "type": "Speed"
+          "reason": "Amigo/Grupo",
+          "type": "Friend"
         },
         {
           "id": "uma-30007",
-          "reason": "Meta Fine Motion",
-          "type": "Speed"
+          "reason": "Poder",
+          "type": "Power"
         },
         {
           "id": "uma-30029",
-          "reason": "Meta Fine Motion",
-          "type": "Speed"
+          "reason": "Estamina",
+          "type": "Stamina"
         },
         {
           "id": "uma-30083",
-          "reason": "Meta Fine Motion",
-          "type": "Speed"
+          "reason": "Determinação",
+          "type": "Guts"
         },
         {
           "id": "uma-30070",
-          "reason": "Meta Fine Motion",
-          "type": "Speed"
+          "reason": "Determinação",
+          "type": "Guts"
         },
         {
           "id": "uma-30061",
-          "reason": "Meta Fine Motion",
-          "type": "Speed"
+          "reason": "Inteligência",
+          "type": "Intelligence"
         },
         {
           "id": "uma-30076",
-          "reason": "Meta Fine Motion",
+          "reason": "Velocidade",
           "type": "Speed"
         },
         {
           "id": "uma-20038",
-          "reason": "Meta Fine Motion",
-          "type": "Speed"
+          "reason": "Determinação",
+          "type": "Guts"
         },
         {
           "id": "uma-20041",
-          "reason": "Meta Fine Motion",
-          "type": "Speed"
+          "reason": "Determinação",
+          "type": "Guts"
         },
         {
           "id": "uma-20037",
-          "reason": "Meta Fine Motion",
-          "type": "Speed"
+          "reason": "Poder",
+          "type": "Power"
         },
         {
           "id": "uma-20042",
-          "reason": "Meta Fine Motion",
-          "type": "Speed"
+          "reason": "Poder",
+          "type": "Power"
         },
         {
           "id": "uma-20039",
-          "reason": "Meta Fine Motion",
+          "reason": "Velocidade",
           "type": "Speed"
         },
         {
           "id": "uma-20035",
-          "reason": "Meta Fine Motion",
-          "type": "Speed"
+          "reason": "Estamina",
+          "type": "Stamina"
         },
         {
           "id": "uma-30057",
-          "reason": "Meta Fine Motion",
+          "reason": "Velocidade",
           "type": "Speed"
         },
         {
           "id": "uma-30071",
-          "reason": "Meta Fine Motion",
-          "type": "Speed"
+          "reason": "Poder",
+          "type": "Power"
         },
         {
           "id": "uma-30088",
-          "reason": "Meta Fine Motion",
-          "type": "Speed"
+          "reason": "Inteligência",
+          "type": "Intelligence"
         }
       ]
     },
@@ -10395,98 +10395,98 @@ export const META_DECKS: Record<string, ScenarioDeck[]> = {
       "cards": [
         {
           "id": "uma-30028",
-          "reason": "Meta Fine Motion",
+          "reason": "Velocidade",
           "type": "Speed"
         },
         {
           "id": "uma-30016",
-          "reason": "Meta Fine Motion",
-          "type": "Speed"
+          "reason": "Estamina",
+          "type": "Stamina"
         },
         {
           "id": "uma-30010",
-          "reason": "Meta Fine Motion",
-          "type": "Speed"
+          "reason": "Inteligência",
+          "type": "Intelligence"
         },
         {
           "id": "uma-30021",
-          "reason": "Meta Fine Motion",
-          "type": "Speed"
+          "reason": "Amigo/Grupo",
+          "type": "Friend"
         },
         {
           "id": "uma-30007",
-          "reason": "Meta Fine Motion",
-          "type": "Speed"
+          "reason": "Poder",
+          "type": "Power"
         },
         {
           "id": "uma-30029",
-          "reason": "Meta Fine Motion",
-          "type": "Speed"
+          "reason": "Estamina",
+          "type": "Stamina"
         },
         {
           "id": "uma-30083",
-          "reason": "Meta Fine Motion",
-          "type": "Speed"
+          "reason": "Determinação",
+          "type": "Guts"
         },
         {
           "id": "uma-30070",
-          "reason": "Meta Fine Motion",
-          "type": "Speed"
+          "reason": "Determinação",
+          "type": "Guts"
         },
         {
           "id": "uma-30061",
-          "reason": "Meta Fine Motion",
-          "type": "Speed"
+          "reason": "Inteligência",
+          "type": "Intelligence"
         },
         {
           "id": "uma-30076",
-          "reason": "Meta Fine Motion",
+          "reason": "Velocidade",
           "type": "Speed"
         },
         {
           "id": "uma-20038",
-          "reason": "Meta Fine Motion",
-          "type": "Speed"
+          "reason": "Determinação",
+          "type": "Guts"
         },
         {
           "id": "uma-20041",
-          "reason": "Meta Fine Motion",
-          "type": "Speed"
+          "reason": "Determinação",
+          "type": "Guts"
         },
         {
           "id": "uma-20037",
-          "reason": "Meta Fine Motion",
-          "type": "Speed"
+          "reason": "Poder",
+          "type": "Power"
         },
         {
           "id": "uma-20042",
-          "reason": "Meta Fine Motion",
-          "type": "Speed"
+          "reason": "Poder",
+          "type": "Power"
         },
         {
           "id": "uma-20039",
-          "reason": "Meta Fine Motion",
+          "reason": "Velocidade",
           "type": "Speed"
         },
         {
           "id": "uma-20035",
-          "reason": "Meta Fine Motion",
-          "type": "Speed"
+          "reason": "Estamina",
+          "type": "Stamina"
         },
         {
           "id": "uma-30057",
-          "reason": "Meta Fine Motion",
+          "reason": "Velocidade",
           "type": "Speed"
         },
         {
           "id": "uma-30071",
-          "reason": "Meta Fine Motion",
-          "type": "Speed"
+          "reason": "Poder",
+          "type": "Power"
         },
         {
           "id": "uma-30088",
-          "reason": "Meta Fine Motion",
-          "type": "Speed"
+          "reason": "Inteligência",
+          "type": "Intelligence"
         }
       ]
     }
@@ -10538,98 +10538,98 @@ export const META_DECKS: Record<string, ScenarioDeck[]> = {
       "cards": [
         {
           "id": "uma-30028",
-          "reason": "Meta Mihono Bourbon",
+          "reason": "Velocidade",
           "type": "Speed"
         },
         {
           "id": "uma-30016",
-          "reason": "Meta Mihono Bourbon",
-          "type": "Speed"
+          "reason": "Estamina",
+          "type": "Stamina"
         },
         {
           "id": "uma-30010",
-          "reason": "Meta Mihono Bourbon",
-          "type": "Speed"
+          "reason": "Inteligência",
+          "type": "Intelligence"
         },
         {
           "id": "uma-30036",
-          "reason": "Meta Mihono Bourbon",
-          "type": "Speed"
+          "reason": "Amigo/Grupo",
+          "type": "Friend"
         },
         {
           "id": "uma-30076",
-          "reason": "Meta Mihono Bourbon",
+          "reason": "Velocidade",
           "type": "Speed"
         },
         {
           "id": "uma-30087",
-          "reason": "Meta Mihono Bourbon",
-          "type": "Speed"
+          "reason": "Estamina",
+          "type": "Stamina"
         },
         {
           "id": "uma-30048",
-          "reason": "Meta Mihono Bourbon",
-          "type": "Speed"
+          "reason": "Determinação",
+          "type": "Guts"
         },
         {
           "id": "uma-30040",
-          "reason": "Meta Mihono Bourbon",
-          "type": "Speed"
+          "reason": "Determinação",
+          "type": "Guts"
         },
         {
           "id": "uma-30013",
-          "reason": "Meta Mihono Bourbon",
-          "type": "Speed"
+          "reason": "Inteligência",
+          "type": "Intelligence"
         },
         {
           "id": "uma-30078",
-          "reason": "Meta Mihono Bourbon",
+          "reason": "Velocidade",
           "type": "Speed"
         },
         {
           "id": "uma-20041",
-          "reason": "Meta Mihono Bourbon",
-          "type": "Speed"
+          "reason": "Determinação",
+          "type": "Guts"
         },
         {
           "id": "uma-20037",
-          "reason": "Meta Mihono Bourbon",
-          "type": "Speed"
+          "reason": "Poder",
+          "type": "Power"
         },
         {
           "id": "uma-20042",
-          "reason": "Meta Mihono Bourbon",
-          "type": "Speed"
+          "reason": "Poder",
+          "type": "Power"
         },
         {
           "id": "uma-20039",
-          "reason": "Meta Mihono Bourbon",
+          "reason": "Velocidade",
           "type": "Speed"
         },
         {
           "id": "uma-20035",
-          "reason": "Meta Mihono Bourbon",
-          "type": "Speed"
+          "reason": "Estamina",
+          "type": "Stamina"
         },
         {
           "id": "uma-20043",
-          "reason": "Meta Mihono Bourbon",
-          "type": "Speed"
+          "reason": "Poder",
+          "type": "Power"
         },
         {
           "id": "uma-30065",
-          "reason": "Meta Mihono Bourbon",
+          "reason": "Velocidade",
           "type": "Speed"
         },
         {
           "id": "uma-30024",
-          "reason": "Meta Mihono Bourbon",
-          "type": "Speed"
+          "reason": "Poder",
+          "type": "Power"
         },
         {
           "id": "uma-30061",
-          "reason": "Meta Mihono Bourbon",
-          "type": "Speed"
+          "reason": "Inteligência",
+          "type": "Intelligence"
         }
       ]
     },
@@ -10666,98 +10666,98 @@ export const META_DECKS: Record<string, ScenarioDeck[]> = {
       "cards": [
         {
           "id": "uma-30028",
-          "reason": "Meta Mihono Bourbon",
+          "reason": "Velocidade",
           "type": "Speed"
         },
         {
           "id": "uma-30016",
-          "reason": "Meta Mihono Bourbon",
-          "type": "Speed"
+          "reason": "Estamina",
+          "type": "Stamina"
         },
         {
           "id": "uma-30010",
-          "reason": "Meta Mihono Bourbon",
-          "type": "Speed"
+          "reason": "Inteligência",
+          "type": "Intelligence"
         },
         {
           "id": "uma-30036",
-          "reason": "Meta Mihono Bourbon",
-          "type": "Speed"
+          "reason": "Amigo/Grupo",
+          "type": "Friend"
         },
         {
           "id": "uma-30076",
-          "reason": "Meta Mihono Bourbon",
+          "reason": "Velocidade",
           "type": "Speed"
         },
         {
           "id": "uma-30087",
-          "reason": "Meta Mihono Bourbon",
-          "type": "Speed"
+          "reason": "Estamina",
+          "type": "Stamina"
         },
         {
           "id": "uma-30048",
-          "reason": "Meta Mihono Bourbon",
-          "type": "Speed"
+          "reason": "Determinação",
+          "type": "Guts"
         },
         {
           "id": "uma-30040",
-          "reason": "Meta Mihono Bourbon",
-          "type": "Speed"
+          "reason": "Determinação",
+          "type": "Guts"
         },
         {
           "id": "uma-30013",
-          "reason": "Meta Mihono Bourbon",
-          "type": "Speed"
+          "reason": "Inteligência",
+          "type": "Intelligence"
         },
         {
           "id": "uma-30078",
-          "reason": "Meta Mihono Bourbon",
+          "reason": "Velocidade",
           "type": "Speed"
         },
         {
           "id": "uma-20041",
-          "reason": "Meta Mihono Bourbon",
-          "type": "Speed"
+          "reason": "Determinação",
+          "type": "Guts"
         },
         {
           "id": "uma-20037",
-          "reason": "Meta Mihono Bourbon",
-          "type": "Speed"
+          "reason": "Poder",
+          "type": "Power"
         },
         {
           "id": "uma-20042",
-          "reason": "Meta Mihono Bourbon",
-          "type": "Speed"
+          "reason": "Poder",
+          "type": "Power"
         },
         {
           "id": "uma-20039",
-          "reason": "Meta Mihono Bourbon",
+          "reason": "Velocidade",
           "type": "Speed"
         },
         {
           "id": "uma-20035",
-          "reason": "Meta Mihono Bourbon",
-          "type": "Speed"
+          "reason": "Estamina",
+          "type": "Stamina"
         },
         {
           "id": "uma-20043",
-          "reason": "Meta Mihono Bourbon",
-          "type": "Speed"
+          "reason": "Poder",
+          "type": "Power"
         },
         {
           "id": "uma-30065",
-          "reason": "Meta Mihono Bourbon",
+          "reason": "Velocidade",
           "type": "Speed"
         },
         {
           "id": "uma-30024",
-          "reason": "Meta Mihono Bourbon",
-          "type": "Speed"
+          "reason": "Poder",
+          "type": "Power"
         },
         {
           "id": "uma-30061",
-          "reason": "Meta Mihono Bourbon",
-          "type": "Speed"
+          "reason": "Inteligência",
+          "type": "Intelligence"
         }
       ]
     },
@@ -10794,98 +10794,98 @@ export const META_DECKS: Record<string, ScenarioDeck[]> = {
       "cards": [
         {
           "id": "uma-30028",
-          "reason": "Meta Mihono Bourbon",
+          "reason": "Velocidade",
           "type": "Speed"
         },
         {
           "id": "uma-30016",
-          "reason": "Meta Mihono Bourbon",
-          "type": "Speed"
+          "reason": "Estamina",
+          "type": "Stamina"
         },
         {
           "id": "uma-30010",
-          "reason": "Meta Mihono Bourbon",
-          "type": "Speed"
+          "reason": "Inteligência",
+          "type": "Intelligence"
         },
         {
           "id": "uma-30036",
-          "reason": "Meta Mihono Bourbon",
-          "type": "Speed"
+          "reason": "Amigo/Grupo",
+          "type": "Friend"
         },
         {
           "id": "uma-30076",
-          "reason": "Meta Mihono Bourbon",
+          "reason": "Velocidade",
           "type": "Speed"
         },
         {
           "id": "uma-30087",
-          "reason": "Meta Mihono Bourbon",
-          "type": "Speed"
+          "reason": "Estamina",
+          "type": "Stamina"
         },
         {
           "id": "uma-30048",
-          "reason": "Meta Mihono Bourbon",
-          "type": "Speed"
+          "reason": "Determinação",
+          "type": "Guts"
         },
         {
           "id": "uma-30040",
-          "reason": "Meta Mihono Bourbon",
-          "type": "Speed"
+          "reason": "Determinação",
+          "type": "Guts"
         },
         {
           "id": "uma-30013",
-          "reason": "Meta Mihono Bourbon",
-          "type": "Speed"
+          "reason": "Inteligência",
+          "type": "Intelligence"
         },
         {
           "id": "uma-30078",
-          "reason": "Meta Mihono Bourbon",
+          "reason": "Velocidade",
           "type": "Speed"
         },
         {
           "id": "uma-20041",
-          "reason": "Meta Mihono Bourbon",
-          "type": "Speed"
+          "reason": "Determinação",
+          "type": "Guts"
         },
         {
           "id": "uma-20037",
-          "reason": "Meta Mihono Bourbon",
-          "type": "Speed"
+          "reason": "Poder",
+          "type": "Power"
         },
         {
           "id": "uma-20042",
-          "reason": "Meta Mihono Bourbon",
-          "type": "Speed"
+          "reason": "Poder",
+          "type": "Power"
         },
         {
           "id": "uma-20039",
-          "reason": "Meta Mihono Bourbon",
+          "reason": "Velocidade",
           "type": "Speed"
         },
         {
           "id": "uma-20035",
-          "reason": "Meta Mihono Bourbon",
-          "type": "Speed"
+          "reason": "Estamina",
+          "type": "Stamina"
         },
         {
           "id": "uma-20043",
-          "reason": "Meta Mihono Bourbon",
-          "type": "Speed"
+          "reason": "Poder",
+          "type": "Power"
         },
         {
           "id": "uma-30065",
-          "reason": "Meta Mihono Bourbon",
+          "reason": "Velocidade",
           "type": "Speed"
         },
         {
           "id": "uma-30024",
-          "reason": "Meta Mihono Bourbon",
-          "type": "Speed"
+          "reason": "Poder",
+          "type": "Power"
         },
         {
           "id": "uma-30061",
-          "reason": "Meta Mihono Bourbon",
-          "type": "Speed"
+          "reason": "Inteligência",
+          "type": "Intelligence"
         }
       ]
     }
@@ -10937,93 +10937,93 @@ export const META_DECKS: Record<string, ScenarioDeck[]> = {
       "cards": [
         {
           "id": "uma-30028",
-          "reason": "Meta Mejiro Ryan",
+          "reason": "Velocidade",
           "type": "Speed"
         },
         {
           "id": "uma-30016",
-          "reason": "Meta Mejiro Ryan",
-          "type": "Speed"
+          "reason": "Estamina",
+          "type": "Stamina"
         },
         {
           "id": "uma-30010",
-          "reason": "Meta Mejiro Ryan",
-          "type": "Speed"
+          "reason": "Inteligência",
+          "type": "Intelligence"
         },
         {
           "id": "uma-30036",
-          "reason": "Meta Mejiro Ryan",
-          "type": "Speed"
+          "reason": "Amigo/Grupo",
+          "type": "Friend"
         },
         {
           "id": "uma-30005",
-          "reason": "Meta Mejiro Ryan",
-          "type": "Speed"
+          "reason": "Poder",
+          "type": "Power"
         },
         {
           "id": "uma-30084",
-          "reason": "Meta Mejiro Ryan",
+          "reason": "Velocidade",
           "type": "Speed"
         },
         {
           "id": "uma-30019",
-          "reason": "Meta Mejiro Ryan",
-          "type": "Speed"
+          "reason": "Determinação",
+          "type": "Guts"
         },
         {
           "id": "uma-30012",
-          "reason": "Meta Mejiro Ryan",
-          "type": "Speed"
+          "reason": "Determinação",
+          "type": "Guts"
         },
         {
           "id": "uma-30082",
-          "reason": "Meta Mejiro Ryan",
-          "type": "Speed"
+          "reason": "Inteligência",
+          "type": "Intelligence"
         },
         {
           "id": "uma-20038",
-          "reason": "Meta Mejiro Ryan",
-          "type": "Speed"
+          "reason": "Determinação",
+          "type": "Guts"
         },
         {
           "id": "uma-20041",
-          "reason": "Meta Mejiro Ryan",
-          "type": "Speed"
+          "reason": "Determinação",
+          "type": "Guts"
         },
         {
           "id": "uma-20037",
-          "reason": "Meta Mejiro Ryan",
-          "type": "Speed"
+          "reason": "Poder",
+          "type": "Power"
         },
         {
           "id": "uma-20042",
-          "reason": "Meta Mejiro Ryan",
-          "type": "Speed"
+          "reason": "Poder",
+          "type": "Power"
         },
         {
           "id": "uma-20039",
-          "reason": "Meta Mejiro Ryan",
+          "reason": "Velocidade",
           "type": "Speed"
         },
         {
           "id": "uma-20035",
-          "reason": "Meta Mejiro Ryan",
-          "type": "Speed"
+          "reason": "Estamina",
+          "type": "Stamina"
         },
         {
           "id": "uma-30072",
-          "reason": "Meta Mejiro Ryan",
+          "reason": "Velocidade",
           "type": "Speed"
         },
         {
           "id": "uma-30032",
-          "reason": "Meta Mejiro Ryan",
-          "type": "Speed"
+          "reason": "Poder",
+          "type": "Power"
         },
         {
           "id": "uma-30041",
-          "reason": "Meta Mejiro Ryan",
-          "type": "Speed"
+          "reason": "Inteligência",
+          "type": "Intelligence"
         }
       ]
     },
@@ -11060,93 +11060,93 @@ export const META_DECKS: Record<string, ScenarioDeck[]> = {
       "cards": [
         {
           "id": "uma-30028",
-          "reason": "Meta Mejiro Ryan",
+          "reason": "Velocidade",
           "type": "Speed"
         },
         {
           "id": "uma-30016",
-          "reason": "Meta Mejiro Ryan",
-          "type": "Speed"
+          "reason": "Estamina",
+          "type": "Stamina"
         },
         {
           "id": "uma-30010",
-          "reason": "Meta Mejiro Ryan",
-          "type": "Speed"
+          "reason": "Inteligência",
+          "type": "Intelligence"
         },
         {
           "id": "uma-30036",
-          "reason": "Meta Mejiro Ryan",
-          "type": "Speed"
+          "reason": "Amigo/Grupo",
+          "type": "Friend"
         },
         {
           "id": "uma-30005",
-          "reason": "Meta Mejiro Ryan",
-          "type": "Speed"
+          "reason": "Poder",
+          "type": "Power"
         },
         {
           "id": "uma-30084",
-          "reason": "Meta Mejiro Ryan",
+          "reason": "Velocidade",
           "type": "Speed"
         },
         {
           "id": "uma-30019",
-          "reason": "Meta Mejiro Ryan",
-          "type": "Speed"
+          "reason": "Determinação",
+          "type": "Guts"
         },
         {
           "id": "uma-30012",
-          "reason": "Meta Mejiro Ryan",
-          "type": "Speed"
+          "reason": "Determinação",
+          "type": "Guts"
         },
         {
           "id": "uma-30082",
-          "reason": "Meta Mejiro Ryan",
-          "type": "Speed"
+          "reason": "Inteligência",
+          "type": "Intelligence"
         },
         {
           "id": "uma-20038",
-          "reason": "Meta Mejiro Ryan",
-          "type": "Speed"
+          "reason": "Determinação",
+          "type": "Guts"
         },
         {
           "id": "uma-20041",
-          "reason": "Meta Mejiro Ryan",
-          "type": "Speed"
+          "reason": "Determinação",
+          "type": "Guts"
         },
         {
           "id": "uma-20037",
-          "reason": "Meta Mejiro Ryan",
-          "type": "Speed"
+          "reason": "Poder",
+          "type": "Power"
         },
         {
           "id": "uma-20042",
-          "reason": "Meta Mejiro Ryan",
-          "type": "Speed"
+          "reason": "Poder",
+          "type": "Power"
         },
         {
           "id": "uma-20039",
-          "reason": "Meta Mejiro Ryan",
+          "reason": "Velocidade",
           "type": "Speed"
         },
         {
           "id": "uma-20035",
-          "reason": "Meta Mejiro Ryan",
-          "type": "Speed"
+          "reason": "Estamina",
+          "type": "Stamina"
         },
         {
           "id": "uma-30072",
-          "reason": "Meta Mejiro Ryan",
+          "reason": "Velocidade",
           "type": "Speed"
         },
         {
           "id": "uma-30032",
-          "reason": "Meta Mejiro Ryan",
-          "type": "Speed"
+          "reason": "Poder",
+          "type": "Power"
         },
         {
           "id": "uma-30041",
-          "reason": "Meta Mejiro Ryan",
-          "type": "Speed"
+          "reason": "Inteligência",
+          "type": "Intelligence"
         }
       ]
     },
@@ -11183,93 +11183,93 @@ export const META_DECKS: Record<string, ScenarioDeck[]> = {
       "cards": [
         {
           "id": "uma-30028",
-          "reason": "Meta Mejiro Ryan",
+          "reason": "Velocidade",
           "type": "Speed"
         },
         {
           "id": "uma-30016",
-          "reason": "Meta Mejiro Ryan",
-          "type": "Speed"
+          "reason": "Estamina",
+          "type": "Stamina"
         },
         {
           "id": "uma-30010",
-          "reason": "Meta Mejiro Ryan",
-          "type": "Speed"
+          "reason": "Inteligência",
+          "type": "Intelligence"
         },
         {
           "id": "uma-30036",
-          "reason": "Meta Mejiro Ryan",
-          "type": "Speed"
+          "reason": "Amigo/Grupo",
+          "type": "Friend"
         },
         {
           "id": "uma-30005",
-          "reason": "Meta Mejiro Ryan",
-          "type": "Speed"
+          "reason": "Poder",
+          "type": "Power"
         },
         {
           "id": "uma-30084",
-          "reason": "Meta Mejiro Ryan",
+          "reason": "Velocidade",
           "type": "Speed"
         },
         {
           "id": "uma-30019",
-          "reason": "Meta Mejiro Ryan",
-          "type": "Speed"
+          "reason": "Determinação",
+          "type": "Guts"
         },
         {
           "id": "uma-30012",
-          "reason": "Meta Mejiro Ryan",
-          "type": "Speed"
+          "reason": "Determinação",
+          "type": "Guts"
         },
         {
           "id": "uma-30082",
-          "reason": "Meta Mejiro Ryan",
-          "type": "Speed"
+          "reason": "Inteligência",
+          "type": "Intelligence"
         },
         {
           "id": "uma-20038",
-          "reason": "Meta Mejiro Ryan",
-          "type": "Speed"
+          "reason": "Determinação",
+          "type": "Guts"
         },
         {
           "id": "uma-20041",
-          "reason": "Meta Mejiro Ryan",
-          "type": "Speed"
+          "reason": "Determinação",
+          "type": "Guts"
         },
         {
           "id": "uma-20037",
-          "reason": "Meta Mejiro Ryan",
-          "type": "Speed"
+          "reason": "Poder",
+          "type": "Power"
         },
         {
           "id": "uma-20042",
-          "reason": "Meta Mejiro Ryan",
-          "type": "Speed"
+          "reason": "Poder",
+          "type": "Power"
         },
         {
           "id": "uma-20039",
-          "reason": "Meta Mejiro Ryan",
+          "reason": "Velocidade",
           "type": "Speed"
         },
         {
           "id": "uma-20035",
-          "reason": "Meta Mejiro Ryan",
-          "type": "Speed"
+          "reason": "Estamina",
+          "type": "Stamina"
         },
         {
           "id": "uma-30072",
-          "reason": "Meta Mejiro Ryan",
+          "reason": "Velocidade",
           "type": "Speed"
         },
         {
           "id": "uma-30032",
-          "reason": "Meta Mejiro Ryan",
-          "type": "Speed"
+          "reason": "Poder",
+          "type": "Power"
         },
         {
           "id": "uma-30041",
-          "reason": "Meta Mejiro Ryan",
-          "type": "Speed"
+          "reason": "Inteligência",
+          "type": "Intelligence"
         }
       ]
     }
@@ -11321,88 +11321,88 @@ export const META_DECKS: Record<string, ScenarioDeck[]> = {
       "cards": [
         {
           "id": "uma-30028",
-          "reason": "Meta Narita Taishin",
+          "reason": "Velocidade",
           "type": "Speed"
         },
         {
           "id": "uma-30016",
-          "reason": "Meta Narita Taishin",
-          "type": "Speed"
+          "reason": "Estamina",
+          "type": "Stamina"
         },
         {
           "id": "uma-30010",
-          "reason": "Meta Narita Taishin",
-          "type": "Speed"
+          "reason": "Inteligência",
+          "type": "Intelligence"
         },
         {
           "id": "uma-30036",
-          "reason": "Meta Narita Taishin",
-          "type": "Speed"
+          "reason": "Amigo/Grupo",
+          "type": "Friend"
         },
         {
           "id": "uma-30073",
-          "reason": "Meta Narita Taishin",
-          "type": "Speed"
+          "reason": "Inteligência",
+          "type": "Intelligence"
         },
         {
           "id": "uma-30038",
-          "reason": "Meta Narita Taishin",
-          "type": "Speed"
+          "reason": "Estamina",
+          "type": "Stamina"
         },
         {
           "id": "uma-30001",
-          "reason": "Meta Narita Taishin",
-          "type": "Speed"
+          "reason": "Determinação",
+          "type": "Guts"
         },
         {
           "id": "uma-30083",
-          "reason": "Meta Narita Taishin",
-          "type": "Speed"
+          "reason": "Determinação",
+          "type": "Guts"
         },
         {
           "id": "uma-30066",
-          "reason": "Meta Narita Taishin",
-          "type": "Speed"
+          "reason": "Inteligência",
+          "type": "Intelligence"
         },
         {
           "id": "uma-30072",
-          "reason": "Meta Narita Taishin",
+          "reason": "Velocidade",
           "type": "Speed"
         },
         {
           "id": "uma-20040",
-          "reason": "Meta Narita Taishin",
-          "type": "Speed"
+          "reason": "Estamina",
+          "type": "Stamina"
         },
         {
           "id": "uma-20038",
-          "reason": "Meta Narita Taishin",
-          "type": "Speed"
+          "reason": "Determinação",
+          "type": "Guts"
         },
         {
           "id": "uma-20041",
-          "reason": "Meta Narita Taishin",
-          "type": "Speed"
+          "reason": "Determinação",
+          "type": "Guts"
         },
         {
           "id": "uma-20037",
-          "reason": "Meta Narita Taishin",
-          "type": "Speed"
+          "reason": "Poder",
+          "type": "Power"
         },
         {
           "id": "uma-20042",
-          "reason": "Meta Narita Taishin",
-          "type": "Speed"
+          "reason": "Poder",
+          "type": "Power"
         },
         {
           "id": "uma-20039",
-          "reason": "Meta Narita Taishin",
+          "reason": "Velocidade",
           "type": "Speed"
         },
         {
           "id": "uma-30033",
-          "reason": "Meta Narita Taishin",
-          "type": "Speed"
+          "reason": "Poder",
+          "type": "Power"
         }
       ]
     },
@@ -11439,88 +11439,88 @@ export const META_DECKS: Record<string, ScenarioDeck[]> = {
       "cards": [
         {
           "id": "uma-30028",
-          "reason": "Meta Narita Taishin",
+          "reason": "Velocidade",
           "type": "Speed"
         },
         {
           "id": "uma-30016",
-          "reason": "Meta Narita Taishin",
-          "type": "Speed"
+          "reason": "Estamina",
+          "type": "Stamina"
         },
         {
           "id": "uma-30010",
-          "reason": "Meta Narita Taishin",
-          "type": "Speed"
+          "reason": "Inteligência",
+          "type": "Intelligence"
         },
         {
           "id": "uma-30036",
-          "reason": "Meta Narita Taishin",
-          "type": "Speed"
+          "reason": "Amigo/Grupo",
+          "type": "Friend"
         },
         {
           "id": "uma-30073",
-          "reason": "Meta Narita Taishin",
-          "type": "Speed"
+          "reason": "Inteligência",
+          "type": "Intelligence"
         },
         {
           "id": "uma-30038",
-          "reason": "Meta Narita Taishin",
-          "type": "Speed"
+          "reason": "Estamina",
+          "type": "Stamina"
         },
         {
           "id": "uma-30001",
-          "reason": "Meta Narita Taishin",
-          "type": "Speed"
+          "reason": "Determinação",
+          "type": "Guts"
         },
         {
           "id": "uma-30083",
-          "reason": "Meta Narita Taishin",
-          "type": "Speed"
+          "reason": "Determinação",
+          "type": "Guts"
         },
         {
           "id": "uma-30066",
-          "reason": "Meta Narita Taishin",
-          "type": "Speed"
+          "reason": "Inteligência",
+          "type": "Intelligence"
         },
         {
           "id": "uma-30072",
-          "reason": "Meta Narita Taishin",
+          "reason": "Velocidade",
           "type": "Speed"
         },
         {
           "id": "uma-20040",
-          "reason": "Meta Narita Taishin",
-          "type": "Speed"
+          "reason": "Estamina",
+          "type": "Stamina"
         },
         {
           "id": "uma-20038",
-          "reason": "Meta Narita Taishin",
-          "type": "Speed"
+          "reason": "Determinação",
+          "type": "Guts"
         },
         {
           "id": "uma-20041",
-          "reason": "Meta Narita Taishin",
-          "type": "Speed"
+          "reason": "Determinação",
+          "type": "Guts"
         },
         {
           "id": "uma-20037",
-          "reason": "Meta Narita Taishin",
-          "type": "Speed"
+          "reason": "Poder",
+          "type": "Power"
         },
         {
           "id": "uma-20042",
-          "reason": "Meta Narita Taishin",
-          "type": "Speed"
+          "reason": "Poder",
+          "type": "Power"
         },
         {
           "id": "uma-20039",
-          "reason": "Meta Narita Taishin",
+          "reason": "Velocidade",
           "type": "Speed"
         },
         {
           "id": "uma-30033",
-          "reason": "Meta Narita Taishin",
-          "type": "Speed"
+          "reason": "Poder",
+          "type": "Power"
         }
       ]
     },
@@ -11557,88 +11557,88 @@ export const META_DECKS: Record<string, ScenarioDeck[]> = {
       "cards": [
         {
           "id": "uma-30028",
-          "reason": "Meta Narita Taishin",
+          "reason": "Velocidade",
           "type": "Speed"
         },
         {
           "id": "uma-30016",
-          "reason": "Meta Narita Taishin",
-          "type": "Speed"
+          "reason": "Estamina",
+          "type": "Stamina"
         },
         {
           "id": "uma-30010",
-          "reason": "Meta Narita Taishin",
-          "type": "Speed"
+          "reason": "Inteligência",
+          "type": "Intelligence"
         },
         {
           "id": "uma-30036",
-          "reason": "Meta Narita Taishin",
-          "type": "Speed"
+          "reason": "Amigo/Grupo",
+          "type": "Friend"
         },
         {
           "id": "uma-30073",
-          "reason": "Meta Narita Taishin",
-          "type": "Speed"
+          "reason": "Inteligência",
+          "type": "Intelligence"
         },
         {
           "id": "uma-30038",
-          "reason": "Meta Narita Taishin",
-          "type": "Speed"
+          "reason": "Estamina",
+          "type": "Stamina"
         },
         {
           "id": "uma-30001",
-          "reason": "Meta Narita Taishin",
-          "type": "Speed"
+          "reason": "Determinação",
+          "type": "Guts"
         },
         {
           "id": "uma-30083",
-          "reason": "Meta Narita Taishin",
-          "type": "Speed"
+          "reason": "Determinação",
+          "type": "Guts"
         },
         {
           "id": "uma-30066",
-          "reason": "Meta Narita Taishin",
-          "type": "Speed"
+          "reason": "Inteligência",
+          "type": "Intelligence"
         },
         {
           "id": "uma-30072",
-          "reason": "Meta Narita Taishin",
+          "reason": "Velocidade",
           "type": "Speed"
         },
         {
           "id": "uma-20040",
-          "reason": "Meta Narita Taishin",
-          "type": "Speed"
+          "reason": "Estamina",
+          "type": "Stamina"
         },
         {
           "id": "uma-20038",
-          "reason": "Meta Narita Taishin",
-          "type": "Speed"
+          "reason": "Determinação",
+          "type": "Guts"
         },
         {
           "id": "uma-20041",
-          "reason": "Meta Narita Taishin",
-          "type": "Speed"
+          "reason": "Determinação",
+          "type": "Guts"
         },
         {
           "id": "uma-20037",
-          "reason": "Meta Narita Taishin",
-          "type": "Speed"
+          "reason": "Poder",
+          "type": "Power"
         },
         {
           "id": "uma-20042",
-          "reason": "Meta Narita Taishin",
-          "type": "Speed"
+          "reason": "Poder",
+          "type": "Power"
         },
         {
           "id": "uma-20039",
-          "reason": "Meta Narita Taishin",
+          "reason": "Velocidade",
           "type": "Speed"
         },
         {
           "id": "uma-30033",
-          "reason": "Meta Narita Taishin",
-          "type": "Speed"
+          "reason": "Poder",
+          "type": "Power"
         }
       ]
     }
@@ -11690,93 +11690,93 @@ export const META_DECKS: Record<string, ScenarioDeck[]> = {
       "cards": [
         {
           "id": "uma-30028",
-          "reason": "Meta Mejiro Dober",
+          "reason": "Velocidade",
           "type": "Speed"
         },
         {
           "id": "uma-30016",
-          "reason": "Meta Mejiro Dober",
-          "type": "Speed"
+          "reason": "Estamina",
+          "type": "Stamina"
         },
         {
           "id": "uma-30010",
-          "reason": "Meta Mejiro Dober",
-          "type": "Speed"
+          "reason": "Inteligência",
+          "type": "Intelligence"
         },
         {
           "id": "uma-30021",
-          "reason": "Meta Mejiro Dober",
-          "type": "Speed"
+          "reason": "Amigo/Grupo",
+          "type": "Friend"
         },
         {
           "id": "uma-30005",
-          "reason": "Meta Mejiro Dober",
-          "type": "Speed"
+          "reason": "Poder",
+          "type": "Power"
         },
         {
           "id": "uma-30065",
-          "reason": "Meta Mejiro Dober",
+          "reason": "Velocidade",
           "type": "Speed"
         },
         {
           "id": "uma-30001",
-          "reason": "Meta Mejiro Dober",
-          "type": "Speed"
+          "reason": "Determinação",
+          "type": "Guts"
         },
         {
           "id": "uma-30083",
-          "reason": "Meta Mejiro Dober",
-          "type": "Speed"
+          "reason": "Determinação",
+          "type": "Guts"
         },
         {
           "id": "uma-30076",
-          "reason": "Meta Mejiro Dober",
+          "reason": "Velocidade",
           "type": "Speed"
         },
         {
           "id": "uma-20037",
-          "reason": "Meta Mejiro Dober",
-          "type": "Speed"
+          "reason": "Poder",
+          "type": "Power"
         },
         {
           "id": "uma-20042",
-          "reason": "Meta Mejiro Dober",
-          "type": "Speed"
+          "reason": "Poder",
+          "type": "Power"
         },
         {
           "id": "uma-20039",
-          "reason": "Meta Mejiro Dober",
+          "reason": "Velocidade",
           "type": "Speed"
         },
         {
           "id": "uma-20035",
-          "reason": "Meta Mejiro Dober",
-          "type": "Speed"
+          "reason": "Estamina",
+          "type": "Stamina"
         },
         {
           "id": "uma-20043",
-          "reason": "Meta Mejiro Dober",
-          "type": "Speed"
+          "reason": "Poder",
+          "type": "Power"
         },
         {
           "id": "uma-20040",
-          "reason": "Meta Mejiro Dober",
-          "type": "Speed"
+          "reason": "Estamina",
+          "type": "Stamina"
         },
         {
           "id": "uma-30057",
-          "reason": "Meta Mejiro Dober",
+          "reason": "Velocidade",
           "type": "Speed"
         },
         {
           "id": "uma-30017",
-          "reason": "Meta Mejiro Dober",
-          "type": "Speed"
+          "reason": "Poder",
+          "type": "Power"
         },
         {
           "id": "uma-30055",
-          "reason": "Meta Mejiro Dober",
-          "type": "Speed"
+          "reason": "Inteligência",
+          "type": "Intelligence"
         }
       ]
     },
@@ -11813,93 +11813,93 @@ export const META_DECKS: Record<string, ScenarioDeck[]> = {
       "cards": [
         {
           "id": "uma-30028",
-          "reason": "Meta Mejiro Dober",
+          "reason": "Velocidade",
           "type": "Speed"
         },
         {
           "id": "uma-30016",
-          "reason": "Meta Mejiro Dober",
-          "type": "Speed"
+          "reason": "Estamina",
+          "type": "Stamina"
         },
         {
           "id": "uma-30010",
-          "reason": "Meta Mejiro Dober",
-          "type": "Speed"
+          "reason": "Inteligência",
+          "type": "Intelligence"
         },
         {
           "id": "uma-30021",
-          "reason": "Meta Mejiro Dober",
-          "type": "Speed"
+          "reason": "Amigo/Grupo",
+          "type": "Friend"
         },
         {
           "id": "uma-30005",
-          "reason": "Meta Mejiro Dober",
-          "type": "Speed"
+          "reason": "Poder",
+          "type": "Power"
         },
         {
           "id": "uma-30065",
-          "reason": "Meta Mejiro Dober",
+          "reason": "Velocidade",
           "type": "Speed"
         },
         {
           "id": "uma-30001",
-          "reason": "Meta Mejiro Dober",
-          "type": "Speed"
+          "reason": "Determinação",
+          "type": "Guts"
         },
         {
           "id": "uma-30083",
-          "reason": "Meta Mejiro Dober",
-          "type": "Speed"
+          "reason": "Determinação",
+          "type": "Guts"
         },
         {
           "id": "uma-30076",
-          "reason": "Meta Mejiro Dober",
+          "reason": "Velocidade",
           "type": "Speed"
         },
         {
           "id": "uma-20037",
-          "reason": "Meta Mejiro Dober",
-          "type": "Speed"
+          "reason": "Poder",
+          "type": "Power"
         },
         {
           "id": "uma-20042",
-          "reason": "Meta Mejiro Dober",
-          "type": "Speed"
+          "reason": "Poder",
+          "type": "Power"
         },
         {
           "id": "uma-20039",
-          "reason": "Meta Mejiro Dober",
+          "reason": "Velocidade",
           "type": "Speed"
         },
         {
           "id": "uma-20035",
-          "reason": "Meta Mejiro Dober",
-          "type": "Speed"
+          "reason": "Estamina",
+          "type": "Stamina"
         },
         {
           "id": "uma-20043",
-          "reason": "Meta Mejiro Dober",
-          "type": "Speed"
+          "reason": "Poder",
+          "type": "Power"
         },
         {
           "id": "uma-20040",
-          "reason": "Meta Mejiro Dober",
-          "type": "Speed"
+          "reason": "Estamina",
+          "type": "Stamina"
         },
         {
           "id": "uma-30057",
-          "reason": "Meta Mejiro Dober",
+          "reason": "Velocidade",
           "type": "Speed"
         },
         {
           "id": "uma-30017",
-          "reason": "Meta Mejiro Dober",
-          "type": "Speed"
+          "reason": "Poder",
+          "type": "Power"
         },
         {
           "id": "uma-30055",
-          "reason": "Meta Mejiro Dober",
-          "type": "Speed"
+          "reason": "Inteligência",
+          "type": "Intelligence"
         }
       ]
     },
@@ -11936,93 +11936,93 @@ export const META_DECKS: Record<string, ScenarioDeck[]> = {
       "cards": [
         {
           "id": "uma-30028",
-          "reason": "Meta Mejiro Dober",
+          "reason": "Velocidade",
           "type": "Speed"
         },
         {
           "id": "uma-30016",
-          "reason": "Meta Mejiro Dober",
-          "type": "Speed"
+          "reason": "Estamina",
+          "type": "Stamina"
         },
         {
           "id": "uma-30010",
-          "reason": "Meta Mejiro Dober",
-          "type": "Speed"
+          "reason": "Inteligência",
+          "type": "Intelligence"
         },
         {
           "id": "uma-30021",
-          "reason": "Meta Mejiro Dober",
-          "type": "Speed"
+          "reason": "Amigo/Grupo",
+          "type": "Friend"
         },
         {
           "id": "uma-30005",
-          "reason": "Meta Mejiro Dober",
-          "type": "Speed"
+          "reason": "Poder",
+          "type": "Power"
         },
         {
           "id": "uma-30065",
-          "reason": "Meta Mejiro Dober",
+          "reason": "Velocidade",
           "type": "Speed"
         },
         {
           "id": "uma-30001",
-          "reason": "Meta Mejiro Dober",
-          "type": "Speed"
+          "reason": "Determinação",
+          "type": "Guts"
         },
         {
           "id": "uma-30083",
-          "reason": "Meta Mejiro Dober",
-          "type": "Speed"
+          "reason": "Determinação",
+          "type": "Guts"
         },
         {
           "id": "uma-30076",
-          "reason": "Meta Mejiro Dober",
+          "reason": "Velocidade",
           "type": "Speed"
         },
         {
           "id": "uma-20037",
-          "reason": "Meta Mejiro Dober",
-          "type": "Speed"
+          "reason": "Poder",
+          "type": "Power"
         },
         {
           "id": "uma-20042",
-          "reason": "Meta Mejiro Dober",
-          "type": "Speed"
+          "reason": "Poder",
+          "type": "Power"
         },
         {
           "id": "uma-20039",
-          "reason": "Meta Mejiro Dober",
+          "reason": "Velocidade",
           "type": "Speed"
         },
         {
           "id": "uma-20035",
-          "reason": "Meta Mejiro Dober",
-          "type": "Speed"
+          "reason": "Estamina",
+          "type": "Stamina"
         },
         {
           "id": "uma-20043",
-          "reason": "Meta Mejiro Dober",
-          "type": "Speed"
+          "reason": "Poder",
+          "type": "Power"
         },
         {
           "id": "uma-20040",
-          "reason": "Meta Mejiro Dober",
-          "type": "Speed"
+          "reason": "Estamina",
+          "type": "Stamina"
         },
         {
           "id": "uma-30057",
-          "reason": "Meta Mejiro Dober",
+          "reason": "Velocidade",
           "type": "Speed"
         },
         {
           "id": "uma-30017",
-          "reason": "Meta Mejiro Dober",
-          "type": "Speed"
+          "reason": "Poder",
+          "type": "Power"
         },
         {
           "id": "uma-30055",
-          "reason": "Meta Mejiro Dober",
-          "type": "Speed"
+          "reason": "Inteligência",
+          "type": "Intelligence"
         }
       ]
     }
@@ -12074,98 +12074,98 @@ export const META_DECKS: Record<string, ScenarioDeck[]> = {
       "cards": [
         {
           "id": "uma-30028",
-          "reason": "Meta Meisho Doto",
+          "reason": "Velocidade",
           "type": "Speed"
         },
         {
           "id": "uma-30016",
-          "reason": "Meta Meisho Doto",
-          "type": "Speed"
+          "reason": "Estamina",
+          "type": "Stamina"
         },
         {
           "id": "uma-30010",
-          "reason": "Meta Meisho Doto",
-          "type": "Speed"
+          "reason": "Inteligência",
+          "type": "Intelligence"
         },
         {
           "id": "uma-30021",
-          "reason": "Meta Meisho Doto",
-          "type": "Speed"
+          "reason": "Amigo/Grupo",
+          "type": "Friend"
         },
         {
           "id": "uma-30005",
-          "reason": "Meta Meisho Doto",
-          "type": "Speed"
+          "reason": "Poder",
+          "type": "Power"
         },
         {
           "id": "uma-30009",
-          "reason": "Meta Meisho Doto",
-          "type": "Speed"
+          "reason": "Estamina",
+          "type": "Stamina"
         },
         {
           "id": "uma-30060",
-          "reason": "Meta Meisho Doto",
-          "type": "Speed"
+          "reason": "Determinação",
+          "type": "Guts"
         },
         {
           "id": "uma-30048",
-          "reason": "Meta Meisho Doto",
-          "type": "Speed"
+          "reason": "Determinação",
+          "type": "Guts"
         },
         {
           "id": "uma-30041",
-          "reason": "Meta Meisho Doto",
-          "type": "Speed"
+          "reason": "Inteligência",
+          "type": "Intelligence"
         },
         {
           "id": "uma-30057",
-          "reason": "Meta Meisho Doto",
+          "reason": "Velocidade",
           "type": "Speed"
         },
         {
           "id": "uma-20042",
-          "reason": "Meta Meisho Doto",
-          "type": "Speed"
+          "reason": "Poder",
+          "type": "Power"
         },
         {
           "id": "uma-20039",
-          "reason": "Meta Meisho Doto",
+          "reason": "Velocidade",
           "type": "Speed"
         },
         {
           "id": "uma-20035",
-          "reason": "Meta Meisho Doto",
-          "type": "Speed"
+          "reason": "Estamina",
+          "type": "Stamina"
         },
         {
           "id": "uma-20043",
-          "reason": "Meta Meisho Doto",
-          "type": "Speed"
+          "reason": "Poder",
+          "type": "Power"
         },
         {
           "id": "uma-20040",
-          "reason": "Meta Meisho Doto",
-          "type": "Speed"
+          "reason": "Estamina",
+          "type": "Stamina"
         },
         {
           "id": "uma-20038",
-          "reason": "Meta Meisho Doto",
-          "type": "Speed"
+          "reason": "Determinação",
+          "type": "Guts"
         },
         {
           "id": "uma-30025",
-          "reason": "Meta Meisho Doto",
+          "reason": "Velocidade",
           "type": "Speed"
         },
         {
           "id": "uma-30056",
-          "reason": "Meta Meisho Doto",
-          "type": "Speed"
+          "reason": "Poder",
+          "type": "Power"
         },
         {
           "id": "uma-30068",
-          "reason": "Meta Meisho Doto",
-          "type": "Speed"
+          "reason": "Inteligência",
+          "type": "Intelligence"
         }
       ]
     },
@@ -12202,98 +12202,98 @@ export const META_DECKS: Record<string, ScenarioDeck[]> = {
       "cards": [
         {
           "id": "uma-30028",
-          "reason": "Meta Meisho Doto",
+          "reason": "Velocidade",
           "type": "Speed"
         },
         {
           "id": "uma-30016",
-          "reason": "Meta Meisho Doto",
-          "type": "Speed"
+          "reason": "Estamina",
+          "type": "Stamina"
         },
         {
           "id": "uma-30010",
-          "reason": "Meta Meisho Doto",
-          "type": "Speed"
+          "reason": "Inteligência",
+          "type": "Intelligence"
         },
         {
           "id": "uma-30021",
-          "reason": "Meta Meisho Doto",
-          "type": "Speed"
+          "reason": "Amigo/Grupo",
+          "type": "Friend"
         },
         {
           "id": "uma-30005",
-          "reason": "Meta Meisho Doto",
-          "type": "Speed"
+          "reason": "Poder",
+          "type": "Power"
         },
         {
           "id": "uma-30009",
-          "reason": "Meta Meisho Doto",
-          "type": "Speed"
+          "reason": "Estamina",
+          "type": "Stamina"
         },
         {
           "id": "uma-30060",
-          "reason": "Meta Meisho Doto",
-          "type": "Speed"
+          "reason": "Determinação",
+          "type": "Guts"
         },
         {
           "id": "uma-30048",
-          "reason": "Meta Meisho Doto",
-          "type": "Speed"
+          "reason": "Determinação",
+          "type": "Guts"
         },
         {
           "id": "uma-30041",
-          "reason": "Meta Meisho Doto",
-          "type": "Speed"
+          "reason": "Inteligência",
+          "type": "Intelligence"
         },
         {
           "id": "uma-30057",
-          "reason": "Meta Meisho Doto",
+          "reason": "Velocidade",
           "type": "Speed"
         },
         {
           "id": "uma-20042",
-          "reason": "Meta Meisho Doto",
-          "type": "Speed"
+          "reason": "Poder",
+          "type": "Power"
         },
         {
           "id": "uma-20039",
-          "reason": "Meta Meisho Doto",
+          "reason": "Velocidade",
           "type": "Speed"
         },
         {
           "id": "uma-20035",
-          "reason": "Meta Meisho Doto",
-          "type": "Speed"
+          "reason": "Estamina",
+          "type": "Stamina"
         },
         {
           "id": "uma-20043",
-          "reason": "Meta Meisho Doto",
-          "type": "Speed"
+          "reason": "Poder",
+          "type": "Power"
         },
         {
           "id": "uma-20040",
-          "reason": "Meta Meisho Doto",
-          "type": "Speed"
+          "reason": "Estamina",
+          "type": "Stamina"
         },
         {
           "id": "uma-20038",
-          "reason": "Meta Meisho Doto",
-          "type": "Speed"
+          "reason": "Determinação",
+          "type": "Guts"
         },
         {
           "id": "uma-30025",
-          "reason": "Meta Meisho Doto",
+          "reason": "Velocidade",
           "type": "Speed"
         },
         {
           "id": "uma-30056",
-          "reason": "Meta Meisho Doto",
-          "type": "Speed"
+          "reason": "Poder",
+          "type": "Power"
         },
         {
           "id": "uma-30068",
-          "reason": "Meta Meisho Doto",
-          "type": "Speed"
+          "reason": "Inteligência",
+          "type": "Intelligence"
         }
       ]
     },
@@ -12330,98 +12330,98 @@ export const META_DECKS: Record<string, ScenarioDeck[]> = {
       "cards": [
         {
           "id": "uma-30028",
-          "reason": "Meta Meisho Doto",
+          "reason": "Velocidade",
           "type": "Speed"
         },
         {
           "id": "uma-30016",
-          "reason": "Meta Meisho Doto",
-          "type": "Speed"
+          "reason": "Estamina",
+          "type": "Stamina"
         },
         {
           "id": "uma-30010",
-          "reason": "Meta Meisho Doto",
-          "type": "Speed"
+          "reason": "Inteligência",
+          "type": "Intelligence"
         },
         {
           "id": "uma-30021",
-          "reason": "Meta Meisho Doto",
-          "type": "Speed"
+          "reason": "Amigo/Grupo",
+          "type": "Friend"
         },
         {
           "id": "uma-30005",
-          "reason": "Meta Meisho Doto",
-          "type": "Speed"
+          "reason": "Poder",
+          "type": "Power"
         },
         {
           "id": "uma-30009",
-          "reason": "Meta Meisho Doto",
-          "type": "Speed"
+          "reason": "Estamina",
+          "type": "Stamina"
         },
         {
           "id": "uma-30060",
-          "reason": "Meta Meisho Doto",
-          "type": "Speed"
+          "reason": "Determinação",
+          "type": "Guts"
         },
         {
           "id": "uma-30048",
-          "reason": "Meta Meisho Doto",
-          "type": "Speed"
+          "reason": "Determinação",
+          "type": "Guts"
         },
         {
           "id": "uma-30041",
-          "reason": "Meta Meisho Doto",
-          "type": "Speed"
+          "reason": "Inteligência",
+          "type": "Intelligence"
         },
         {
           "id": "uma-30057",
-          "reason": "Meta Meisho Doto",
+          "reason": "Velocidade",
           "type": "Speed"
         },
         {
           "id": "uma-20042",
-          "reason": "Meta Meisho Doto",
-          "type": "Speed"
+          "reason": "Poder",
+          "type": "Power"
         },
         {
           "id": "uma-20039",
-          "reason": "Meta Meisho Doto",
+          "reason": "Velocidade",
           "type": "Speed"
         },
         {
           "id": "uma-20035",
-          "reason": "Meta Meisho Doto",
-          "type": "Speed"
+          "reason": "Estamina",
+          "type": "Stamina"
         },
         {
           "id": "uma-20043",
-          "reason": "Meta Meisho Doto",
-          "type": "Speed"
+          "reason": "Poder",
+          "type": "Power"
         },
         {
           "id": "uma-20040",
-          "reason": "Meta Meisho Doto",
-          "type": "Speed"
+          "reason": "Estamina",
+          "type": "Stamina"
         },
         {
           "id": "uma-20038",
-          "reason": "Meta Meisho Doto",
-          "type": "Speed"
+          "reason": "Determinação",
+          "type": "Guts"
         },
         {
           "id": "uma-30025",
-          "reason": "Meta Meisho Doto",
+          "reason": "Velocidade",
           "type": "Speed"
         },
         {
           "id": "uma-30056",
-          "reason": "Meta Meisho Doto",
-          "type": "Speed"
+          "reason": "Poder",
+          "type": "Power"
         },
         {
           "id": "uma-30068",
-          "reason": "Meta Meisho Doto",
-          "type": "Speed"
+          "reason": "Inteligência",
+          "type": "Intelligence"
         }
       ]
     }
@@ -12473,98 +12473,98 @@ export const META_DECKS: Record<string, ScenarioDeck[]> = {
       "cards": [
         {
           "id": "uma-30028",
-          "reason": "Meta Air Shakur",
+          "reason": "Velocidade",
           "type": "Speed"
         },
         {
           "id": "uma-30016",
-          "reason": "Meta Air Shakur",
-          "type": "Speed"
+          "reason": "Estamina",
+          "type": "Stamina"
         },
         {
           "id": "uma-30010",
-          "reason": "Meta Air Shakur",
-          "type": "Speed"
+          "reason": "Inteligência",
+          "type": "Intelligence"
         },
         {
           "id": "uma-30080",
-          "reason": "Meta Air Shakur",
-          "type": "Speed"
+          "reason": "Amigo/Grupo",
+          "type": "Friend"
         },
         {
           "id": "uma-30005",
-          "reason": "Meta Air Shakur",
-          "type": "Speed"
+          "reason": "Poder",
+          "type": "Power"
         },
         {
           "id": "uma-30069",
-          "reason": "Meta Air Shakur",
-          "type": "Speed"
+          "reason": "Estamina",
+          "type": "Stamina"
         },
         {
           "id": "uma-30027",
-          "reason": "Meta Air Shakur",
-          "type": "Speed"
+          "reason": "Determinação",
+          "type": "Guts"
         },
         {
           "id": "uma-30019",
-          "reason": "Meta Air Shakur",
-          "type": "Speed"
+          "reason": "Determinação",
+          "type": "Guts"
         },
         {
           "id": "uma-30068",
-          "reason": "Meta Air Shakur",
-          "type": "Speed"
+          "reason": "Inteligência",
+          "type": "Intelligence"
         },
         {
           "id": "uma-30076",
-          "reason": "Meta Air Shakur",
+          "reason": "Velocidade",
           "type": "Speed"
         },
         {
           "id": "uma-20037",
-          "reason": "Meta Air Shakur",
-          "type": "Speed"
+          "reason": "Poder",
+          "type": "Power"
         },
         {
           "id": "uma-20042",
-          "reason": "Meta Air Shakur",
-          "type": "Speed"
+          "reason": "Poder",
+          "type": "Power"
         },
         {
           "id": "uma-20039",
-          "reason": "Meta Air Shakur",
+          "reason": "Velocidade",
           "type": "Speed"
         },
         {
           "id": "uma-20035",
-          "reason": "Meta Air Shakur",
-          "type": "Speed"
+          "reason": "Estamina",
+          "type": "Stamina"
         },
         {
           "id": "uma-20043",
-          "reason": "Meta Air Shakur",
-          "type": "Speed"
+          "reason": "Poder",
+          "type": "Power"
         },
         {
           "id": "uma-20040",
-          "reason": "Meta Air Shakur",
-          "type": "Speed"
+          "reason": "Estamina",
+          "type": "Stamina"
         },
         {
           "id": "uma-30057",
-          "reason": "Meta Air Shakur",
+          "reason": "Velocidade",
           "type": "Speed"
         },
         {
           "id": "uma-30058",
-          "reason": "Meta Air Shakur",
-          "type": "Speed"
+          "reason": "Poder",
+          "type": "Power"
         },
         {
           "id": "uma-30013",
-          "reason": "Meta Air Shakur",
-          "type": "Speed"
+          "reason": "Inteligência",
+          "type": "Intelligence"
         }
       ]
     },
@@ -12601,98 +12601,98 @@ export const META_DECKS: Record<string, ScenarioDeck[]> = {
       "cards": [
         {
           "id": "uma-30028",
-          "reason": "Meta Air Shakur",
+          "reason": "Velocidade",
           "type": "Speed"
         },
         {
           "id": "uma-30016",
-          "reason": "Meta Air Shakur",
-          "type": "Speed"
+          "reason": "Estamina",
+          "type": "Stamina"
         },
         {
           "id": "uma-30010",
-          "reason": "Meta Air Shakur",
-          "type": "Speed"
+          "reason": "Inteligência",
+          "type": "Intelligence"
         },
         {
           "id": "uma-30080",
-          "reason": "Meta Air Shakur",
-          "type": "Speed"
+          "reason": "Amigo/Grupo",
+          "type": "Friend"
         },
         {
           "id": "uma-30005",
-          "reason": "Meta Air Shakur",
-          "type": "Speed"
+          "reason": "Poder",
+          "type": "Power"
         },
         {
           "id": "uma-30069",
-          "reason": "Meta Air Shakur",
-          "type": "Speed"
+          "reason": "Estamina",
+          "type": "Stamina"
         },
         {
           "id": "uma-30027",
-          "reason": "Meta Air Shakur",
-          "type": "Speed"
+          "reason": "Determinação",
+          "type": "Guts"
         },
         {
           "id": "uma-30019",
-          "reason": "Meta Air Shakur",
-          "type": "Speed"
+          "reason": "Determinação",
+          "type": "Guts"
         },
         {
           "id": "uma-30068",
-          "reason": "Meta Air Shakur",
-          "type": "Speed"
+          "reason": "Inteligência",
+          "type": "Intelligence"
         },
         {
           "id": "uma-30076",
-          "reason": "Meta Air Shakur",
+          "reason": "Velocidade",
           "type": "Speed"
         },
         {
           "id": "uma-20037",
-          "reason": "Meta Air Shakur",
-          "type": "Speed"
+          "reason": "Poder",
+          "type": "Power"
         },
         {
           "id": "uma-20042",
-          "reason": "Meta Air Shakur",
-          "type": "Speed"
+          "reason": "Poder",
+          "type": "Power"
         },
         {
           "id": "uma-20039",
-          "reason": "Meta Air Shakur",
+          "reason": "Velocidade",
           "type": "Speed"
         },
         {
           "id": "uma-20035",
-          "reason": "Meta Air Shakur",
-          "type": "Speed"
+          "reason": "Estamina",
+          "type": "Stamina"
         },
         {
           "id": "uma-20043",
-          "reason": "Meta Air Shakur",
-          "type": "Speed"
+          "reason": "Poder",
+          "type": "Power"
         },
         {
           "id": "uma-20040",
-          "reason": "Meta Air Shakur",
-          "type": "Speed"
+          "reason": "Estamina",
+          "type": "Stamina"
         },
         {
           "id": "uma-30057",
-          "reason": "Meta Air Shakur",
+          "reason": "Velocidade",
           "type": "Speed"
         },
         {
           "id": "uma-30058",
-          "reason": "Meta Air Shakur",
-          "type": "Speed"
+          "reason": "Poder",
+          "type": "Power"
         },
         {
           "id": "uma-30013",
-          "reason": "Meta Air Shakur",
-          "type": "Speed"
+          "reason": "Inteligência",
+          "type": "Intelligence"
         }
       ]
     },
@@ -12729,98 +12729,98 @@ export const META_DECKS: Record<string, ScenarioDeck[]> = {
       "cards": [
         {
           "id": "uma-30028",
-          "reason": "Meta Air Shakur",
+          "reason": "Velocidade",
           "type": "Speed"
         },
         {
           "id": "uma-30016",
-          "reason": "Meta Air Shakur",
-          "type": "Speed"
+          "reason": "Estamina",
+          "type": "Stamina"
         },
         {
           "id": "uma-30010",
-          "reason": "Meta Air Shakur",
-          "type": "Speed"
+          "reason": "Inteligência",
+          "type": "Intelligence"
         },
         {
           "id": "uma-30080",
-          "reason": "Meta Air Shakur",
-          "type": "Speed"
+          "reason": "Amigo/Grupo",
+          "type": "Friend"
         },
         {
           "id": "uma-30005",
-          "reason": "Meta Air Shakur",
-          "type": "Speed"
+          "reason": "Poder",
+          "type": "Power"
         },
         {
           "id": "uma-30069",
-          "reason": "Meta Air Shakur",
-          "type": "Speed"
+          "reason": "Estamina",
+          "type": "Stamina"
         },
         {
           "id": "uma-30027",
-          "reason": "Meta Air Shakur",
-          "type": "Speed"
+          "reason": "Determinação",
+          "type": "Guts"
         },
         {
           "id": "uma-30019",
-          "reason": "Meta Air Shakur",
-          "type": "Speed"
+          "reason": "Determinação",
+          "type": "Guts"
         },
         {
           "id": "uma-30068",
-          "reason": "Meta Air Shakur",
-          "type": "Speed"
+          "reason": "Inteligência",
+          "type": "Intelligence"
         },
         {
           "id": "uma-30076",
-          "reason": "Meta Air Shakur",
+          "reason": "Velocidade",
           "type": "Speed"
         },
         {
           "id": "uma-20037",
-          "reason": "Meta Air Shakur",
-          "type": "Speed"
+          "reason": "Poder",
+          "type": "Power"
         },
         {
           "id": "uma-20042",
-          "reason": "Meta Air Shakur",
-          "type": "Speed"
+          "reason": "Poder",
+          "type": "Power"
         },
         {
           "id": "uma-20039",
-          "reason": "Meta Air Shakur",
+          "reason": "Velocidade",
           "type": "Speed"
         },
         {
           "id": "uma-20035",
-          "reason": "Meta Air Shakur",
-          "type": "Speed"
+          "reason": "Estamina",
+          "type": "Stamina"
         },
         {
           "id": "uma-20043",
-          "reason": "Meta Air Shakur",
-          "type": "Speed"
+          "reason": "Poder",
+          "type": "Power"
         },
         {
           "id": "uma-20040",
-          "reason": "Meta Air Shakur",
-          "type": "Speed"
+          "reason": "Estamina",
+          "type": "Stamina"
         },
         {
           "id": "uma-30057",
-          "reason": "Meta Air Shakur",
+          "reason": "Velocidade",
           "type": "Speed"
         },
         {
           "id": "uma-30058",
-          "reason": "Meta Air Shakur",
-          "type": "Speed"
+          "reason": "Poder",
+          "type": "Power"
         },
         {
           "id": "uma-30013",
-          "reason": "Meta Air Shakur",
-          "type": "Speed"
+          "reason": "Inteligência",
+          "type": "Intelligence"
         }
       ]
     }
@@ -12872,93 +12872,93 @@ export const META_DECKS: Record<string, ScenarioDeck[]> = {
       "cards": [
         {
           "id": "uma-30028",
-          "reason": "Meta Marvelous Sunday",
+          "reason": "Velocidade",
           "type": "Speed"
         },
         {
           "id": "uma-30016",
-          "reason": "Meta Marvelous Sunday",
-          "type": "Speed"
+          "reason": "Estamina",
+          "type": "Stamina"
         },
         {
           "id": "uma-30010",
-          "reason": "Meta Marvelous Sunday",
-          "type": "Speed"
+          "reason": "Inteligência",
+          "type": "Intelligence"
         },
         {
           "id": "uma-30021",
-          "reason": "Meta Marvelous Sunday",
-          "type": "Speed"
+          "reason": "Amigo/Grupo",
+          "type": "Friend"
         },
         {
           "id": "uma-30007",
-          "reason": "Meta Marvelous Sunday",
-          "type": "Speed"
+          "reason": "Poder",
+          "type": "Power"
         },
         {
           "id": "uma-30043",
-          "reason": "Meta Marvelous Sunday",
-          "type": "Speed"
+          "reason": "Estamina",
+          "type": "Stamina"
         },
         {
           "id": "uma-30006",
-          "reason": "Meta Marvelous Sunday",
-          "type": "Speed"
+          "reason": "Determinação",
+          "type": "Guts"
         },
         {
           "id": "uma-30001",
-          "reason": "Meta Marvelous Sunday",
-          "type": "Speed"
+          "reason": "Determinação",
+          "type": "Guts"
         },
         {
           "id": "uma-30076",
-          "reason": "Meta Marvelous Sunday",
+          "reason": "Velocidade",
           "type": "Speed"
         },
         {
           "id": "uma-20037",
-          "reason": "Meta Marvelous Sunday",
-          "type": "Speed"
+          "reason": "Poder",
+          "type": "Power"
         },
         {
           "id": "uma-20042",
-          "reason": "Meta Marvelous Sunday",
-          "type": "Speed"
+          "reason": "Poder",
+          "type": "Power"
         },
         {
           "id": "uma-20039",
-          "reason": "Meta Marvelous Sunday",
+          "reason": "Velocidade",
           "type": "Speed"
         },
         {
           "id": "uma-20035",
-          "reason": "Meta Marvelous Sunday",
-          "type": "Speed"
+          "reason": "Estamina",
+          "type": "Stamina"
         },
         {
           "id": "uma-20043",
-          "reason": "Meta Marvelous Sunday",
-          "type": "Speed"
+          "reason": "Poder",
+          "type": "Power"
         },
         {
           "id": "uma-20040",
-          "reason": "Meta Marvelous Sunday",
-          "type": "Speed"
+          "reason": "Estamina",
+          "type": "Stamina"
         },
         {
           "id": "uma-30057",
-          "reason": "Meta Marvelous Sunday",
+          "reason": "Velocidade",
           "type": "Speed"
         },
         {
           "id": "uma-30017",
-          "reason": "Meta Marvelous Sunday",
-          "type": "Speed"
+          "reason": "Poder",
+          "type": "Power"
         },
         {
           "id": "uma-30055",
-          "reason": "Meta Marvelous Sunday",
-          "type": "Speed"
+          "reason": "Inteligência",
+          "type": "Intelligence"
         }
       ]
     },
@@ -12995,93 +12995,93 @@ export const META_DECKS: Record<string, ScenarioDeck[]> = {
       "cards": [
         {
           "id": "uma-30028",
-          "reason": "Meta Marvelous Sunday",
+          "reason": "Velocidade",
           "type": "Speed"
         },
         {
           "id": "uma-30016",
-          "reason": "Meta Marvelous Sunday",
-          "type": "Speed"
+          "reason": "Estamina",
+          "type": "Stamina"
         },
         {
           "id": "uma-30010",
-          "reason": "Meta Marvelous Sunday",
-          "type": "Speed"
+          "reason": "Inteligência",
+          "type": "Intelligence"
         },
         {
           "id": "uma-30021",
-          "reason": "Meta Marvelous Sunday",
-          "type": "Speed"
+          "reason": "Amigo/Grupo",
+          "type": "Friend"
         },
         {
           "id": "uma-30007",
-          "reason": "Meta Marvelous Sunday",
-          "type": "Speed"
+          "reason": "Poder",
+          "type": "Power"
         },
         {
           "id": "uma-30043",
-          "reason": "Meta Marvelous Sunday",
-          "type": "Speed"
+          "reason": "Estamina",
+          "type": "Stamina"
         },
         {
           "id": "uma-30006",
-          "reason": "Meta Marvelous Sunday",
-          "type": "Speed"
+          "reason": "Determinação",
+          "type": "Guts"
         },
         {
           "id": "uma-30001",
-          "reason": "Meta Marvelous Sunday",
-          "type": "Speed"
+          "reason": "Determinação",
+          "type": "Guts"
         },
         {
           "id": "uma-30076",
-          "reason": "Meta Marvelous Sunday",
+          "reason": "Velocidade",
           "type": "Speed"
         },
         {
           "id": "uma-20037",
-          "reason": "Meta Marvelous Sunday",
-          "type": "Speed"
+          "reason": "Poder",
+          "type": "Power"
         },
         {
           "id": "uma-20042",
-          "reason": "Meta Marvelous Sunday",
-          "type": "Speed"
+          "reason": "Poder",
+          "type": "Power"
         },
         {
           "id": "uma-20039",
-          "reason": "Meta Marvelous Sunday",
+          "reason": "Velocidade",
           "type": "Speed"
         },
         {
           "id": "uma-20035",
-          "reason": "Meta Marvelous Sunday",
-          "type": "Speed"
+          "reason": "Estamina",
+          "type": "Stamina"
         },
         {
           "id": "uma-20043",
-          "reason": "Meta Marvelous Sunday",
-          "type": "Speed"
+          "reason": "Poder",
+          "type": "Power"
         },
         {
           "id": "uma-20040",
-          "reason": "Meta Marvelous Sunday",
-          "type": "Speed"
+          "reason": "Estamina",
+          "type": "Stamina"
         },
         {
           "id": "uma-30057",
-          "reason": "Meta Marvelous Sunday",
+          "reason": "Velocidade",
           "type": "Speed"
         },
         {
           "id": "uma-30017",
-          "reason": "Meta Marvelous Sunday",
-          "type": "Speed"
+          "reason": "Poder",
+          "type": "Power"
         },
         {
           "id": "uma-30055",
-          "reason": "Meta Marvelous Sunday",
-          "type": "Speed"
+          "reason": "Inteligência",
+          "type": "Intelligence"
         }
       ]
     },
@@ -13118,93 +13118,93 @@ export const META_DECKS: Record<string, ScenarioDeck[]> = {
       "cards": [
         {
           "id": "uma-30028",
-          "reason": "Meta Marvelous Sunday",
+          "reason": "Velocidade",
           "type": "Speed"
         },
         {
           "id": "uma-30016",
-          "reason": "Meta Marvelous Sunday",
-          "type": "Speed"
+          "reason": "Estamina",
+          "type": "Stamina"
         },
         {
           "id": "uma-30010",
-          "reason": "Meta Marvelous Sunday",
-          "type": "Speed"
+          "reason": "Inteligência",
+          "type": "Intelligence"
         },
         {
           "id": "uma-30021",
-          "reason": "Meta Marvelous Sunday",
-          "type": "Speed"
+          "reason": "Amigo/Grupo",
+          "type": "Friend"
         },
         {
           "id": "uma-30007",
-          "reason": "Meta Marvelous Sunday",
-          "type": "Speed"
+          "reason": "Poder",
+          "type": "Power"
         },
         {
           "id": "uma-30043",
-          "reason": "Meta Marvelous Sunday",
-          "type": "Speed"
+          "reason": "Estamina",
+          "type": "Stamina"
         },
         {
           "id": "uma-30006",
-          "reason": "Meta Marvelous Sunday",
-          "type": "Speed"
+          "reason": "Determinação",
+          "type": "Guts"
         },
         {
           "id": "uma-30001",
-          "reason": "Meta Marvelous Sunday",
-          "type": "Speed"
+          "reason": "Determinação",
+          "type": "Guts"
         },
         {
           "id": "uma-30076",
-          "reason": "Meta Marvelous Sunday",
+          "reason": "Velocidade",
           "type": "Speed"
         },
         {
           "id": "uma-20037",
-          "reason": "Meta Marvelous Sunday",
-          "type": "Speed"
+          "reason": "Poder",
+          "type": "Power"
         },
         {
           "id": "uma-20042",
-          "reason": "Meta Marvelous Sunday",
-          "type": "Speed"
+          "reason": "Poder",
+          "type": "Power"
         },
         {
           "id": "uma-20039",
-          "reason": "Meta Marvelous Sunday",
+          "reason": "Velocidade",
           "type": "Speed"
         },
         {
           "id": "uma-20035",
-          "reason": "Meta Marvelous Sunday",
-          "type": "Speed"
+          "reason": "Estamina",
+          "type": "Stamina"
         },
         {
           "id": "uma-20043",
-          "reason": "Meta Marvelous Sunday",
-          "type": "Speed"
+          "reason": "Poder",
+          "type": "Power"
         },
         {
           "id": "uma-20040",
-          "reason": "Meta Marvelous Sunday",
-          "type": "Speed"
+          "reason": "Estamina",
+          "type": "Stamina"
         },
         {
           "id": "uma-30057",
-          "reason": "Meta Marvelous Sunday",
+          "reason": "Velocidade",
           "type": "Speed"
         },
         {
           "id": "uma-30017",
-          "reason": "Meta Marvelous Sunday",
-          "type": "Speed"
+          "reason": "Poder",
+          "type": "Power"
         },
         {
           "id": "uma-30055",
-          "reason": "Meta Marvelous Sunday",
-          "type": "Speed"
+          "reason": "Inteligência",
+          "type": "Intelligence"
         }
       ]
     }
@@ -13256,98 +13256,98 @@ export const META_DECKS: Record<string, ScenarioDeck[]> = {
       "cards": [
         {
           "id": "uma-30028",
-          "reason": "Meta Machikane Fukukitaru",
+          "reason": "Velocidade",
           "type": "Speed"
         },
         {
           "id": "uma-30016",
-          "reason": "Meta Machikane Fukukitaru",
-          "type": "Speed"
+          "reason": "Estamina",
+          "type": "Stamina"
         },
         {
           "id": "uma-30010",
-          "reason": "Meta Machikane Fukukitaru",
-          "type": "Speed"
+          "reason": "Inteligência",
+          "type": "Intelligence"
         },
         {
           "id": "uma-30021",
-          "reason": "Meta Machikane Fukukitaru",
-          "type": "Speed"
+          "reason": "Amigo/Grupo",
+          "type": "Friend"
         },
         {
           "id": "uma-30005",
-          "reason": "Meta Machikane Fukukitaru",
-          "type": "Speed"
+          "reason": "Poder",
+          "type": "Power"
         },
         {
           "id": "uma-30065",
-          "reason": "Meta Machikane Fukukitaru",
+          "reason": "Velocidade",
           "type": "Speed"
         },
         {
           "id": "uma-30001",
-          "reason": "Meta Machikane Fukukitaru",
-          "type": "Speed"
+          "reason": "Determinação",
+          "type": "Guts"
         },
         {
           "id": "uma-30083",
-          "reason": "Meta Machikane Fukukitaru",
-          "type": "Speed"
+          "reason": "Determinação",
+          "type": "Guts"
         },
         {
           "id": "uma-30061",
-          "reason": "Meta Machikane Fukukitaru",
-          "type": "Speed"
+          "reason": "Inteligência",
+          "type": "Intelligence"
         },
         {
           "id": "uma-30084",
-          "reason": "Meta Machikane Fukukitaru",
+          "reason": "Velocidade",
           "type": "Speed"
         },
         {
           "id": "uma-20039",
-          "reason": "Meta Machikane Fukukitaru",
+          "reason": "Velocidade",
           "type": "Speed"
         },
         {
           "id": "uma-20035",
-          "reason": "Meta Machikane Fukukitaru",
-          "type": "Speed"
+          "reason": "Estamina",
+          "type": "Stamina"
         },
         {
           "id": "uma-20043",
-          "reason": "Meta Machikane Fukukitaru",
-          "type": "Speed"
+          "reason": "Poder",
+          "type": "Power"
         },
         {
           "id": "uma-20040",
-          "reason": "Meta Machikane Fukukitaru",
-          "type": "Speed"
+          "reason": "Estamina",
+          "type": "Stamina"
         },
         {
           "id": "uma-20038",
-          "reason": "Meta Machikane Fukukitaru",
-          "type": "Speed"
+          "reason": "Determinação",
+          "type": "Guts"
         },
         {
           "id": "uma-20041",
-          "reason": "Meta Machikane Fukukitaru",
-          "type": "Speed"
+          "reason": "Determinação",
+          "type": "Guts"
         },
         {
           "id": "uma-30072",
-          "reason": "Meta Machikane Fukukitaru",
+          "reason": "Velocidade",
           "type": "Speed"
         },
         {
           "id": "uma-30047",
-          "reason": "Meta Machikane Fukukitaru",
-          "type": "Speed"
+          "reason": "Poder",
+          "type": "Power"
         },
         {
           "id": "uma-30088",
-          "reason": "Meta Machikane Fukukitaru",
-          "type": "Speed"
+          "reason": "Inteligência",
+          "type": "Intelligence"
         }
       ]
     },
@@ -13384,98 +13384,98 @@ export const META_DECKS: Record<string, ScenarioDeck[]> = {
       "cards": [
         {
           "id": "uma-30028",
-          "reason": "Meta Machikane Fukukitaru",
+          "reason": "Velocidade",
           "type": "Speed"
         },
         {
           "id": "uma-30016",
-          "reason": "Meta Machikane Fukukitaru",
-          "type": "Speed"
+          "reason": "Estamina",
+          "type": "Stamina"
         },
         {
           "id": "uma-30010",
-          "reason": "Meta Machikane Fukukitaru",
-          "type": "Speed"
+          "reason": "Inteligência",
+          "type": "Intelligence"
         },
         {
           "id": "uma-30021",
-          "reason": "Meta Machikane Fukukitaru",
-          "type": "Speed"
+          "reason": "Amigo/Grupo",
+          "type": "Friend"
         },
         {
           "id": "uma-30005",
-          "reason": "Meta Machikane Fukukitaru",
-          "type": "Speed"
+          "reason": "Poder",
+          "type": "Power"
         },
         {
           "id": "uma-30065",
-          "reason": "Meta Machikane Fukukitaru",
+          "reason": "Velocidade",
           "type": "Speed"
         },
         {
           "id": "uma-30001",
-          "reason": "Meta Machikane Fukukitaru",
-          "type": "Speed"
+          "reason": "Determinação",
+          "type": "Guts"
         },
         {
           "id": "uma-30083",
-          "reason": "Meta Machikane Fukukitaru",
-          "type": "Speed"
+          "reason": "Determinação",
+          "type": "Guts"
         },
         {
           "id": "uma-30061",
-          "reason": "Meta Machikane Fukukitaru",
-          "type": "Speed"
+          "reason": "Inteligência",
+          "type": "Intelligence"
         },
         {
           "id": "uma-30084",
-          "reason": "Meta Machikane Fukukitaru",
+          "reason": "Velocidade",
           "type": "Speed"
         },
         {
           "id": "uma-20039",
-          "reason": "Meta Machikane Fukukitaru",
+          "reason": "Velocidade",
           "type": "Speed"
         },
         {
           "id": "uma-20035",
-          "reason": "Meta Machikane Fukukitaru",
-          "type": "Speed"
+          "reason": "Estamina",
+          "type": "Stamina"
         },
         {
           "id": "uma-20043",
-          "reason": "Meta Machikane Fukukitaru",
-          "type": "Speed"
+          "reason": "Poder",
+          "type": "Power"
         },
         {
           "id": "uma-20040",
-          "reason": "Meta Machikane Fukukitaru",
-          "type": "Speed"
+          "reason": "Estamina",
+          "type": "Stamina"
         },
         {
           "id": "uma-20038",
-          "reason": "Meta Machikane Fukukitaru",
-          "type": "Speed"
+          "reason": "Determinação",
+          "type": "Guts"
         },
         {
           "id": "uma-20041",
-          "reason": "Meta Machikane Fukukitaru",
-          "type": "Speed"
+          "reason": "Determinação",
+          "type": "Guts"
         },
         {
           "id": "uma-30072",
-          "reason": "Meta Machikane Fukukitaru",
+          "reason": "Velocidade",
           "type": "Speed"
         },
         {
           "id": "uma-30047",
-          "reason": "Meta Machikane Fukukitaru",
-          "type": "Speed"
+          "reason": "Poder",
+          "type": "Power"
         },
         {
           "id": "uma-30088",
-          "reason": "Meta Machikane Fukukitaru",
-          "type": "Speed"
+          "reason": "Inteligência",
+          "type": "Intelligence"
         }
       ]
     },
@@ -13512,98 +13512,98 @@ export const META_DECKS: Record<string, ScenarioDeck[]> = {
       "cards": [
         {
           "id": "uma-30028",
-          "reason": "Meta Machikane Fukukitaru",
+          "reason": "Velocidade",
           "type": "Speed"
         },
         {
           "id": "uma-30016",
-          "reason": "Meta Machikane Fukukitaru",
-          "type": "Speed"
+          "reason": "Estamina",
+          "type": "Stamina"
         },
         {
           "id": "uma-30010",
-          "reason": "Meta Machikane Fukukitaru",
-          "type": "Speed"
+          "reason": "Inteligência",
+          "type": "Intelligence"
         },
         {
           "id": "uma-30021",
-          "reason": "Meta Machikane Fukukitaru",
-          "type": "Speed"
+          "reason": "Amigo/Grupo",
+          "type": "Friend"
         },
         {
           "id": "uma-30005",
-          "reason": "Meta Machikane Fukukitaru",
-          "type": "Speed"
+          "reason": "Poder",
+          "type": "Power"
         },
         {
           "id": "uma-30065",
-          "reason": "Meta Machikane Fukukitaru",
+          "reason": "Velocidade",
           "type": "Speed"
         },
         {
           "id": "uma-30001",
-          "reason": "Meta Machikane Fukukitaru",
-          "type": "Speed"
+          "reason": "Determinação",
+          "type": "Guts"
         },
         {
           "id": "uma-30083",
-          "reason": "Meta Machikane Fukukitaru",
-          "type": "Speed"
+          "reason": "Determinação",
+          "type": "Guts"
         },
         {
           "id": "uma-30061",
-          "reason": "Meta Machikane Fukukitaru",
-          "type": "Speed"
+          "reason": "Inteligência",
+          "type": "Intelligence"
         },
         {
           "id": "uma-30084",
-          "reason": "Meta Machikane Fukukitaru",
+          "reason": "Velocidade",
           "type": "Speed"
         },
         {
           "id": "uma-20039",
-          "reason": "Meta Machikane Fukukitaru",
+          "reason": "Velocidade",
           "type": "Speed"
         },
         {
           "id": "uma-20035",
-          "reason": "Meta Machikane Fukukitaru",
-          "type": "Speed"
+          "reason": "Estamina",
+          "type": "Stamina"
         },
         {
           "id": "uma-20043",
-          "reason": "Meta Machikane Fukukitaru",
-          "type": "Speed"
+          "reason": "Poder",
+          "type": "Power"
         },
         {
           "id": "uma-20040",
-          "reason": "Meta Machikane Fukukitaru",
-          "type": "Speed"
+          "reason": "Estamina",
+          "type": "Stamina"
         },
         {
           "id": "uma-20038",
-          "reason": "Meta Machikane Fukukitaru",
-          "type": "Speed"
+          "reason": "Determinação",
+          "type": "Guts"
         },
         {
           "id": "uma-20041",
-          "reason": "Meta Machikane Fukukitaru",
-          "type": "Speed"
+          "reason": "Determinação",
+          "type": "Guts"
         },
         {
           "id": "uma-30072",
-          "reason": "Meta Machikane Fukukitaru",
+          "reason": "Velocidade",
           "type": "Speed"
         },
         {
           "id": "uma-30047",
-          "reason": "Meta Machikane Fukukitaru",
-          "type": "Speed"
+          "reason": "Poder",
+          "type": "Power"
         },
         {
           "id": "uma-30088",
-          "reason": "Meta Machikane Fukukitaru",
-          "type": "Speed"
+          "reason": "Inteligência",
+          "type": "Intelligence"
         }
       ]
     }
@@ -13655,98 +13655,98 @@ export const META_DECKS: Record<string, ScenarioDeck[]> = {
       "cards": [
         {
           "id": "uma-30028",
-          "reason": "Meta Mejiro McQueen",
+          "reason": "Velocidade",
           "type": "Speed"
         },
         {
           "id": "uma-30016",
-          "reason": "Meta Mejiro McQueen",
-          "type": "Speed"
+          "reason": "Estamina",
+          "type": "Stamina"
         },
         {
           "id": "uma-30010",
-          "reason": "Meta Mejiro McQueen",
-          "type": "Speed"
+          "reason": "Inteligência",
+          "type": "Intelligence"
         },
         {
           "id": "uma-30080",
-          "reason": "Meta Mejiro McQueen",
-          "type": "Speed"
+          "reason": "Amigo/Grupo",
+          "type": "Friend"
         },
         {
           "id": "uma-30076",
-          "reason": "Meta Mejiro McQueen",
+          "reason": "Velocidade",
           "type": "Speed"
         },
         {
           "id": "uma-30043",
-          "reason": "Meta Mejiro McQueen",
-          "type": "Speed"
+          "reason": "Estamina",
+          "type": "Stamina"
         },
         {
           "id": "uma-30048",
-          "reason": "Meta Mejiro McQueen",
-          "type": "Speed"
+          "reason": "Determinação",
+          "type": "Guts"
         },
         {
           "id": "uma-30040",
-          "reason": "Meta Mejiro McQueen",
-          "type": "Speed"
+          "reason": "Determinação",
+          "type": "Guts"
         },
         {
           "id": "uma-30031",
-          "reason": "Meta Mejiro McQueen",
-          "type": "Speed"
+          "reason": "Inteligência",
+          "type": "Intelligence"
         },
         {
           "id": "uma-30025",
-          "reason": "Meta Mejiro McQueen",
+          "reason": "Velocidade",
           "type": "Speed"
         },
         {
           "id": "uma-20039",
-          "reason": "Meta Mejiro McQueen",
+          "reason": "Velocidade",
           "type": "Speed"
         },
         {
           "id": "uma-20035",
-          "reason": "Meta Mejiro McQueen",
-          "type": "Speed"
+          "reason": "Estamina",
+          "type": "Stamina"
         },
         {
           "id": "uma-20043",
-          "reason": "Meta Mejiro McQueen",
-          "type": "Speed"
+          "reason": "Poder",
+          "type": "Power"
         },
         {
           "id": "uma-20040",
-          "reason": "Meta Mejiro McQueen",
-          "type": "Speed"
+          "reason": "Estamina",
+          "type": "Stamina"
         },
         {
           "id": "uma-20038",
-          "reason": "Meta Mejiro McQueen",
-          "type": "Speed"
+          "reason": "Determinação",
+          "type": "Guts"
         },
         {
           "id": "uma-20041",
-          "reason": "Meta Mejiro McQueen",
-          "type": "Speed"
+          "reason": "Determinação",
+          "type": "Guts"
         },
         {
           "id": "uma-30078",
-          "reason": "Meta Mejiro McQueen",
+          "reason": "Velocidade",
           "type": "Speed"
         },
         {
           "id": "uma-30005",
-          "reason": "Meta Mejiro McQueen",
-          "type": "Speed"
+          "reason": "Poder",
+          "type": "Power"
         },
         {
           "id": "uma-30066",
-          "reason": "Meta Mejiro McQueen",
-          "type": "Speed"
+          "reason": "Inteligência",
+          "type": "Intelligence"
         }
       ]
     },
@@ -13783,98 +13783,98 @@ export const META_DECKS: Record<string, ScenarioDeck[]> = {
       "cards": [
         {
           "id": "uma-30028",
-          "reason": "Meta Mejiro McQueen",
+          "reason": "Velocidade",
           "type": "Speed"
         },
         {
           "id": "uma-30016",
-          "reason": "Meta Mejiro McQueen",
-          "type": "Speed"
+          "reason": "Estamina",
+          "type": "Stamina"
         },
         {
           "id": "uma-30010",
-          "reason": "Meta Mejiro McQueen",
-          "type": "Speed"
+          "reason": "Inteligência",
+          "type": "Intelligence"
         },
         {
           "id": "uma-30080",
-          "reason": "Meta Mejiro McQueen",
-          "type": "Speed"
+          "reason": "Amigo/Grupo",
+          "type": "Friend"
         },
         {
           "id": "uma-30076",
-          "reason": "Meta Mejiro McQueen",
+          "reason": "Velocidade",
           "type": "Speed"
         },
         {
           "id": "uma-30043",
-          "reason": "Meta Mejiro McQueen",
-          "type": "Speed"
+          "reason": "Estamina",
+          "type": "Stamina"
         },
         {
           "id": "uma-30048",
-          "reason": "Meta Mejiro McQueen",
-          "type": "Speed"
+          "reason": "Determinação",
+          "type": "Guts"
         },
         {
           "id": "uma-30040",
-          "reason": "Meta Mejiro McQueen",
-          "type": "Speed"
+          "reason": "Determinação",
+          "type": "Guts"
         },
         {
           "id": "uma-30031",
-          "reason": "Meta Mejiro McQueen",
-          "type": "Speed"
+          "reason": "Inteligência",
+          "type": "Intelligence"
         },
         {
           "id": "uma-30025",
-          "reason": "Meta Mejiro McQueen",
+          "reason": "Velocidade",
           "type": "Speed"
         },
         {
           "id": "uma-20039",
-          "reason": "Meta Mejiro McQueen",
+          "reason": "Velocidade",
           "type": "Speed"
         },
         {
           "id": "uma-20035",
-          "reason": "Meta Mejiro McQueen",
-          "type": "Speed"
+          "reason": "Estamina",
+          "type": "Stamina"
         },
         {
           "id": "uma-20043",
-          "reason": "Meta Mejiro McQueen",
-          "type": "Speed"
+          "reason": "Poder",
+          "type": "Power"
         },
         {
           "id": "uma-20040",
-          "reason": "Meta Mejiro McQueen",
-          "type": "Speed"
+          "reason": "Estamina",
+          "type": "Stamina"
         },
         {
           "id": "uma-20038",
-          "reason": "Meta Mejiro McQueen",
-          "type": "Speed"
+          "reason": "Determinação",
+          "type": "Guts"
         },
         {
           "id": "uma-20041",
-          "reason": "Meta Mejiro McQueen",
-          "type": "Speed"
+          "reason": "Determinação",
+          "type": "Guts"
         },
         {
           "id": "uma-30078",
-          "reason": "Meta Mejiro McQueen",
+          "reason": "Velocidade",
           "type": "Speed"
         },
         {
           "id": "uma-30005",
-          "reason": "Meta Mejiro McQueen",
-          "type": "Speed"
+          "reason": "Poder",
+          "type": "Power"
         },
         {
           "id": "uma-30066",
-          "reason": "Meta Mejiro McQueen",
-          "type": "Speed"
+          "reason": "Inteligência",
+          "type": "Intelligence"
         }
       ]
     },
@@ -13911,98 +13911,98 @@ export const META_DECKS: Record<string, ScenarioDeck[]> = {
       "cards": [
         {
           "id": "uma-30028",
-          "reason": "Meta Mejiro McQueen",
+          "reason": "Velocidade",
           "type": "Speed"
         },
         {
           "id": "uma-30016",
-          "reason": "Meta Mejiro McQueen",
-          "type": "Speed"
+          "reason": "Estamina",
+          "type": "Stamina"
         },
         {
           "id": "uma-30010",
-          "reason": "Meta Mejiro McQueen",
-          "type": "Speed"
+          "reason": "Inteligência",
+          "type": "Intelligence"
         },
         {
           "id": "uma-30080",
-          "reason": "Meta Mejiro McQueen",
-          "type": "Speed"
+          "reason": "Amigo/Grupo",
+          "type": "Friend"
         },
         {
           "id": "uma-30076",
-          "reason": "Meta Mejiro McQueen",
+          "reason": "Velocidade",
           "type": "Speed"
         },
         {
           "id": "uma-30043",
-          "reason": "Meta Mejiro McQueen",
-          "type": "Speed"
+          "reason": "Estamina",
+          "type": "Stamina"
         },
         {
           "id": "uma-30048",
-          "reason": "Meta Mejiro McQueen",
-          "type": "Speed"
+          "reason": "Determinação",
+          "type": "Guts"
         },
         {
           "id": "uma-30040",
-          "reason": "Meta Mejiro McQueen",
-          "type": "Speed"
+          "reason": "Determinação",
+          "type": "Guts"
         },
         {
           "id": "uma-30031",
-          "reason": "Meta Mejiro McQueen",
-          "type": "Speed"
+          "reason": "Inteligência",
+          "type": "Intelligence"
         },
         {
           "id": "uma-30025",
-          "reason": "Meta Mejiro McQueen",
+          "reason": "Velocidade",
           "type": "Speed"
         },
         {
           "id": "uma-20039",
-          "reason": "Meta Mejiro McQueen",
+          "reason": "Velocidade",
           "type": "Speed"
         },
         {
           "id": "uma-20035",
-          "reason": "Meta Mejiro McQueen",
-          "type": "Speed"
+          "reason": "Estamina",
+          "type": "Stamina"
         },
         {
           "id": "uma-20043",
-          "reason": "Meta Mejiro McQueen",
-          "type": "Speed"
+          "reason": "Poder",
+          "type": "Power"
         },
         {
           "id": "uma-20040",
-          "reason": "Meta Mejiro McQueen",
-          "type": "Speed"
+          "reason": "Estamina",
+          "type": "Stamina"
         },
         {
           "id": "uma-20038",
-          "reason": "Meta Mejiro McQueen",
-          "type": "Speed"
+          "reason": "Determinação",
+          "type": "Guts"
         },
         {
           "id": "uma-20041",
-          "reason": "Meta Mejiro McQueen",
-          "type": "Speed"
+          "reason": "Determinação",
+          "type": "Guts"
         },
         {
           "id": "uma-30078",
-          "reason": "Meta Mejiro McQueen",
+          "reason": "Velocidade",
           "type": "Speed"
         },
         {
           "id": "uma-30005",
-          "reason": "Meta Mejiro McQueen",
-          "type": "Speed"
+          "reason": "Poder",
+          "type": "Power"
         },
         {
           "id": "uma-30066",
-          "reason": "Meta Mejiro McQueen",
-          "type": "Speed"
+          "reason": "Inteligência",
+          "type": "Intelligence"
         }
       ]
     }
@@ -14054,93 +14054,93 @@ export const META_DECKS: Record<string, ScenarioDeck[]> = {
       "cards": [
         {
           "id": "uma-30028",
-          "reason": "Meta Gold Ship",
+          "reason": "Velocidade",
           "type": "Speed"
         },
         {
           "id": "uma-30016",
-          "reason": "Meta Gold Ship",
-          "type": "Speed"
+          "reason": "Estamina",
+          "type": "Stamina"
         },
         {
           "id": "uma-30010",
-          "reason": "Meta Gold Ship",
-          "type": "Speed"
+          "reason": "Inteligência",
+          "type": "Intelligence"
         },
         {
           "id": "uma-30021",
-          "reason": "Meta Gold Ship",
-          "type": "Speed"
+          "reason": "Amigo/Grupo",
+          "type": "Friend"
         },
         {
           "id": "uma-30073",
-          "reason": "Meta Gold Ship",
-          "type": "Speed"
+          "reason": "Inteligência",
+          "type": "Intelligence"
         },
         {
           "id": "uma-30048",
-          "reason": "Meta Gold Ship",
-          "type": "Speed"
+          "reason": "Determinação",
+          "type": "Guts"
         },
         {
           "id": "uma-30001",
-          "reason": "Meta Gold Ship",
-          "type": "Speed"
+          "reason": "Determinação",
+          "type": "Guts"
         },
         {
           "id": "uma-30083",
-          "reason": "Meta Gold Ship",
-          "type": "Speed"
+          "reason": "Determinação",
+          "type": "Guts"
         },
         {
           "id": "uma-30084",
-          "reason": "Meta Gold Ship",
+          "reason": "Velocidade",
           "type": "Speed"
         },
         {
           "id": "uma-20037",
-          "reason": "Meta Gold Ship",
-          "type": "Speed"
+          "reason": "Poder",
+          "type": "Power"
         },
         {
           "id": "uma-20042",
-          "reason": "Meta Gold Ship",
-          "type": "Speed"
+          "reason": "Poder",
+          "type": "Power"
         },
         {
           "id": "uma-20039",
-          "reason": "Meta Gold Ship",
+          "reason": "Velocidade",
           "type": "Speed"
         },
         {
           "id": "uma-20035",
-          "reason": "Meta Gold Ship",
-          "type": "Speed"
+          "reason": "Estamina",
+          "type": "Stamina"
         },
         {
           "id": "uma-20043",
-          "reason": "Meta Gold Ship",
-          "type": "Speed"
+          "reason": "Poder",
+          "type": "Power"
         },
         {
           "id": "uma-20040",
-          "reason": "Meta Gold Ship",
-          "type": "Speed"
+          "reason": "Estamina",
+          "type": "Stamina"
         },
         {
           "id": "uma-30072",
-          "reason": "Meta Gold Ship",
+          "reason": "Velocidade",
           "type": "Speed"
         },
         {
           "id": "uma-30058",
-          "reason": "Meta Gold Ship",
-          "type": "Speed"
+          "reason": "Poder",
+          "type": "Power"
         },
         {
           "id": "uma-30055",
-          "reason": "Meta Gold Ship",
-          "type": "Speed"
+          "reason": "Inteligência",
+          "type": "Intelligence"
         }
       ]
     },
@@ -14177,93 +14177,93 @@ export const META_DECKS: Record<string, ScenarioDeck[]> = {
       "cards": [
         {
           "id": "uma-30028",
-          "reason": "Meta Gold Ship",
+          "reason": "Velocidade",
           "type": "Speed"
         },
         {
           "id": "uma-30016",
-          "reason": "Meta Gold Ship",
-          "type": "Speed"
+          "reason": "Estamina",
+          "type": "Stamina"
         },
         {
           "id": "uma-30010",
-          "reason": "Meta Gold Ship",
-          "type": "Speed"
+          "reason": "Inteligência",
+          "type": "Intelligence"
         },
         {
           "id": "uma-30021",
-          "reason": "Meta Gold Ship",
-          "type": "Speed"
+          "reason": "Amigo/Grupo",
+          "type": "Friend"
         },
         {
           "id": "uma-30073",
-          "reason": "Meta Gold Ship",
-          "type": "Speed"
+          "reason": "Inteligência",
+          "type": "Intelligence"
         },
         {
           "id": "uma-30048",
-          "reason": "Meta Gold Ship",
-          "type": "Speed"
+          "reason": "Determinação",
+          "type": "Guts"
         },
         {
           "id": "uma-30001",
-          "reason": "Meta Gold Ship",
-          "type": "Speed"
+          "reason": "Determinação",
+          "type": "Guts"
         },
         {
           "id": "uma-30083",
-          "reason": "Meta Gold Ship",
-          "type": "Speed"
+          "reason": "Determinação",
+          "type": "Guts"
         },
         {
           "id": "uma-30084",
-          "reason": "Meta Gold Ship",
+          "reason": "Velocidade",
           "type": "Speed"
         },
         {
           "id": "uma-20037",
-          "reason": "Meta Gold Ship",
-          "type": "Speed"
+          "reason": "Poder",
+          "type": "Power"
         },
         {
           "id": "uma-20042",
-          "reason": "Meta Gold Ship",
-          "type": "Speed"
+          "reason": "Poder",
+          "type": "Power"
         },
         {
           "id": "uma-20039",
-          "reason": "Meta Gold Ship",
+          "reason": "Velocidade",
           "type": "Speed"
         },
         {
           "id": "uma-20035",
-          "reason": "Meta Gold Ship",
-          "type": "Speed"
+          "reason": "Estamina",
+          "type": "Stamina"
         },
         {
           "id": "uma-20043",
-          "reason": "Meta Gold Ship",
-          "type": "Speed"
+          "reason": "Poder",
+          "type": "Power"
         },
         {
           "id": "uma-20040",
-          "reason": "Meta Gold Ship",
-          "type": "Speed"
+          "reason": "Estamina",
+          "type": "Stamina"
         },
         {
           "id": "uma-30072",
-          "reason": "Meta Gold Ship",
+          "reason": "Velocidade",
           "type": "Speed"
         },
         {
           "id": "uma-30058",
-          "reason": "Meta Gold Ship",
-          "type": "Speed"
+          "reason": "Poder",
+          "type": "Power"
         },
         {
           "id": "uma-30055",
-          "reason": "Meta Gold Ship",
-          "type": "Speed"
+          "reason": "Inteligência",
+          "type": "Intelligence"
         }
       ]
     },
@@ -14300,93 +14300,93 @@ export const META_DECKS: Record<string, ScenarioDeck[]> = {
       "cards": [
         {
           "id": "uma-30028",
-          "reason": "Meta Gold Ship",
+          "reason": "Velocidade",
           "type": "Speed"
         },
         {
           "id": "uma-30016",
-          "reason": "Meta Gold Ship",
-          "type": "Speed"
+          "reason": "Estamina",
+          "type": "Stamina"
         },
         {
           "id": "uma-30010",
-          "reason": "Meta Gold Ship",
-          "type": "Speed"
+          "reason": "Inteligência",
+          "type": "Intelligence"
         },
         {
           "id": "uma-30021",
-          "reason": "Meta Gold Ship",
-          "type": "Speed"
+          "reason": "Amigo/Grupo",
+          "type": "Friend"
         },
         {
           "id": "uma-30073",
-          "reason": "Meta Gold Ship",
-          "type": "Speed"
+          "reason": "Inteligência",
+          "type": "Intelligence"
         },
         {
           "id": "uma-30048",
-          "reason": "Meta Gold Ship",
-          "type": "Speed"
+          "reason": "Determinação",
+          "type": "Guts"
         },
         {
           "id": "uma-30001",
-          "reason": "Meta Gold Ship",
-          "type": "Speed"
+          "reason": "Determinação",
+          "type": "Guts"
         },
         {
           "id": "uma-30083",
-          "reason": "Meta Gold Ship",
-          "type": "Speed"
+          "reason": "Determinação",
+          "type": "Guts"
         },
         {
           "id": "uma-30084",
-          "reason": "Meta Gold Ship",
+          "reason": "Velocidade",
           "type": "Speed"
         },
         {
           "id": "uma-20037",
-          "reason": "Meta Gold Ship",
-          "type": "Speed"
+          "reason": "Poder",
+          "type": "Power"
         },
         {
           "id": "uma-20042",
-          "reason": "Meta Gold Ship",
-          "type": "Speed"
+          "reason": "Poder",
+          "type": "Power"
         },
         {
           "id": "uma-20039",
-          "reason": "Meta Gold Ship",
+          "reason": "Velocidade",
           "type": "Speed"
         },
         {
           "id": "uma-20035",
-          "reason": "Meta Gold Ship",
-          "type": "Speed"
+          "reason": "Estamina",
+          "type": "Stamina"
         },
         {
           "id": "uma-20043",
-          "reason": "Meta Gold Ship",
-          "type": "Speed"
+          "reason": "Poder",
+          "type": "Power"
         },
         {
           "id": "uma-20040",
-          "reason": "Meta Gold Ship",
-          "type": "Speed"
+          "reason": "Estamina",
+          "type": "Stamina"
         },
         {
           "id": "uma-30072",
-          "reason": "Meta Gold Ship",
+          "reason": "Velocidade",
           "type": "Speed"
         },
         {
           "id": "uma-30058",
-          "reason": "Meta Gold Ship",
-          "type": "Speed"
+          "reason": "Poder",
+          "type": "Power"
         },
         {
           "id": "uma-30055",
-          "reason": "Meta Gold Ship",
-          "type": "Speed"
+          "reason": "Inteligência",
+          "type": "Intelligence"
         }
       ]
     }
@@ -14438,98 +14438,98 @@ export const META_DECKS: Record<string, ScenarioDeck[]> = {
       "cards": [
         {
           "id": "uma-30028",
-          "reason": "Meta T.M. Opera O",
+          "reason": "Velocidade",
           "type": "Speed"
         },
         {
           "id": "uma-30016",
-          "reason": "Meta T.M. Opera O",
-          "type": "Speed"
+          "reason": "Estamina",
+          "type": "Stamina"
         },
         {
           "id": "uma-30010",
-          "reason": "Meta T.M. Opera O",
-          "type": "Speed"
+          "reason": "Inteligência",
+          "type": "Intelligence"
         },
         {
           "id": "uma-30080",
-          "reason": "Meta T.M. Opera O",
-          "type": "Speed"
+          "reason": "Amigo/Grupo",
+          "type": "Friend"
         },
         {
           "id": "uma-30007",
-          "reason": "Meta T.M. Opera O",
-          "type": "Speed"
+          "reason": "Poder",
+          "type": "Power"
         },
         {
           "id": "uma-30048",
-          "reason": "Meta T.M. Opera O",
-          "type": "Speed"
+          "reason": "Determinação",
+          "type": "Guts"
         },
         {
           "id": "uma-30040",
-          "reason": "Meta T.M. Opera O",
-          "type": "Speed"
+          "reason": "Determinação",
+          "type": "Guts"
         },
         {
           "id": "uma-30030",
-          "reason": "Meta T.M. Opera O",
-          "type": "Speed"
+          "reason": "Determinação",
+          "type": "Guts"
         },
         {
           "id": "uma-30031",
-          "reason": "Meta T.M. Opera O",
-          "type": "Speed"
+          "reason": "Inteligência",
+          "type": "Intelligence"
         },
         {
           "id": "uma-30025",
-          "reason": "Meta T.M. Opera O",
+          "reason": "Velocidade",
           "type": "Speed"
         },
         {
           "id": "uma-20039",
-          "reason": "Meta T.M. Opera O",
+          "reason": "Velocidade",
           "type": "Speed"
         },
         {
           "id": "uma-20035",
-          "reason": "Meta T.M. Opera O",
-          "type": "Speed"
+          "reason": "Estamina",
+          "type": "Stamina"
         },
         {
           "id": "uma-20043",
-          "reason": "Meta T.M. Opera O",
-          "type": "Speed"
+          "reason": "Poder",
+          "type": "Power"
         },
         {
           "id": "uma-20040",
-          "reason": "Meta T.M. Opera O",
-          "type": "Speed"
+          "reason": "Estamina",
+          "type": "Stamina"
         },
         {
           "id": "uma-20038",
-          "reason": "Meta T.M. Opera O",
-          "type": "Speed"
+          "reason": "Determinação",
+          "type": "Guts"
         },
         {
           "id": "uma-20041",
-          "reason": "Meta T.M. Opera O",
-          "type": "Speed"
+          "reason": "Determinação",
+          "type": "Guts"
         },
         {
           "id": "uma-30078",
-          "reason": "Meta T.M. Opera O",
+          "reason": "Velocidade",
           "type": "Speed"
         },
         {
           "id": "uma-30005",
-          "reason": "Meta T.M. Opera O",
-          "type": "Speed"
+          "reason": "Poder",
+          "type": "Power"
         },
         {
           "id": "uma-30066",
-          "reason": "Meta T.M. Opera O",
-          "type": "Speed"
+          "reason": "Inteligência",
+          "type": "Intelligence"
         }
       ]
     },
@@ -14566,98 +14566,98 @@ export const META_DECKS: Record<string, ScenarioDeck[]> = {
       "cards": [
         {
           "id": "uma-30028",
-          "reason": "Meta T.M. Opera O",
+          "reason": "Velocidade",
           "type": "Speed"
         },
         {
           "id": "uma-30016",
-          "reason": "Meta T.M. Opera O",
-          "type": "Speed"
+          "reason": "Estamina",
+          "type": "Stamina"
         },
         {
           "id": "uma-30010",
-          "reason": "Meta T.M. Opera O",
-          "type": "Speed"
+          "reason": "Inteligência",
+          "type": "Intelligence"
         },
         {
           "id": "uma-30080",
-          "reason": "Meta T.M. Opera O",
-          "type": "Speed"
+          "reason": "Amigo/Grupo",
+          "type": "Friend"
         },
         {
           "id": "uma-30007",
-          "reason": "Meta T.M. Opera O",
-          "type": "Speed"
+          "reason": "Poder",
+          "type": "Power"
         },
         {
           "id": "uma-30048",
-          "reason": "Meta T.M. Opera O",
-          "type": "Speed"
+          "reason": "Determinação",
+          "type": "Guts"
         },
         {
           "id": "uma-30040",
-          "reason": "Meta T.M. Opera O",
-          "type": "Speed"
+          "reason": "Determinação",
+          "type": "Guts"
         },
         {
           "id": "uma-30030",
-          "reason": "Meta T.M. Opera O",
-          "type": "Speed"
+          "reason": "Determinação",
+          "type": "Guts"
         },
         {
           "id": "uma-30031",
-          "reason": "Meta T.M. Opera O",
-          "type": "Speed"
+          "reason": "Inteligência",
+          "type": "Intelligence"
         },
         {
           "id": "uma-30025",
-          "reason": "Meta T.M. Opera O",
+          "reason": "Velocidade",
           "type": "Speed"
         },
         {
           "id": "uma-20039",
-          "reason": "Meta T.M. Opera O",
+          "reason": "Velocidade",
           "type": "Speed"
         },
         {
           "id": "uma-20035",
-          "reason": "Meta T.M. Opera O",
-          "type": "Speed"
+          "reason": "Estamina",
+          "type": "Stamina"
         },
         {
           "id": "uma-20043",
-          "reason": "Meta T.M. Opera O",
-          "type": "Speed"
+          "reason": "Poder",
+          "type": "Power"
         },
         {
           "id": "uma-20040",
-          "reason": "Meta T.M. Opera O",
-          "type": "Speed"
+          "reason": "Estamina",
+          "type": "Stamina"
         },
         {
           "id": "uma-20038",
-          "reason": "Meta T.M. Opera O",
-          "type": "Speed"
+          "reason": "Determinação",
+          "type": "Guts"
         },
         {
           "id": "uma-20041",
-          "reason": "Meta T.M. Opera O",
-          "type": "Speed"
+          "reason": "Determinação",
+          "type": "Guts"
         },
         {
           "id": "uma-30078",
-          "reason": "Meta T.M. Opera O",
+          "reason": "Velocidade",
           "type": "Speed"
         },
         {
           "id": "uma-30005",
-          "reason": "Meta T.M. Opera O",
-          "type": "Speed"
+          "reason": "Poder",
+          "type": "Power"
         },
         {
           "id": "uma-30066",
-          "reason": "Meta T.M. Opera O",
-          "type": "Speed"
+          "reason": "Inteligência",
+          "type": "Intelligence"
         }
       ]
     },
@@ -14694,98 +14694,98 @@ export const META_DECKS: Record<string, ScenarioDeck[]> = {
       "cards": [
         {
           "id": "uma-30028",
-          "reason": "Meta T.M. Opera O",
+          "reason": "Velocidade",
           "type": "Speed"
         },
         {
           "id": "uma-30016",
-          "reason": "Meta T.M. Opera O",
-          "type": "Speed"
+          "reason": "Estamina",
+          "type": "Stamina"
         },
         {
           "id": "uma-30010",
-          "reason": "Meta T.M. Opera O",
-          "type": "Speed"
+          "reason": "Inteligência",
+          "type": "Intelligence"
         },
         {
           "id": "uma-30080",
-          "reason": "Meta T.M. Opera O",
-          "type": "Speed"
+          "reason": "Amigo/Grupo",
+          "type": "Friend"
         },
         {
           "id": "uma-30007",
-          "reason": "Meta T.M. Opera O",
-          "type": "Speed"
+          "reason": "Poder",
+          "type": "Power"
         },
         {
           "id": "uma-30048",
-          "reason": "Meta T.M. Opera O",
-          "type": "Speed"
+          "reason": "Determinação",
+          "type": "Guts"
         },
         {
           "id": "uma-30040",
-          "reason": "Meta T.M. Opera O",
-          "type": "Speed"
+          "reason": "Determinação",
+          "type": "Guts"
         },
         {
           "id": "uma-30030",
-          "reason": "Meta T.M. Opera O",
-          "type": "Speed"
+          "reason": "Determinação",
+          "type": "Guts"
         },
         {
           "id": "uma-30031",
-          "reason": "Meta T.M. Opera O",
-          "type": "Speed"
+          "reason": "Inteligência",
+          "type": "Intelligence"
         },
         {
           "id": "uma-30025",
-          "reason": "Meta T.M. Opera O",
+          "reason": "Velocidade",
           "type": "Speed"
         },
         {
           "id": "uma-20039",
-          "reason": "Meta T.M. Opera O",
+          "reason": "Velocidade",
           "type": "Speed"
         },
         {
           "id": "uma-20035",
-          "reason": "Meta T.M. Opera O",
-          "type": "Speed"
+          "reason": "Estamina",
+          "type": "Stamina"
         },
         {
           "id": "uma-20043",
-          "reason": "Meta T.M. Opera O",
-          "type": "Speed"
+          "reason": "Poder",
+          "type": "Power"
         },
         {
           "id": "uma-20040",
-          "reason": "Meta T.M. Opera O",
-          "type": "Speed"
+          "reason": "Estamina",
+          "type": "Stamina"
         },
         {
           "id": "uma-20038",
-          "reason": "Meta T.M. Opera O",
-          "type": "Speed"
+          "reason": "Determinação",
+          "type": "Guts"
         },
         {
           "id": "uma-20041",
-          "reason": "Meta T.M. Opera O",
-          "type": "Speed"
+          "reason": "Determinação",
+          "type": "Guts"
         },
         {
           "id": "uma-30078",
-          "reason": "Meta T.M. Opera O",
+          "reason": "Velocidade",
           "type": "Speed"
         },
         {
           "id": "uma-30005",
-          "reason": "Meta T.M. Opera O",
-          "type": "Speed"
+          "reason": "Poder",
+          "type": "Power"
         },
         {
           "id": "uma-30066",
-          "reason": "Meta T.M. Opera O",
-          "type": "Speed"
+          "reason": "Inteligência",
+          "type": "Intelligence"
         }
       ]
     }
@@ -14837,93 +14837,93 @@ export const META_DECKS: Record<string, ScenarioDeck[]> = {
       "cards": [
         {
           "id": "uma-30028",
-          "reason": "Meta Manhattan Cafe",
+          "reason": "Velocidade",
           "type": "Speed"
         },
         {
           "id": "uma-30016",
-          "reason": "Meta Manhattan Cafe",
-          "type": "Speed"
+          "reason": "Estamina",
+          "type": "Stamina"
         },
         {
           "id": "uma-30010",
-          "reason": "Meta Manhattan Cafe",
-          "type": "Speed"
+          "reason": "Inteligência",
+          "type": "Intelligence"
         },
         {
           "id": "uma-30036",
-          "reason": "Meta Manhattan Cafe",
-          "type": "Speed"
+          "reason": "Amigo/Grupo",
+          "type": "Friend"
         },
         {
           "id": "uma-30073",
-          "reason": "Meta Manhattan Cafe",
-          "type": "Speed"
+          "reason": "Inteligência",
+          "type": "Intelligence"
         },
         {
           "id": "uma-30019",
-          "reason": "Meta Manhattan Cafe",
-          "type": "Speed"
+          "reason": "Determinação",
+          "type": "Guts"
         },
         {
           "id": "uma-30063",
-          "reason": "Meta Manhattan Cafe",
-          "type": "Speed"
+          "reason": "Determinação",
+          "type": "Guts"
         },
         {
           "id": "uma-30060",
-          "reason": "Meta Manhattan Cafe",
-          "type": "Speed"
+          "reason": "Determinação",
+          "type": "Guts"
         },
         {
           "id": "uma-30066",
-          "reason": "Meta Manhattan Cafe",
-          "type": "Speed"
+          "reason": "Inteligência",
+          "type": "Intelligence"
         },
         {
           "id": "uma-30026",
-          "reason": "Meta Manhattan Cafe",
+          "reason": "Velocidade",
           "type": "Speed"
         },
         {
           "id": "uma-20042",
-          "reason": "Meta Manhattan Cafe",
-          "type": "Speed"
+          "reason": "Poder",
+          "type": "Power"
         },
         {
           "id": "uma-20039",
-          "reason": "Meta Manhattan Cafe",
+          "reason": "Velocidade",
           "type": "Speed"
         },
         {
           "id": "uma-20035",
-          "reason": "Meta Manhattan Cafe",
-          "type": "Speed"
+          "reason": "Estamina",
+          "type": "Stamina"
         },
         {
           "id": "uma-20043",
-          "reason": "Meta Manhattan Cafe",
-          "type": "Speed"
+          "reason": "Poder",
+          "type": "Power"
         },
         {
           "id": "uma-20040",
-          "reason": "Meta Manhattan Cafe",
-          "type": "Speed"
+          "reason": "Estamina",
+          "type": "Stamina"
         },
         {
           "id": "uma-20038",
-          "reason": "Meta Manhattan Cafe",
-          "type": "Speed"
+          "reason": "Determinação",
+          "type": "Guts"
         },
         {
           "id": "uma-30084",
-          "reason": "Meta Manhattan Cafe",
+          "reason": "Velocidade",
           "type": "Speed"
         },
         {
           "id": "uma-30056",
-          "reason": "Meta Manhattan Cafe",
-          "type": "Speed"
+          "reason": "Poder",
+          "type": "Power"
         }
       ]
     },
@@ -14960,93 +14960,93 @@ export const META_DECKS: Record<string, ScenarioDeck[]> = {
       "cards": [
         {
           "id": "uma-30028",
-          "reason": "Meta Manhattan Cafe",
+          "reason": "Velocidade",
           "type": "Speed"
         },
         {
           "id": "uma-30016",
-          "reason": "Meta Manhattan Cafe",
-          "type": "Speed"
+          "reason": "Estamina",
+          "type": "Stamina"
         },
         {
           "id": "uma-30010",
-          "reason": "Meta Manhattan Cafe",
-          "type": "Speed"
+          "reason": "Inteligência",
+          "type": "Intelligence"
         },
         {
           "id": "uma-30036",
-          "reason": "Meta Manhattan Cafe",
-          "type": "Speed"
+          "reason": "Amigo/Grupo",
+          "type": "Friend"
         },
         {
           "id": "uma-30073",
-          "reason": "Meta Manhattan Cafe",
-          "type": "Speed"
+          "reason": "Inteligência",
+          "type": "Intelligence"
         },
         {
           "id": "uma-30019",
-          "reason": "Meta Manhattan Cafe",
-          "type": "Speed"
+          "reason": "Determinação",
+          "type": "Guts"
         },
         {
           "id": "uma-30063",
-          "reason": "Meta Manhattan Cafe",
-          "type": "Speed"
+          "reason": "Determinação",
+          "type": "Guts"
         },
         {
           "id": "uma-30060",
-          "reason": "Meta Manhattan Cafe",
-          "type": "Speed"
+          "reason": "Determinação",
+          "type": "Guts"
         },
         {
           "id": "uma-30066",
-          "reason": "Meta Manhattan Cafe",
-          "type": "Speed"
+          "reason": "Inteligência",
+          "type": "Intelligence"
         },
         {
           "id": "uma-30026",
-          "reason": "Meta Manhattan Cafe",
+          "reason": "Velocidade",
           "type": "Speed"
         },
         {
           "id": "uma-20042",
-          "reason": "Meta Manhattan Cafe",
-          "type": "Speed"
+          "reason": "Poder",
+          "type": "Power"
         },
         {
           "id": "uma-20039",
-          "reason": "Meta Manhattan Cafe",
+          "reason": "Velocidade",
           "type": "Speed"
         },
         {
           "id": "uma-20035",
-          "reason": "Meta Manhattan Cafe",
-          "type": "Speed"
+          "reason": "Estamina",
+          "type": "Stamina"
         },
         {
           "id": "uma-20043",
-          "reason": "Meta Manhattan Cafe",
-          "type": "Speed"
+          "reason": "Poder",
+          "type": "Power"
         },
         {
           "id": "uma-20040",
-          "reason": "Meta Manhattan Cafe",
-          "type": "Speed"
+          "reason": "Estamina",
+          "type": "Stamina"
         },
         {
           "id": "uma-20038",
-          "reason": "Meta Manhattan Cafe",
-          "type": "Speed"
+          "reason": "Determinação",
+          "type": "Guts"
         },
         {
           "id": "uma-30084",
-          "reason": "Meta Manhattan Cafe",
+          "reason": "Velocidade",
           "type": "Speed"
         },
         {
           "id": "uma-30056",
-          "reason": "Meta Manhattan Cafe",
-          "type": "Speed"
+          "reason": "Poder",
+          "type": "Power"
         }
       ]
     },
@@ -15083,93 +15083,93 @@ export const META_DECKS: Record<string, ScenarioDeck[]> = {
       "cards": [
         {
           "id": "uma-30028",
-          "reason": "Meta Manhattan Cafe",
+          "reason": "Velocidade",
           "type": "Speed"
         },
         {
           "id": "uma-30016",
-          "reason": "Meta Manhattan Cafe",
-          "type": "Speed"
+          "reason": "Estamina",
+          "type": "Stamina"
         },
         {
           "id": "uma-30010",
-          "reason": "Meta Manhattan Cafe",
-          "type": "Speed"
+          "reason": "Inteligência",
+          "type": "Intelligence"
         },
         {
           "id": "uma-30036",
-          "reason": "Meta Manhattan Cafe",
-          "type": "Speed"
+          "reason": "Amigo/Grupo",
+          "type": "Friend"
         },
         {
           "id": "uma-30073",
-          "reason": "Meta Manhattan Cafe",
-          "type": "Speed"
+          "reason": "Inteligência",
+          "type": "Intelligence"
         },
         {
           "id": "uma-30019",
-          "reason": "Meta Manhattan Cafe",
-          "type": "Speed"
+          "reason": "Determinação",
+          "type": "Guts"
         },
         {
           "id": "uma-30063",
-          "reason": "Meta Manhattan Cafe",
-          "type": "Speed"
+          "reason": "Determinação",
+          "type": "Guts"
         },
         {
           "id": "uma-30060",
-          "reason": "Meta Manhattan Cafe",
-          "type": "Speed"
+          "reason": "Determinação",
+          "type": "Guts"
         },
         {
           "id": "uma-30066",
-          "reason": "Meta Manhattan Cafe",
-          "type": "Speed"
+          "reason": "Inteligência",
+          "type": "Intelligence"
         },
         {
           "id": "uma-30026",
-          "reason": "Meta Manhattan Cafe",
+          "reason": "Velocidade",
           "type": "Speed"
         },
         {
           "id": "uma-20042",
-          "reason": "Meta Manhattan Cafe",
-          "type": "Speed"
+          "reason": "Poder",
+          "type": "Power"
         },
         {
           "id": "uma-20039",
-          "reason": "Meta Manhattan Cafe",
+          "reason": "Velocidade",
           "type": "Speed"
         },
         {
           "id": "uma-20035",
-          "reason": "Meta Manhattan Cafe",
-          "type": "Speed"
+          "reason": "Estamina",
+          "type": "Stamina"
         },
         {
           "id": "uma-20043",
-          "reason": "Meta Manhattan Cafe",
-          "type": "Speed"
+          "reason": "Poder",
+          "type": "Power"
         },
         {
           "id": "uma-20040",
-          "reason": "Meta Manhattan Cafe",
-          "type": "Speed"
+          "reason": "Estamina",
+          "type": "Stamina"
         },
         {
           "id": "uma-20038",
-          "reason": "Meta Manhattan Cafe",
-          "type": "Speed"
+          "reason": "Determinação",
+          "type": "Guts"
         },
         {
           "id": "uma-30084",
-          "reason": "Meta Manhattan Cafe",
+          "reason": "Velocidade",
           "type": "Speed"
         },
         {
           "id": "uma-30056",
-          "reason": "Meta Manhattan Cafe",
-          "type": "Speed"
+          "reason": "Poder",
+          "type": "Power"
         }
       ]
     }
@@ -15221,98 +15221,98 @@ export const META_DECKS: Record<string, ScenarioDeck[]> = {
       "cards": [
         {
           "id": "uma-30028",
-          "reason": "Meta Rice Shower",
+          "reason": "Velocidade",
           "type": "Speed"
         },
         {
           "id": "uma-30016",
-          "reason": "Meta Rice Shower",
-          "type": "Speed"
+          "reason": "Estamina",
+          "type": "Stamina"
         },
         {
           "id": "uma-30010",
-          "reason": "Meta Rice Shower",
-          "type": "Speed"
+          "reason": "Inteligência",
+          "type": "Intelligence"
         },
         {
           "id": "uma-30021",
-          "reason": "Meta Rice Shower",
-          "type": "Speed"
+          "reason": "Amigo/Grupo",
+          "type": "Friend"
         },
         {
           "id": "uma-30005",
-          "reason": "Meta Rice Shower",
-          "type": "Speed"
+          "reason": "Poder",
+          "type": "Power"
         },
         {
           "id": "uma-30009",
-          "reason": "Meta Rice Shower",
-          "type": "Speed"
+          "reason": "Estamina",
+          "type": "Stamina"
         },
         {
           "id": "uma-30060",
-          "reason": "Meta Rice Shower",
-          "type": "Speed"
+          "reason": "Determinação",
+          "type": "Guts"
         },
         {
           "id": "uma-30048",
-          "reason": "Meta Rice Shower",
-          "type": "Speed"
+          "reason": "Determinação",
+          "type": "Guts"
         },
         {
           "id": "uma-30041",
-          "reason": "Meta Rice Shower",
-          "type": "Speed"
+          "reason": "Inteligência",
+          "type": "Intelligence"
         },
         {
           "id": "uma-30057",
-          "reason": "Meta Rice Shower",
+          "reason": "Velocidade",
           "type": "Speed"
         },
         {
           "id": "uma-20042",
-          "reason": "Meta Rice Shower",
-          "type": "Speed"
+          "reason": "Poder",
+          "type": "Power"
         },
         {
           "id": "uma-20039",
-          "reason": "Meta Rice Shower",
+          "reason": "Velocidade",
           "type": "Speed"
         },
         {
           "id": "uma-20035",
-          "reason": "Meta Rice Shower",
-          "type": "Speed"
+          "reason": "Estamina",
+          "type": "Stamina"
         },
         {
           "id": "uma-20043",
-          "reason": "Meta Rice Shower",
-          "type": "Speed"
+          "reason": "Poder",
+          "type": "Power"
         },
         {
           "id": "uma-20040",
-          "reason": "Meta Rice Shower",
-          "type": "Speed"
+          "reason": "Estamina",
+          "type": "Stamina"
         },
         {
           "id": "uma-20038",
-          "reason": "Meta Rice Shower",
-          "type": "Speed"
+          "reason": "Determinação",
+          "type": "Guts"
         },
         {
           "id": "uma-30025",
-          "reason": "Meta Rice Shower",
+          "reason": "Velocidade",
           "type": "Speed"
         },
         {
           "id": "uma-30056",
-          "reason": "Meta Rice Shower",
-          "type": "Speed"
+          "reason": "Poder",
+          "type": "Power"
         },
         {
           "id": "uma-30068",
-          "reason": "Meta Rice Shower",
-          "type": "Speed"
+          "reason": "Inteligência",
+          "type": "Intelligence"
         }
       ]
     },
@@ -15349,98 +15349,98 @@ export const META_DECKS: Record<string, ScenarioDeck[]> = {
       "cards": [
         {
           "id": "uma-30028",
-          "reason": "Meta Rice Shower",
+          "reason": "Velocidade",
           "type": "Speed"
         },
         {
           "id": "uma-30016",
-          "reason": "Meta Rice Shower",
-          "type": "Speed"
+          "reason": "Estamina",
+          "type": "Stamina"
         },
         {
           "id": "uma-30010",
-          "reason": "Meta Rice Shower",
-          "type": "Speed"
+          "reason": "Inteligência",
+          "type": "Intelligence"
         },
         {
           "id": "uma-30021",
-          "reason": "Meta Rice Shower",
-          "type": "Speed"
+          "reason": "Amigo/Grupo",
+          "type": "Friend"
         },
         {
           "id": "uma-30005",
-          "reason": "Meta Rice Shower",
-          "type": "Speed"
+          "reason": "Poder",
+          "type": "Power"
         },
         {
           "id": "uma-30009",
-          "reason": "Meta Rice Shower",
-          "type": "Speed"
+          "reason": "Estamina",
+          "type": "Stamina"
         },
         {
           "id": "uma-30060",
-          "reason": "Meta Rice Shower",
-          "type": "Speed"
+          "reason": "Determinação",
+          "type": "Guts"
         },
         {
           "id": "uma-30048",
-          "reason": "Meta Rice Shower",
-          "type": "Speed"
+          "reason": "Determinação",
+          "type": "Guts"
         },
         {
           "id": "uma-30041",
-          "reason": "Meta Rice Shower",
-          "type": "Speed"
+          "reason": "Inteligência",
+          "type": "Intelligence"
         },
         {
           "id": "uma-30057",
-          "reason": "Meta Rice Shower",
+          "reason": "Velocidade",
           "type": "Speed"
         },
         {
           "id": "uma-20042",
-          "reason": "Meta Rice Shower",
-          "type": "Speed"
+          "reason": "Poder",
+          "type": "Power"
         },
         {
           "id": "uma-20039",
-          "reason": "Meta Rice Shower",
+          "reason": "Velocidade",
           "type": "Speed"
         },
         {
           "id": "uma-20035",
-          "reason": "Meta Rice Shower",
-          "type": "Speed"
+          "reason": "Estamina",
+          "type": "Stamina"
         },
         {
           "id": "uma-20043",
-          "reason": "Meta Rice Shower",
-          "type": "Speed"
+          "reason": "Poder",
+          "type": "Power"
         },
         {
           "id": "uma-20040",
-          "reason": "Meta Rice Shower",
-          "type": "Speed"
+          "reason": "Estamina",
+          "type": "Stamina"
         },
         {
           "id": "uma-20038",
-          "reason": "Meta Rice Shower",
-          "type": "Speed"
+          "reason": "Determinação",
+          "type": "Guts"
         },
         {
           "id": "uma-30025",
-          "reason": "Meta Rice Shower",
+          "reason": "Velocidade",
           "type": "Speed"
         },
         {
           "id": "uma-30056",
-          "reason": "Meta Rice Shower",
-          "type": "Speed"
+          "reason": "Poder",
+          "type": "Power"
         },
         {
           "id": "uma-30068",
-          "reason": "Meta Rice Shower",
-          "type": "Speed"
+          "reason": "Inteligência",
+          "type": "Intelligence"
         }
       ]
     },
@@ -15477,98 +15477,98 @@ export const META_DECKS: Record<string, ScenarioDeck[]> = {
       "cards": [
         {
           "id": "uma-30028",
-          "reason": "Meta Rice Shower",
+          "reason": "Velocidade",
           "type": "Speed"
         },
         {
           "id": "uma-30016",
-          "reason": "Meta Rice Shower",
-          "type": "Speed"
+          "reason": "Estamina",
+          "type": "Stamina"
         },
         {
           "id": "uma-30010",
-          "reason": "Meta Rice Shower",
-          "type": "Speed"
+          "reason": "Inteligência",
+          "type": "Intelligence"
         },
         {
           "id": "uma-30021",
-          "reason": "Meta Rice Shower",
-          "type": "Speed"
+          "reason": "Amigo/Grupo",
+          "type": "Friend"
         },
         {
           "id": "uma-30005",
-          "reason": "Meta Rice Shower",
-          "type": "Speed"
+          "reason": "Poder",
+          "type": "Power"
         },
         {
           "id": "uma-30009",
-          "reason": "Meta Rice Shower",
-          "type": "Speed"
+          "reason": "Estamina",
+          "type": "Stamina"
         },
         {
           "id": "uma-30060",
-          "reason": "Meta Rice Shower",
-          "type": "Speed"
+          "reason": "Determinação",
+          "type": "Guts"
         },
         {
           "id": "uma-30048",
-          "reason": "Meta Rice Shower",
-          "type": "Speed"
+          "reason": "Determinação",
+          "type": "Guts"
         },
         {
           "id": "uma-30041",
-          "reason": "Meta Rice Shower",
-          "type": "Speed"
+          "reason": "Inteligência",
+          "type": "Intelligence"
         },
         {
           "id": "uma-30057",
-          "reason": "Meta Rice Shower",
+          "reason": "Velocidade",
           "type": "Speed"
         },
         {
           "id": "uma-20042",
-          "reason": "Meta Rice Shower",
-          "type": "Speed"
+          "reason": "Poder",
+          "type": "Power"
         },
         {
           "id": "uma-20039",
-          "reason": "Meta Rice Shower",
+          "reason": "Velocidade",
           "type": "Speed"
         },
         {
           "id": "uma-20035",
-          "reason": "Meta Rice Shower",
-          "type": "Speed"
+          "reason": "Estamina",
+          "type": "Stamina"
         },
         {
           "id": "uma-20043",
-          "reason": "Meta Rice Shower",
-          "type": "Speed"
+          "reason": "Poder",
+          "type": "Power"
         },
         {
           "id": "uma-20040",
-          "reason": "Meta Rice Shower",
-          "type": "Speed"
+          "reason": "Estamina",
+          "type": "Stamina"
         },
         {
           "id": "uma-20038",
-          "reason": "Meta Rice Shower",
-          "type": "Speed"
+          "reason": "Determinação",
+          "type": "Guts"
         },
         {
           "id": "uma-30025",
-          "reason": "Meta Rice Shower",
+          "reason": "Velocidade",
           "type": "Speed"
         },
         {
           "id": "uma-30056",
-          "reason": "Meta Rice Shower",
-          "type": "Speed"
+          "reason": "Poder",
+          "type": "Power"
         },
         {
           "id": "uma-30068",
-          "reason": "Meta Rice Shower",
-          "type": "Speed"
+          "reason": "Inteligência",
+          "type": "Intelligence"
         }
       ]
     }
@@ -15620,93 +15620,93 @@ export const META_DECKS: Record<string, ScenarioDeck[]> = {
       "cards": [
         {
           "id": "uma-30028",
-          "reason": "Meta Seiun Sky",
+          "reason": "Velocidade",
           "type": "Speed"
         },
         {
           "id": "uma-30016",
-          "reason": "Meta Seiun Sky",
-          "type": "Speed"
+          "reason": "Estamina",
+          "type": "Stamina"
         },
         {
           "id": "uma-30010",
-          "reason": "Meta Seiun Sky",
-          "type": "Speed"
+          "reason": "Inteligência",
+          "type": "Intelligence"
         },
         {
           "id": "uma-30021",
-          "reason": "Meta Seiun Sky",
-          "type": "Speed"
+          "reason": "Amigo/Grupo",
+          "type": "Friend"
         },
         {
           "id": "uma-30076",
-          "reason": "Meta Seiun Sky",
+          "reason": "Velocidade",
           "type": "Speed"
         },
         {
           "id": "uma-30019",
-          "reason": "Meta Seiun Sky",
-          "type": "Speed"
+          "reason": "Determinação",
+          "type": "Guts"
         },
         {
           "id": "uma-30030",
-          "reason": "Meta Seiun Sky",
-          "type": "Speed"
+          "reason": "Determinação",
+          "type": "Guts"
         },
         {
           "id": "uma-30027",
-          "reason": "Meta Seiun Sky",
-          "type": "Speed"
+          "reason": "Determinação",
+          "type": "Guts"
         },
         {
           "id": "uma-30041",
-          "reason": "Meta Seiun Sky",
-          "type": "Speed"
+          "reason": "Inteligência",
+          "type": "Intelligence"
         },
         {
           "id": "uma-30072",
-          "reason": "Meta Seiun Sky",
+          "reason": "Velocidade",
           "type": "Speed"
         },
         {
           "id": "uma-20042",
-          "reason": "Meta Seiun Sky",
-          "type": "Speed"
+          "reason": "Poder",
+          "type": "Power"
         },
         {
           "id": "uma-20039",
-          "reason": "Meta Seiun Sky",
+          "reason": "Velocidade",
           "type": "Speed"
         },
         {
           "id": "uma-20035",
-          "reason": "Meta Seiun Sky",
-          "type": "Speed"
+          "reason": "Estamina",
+          "type": "Stamina"
         },
         {
           "id": "uma-20043",
-          "reason": "Meta Seiun Sky",
-          "type": "Speed"
+          "reason": "Poder",
+          "type": "Power"
         },
         {
           "id": "uma-20040",
-          "reason": "Meta Seiun Sky",
-          "type": "Speed"
+          "reason": "Estamina",
+          "type": "Stamina"
         },
         {
           "id": "uma-20038",
-          "reason": "Meta Seiun Sky",
-          "type": "Speed"
+          "reason": "Determinação",
+          "type": "Guts"
         },
         {
           "id": "uma-30056",
-          "reason": "Meta Seiun Sky",
-          "type": "Speed"
+          "reason": "Poder",
+          "type": "Power"
         },
         {
           "id": "uma-30068",
-          "reason": "Meta Seiun Sky",
-          "type": "Speed"
+          "reason": "Inteligência",
+          "type": "Intelligence"
         }
       ]
     },
@@ -15743,93 +15743,93 @@ export const META_DECKS: Record<string, ScenarioDeck[]> = {
       "cards": [
         {
           "id": "uma-30028",
-          "reason": "Meta Seiun Sky",
+          "reason": "Velocidade",
           "type": "Speed"
         },
         {
           "id": "uma-30016",
-          "reason": "Meta Seiun Sky",
-          "type": "Speed"
+          "reason": "Estamina",
+          "type": "Stamina"
         },
         {
           "id": "uma-30010",
-          "reason": "Meta Seiun Sky",
-          "type": "Speed"
+          "reason": "Inteligência",
+          "type": "Intelligence"
         },
         {
           "id": "uma-30021",
-          "reason": "Meta Seiun Sky",
-          "type": "Speed"
+          "reason": "Amigo/Grupo",
+          "type": "Friend"
         },
         {
           "id": "uma-30076",
-          "reason": "Meta Seiun Sky",
+          "reason": "Velocidade",
           "type": "Speed"
         },
         {
           "id": "uma-30019",
-          "reason": "Meta Seiun Sky",
-          "type": "Speed"
+          "reason": "Determinação",
+          "type": "Guts"
         },
         {
           "id": "uma-30030",
-          "reason": "Meta Seiun Sky",
-          "type": "Speed"
+          "reason": "Determinação",
+          "type": "Guts"
         },
         {
           "id": "uma-30027",
-          "reason": "Meta Seiun Sky",
-          "type": "Speed"
+          "reason": "Determinação",
+          "type": "Guts"
         },
         {
           "id": "uma-30041",
-          "reason": "Meta Seiun Sky",
-          "type": "Speed"
+          "reason": "Inteligência",
+          "type": "Intelligence"
         },
         {
           "id": "uma-30072",
-          "reason": "Meta Seiun Sky",
+          "reason": "Velocidade",
           "type": "Speed"
         },
         {
           "id": "uma-20042",
-          "reason": "Meta Seiun Sky",
-          "type": "Speed"
+          "reason": "Poder",
+          "type": "Power"
         },
         {
           "id": "uma-20039",
-          "reason": "Meta Seiun Sky",
+          "reason": "Velocidade",
           "type": "Speed"
         },
         {
           "id": "uma-20035",
-          "reason": "Meta Seiun Sky",
-          "type": "Speed"
+          "reason": "Estamina",
+          "type": "Stamina"
         },
         {
           "id": "uma-20043",
-          "reason": "Meta Seiun Sky",
-          "type": "Speed"
+          "reason": "Poder",
+          "type": "Power"
         },
         {
           "id": "uma-20040",
-          "reason": "Meta Seiun Sky",
-          "type": "Speed"
+          "reason": "Estamina",
+          "type": "Stamina"
         },
         {
           "id": "uma-20038",
-          "reason": "Meta Seiun Sky",
-          "type": "Speed"
+          "reason": "Determinação",
+          "type": "Guts"
         },
         {
           "id": "uma-30056",
-          "reason": "Meta Seiun Sky",
-          "type": "Speed"
+          "reason": "Poder",
+          "type": "Power"
         },
         {
           "id": "uma-30068",
-          "reason": "Meta Seiun Sky",
-          "type": "Speed"
+          "reason": "Inteligência",
+          "type": "Intelligence"
         }
       ]
     },
@@ -15866,93 +15866,93 @@ export const META_DECKS: Record<string, ScenarioDeck[]> = {
       "cards": [
         {
           "id": "uma-30028",
-          "reason": "Meta Seiun Sky",
+          "reason": "Velocidade",
           "type": "Speed"
         },
         {
           "id": "uma-30016",
-          "reason": "Meta Seiun Sky",
-          "type": "Speed"
+          "reason": "Estamina",
+          "type": "Stamina"
         },
         {
           "id": "uma-30010",
-          "reason": "Meta Seiun Sky",
-          "type": "Speed"
+          "reason": "Inteligência",
+          "type": "Intelligence"
         },
         {
           "id": "uma-30021",
-          "reason": "Meta Seiun Sky",
-          "type": "Speed"
+          "reason": "Amigo/Grupo",
+          "type": "Friend"
         },
         {
           "id": "uma-30076",
-          "reason": "Meta Seiun Sky",
+          "reason": "Velocidade",
           "type": "Speed"
         },
         {
           "id": "uma-30019",
-          "reason": "Meta Seiun Sky",
-          "type": "Speed"
+          "reason": "Determinação",
+          "type": "Guts"
         },
         {
           "id": "uma-30030",
-          "reason": "Meta Seiun Sky",
-          "type": "Speed"
+          "reason": "Determinação",
+          "type": "Guts"
         },
         {
           "id": "uma-30027",
-          "reason": "Meta Seiun Sky",
-          "type": "Speed"
+          "reason": "Determinação",
+          "type": "Guts"
         },
         {
           "id": "uma-30041",
-          "reason": "Meta Seiun Sky",
-          "type": "Speed"
+          "reason": "Inteligência",
+          "type": "Intelligence"
         },
         {
           "id": "uma-30072",
-          "reason": "Meta Seiun Sky",
+          "reason": "Velocidade",
           "type": "Speed"
         },
         {
           "id": "uma-20042",
-          "reason": "Meta Seiun Sky",
-          "type": "Speed"
+          "reason": "Poder",
+          "type": "Power"
         },
         {
           "id": "uma-20039",
-          "reason": "Meta Seiun Sky",
+          "reason": "Velocidade",
           "type": "Speed"
         },
         {
           "id": "uma-20035",
-          "reason": "Meta Seiun Sky",
-          "type": "Speed"
+          "reason": "Estamina",
+          "type": "Stamina"
         },
         {
           "id": "uma-20043",
-          "reason": "Meta Seiun Sky",
-          "type": "Speed"
+          "reason": "Poder",
+          "type": "Power"
         },
         {
           "id": "uma-20040",
-          "reason": "Meta Seiun Sky",
-          "type": "Speed"
+          "reason": "Estamina",
+          "type": "Stamina"
         },
         {
           "id": "uma-20038",
-          "reason": "Meta Seiun Sky",
-          "type": "Speed"
+          "reason": "Determinação",
+          "type": "Guts"
         },
         {
           "id": "uma-30056",
-          "reason": "Meta Seiun Sky",
-          "type": "Speed"
+          "reason": "Poder",
+          "type": "Power"
         },
         {
           "id": "uma-30068",
-          "reason": "Meta Seiun Sky",
-          "type": "Speed"
+          "reason": "Inteligência",
+          "type": "Intelligence"
         }
       ]
     }
@@ -16004,98 +16004,98 @@ export const META_DECKS: Record<string, ScenarioDeck[]> = {
       "cards": [
         {
           "id": "uma-30028",
-          "reason": "Meta Mayano Top Gun",
+          "reason": "Velocidade",
           "type": "Speed"
         },
         {
           "id": "uma-30016",
-          "reason": "Meta Mayano Top Gun",
-          "type": "Speed"
+          "reason": "Estamina",
+          "type": "Stamina"
         },
         {
           "id": "uma-30010",
-          "reason": "Meta Mayano Top Gun",
-          "type": "Speed"
+          "reason": "Inteligência",
+          "type": "Intelligence"
         },
         {
           "id": "uma-30021",
-          "reason": "Meta Mayano Top Gun",
-          "type": "Speed"
+          "reason": "Amigo/Grupo",
+          "type": "Friend"
         },
         {
           "id": "uma-30076",
-          "reason": "Meta Mayano Top Gun",
+          "reason": "Velocidade",
           "type": "Speed"
         },
         {
           "id": "uma-30001",
-          "reason": "Meta Mayano Top Gun",
-          "type": "Speed"
+          "reason": "Determinação",
+          "type": "Guts"
         },
         {
           "id": "uma-30030",
-          "reason": "Meta Mayano Top Gun",
-          "type": "Speed"
+          "reason": "Determinação",
+          "type": "Guts"
         },
         {
           "id": "uma-30027",
-          "reason": "Meta Mayano Top Gun",
-          "type": "Speed"
+          "reason": "Determinação",
+          "type": "Guts"
         },
         {
           "id": "uma-30041",
-          "reason": "Meta Mayano Top Gun",
-          "type": "Speed"
+          "reason": "Inteligência",
+          "type": "Intelligence"
         },
         {
           "id": "uma-30078",
-          "reason": "Meta Mayano Top Gun",
+          "reason": "Velocidade",
           "type": "Speed"
         },
         {
           "id": "uma-20040",
-          "reason": "Meta Mayano Top Gun",
-          "type": "Speed"
+          "reason": "Estamina",
+          "type": "Stamina"
         },
         {
           "id": "uma-20038",
-          "reason": "Meta Mayano Top Gun",
-          "type": "Speed"
+          "reason": "Determinação",
+          "type": "Guts"
         },
         {
           "id": "uma-20041",
-          "reason": "Meta Mayano Top Gun",
-          "type": "Speed"
+          "reason": "Determinação",
+          "type": "Guts"
         },
         {
           "id": "uma-20037",
-          "reason": "Meta Mayano Top Gun",
-          "type": "Speed"
+          "reason": "Poder",
+          "type": "Power"
         },
         {
           "id": "uma-20042",
-          "reason": "Meta Mayano Top Gun",
-          "type": "Speed"
+          "reason": "Poder",
+          "type": "Power"
         },
         {
           "id": "uma-20039",
-          "reason": "Meta Mayano Top Gun",
+          "reason": "Velocidade",
           "type": "Speed"
         },
         {
           "id": "uma-30065",
-          "reason": "Meta Mayano Top Gun",
+          "reason": "Velocidade",
           "type": "Speed"
         },
         {
           "id": "uma-30033",
-          "reason": "Meta Mayano Top Gun",
-          "type": "Speed"
+          "reason": "Poder",
+          "type": "Power"
         },
         {
           "id": "uma-30068",
-          "reason": "Meta Mayano Top Gun",
-          "type": "Speed"
+          "reason": "Inteligência",
+          "type": "Intelligence"
         }
       ]
     },
@@ -16132,98 +16132,98 @@ export const META_DECKS: Record<string, ScenarioDeck[]> = {
       "cards": [
         {
           "id": "uma-30028",
-          "reason": "Meta Mayano Top Gun",
+          "reason": "Velocidade",
           "type": "Speed"
         },
         {
           "id": "uma-30016",
-          "reason": "Meta Mayano Top Gun",
-          "type": "Speed"
+          "reason": "Estamina",
+          "type": "Stamina"
         },
         {
           "id": "uma-30010",
-          "reason": "Meta Mayano Top Gun",
-          "type": "Speed"
+          "reason": "Inteligência",
+          "type": "Intelligence"
         },
         {
           "id": "uma-30021",
-          "reason": "Meta Mayano Top Gun",
-          "type": "Speed"
+          "reason": "Amigo/Grupo",
+          "type": "Friend"
         },
         {
           "id": "uma-30076",
-          "reason": "Meta Mayano Top Gun",
+          "reason": "Velocidade",
           "type": "Speed"
         },
         {
           "id": "uma-30001",
-          "reason": "Meta Mayano Top Gun",
-          "type": "Speed"
+          "reason": "Determinação",
+          "type": "Guts"
         },
         {
           "id": "uma-30030",
-          "reason": "Meta Mayano Top Gun",
-          "type": "Speed"
+          "reason": "Determinação",
+          "type": "Guts"
         },
         {
           "id": "uma-30027",
-          "reason": "Meta Mayano Top Gun",
-          "type": "Speed"
+          "reason": "Determinação",
+          "type": "Guts"
         },
         {
           "id": "uma-30041",
-          "reason": "Meta Mayano Top Gun",
-          "type": "Speed"
+          "reason": "Inteligência",
+          "type": "Intelligence"
         },
         {
           "id": "uma-30078",
-          "reason": "Meta Mayano Top Gun",
+          "reason": "Velocidade",
           "type": "Speed"
         },
         {
           "id": "uma-20040",
-          "reason": "Meta Mayano Top Gun",
-          "type": "Speed"
+          "reason": "Estamina",
+          "type": "Stamina"
         },
         {
           "id": "uma-20038",
-          "reason": "Meta Mayano Top Gun",
-          "type": "Speed"
+          "reason": "Determinação",
+          "type": "Guts"
         },
         {
           "id": "uma-20041",
-          "reason": "Meta Mayano Top Gun",
-          "type": "Speed"
+          "reason": "Determinação",
+          "type": "Guts"
         },
         {
           "id": "uma-20037",
-          "reason": "Meta Mayano Top Gun",
-          "type": "Speed"
+          "reason": "Poder",
+          "type": "Power"
         },
         {
           "id": "uma-20042",
-          "reason": "Meta Mayano Top Gun",
-          "type": "Speed"
+          "reason": "Poder",
+          "type": "Power"
         },
         {
           "id": "uma-20039",
-          "reason": "Meta Mayano Top Gun",
+          "reason": "Velocidade",
           "type": "Speed"
         },
         {
           "id": "uma-30065",
-          "reason": "Meta Mayano Top Gun",
+          "reason": "Velocidade",
           "type": "Speed"
         },
         {
           "id": "uma-30033",
-          "reason": "Meta Mayano Top Gun",
-          "type": "Speed"
+          "reason": "Poder",
+          "type": "Power"
         },
         {
           "id": "uma-30068",
-          "reason": "Meta Mayano Top Gun",
-          "type": "Speed"
+          "reason": "Inteligência",
+          "type": "Intelligence"
         }
       ]
     },
@@ -16260,98 +16260,98 @@ export const META_DECKS: Record<string, ScenarioDeck[]> = {
       "cards": [
         {
           "id": "uma-30028",
-          "reason": "Meta Mayano Top Gun",
+          "reason": "Velocidade",
           "type": "Speed"
         },
         {
           "id": "uma-30016",
-          "reason": "Meta Mayano Top Gun",
-          "type": "Speed"
+          "reason": "Estamina",
+          "type": "Stamina"
         },
         {
           "id": "uma-30010",
-          "reason": "Meta Mayano Top Gun",
-          "type": "Speed"
+          "reason": "Inteligência",
+          "type": "Intelligence"
         },
         {
           "id": "uma-30021",
-          "reason": "Meta Mayano Top Gun",
-          "type": "Speed"
+          "reason": "Amigo/Grupo",
+          "type": "Friend"
         },
         {
           "id": "uma-30076",
-          "reason": "Meta Mayano Top Gun",
+          "reason": "Velocidade",
           "type": "Speed"
         },
         {
           "id": "uma-30001",
-          "reason": "Meta Mayano Top Gun",
-          "type": "Speed"
+          "reason": "Determinação",
+          "type": "Guts"
         },
         {
           "id": "uma-30030",
-          "reason": "Meta Mayano Top Gun",
-          "type": "Speed"
+          "reason": "Determinação",
+          "type": "Guts"
         },
         {
           "id": "uma-30027",
-          "reason": "Meta Mayano Top Gun",
-          "type": "Speed"
+          "reason": "Determinação",
+          "type": "Guts"
         },
         {
           "id": "uma-30041",
-          "reason": "Meta Mayano Top Gun",
-          "type": "Speed"
+          "reason": "Inteligência",
+          "type": "Intelligence"
         },
         {
           "id": "uma-30078",
-          "reason": "Meta Mayano Top Gun",
+          "reason": "Velocidade",
           "type": "Speed"
         },
         {
           "id": "uma-20040",
-          "reason": "Meta Mayano Top Gun",
-          "type": "Speed"
+          "reason": "Estamina",
+          "type": "Stamina"
         },
         {
           "id": "uma-20038",
-          "reason": "Meta Mayano Top Gun",
-          "type": "Speed"
+          "reason": "Determinação",
+          "type": "Guts"
         },
         {
           "id": "uma-20041",
-          "reason": "Meta Mayano Top Gun",
-          "type": "Speed"
+          "reason": "Determinação",
+          "type": "Guts"
         },
         {
           "id": "uma-20037",
-          "reason": "Meta Mayano Top Gun",
-          "type": "Speed"
+          "reason": "Poder",
+          "type": "Power"
         },
         {
           "id": "uma-20042",
-          "reason": "Meta Mayano Top Gun",
-          "type": "Speed"
+          "reason": "Poder",
+          "type": "Power"
         },
         {
           "id": "uma-20039",
-          "reason": "Meta Mayano Top Gun",
+          "reason": "Velocidade",
           "type": "Speed"
         },
         {
           "id": "uma-30065",
-          "reason": "Meta Mayano Top Gun",
+          "reason": "Velocidade",
           "type": "Speed"
         },
         {
           "id": "uma-30033",
-          "reason": "Meta Mayano Top Gun",
-          "type": "Speed"
+          "reason": "Poder",
+          "type": "Power"
         },
         {
           "id": "uma-30068",
-          "reason": "Meta Mayano Top Gun",
-          "type": "Speed"
+          "reason": "Inteligência",
+          "type": "Intelligence"
         }
       ]
     }
@@ -16403,98 +16403,98 @@ export const META_DECKS: Record<string, ScenarioDeck[]> = {
       "cards": [
         {
           "id": "uma-30028",
-          "reason": "Meta Biwa Hayahide",
+          "reason": "Velocidade",
           "type": "Speed"
         },
         {
           "id": "uma-30016",
-          "reason": "Meta Biwa Hayahide",
-          "type": "Speed"
+          "reason": "Estamina",
+          "type": "Stamina"
         },
         {
           "id": "uma-30010",
-          "reason": "Meta Biwa Hayahide",
-          "type": "Speed"
+          "reason": "Inteligência",
+          "type": "Intelligence"
         },
         {
           "id": "uma-30021",
-          "reason": "Meta Biwa Hayahide",
-          "type": "Speed"
+          "reason": "Amigo/Grupo",
+          "type": "Friend"
         },
         {
           "id": "uma-30007",
-          "reason": "Meta Biwa Hayahide",
-          "type": "Speed"
+          "reason": "Poder",
+          "type": "Power"
         },
         {
           "id": "uma-30062",
-          "reason": "Meta Biwa Hayahide",
-          "type": "Speed"
+          "reason": "Estamina",
+          "type": "Stamina"
         },
         {
           "id": "uma-30001",
-          "reason": "Meta Biwa Hayahide",
-          "type": "Speed"
+          "reason": "Determinação",
+          "type": "Guts"
         },
         {
           "id": "uma-30083",
-          "reason": "Meta Biwa Hayahide",
-          "type": "Speed"
+          "reason": "Determinação",
+          "type": "Guts"
         },
         {
           "id": "uma-30061",
-          "reason": "Meta Biwa Hayahide",
-          "type": "Speed"
+          "reason": "Inteligência",
+          "type": "Intelligence"
         },
         {
           "id": "uma-30084",
-          "reason": "Meta Biwa Hayahide",
+          "reason": "Velocidade",
           "type": "Speed"
         },
         {
           "id": "uma-20038",
-          "reason": "Meta Biwa Hayahide",
-          "type": "Speed"
+          "reason": "Determinação",
+          "type": "Guts"
         },
         {
           "id": "uma-20041",
-          "reason": "Meta Biwa Hayahide",
-          "type": "Speed"
+          "reason": "Determinação",
+          "type": "Guts"
         },
         {
           "id": "uma-20037",
-          "reason": "Meta Biwa Hayahide",
-          "type": "Speed"
+          "reason": "Poder",
+          "type": "Power"
         },
         {
           "id": "uma-20042",
-          "reason": "Meta Biwa Hayahide",
-          "type": "Speed"
+          "reason": "Poder",
+          "type": "Power"
         },
         {
           "id": "uma-20039",
-          "reason": "Meta Biwa Hayahide",
+          "reason": "Velocidade",
           "type": "Speed"
         },
         {
           "id": "uma-20035",
-          "reason": "Meta Biwa Hayahide",
-          "type": "Speed"
+          "reason": "Estamina",
+          "type": "Stamina"
         },
         {
           "id": "uma-30072",
-          "reason": "Meta Biwa Hayahide",
+          "reason": "Velocidade",
           "type": "Speed"
         },
         {
           "id": "uma-30032",
-          "reason": "Meta Biwa Hayahide",
-          "type": "Speed"
+          "reason": "Poder",
+          "type": "Power"
         },
         {
           "id": "uma-30088",
-          "reason": "Meta Biwa Hayahide",
-          "type": "Speed"
+          "reason": "Inteligência",
+          "type": "Intelligence"
         }
       ]
     },
@@ -16531,98 +16531,98 @@ export const META_DECKS: Record<string, ScenarioDeck[]> = {
       "cards": [
         {
           "id": "uma-30028",
-          "reason": "Meta Biwa Hayahide",
+          "reason": "Velocidade",
           "type": "Speed"
         },
         {
           "id": "uma-30016",
-          "reason": "Meta Biwa Hayahide",
-          "type": "Speed"
+          "reason": "Estamina",
+          "type": "Stamina"
         },
         {
           "id": "uma-30010",
-          "reason": "Meta Biwa Hayahide",
-          "type": "Speed"
+          "reason": "Inteligência",
+          "type": "Intelligence"
         },
         {
           "id": "uma-30021",
-          "reason": "Meta Biwa Hayahide",
-          "type": "Speed"
+          "reason": "Amigo/Grupo",
+          "type": "Friend"
         },
         {
           "id": "uma-30007",
-          "reason": "Meta Biwa Hayahide",
-          "type": "Speed"
+          "reason": "Poder",
+          "type": "Power"
         },
         {
           "id": "uma-30062",
-          "reason": "Meta Biwa Hayahide",
-          "type": "Speed"
+          "reason": "Estamina",
+          "type": "Stamina"
         },
         {
           "id": "uma-30001",
-          "reason": "Meta Biwa Hayahide",
-          "type": "Speed"
+          "reason": "Determinação",
+          "type": "Guts"
         },
         {
           "id": "uma-30083",
-          "reason": "Meta Biwa Hayahide",
-          "type": "Speed"
+          "reason": "Determinação",
+          "type": "Guts"
         },
         {
           "id": "uma-30061",
-          "reason": "Meta Biwa Hayahide",
-          "type": "Speed"
+          "reason": "Inteligência",
+          "type": "Intelligence"
         },
         {
           "id": "uma-30084",
-          "reason": "Meta Biwa Hayahide",
+          "reason": "Velocidade",
           "type": "Speed"
         },
         {
           "id": "uma-20038",
-          "reason": "Meta Biwa Hayahide",
-          "type": "Speed"
+          "reason": "Determinação",
+          "type": "Guts"
         },
         {
           "id": "uma-20041",
-          "reason": "Meta Biwa Hayahide",
-          "type": "Speed"
+          "reason": "Determinação",
+          "type": "Guts"
         },
         {
           "id": "uma-20037",
-          "reason": "Meta Biwa Hayahide",
-          "type": "Speed"
+          "reason": "Poder",
+          "type": "Power"
         },
         {
           "id": "uma-20042",
-          "reason": "Meta Biwa Hayahide",
-          "type": "Speed"
+          "reason": "Poder",
+          "type": "Power"
         },
         {
           "id": "uma-20039",
-          "reason": "Meta Biwa Hayahide",
+          "reason": "Velocidade",
           "type": "Speed"
         },
         {
           "id": "uma-20035",
-          "reason": "Meta Biwa Hayahide",
-          "type": "Speed"
+          "reason": "Estamina",
+          "type": "Stamina"
         },
         {
           "id": "uma-30072",
-          "reason": "Meta Biwa Hayahide",
+          "reason": "Velocidade",
           "type": "Speed"
         },
         {
           "id": "uma-30032",
-          "reason": "Meta Biwa Hayahide",
-          "type": "Speed"
+          "reason": "Poder",
+          "type": "Power"
         },
         {
           "id": "uma-30088",
-          "reason": "Meta Biwa Hayahide",
-          "type": "Speed"
+          "reason": "Inteligência",
+          "type": "Intelligence"
         }
       ]
     },
@@ -16659,98 +16659,98 @@ export const META_DECKS: Record<string, ScenarioDeck[]> = {
       "cards": [
         {
           "id": "uma-30028",
-          "reason": "Meta Biwa Hayahide",
+          "reason": "Velocidade",
           "type": "Speed"
         },
         {
           "id": "uma-30016",
-          "reason": "Meta Biwa Hayahide",
-          "type": "Speed"
+          "reason": "Estamina",
+          "type": "Stamina"
         },
         {
           "id": "uma-30010",
-          "reason": "Meta Biwa Hayahide",
-          "type": "Speed"
+          "reason": "Inteligência",
+          "type": "Intelligence"
         },
         {
           "id": "uma-30021",
-          "reason": "Meta Biwa Hayahide",
-          "type": "Speed"
+          "reason": "Amigo/Grupo",
+          "type": "Friend"
         },
         {
           "id": "uma-30007",
-          "reason": "Meta Biwa Hayahide",
-          "type": "Speed"
+          "reason": "Poder",
+          "type": "Power"
         },
         {
           "id": "uma-30062",
-          "reason": "Meta Biwa Hayahide",
-          "type": "Speed"
+          "reason": "Estamina",
+          "type": "Stamina"
         },
         {
           "id": "uma-30001",
-          "reason": "Meta Biwa Hayahide",
-          "type": "Speed"
+          "reason": "Determinação",
+          "type": "Guts"
         },
         {
           "id": "uma-30083",
-          "reason": "Meta Biwa Hayahide",
-          "type": "Speed"
+          "reason": "Determinação",
+          "type": "Guts"
         },
         {
           "id": "uma-30061",
-          "reason": "Meta Biwa Hayahide",
-          "type": "Speed"
+          "reason": "Inteligência",
+          "type": "Intelligence"
         },
         {
           "id": "uma-30084",
-          "reason": "Meta Biwa Hayahide",
+          "reason": "Velocidade",
           "type": "Speed"
         },
         {
           "id": "uma-20038",
-          "reason": "Meta Biwa Hayahide",
-          "type": "Speed"
+          "reason": "Determinação",
+          "type": "Guts"
         },
         {
           "id": "uma-20041",
-          "reason": "Meta Biwa Hayahide",
-          "type": "Speed"
+          "reason": "Determinação",
+          "type": "Guts"
         },
         {
           "id": "uma-20037",
-          "reason": "Meta Biwa Hayahide",
-          "type": "Speed"
+          "reason": "Poder",
+          "type": "Power"
         },
         {
           "id": "uma-20042",
-          "reason": "Meta Biwa Hayahide",
-          "type": "Speed"
+          "reason": "Poder",
+          "type": "Power"
         },
         {
           "id": "uma-20039",
-          "reason": "Meta Biwa Hayahide",
+          "reason": "Velocidade",
           "type": "Speed"
         },
         {
           "id": "uma-20035",
-          "reason": "Meta Biwa Hayahide",
-          "type": "Speed"
+          "reason": "Estamina",
+          "type": "Stamina"
         },
         {
           "id": "uma-30072",
-          "reason": "Meta Biwa Hayahide",
+          "reason": "Velocidade",
           "type": "Speed"
         },
         {
           "id": "uma-30032",
-          "reason": "Meta Biwa Hayahide",
-          "type": "Speed"
+          "reason": "Poder",
+          "type": "Power"
         },
         {
           "id": "uma-30088",
-          "reason": "Meta Biwa Hayahide",
-          "type": "Speed"
+          "reason": "Inteligência",
+          "type": "Intelligence"
         }
       ]
     }
@@ -16802,93 +16802,93 @@ export const META_DECKS: Record<string, ScenarioDeck[]> = {
       "cards": [
         {
           "id": "uma-30028",
-          "reason": "Meta Super Creek",
+          "reason": "Velocidade",
           "type": "Speed"
         },
         {
           "id": "uma-30016",
-          "reason": "Meta Super Creek",
-          "type": "Speed"
+          "reason": "Estamina",
+          "type": "Stamina"
         },
         {
           "id": "uma-30010",
-          "reason": "Meta Super Creek",
-          "type": "Speed"
+          "reason": "Inteligência",
+          "type": "Intelligence"
         },
         {
           "id": "uma-30080",
-          "reason": "Meta Super Creek",
-          "type": "Speed"
+          "reason": "Amigo/Grupo",
+          "type": "Friend"
         },
         {
           "id": "uma-30005",
-          "reason": "Meta Super Creek",
-          "type": "Speed"
+          "reason": "Poder",
+          "type": "Power"
         },
         {
           "id": "uma-30022",
-          "reason": "Meta Super Creek",
-          "type": "Speed"
+          "reason": "Estamina",
+          "type": "Stamina"
         },
         {
           "id": "uma-30070",
-          "reason": "Meta Super Creek",
-          "type": "Speed"
+          "reason": "Determinação",
+          "type": "Guts"
         },
         {
           "id": "uma-30063",
-          "reason": "Meta Super Creek",
-          "type": "Speed"
+          "reason": "Determinação",
+          "type": "Guts"
         },
         {
           "id": "uma-30055",
-          "reason": "Meta Super Creek",
-          "type": "Speed"
+          "reason": "Inteligência",
+          "type": "Intelligence"
         },
         {
           "id": "uma-30072",
-          "reason": "Meta Super Creek",
+          "reason": "Velocidade",
           "type": "Speed"
         },
         {
           "id": "uma-20041",
-          "reason": "Meta Super Creek",
-          "type": "Speed"
+          "reason": "Determinação",
+          "type": "Guts"
         },
         {
           "id": "uma-20037",
-          "reason": "Meta Super Creek",
-          "type": "Speed"
+          "reason": "Poder",
+          "type": "Power"
         },
         {
           "id": "uma-20042",
-          "reason": "Meta Super Creek",
-          "type": "Speed"
+          "reason": "Poder",
+          "type": "Power"
         },
         {
           "id": "uma-20039",
-          "reason": "Meta Super Creek",
+          "reason": "Velocidade",
           "type": "Speed"
         },
         {
           "id": "uma-20035",
-          "reason": "Meta Super Creek",
-          "type": "Speed"
+          "reason": "Estamina",
+          "type": "Stamina"
         },
         {
           "id": "uma-20043",
-          "reason": "Meta Super Creek",
-          "type": "Speed"
+          "reason": "Poder",
+          "type": "Power"
         },
         {
           "id": "uma-30064",
-          "reason": "Meta Super Creek",
-          "type": "Speed"
+          "reason": "Poder",
+          "type": "Power"
         },
         {
           "id": "uma-30082",
-          "reason": "Meta Super Creek",
-          "type": "Speed"
+          "reason": "Inteligência",
+          "type": "Intelligence"
         }
       ]
     },
@@ -16925,93 +16925,93 @@ export const META_DECKS: Record<string, ScenarioDeck[]> = {
       "cards": [
         {
           "id": "uma-30028",
-          "reason": "Meta Super Creek",
+          "reason": "Velocidade",
           "type": "Speed"
         },
         {
           "id": "uma-30016",
-          "reason": "Meta Super Creek",
-          "type": "Speed"
+          "reason": "Estamina",
+          "type": "Stamina"
         },
         {
           "id": "uma-30010",
-          "reason": "Meta Super Creek",
-          "type": "Speed"
+          "reason": "Inteligência",
+          "type": "Intelligence"
         },
         {
           "id": "uma-30080",
-          "reason": "Meta Super Creek",
-          "type": "Speed"
+          "reason": "Amigo/Grupo",
+          "type": "Friend"
         },
         {
           "id": "uma-30005",
-          "reason": "Meta Super Creek",
-          "type": "Speed"
+          "reason": "Poder",
+          "type": "Power"
         },
         {
           "id": "uma-30022",
-          "reason": "Meta Super Creek",
-          "type": "Speed"
+          "reason": "Estamina",
+          "type": "Stamina"
         },
         {
           "id": "uma-30070",
-          "reason": "Meta Super Creek",
-          "type": "Speed"
+          "reason": "Determinação",
+          "type": "Guts"
         },
         {
           "id": "uma-30063",
-          "reason": "Meta Super Creek",
-          "type": "Speed"
+          "reason": "Determinação",
+          "type": "Guts"
         },
         {
           "id": "uma-30055",
-          "reason": "Meta Super Creek",
-          "type": "Speed"
+          "reason": "Inteligência",
+          "type": "Intelligence"
         },
         {
           "id": "uma-30072",
-          "reason": "Meta Super Creek",
+          "reason": "Velocidade",
           "type": "Speed"
         },
         {
           "id": "uma-20041",
-          "reason": "Meta Super Creek",
-          "type": "Speed"
+          "reason": "Determinação",
+          "type": "Guts"
         },
         {
           "id": "uma-20037",
-          "reason": "Meta Super Creek",
-          "type": "Speed"
+          "reason": "Poder",
+          "type": "Power"
         },
         {
           "id": "uma-20042",
-          "reason": "Meta Super Creek",
-          "type": "Speed"
+          "reason": "Poder",
+          "type": "Power"
         },
         {
           "id": "uma-20039",
-          "reason": "Meta Super Creek",
+          "reason": "Velocidade",
           "type": "Speed"
         },
         {
           "id": "uma-20035",
-          "reason": "Meta Super Creek",
-          "type": "Speed"
+          "reason": "Estamina",
+          "type": "Stamina"
         },
         {
           "id": "uma-20043",
-          "reason": "Meta Super Creek",
-          "type": "Speed"
+          "reason": "Poder",
+          "type": "Power"
         },
         {
           "id": "uma-30064",
-          "reason": "Meta Super Creek",
-          "type": "Speed"
+          "reason": "Poder",
+          "type": "Power"
         },
         {
           "id": "uma-30082",
-          "reason": "Meta Super Creek",
-          "type": "Speed"
+          "reason": "Inteligência",
+          "type": "Intelligence"
         }
       ]
     },
@@ -17048,93 +17048,93 @@ export const META_DECKS: Record<string, ScenarioDeck[]> = {
       "cards": [
         {
           "id": "uma-30028",
-          "reason": "Meta Super Creek",
+          "reason": "Velocidade",
           "type": "Speed"
         },
         {
           "id": "uma-30016",
-          "reason": "Meta Super Creek",
-          "type": "Speed"
+          "reason": "Estamina",
+          "type": "Stamina"
         },
         {
           "id": "uma-30010",
-          "reason": "Meta Super Creek",
-          "type": "Speed"
+          "reason": "Inteligência",
+          "type": "Intelligence"
         },
         {
           "id": "uma-30080",
-          "reason": "Meta Super Creek",
-          "type": "Speed"
+          "reason": "Amigo/Grupo",
+          "type": "Friend"
         },
         {
           "id": "uma-30005",
-          "reason": "Meta Super Creek",
-          "type": "Speed"
+          "reason": "Poder",
+          "type": "Power"
         },
         {
           "id": "uma-30022",
-          "reason": "Meta Super Creek",
-          "type": "Speed"
+          "reason": "Estamina",
+          "type": "Stamina"
         },
         {
           "id": "uma-30070",
-          "reason": "Meta Super Creek",
-          "type": "Speed"
+          "reason": "Determinação",
+          "type": "Guts"
         },
         {
           "id": "uma-30063",
-          "reason": "Meta Super Creek",
-          "type": "Speed"
+          "reason": "Determinação",
+          "type": "Guts"
         },
         {
           "id": "uma-30055",
-          "reason": "Meta Super Creek",
-          "type": "Speed"
+          "reason": "Inteligência",
+          "type": "Intelligence"
         },
         {
           "id": "uma-30072",
-          "reason": "Meta Super Creek",
+          "reason": "Velocidade",
           "type": "Speed"
         },
         {
           "id": "uma-20041",
-          "reason": "Meta Super Creek",
-          "type": "Speed"
+          "reason": "Determinação",
+          "type": "Guts"
         },
         {
           "id": "uma-20037",
-          "reason": "Meta Super Creek",
-          "type": "Speed"
+          "reason": "Poder",
+          "type": "Power"
         },
         {
           "id": "uma-20042",
-          "reason": "Meta Super Creek",
-          "type": "Speed"
+          "reason": "Poder",
+          "type": "Power"
         },
         {
           "id": "uma-20039",
-          "reason": "Meta Super Creek",
+          "reason": "Velocidade",
           "type": "Speed"
         },
         {
           "id": "uma-20035",
-          "reason": "Meta Super Creek",
-          "type": "Speed"
+          "reason": "Estamina",
+          "type": "Stamina"
         },
         {
           "id": "uma-20043",
-          "reason": "Meta Super Creek",
-          "type": "Speed"
+          "reason": "Poder",
+          "type": "Power"
         },
         {
           "id": "uma-30064",
-          "reason": "Meta Super Creek",
-          "type": "Speed"
+          "reason": "Poder",
+          "type": "Power"
         },
         {
           "id": "uma-30082",
-          "reason": "Meta Super Creek",
-          "type": "Speed"
+          "reason": "Inteligência",
+          "type": "Intelligence"
         }
       ]
     }

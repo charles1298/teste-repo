@@ -43,6 +43,9 @@ const typeIcons: Record<string, string> = {
   'Guts': '/assets/icons/icon-type-3.png',
   'Intelligence': '/assets/icons/icon-type-4.png',
   'Friend': '/assets/icons/icon-type-5.png',
+  'Friend/Group': '/assets/icons/icon-type-5.png',
+  'Unknown': '/assets/icons/icon-type-5.png',
+  'Group': '/assets/icons/icon-type-5.png',
 };
 
 
@@ -53,7 +56,7 @@ const getMockCardEffect = (card: any, reason: string) => {
   else if (card.type === 'Power') effects.push('Melhora o ganho de Poder (Power) e oferece melhores bônus de corrida.');
   else if (card.type === 'Guts') effects.push('Fornece bônus vitais de Guts (Determinação) e bônus de motivação.');
   else if (card.type === 'Intelligence') effects.push('Garante maior recuperação de energia e atributos de Inteligência.');
-  else if (card.type === 'Friend') effects.push('Reduz o consumo de energia e previne falhas em treinamentos.');
+  else if (card.type === 'Friend' || card.type === 'Friend/Group' || card.type === 'Group' || card.type === 'Unknown') effects.push('Reduz o consumo de energia e previne falhas em treinamentos.');
 
   effects.push(`Foco principal desta carta: ${reason}.`);
   if (card.hasUniqueSkill) effects.push('Possui Habilidade Única (Gold Skill) que tem ótimo desempenho na corrida.');

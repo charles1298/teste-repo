@@ -154,7 +154,15 @@ const Cards = () => {
   const { decks, toggleCardInDeck } = useDeck();
   const [managingCard, setManagingCard] = useState<SupportCard | null>(null);
 
-  const categories = ['Todas', 'Econômicas', 'SSR', 'SR'];
+  const categories = ['Todas', 'Econômicas', 'SSR', 'SR', 'Speed', 'Stamina', 'Power', 'Guts', 'Intelligence', 'Friend/Group'];
+  const typeMap: Record<string, string> = {
+    'Speed': 'Velocidade',
+    'Stamina': 'Estamina',
+    'Power': 'Poder',
+    'Guts': 'Determinação',
+    'Intelligence': 'Inteligência',
+    'Friend/Group': 'Amigo/Grupo'
+  };
 
   const filteredCards = SUPPORT_CARDS.filter(card => {
     const matchSearch = card.name.toLowerCase().includes(searchTerm.toLowerCase());
@@ -162,6 +170,7 @@ const Cards = () => {
     if (category === 'SSR') matchCategory = card.rarity === 'SSR';
     else if (category === 'SR') matchCategory = card.rarity === 'SR';
     else if (category === 'Econômicas') matchCategory = !!card.isEconomic;
+    else if (typeMap[category]) matchCategory = card.type === category;
     return matchSearch && matchCategory;
   });
 
@@ -197,7 +206,7 @@ const Cards = () => {
                 : "bg-white text-slate-500 border-slate-200 hover:text-uma-pink hover:border-uma-pink"
             )}
           >
-            {cat}
+            {typeMap[cat] || cat}
           </button>
         ))}
       </div>
