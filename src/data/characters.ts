@@ -10,6 +10,8 @@ export interface RecommendedCard {
 
 export interface DeckVariation {
   name: string;
+  tier?: 'S' | 'A' | 'B' | 'C';
+  description?: string;
   recommendedIds: string[];
 }
 
@@ -109,11 +111,11 @@ function getDecksForCharacter(distance: string, style: string): ScenarioDeck[] {
   return ['URA Finale', 'Unity Cup', 'Trackblazer'].map(scenario => ({
     scenario,
     decks: [
-      { name: 'Deck Recomendado', recommendedIds: baseRec },
-      { name: 'Deck Econômico', recommendedIds: ECO_BASE },
-      { name: 'Variação 1 (Meta Speed)', recommendedIds: var1 },
-      { name: 'Variação 2 (Meta Guts)', recommendedIds: var2 },
-      { name: 'Variação 3 (Meta Stamina)', recommendedIds: var3 },
+      { name: 'Deck Meta (Competitivo)', tier: 'S', description: 'Build ideal focada nos atributos principais, otimizada para o meta atual do cenário.', recommendedIds: baseRec },
+      { name: 'Variação Velocidade (Meta Speed)', tier: 'A', description: 'Foco máximo em Speed para liderar corridas curtas e médias.', recommendedIds: var1 },
+      { name: 'Variação Raça (Meta Guts)', tier: 'A', description: 'Aproveita os multiplicadores de Guts (Determinação) para ganhar disputas finais.', recommendedIds: var2 },
+      { name: 'Variação Resistência (Meta Stamina)', tier: 'A', description: 'Maior resiliência e recuperação de estamina, vital para corridas longas.', recommendedIds: var3 },
+      { name: 'Deck Econômico (Budget / F2P)', tier: 'B', description: 'Composto principalmente por cartas SR. Excelente para quem não possui cartas SSR limitadas.', recommendedIds: ECO_BASE },
     ],
     cards: ALL_POOL
   }));

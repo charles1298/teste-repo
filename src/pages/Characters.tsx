@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { PLAYABLE_CHARACTERS, getCardById } from '../data/characters';
 import type { PlayableCharacter, RecommendedCard } from '../data/characters';
-import { Search, ChevronDown, ChevronUp, Trophy, MapPin, Zap } from 'lucide-react';
+import { Search, ChevronDown, ChevronUp, Trophy, MapPin } from 'lucide-react';
 import clsx from 'clsx';
 import { motion, AnimatePresence } from 'framer-motion';
 
@@ -44,6 +44,16 @@ const typeIcons: Record<string, string> = {
   'Intelligence': '/assets/icons/icon-type-4.png',
   'Friend': '/assets/icons/icon-type-5.png',
 };
+
+const getTierStyle = (tier?: string) => {
+  switch(tier) {
+    case 'S': return 'bg-gradient-to-b from-amber-300 to-amber-500 text-amber-950 border-amber-600 shadow-md ring-1 ring-amber-300 drop-shadow-sm';
+    case 'A': return 'bg-gradient-to-b from-rose-300 to-rose-400 text-rose-950 border-rose-500 shadow-sm';
+    case 'B': return 'bg-gradient-to-b from-blue-300 to-blue-400 text-blue-950 border-blue-500 shadow-sm';
+    default: return 'bg-slate-200 text-slate-700 border-slate-300';
+  }
+};
+
 
 const RecommendedCardItem = ({ item, isOwned = false }: { item: RecommendedCard, isOwned?: boolean }) => {
   const card = getCardById(item.id);
@@ -216,19 +226,35 @@ const CharacterCard = ({ character, index, ownedDeck }: { character: PlayableCha
 
               <div className="space-y-6">
                 {/* Decks - Multiple Variations */}
-                <div className="space-y-4">
+                <div className="space-y-5">
                   {currentDeck.decks.map((deckVar, dIdx) => (
-                    <div key={dIdx} className="bg-gradient-to-br from-pink-50/50 to-purple-50/50 rounded-2xl p-4 border border-pink-100/50 shadow-inner">
-                      <div className="flex items-center justify-between mb-4">
-                        <p className="text-xs font-black text-slate-500 uppercase flex items-center gap-2">
-                          <Zap size={16} className={dIdx === 0 ? "text-amber-400 fill-amber-400" : "text-purple-400 fill-purple-400"} /> 
-                          {deckVar.name}
-                        </p>
-                        <span className="text-[10px] font-bold text-uma-pink bg-white px-2 py-0.5 rounded-full border border-pink-100 shadow-sm hidden sm:block">
-                          {deckVar.recommendedIds.length} Cartas
-                        </span>
+                    <div key={dIdx} className={clsx(
+                      "rounded-xl p-4 sm:p-5 border transition-all relative overflow-hidden",
+                      deckVar.tier === 'S' ? "bg-amber-50 border-amber-200 shadow-md" :
+                      deckVar.tier === 'A' ? "bg-rose-50/50 border-rose-200 shadow-sm" :
+                      "bg-white border-slate-200 shadow-sm"
+                    )}>
+                      {deckVar.tier === 'S' && <div className="absolute top-0 right-0 w-32 h-32 bg-gradient-to-bl from-amber-200 to-transparent opacity-30 pointer-events-none rounded-bl-full" />}
+                      <div className="flex flex-col mb-4 border-b border-slate-200 pb-3 relative z-10">
+                        <div className="flex items-center gap-3">
+                          {deckVar.tier && (
+                            <div className={clsx("px-2.5 py-1 rounded text-[11px] font-black border uppercase tracking-wider min-w-[3.5rem] text-center", getTierStyle(deckVar.tier))}>
+                              Tier {deckVar.tier}
+                            </div>
+                          )}
+                          <h4 className="text-sm sm:text-base font-black text-slate-800 flex items-center gap-1.5">
+                            {deckVar.tier === 'S' && <Trophy size={16} className="text-amber-500 fill-amber-500" />}
+                            {deckVar.name}
+                          </h4>
+                          <span className="ml-auto text-[10px] font-bold text-slate-500 bg-white/80 px-2 py-0.5 rounded-full border border-slate-200 shadow-sm">
+                            {deckVar.recommendedIds.length} Cartas
+                          </span>
+                        </div>
+                        {deckVar.description && (
+                          <p className="text-xs sm:text-sm font-medium text-slate-600 mt-2 leading-relaxed bg-white/60 p-2.5 rounded-lg border border-slate-100 italic">{deckVar.description}</p>
+                        )}
                       </div>
-                      <div className="grid grid-cols-3 sm:grid-cols-6 gap-3">
+                      <div className="grid grid-cols-4 sm:grid-cols-6 gap-2 sm:gap-3 relative z-10">
                         {deckVar.recommendedIds.map(id => {
                           const card = getCardById(id);
                           if (!card) return null;
