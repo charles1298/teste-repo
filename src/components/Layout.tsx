@@ -24,7 +24,7 @@ const Layout = () => {
                 onClick={() => window.location.href = '/'}
               >
                 <div className="w-12 h-12 rounded-full overflow-hidden flex items-center justify-center rotate-3 group-hover:rotate-6 transition-transform shadow-md border-2 border-pink-200 bg-white">
-                  <img src="/assets/oguri-cute.png" alt="Logo" className="w-full h-full object-cover" />
+                  <img src="/assets/oguri-chibi-logo.png" alt="Logo" className="w-full h-full object-contain p-0.5" />
                 </div>
                 <div className="ml-3 flex flex-col">
                   <span className="text-2xl font-black text-gray-800 leading-none">

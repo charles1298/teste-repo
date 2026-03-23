@@ -1,4 +1,4 @@
-import { ArrowRight, Star, Heart } from 'lucide-react';
+import { ArrowRight, Trophy, Heart } from 'lucide-react';
 import { NavLink } from 'react-router-dom';
 
 const Dashboard = () => {
@@ -27,8 +27,12 @@ const Dashboard = () => {
               Ver Cartas de Suporte
             </NavLink>
           </div>
-          <div className="hidden md:flex w-64 h-64 bg-white/10 rounded-full border-4 border-white/20 items-center justify-center p-8 backdrop-blur-sm shadow-inner rotate-3">
-             <Star className="w-full h-full text-yellow-300 drop-shadow-lg" fill="currentColor" />
+          <div className="hidden md:flex w-64 h-64 bg-white/10 rounded-full border-4 border-white/20 items-center justify-center p-4 backdrop-blur-sm shadow-inner rotate-3 hover:rotate-0 transition-transform duration-500 overflow-hidden group/logo">
+             <img 
+               src="/assets/oguri-chibi-logo.png" 
+               alt="Oguri Cap Logo" 
+               className="w-full h-full object-contain drop-shadow-[0_0_15px_rgba(255,255,255,0.8)] group-hover/logo:scale-110 transition-transform duration-500"
+             />
           </div>
         </div>
         </div>
@@ -50,7 +54,7 @@ const Dashboard = () => {
 
         <div className="bg-white rounded-3xl p-6 shadow-md border-2 border-blue-100 hover:border-blue-400 hover:shadow-xl transition-all duration-300 group">
           <div className="w-12 h-12 bg-blue-100 text-blue-500 rounded-xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
-            <Star size={24} fill="currentColor" />
+            <Trophy size={24} fill="currentColor" />
           </div>
           <h2 className="text-2xl font-bold text-gray-800 mb-2">Monte seu Deck</h2>
           <p className="text-gray-500 mb-4 font-medium leading-relaxed">
