@@ -1,5 +1,6 @@
 import { SUPPORT_CARDS } from './cards';
 import { GAME8_ICONS } from './game8_icons';
+import { META_DECKS } from './metaDecks';
 
 export interface RecommendedCard {
   id: string;
@@ -56,70 +57,7 @@ export function getCardById(id: string) {
   return SUPPORT_CARDS.find(c => c.id === id);
 }
 
-// Unified Cards Pool
-const ALL_POOL: RecommendedCard[] = [
-  { id: 'uma-30078', type: 'Speed', reason: 'Curta' },
-  { id: 'uma-30028', type: 'Speed', reason: 'Universal' },
-  { id: 'uma-30020', type: 'Speed', reason: 'Aceleração' },
-  { id: 'uma-30016', type: 'Stamina', reason: 'Recup.' },
-  { id: 'uma-30007', type: 'Power', reason: 'Poder' },
-  { id: 'uma-30010', type: 'Intelligence', reason: 'Visão' },
-  { id: 'uma-20018', type: 'Speed', reason: 'SR Alta' },
-  { id: 'uma-20004', type: 'Speed', reason: 'Efic. SR' },
-  { id: 'uma-20039', type: 'Speed', reason: 'Rápido' },
-  { id: 'uma-20019', type: 'Stamina', reason: 'SR Stamina' },
-  { id: 'uma-20002', type: 'Power', reason: 'SR Força' },
-  { id: 'uma-20011', type: 'Intelligence', reason: 'Int. SR' },
-  { id: 'uma-30076', type: 'Speed', reason: 'Fuga' },
-  { id: 'uma-30045', type: 'Speed', reason: 'Acel.' },
-  { id: 'uma-30022', type: 'Stamina', reason: 'Resis.' },
-  { id: 'uma-30086', type: 'Speed', reason: 'Top Road' },
-  { id: 'uma-30017', type: 'Speed', reason: 'Precedente' },
-  { id: 'uma-30029', type: 'Power', reason: 'Intermediário' },
-  { id: 'uma-30024', type: 'Intelligence', reason: 'Posição' },
-  { id: 'uma-30062', type: 'Stamina', reason: 'Longa' },
-  { id: 'uma-30034', type: 'Stamina', reason: 'Perseguidor' },
-  { id: 'uma-30083', type: 'Guts', reason: 'Raça' },
-];
-
-const DISTANCE_BASE: Record<string, string[]> = {
-  'Curta': ['uma-30078', 'uma-30028', 'uma-30020'],
-  'Milha': ['uma-30028', 'uma-30086', 'uma-30020'],
-  'Média': ['uma-30028', 'uma-30086', 'uma-30016'],
-  'Longa': ['uma-30028', 'uma-30086', 'uma-30062'],
-};
-
-const STYLE_BASE: Record<string, string[]> = {
-  'Runner': ['uma-30007', 'uma-30010', 'uma-30076'],
-  'Leader': ['uma-30017', 'uma-30007', 'uma-30010'],
-  'Betweener': ['uma-30029', 'uma-30024', 'uma-30010'],
-  'Chaser': ['uma-30034', 'uma-30024', 'uma-30010'],
-};
-
-const ECO_BASE = ['uma-20018', 'uma-20004', 'uma-20039', 'uma-20019', 'uma-20002', 'uma-20011'];
-
-function getDecksForCharacter(distance: string, style: string): ScenarioDeck[] {
-  const distCards = DISTANCE_BASE[distance] || DISTANCE_BASE['Média'];
-  const styleCards = STYLE_BASE[style] || STYLE_BASE['Betweener'];
-  
-  const baseRec = [...distCards, ...styleCards];
-  
-  const var1 = [...baseRec]; var1[0] = 'uma-30045'; 
-  const var2 = [...baseRec]; var2[1] = 'uma-30083';
-  const var3 = [...baseRec]; var3[2] = 'uma-30022';
-
-  return ['URA Finale', 'Unity Cup', 'Trackblazer'].map(scenario => ({
-    scenario,
-    decks: [
-      { name: 'Deck Meta (Competitivo)', tier: 'S', description: 'Build ideal focada nos atributos principais, otimizada para o meta atual do cenário.', recommendedIds: baseRec },
-      { name: 'Variação Velocidade (Meta Speed)', tier: 'A', description: 'Foco máximo em Speed para liderar corridas curtas e médias.', recommendedIds: var1 },
-      { name: 'Variação Raça (Meta Guts)', tier: 'A', description: 'Aproveita os multiplicadores de Guts (Determinação) para ganhar disputas finais.', recommendedIds: var2 },
-      { name: 'Variação Resistência (Meta Stamina)', tier: 'A', description: 'Maior resiliência e recuperação de estamina, vital para corridas longas.', recommendedIds: var3 },
-      { name: 'Deck Econômico (Budget / F2P)', tier: 'B', description: 'Composto principalmente por cartas SR. Excelente para quem não possui cartas SSR limitadas.', recommendedIds: ECO_BASE },
-    ],
-    cards: ALL_POOL
-  }));
-}
+// Funções Genéricas Anteriores foram substituídas pela lógica estrita unificada do metaDecks.ts
 
 type CharDef = [string, string, string, string, string];
 // [id, name, nameJp, distance, style]
@@ -210,6 +148,6 @@ export const PLAYABLE_CHARACTERS: PlayableCharacter[] = RAW.map(([id,name,nameJp
   return {
     id: `chara-${id}`, name, nameJp, distance, style,
     versions: allVersions,
-    scenarioDecks: getDecksForCharacter(distance, style),
+    scenarioDecks: META_DECKS[`chara-${id}`] || [],
   };
 });
