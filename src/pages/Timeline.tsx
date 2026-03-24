@@ -58,9 +58,11 @@ const Timeline: React.FC = () => {
         <div className="absolute left-1 transform -translate-x-1/2 w-1 h-full bg-pink-50 rounded-full md:hidden" />
 
         <div className="space-y-4 md:space-y-0 relative">
-          {BANNERS.map((banner, index) => (
-            <BannerCard key={banner.id} banner={banner} index={index} />
-          ))}
+          {BANNERS
+            .filter(banner => new Date(banner.startDate) <= new Date())
+            .map((banner, index) => (
+              <BannerCard key={banner.id} banner={banner} index={index} />
+            ))}
         </div>
 
         {/* Ending Marker */}
