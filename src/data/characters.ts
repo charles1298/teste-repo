@@ -22,11 +22,19 @@ export interface ScenarioDeck {
   cards: RecommendedCard[];
 }
 
+function normalizeName(name: string): string {
+  return name.toLowerCase().replace(/[^a-z0-9]/g, '').replace('machikane', 'matikane');
+}
+
 export function getCharacterIconByName(name: string): string {
-  // Fuzzy match base name
+  const norm = normalizeName(name);
+  
+  // Try exact match first
   let iconInfo = GAME8_ICONS[name];
+  
+  // Try normalized match
   if (!iconInfo) {
-    const key = Object.keys(GAME8_ICONS).find(k => k.includes(name));
+    const key = Object.keys(GAME8_ICONS).find(k => normalizeName(k).includes(norm));
     if (key) iconInfo = GAME8_ICONS[key];
   }
 
@@ -56,8 +64,6 @@ export interface PlayableCharacter {
 export function getCardById(id: string) {
   return SUPPORT_CARDS.find(c => c.id === id);
 }
-
-// Funções Genéricas Anteriores foram substituídas pela lógica estrita unificada do metaDecks.ts
 
 type CharDef = [string, string, string, string, string];
 // [id, name, nameJp, distance, style]
@@ -102,7 +108,6 @@ const RAW: CharDef[] = [
   ['tm-opera-o','T.M. Opera O','テイエムオペラオー','Longa','Leader'],
   ['manhattan-cafe','Manhattan Cafe','マンハッタンカフェ','Longa','Chaser'],
   ['rice-shower','Rice Shower','ライスシャワー','Longa','Betweener'],
-  ['rice-shower','Rice Shower','ライスシャワー','Longa','Betweener'],
   ['seiun-sky','Seiun Sky','セイウンスカイ','Longa','Runner'],
   ['mayano-top-gun','Mayano Top Gun','マヤノトップガン','Longa','Runner'],
   ['biwa-hayahide','Biwa Hayahide','ビワハヤヒデ','Longa','Leader'],
@@ -110,7 +115,8 @@ const RAW: CharDef[] = [
 ];
 
 export const PLAYABLE_CHARACTERS: PlayableCharacter[] = RAW.map(([id,name,nameJp,distance,style]) => {
-  const matchingKeys = Object.keys(GAME8_ICONS).filter(k => k.startsWith(name));
+  const norm = normalizeName(name);
+  const matchingKeys = Object.keys(GAME8_ICONS).filter(k => normalizeName(k).startsWith(norm));
   
   let allVersions: CharacterVersion[] = [];
   
@@ -124,11 +130,14 @@ export const PLAYABLE_CHARACTERS: PlayableCharacter[] = RAW.map(([id,name,nameJp
           versionName = match[1];
         }
         
+        // Use high-res version of the icon for the main card image
+        const highResImageUrl = icons[0].iconUrl.replace('/show', '/original');
+        
         allVersions.push({
           id: `v${idx}`,
           name: versionName,
           iconUrl: icons[0].iconUrl,
-          imageUrl: `/assets/characters/${id}.png?v=${idx}`
+          imageUrl: highResImageUrl
         });
       }
     });
@@ -140,7 +149,7 @@ export const PLAYABLE_CHARACTERS: PlayableCharacter[] = RAW.map(([id,name,nameJp
         id: 'base',
         name: 'Padrão',
         iconUrl: `https://ui-avatars.com/api/?name=${encodeURIComponent(name)}&background=fce7f3&color=db2777&bold=true`,
-        imageUrl: `/assets/characters/${id}.png?v=1`
+        imageUrl: `/assets/characters/${id}.png`
       }
     ];
   }
@@ -151,3 +160,4 @@ export const PLAYABLE_CHARACTERS: PlayableCharacter[] = RAW.map(([id,name,nameJp
     scenarioDecks: META_DECKS[`chara-${id}`] || [],
   };
 });
+
