@@ -23,7 +23,10 @@ export interface ScenarioDeck {
 }
 
 function normalizeName(name: string): string {
-  return name.toLowerCase().replace(/[^a-z0-9]/g, '').replace('machikane', 'matikane');
+  return name.toLowerCase()
+    .replace(/\./g, '') // Remove dots (e.g., T.M. Opera O -> tmoperao)
+    .replace(/[^a-z0-9]/g, '')
+    .replace('machikane', 'matikane');
 }
 
 export function getCharacterIconByName(name: string): string {
@@ -34,8 +37,13 @@ export function getCharacterIconByName(name: string): string {
   
   // Try normalized match
   if (!iconInfo) {
-    const key = Object.keys(GAME8_ICONS).find(k => normalizeName(k).includes(norm));
+    const key = Object.keys(GAME8_ICONS).find(k => normalizeName(k) === norm || normalizeName(k).startsWith(norm));
     if (key) iconInfo = GAME8_ICONS[key];
+  }
+
+  // Manual fallback for specific known missing ones
+  if (!iconInfo && MANUAL_ICONS[name]) {
+    return MANUAL_ICONS[name];
   }
 
   if (iconInfo && iconInfo.length > 0) {
@@ -64,6 +72,13 @@ export interface PlayableCharacter {
 export function getCardById(id: string) {
   return SUPPORT_CARDS.find(c => c.id === id);
 }
+
+// Special manual mapping for missing characters found on Game8
+const MANUAL_ICONS: Record<string, string> = {
+  'Nishino Flower': 'https://img.game8.jp/6725788/81ad8ad6c44c54bb02f6ca96a5f5e913.png/show',
+  'Biko Pegasus': 'https://img.game8.jp/9547859/d2c0f7e90f3f4601a293545c082466a8.png/show',
+  'Yukino Bijin': 'https://img.game8.jp/7215139/eb2c21cbde8117c1ec529df5e37c6565.png/show'
+};
 
 type CharDef = [string, string, string, string, string];
 // [id, name, nameJp, distance, style]
@@ -98,7 +113,7 @@ const RAW: CharDef[] = [
   ['mihono-bourbon','Mihono Bourbon','ミホノブルボン','Média','Runner'],
   ['mejiro-ryan','Mejiro Ryan','メジロライアン','Média','Betweener'],
   ['narita-taishin','Narita Taishin','ナリタタイシン','Média','Chaser'],
-  ['mejiro-dober','Mejiro Dober','メジロドーベル','Média','Betweener'],
+  ['mejiro-dober','Mejiro Dober','メジroドーベル','Média','Betweener'],
   ['meisho-doto','Meisho Doto','メイショウドトウ','Média','Betweener'],
   ['air-shakur','Air Shakur','エアシャカール','Média','Betweener'],
   ['marvelous-sunday','Marvelous Sunday','マーベラスサンデー','Média','Leader'],
@@ -116,7 +131,10 @@ const RAW: CharDef[] = [
 
 export const PLAYABLE_CHARACTERS: PlayableCharacter[] = RAW.map(([id,name,nameJp,distance,style]) => {
   const norm = normalizeName(name);
-  const matchingKeys = Object.keys(GAME8_ICONS).filter(k => normalizeName(k).startsWith(norm));
+  const matchingKeys = Object.keys(GAME8_ICONS).filter(k => {
+    const kNorm = normalizeName(k);
+    return kNorm === norm || kNorm.startsWith(norm);
+  });
   
   let allVersions: CharacterVersion[] = [];
   
@@ -130,8 +148,11 @@ export const PLAYABLE_CHARACTERS: PlayableCharacter[] = RAW.map(([id,name,nameJp
           versionName = match[1];
         }
         
-        // Use high-res version of the icon for the main card image
-        const highResImageUrl = icons[0].iconUrl.replace('/show', '/original');
+        // Use high-res version of the icon for the main card image if it contains /show
+        const iconUrl = icons[0].iconUrl;
+        const highResImageUrl = iconUrl.includes('/show') 
+          ? iconUrl.replace('/show', '/original') 
+          : iconUrl;
         
         allVersions.push({
           id: `v${idx}`,
@@ -143,13 +164,25 @@ export const PLAYABLE_CHARACTERS: PlayableCharacter[] = RAW.map(([id,name,nameJp
     });
   }
 
+  // Add manual mapping for versions if missing from repository
+  if (allVersions.length === 0 && MANUAL_ICONS[name]) {
+    const iconUrl = MANUAL_ICONS[name];
+    allVersions.push({
+      id: 'base-manual',
+      name: 'Padrão',
+      iconUrl: iconUrl,
+      imageUrl: iconUrl.includes('/show') ? iconUrl.replace('/show', '/original') : iconUrl
+    });
+  }
+
+  // Ultimate fallback
   if (allVersions.length === 0) {
     allVersions = [
       {
         id: 'base',
         name: 'Padrão',
         iconUrl: `https://ui-avatars.com/api/?name=${encodeURIComponent(name)}&background=fce7f3&color=db2777&bold=true`,
-        imageUrl: `/assets/characters/${id}.png`
+        imageUrl: `https://upload.wikimedia.org/wikipedia/en/thumb/8/87/Uma_Musume_Pretty_Derby_logo.png/400px-Uma_Musume_Pretty_Derby_logo.png`
       }
     ];
   }
@@ -160,4 +193,3 @@ export const PLAYABLE_CHARACTERS: PlayableCharacter[] = RAW.map(([id,name,nameJp
     scenarioDecks: META_DECKS[`chara-${id}`] || [],
   };
 });
-
