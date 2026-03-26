@@ -1,0 +1,7 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <string name="app_name">Umamusume Pretty Derby</string>
+    <string name="title_activity_main">Umamusume Pretty Derby</string>
+    <string name="package_name">com.umamusume.proto</string>
+    <string name="custom_url_scheme">com.umamusume.proto</string>
+</resources>
