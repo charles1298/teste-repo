@@ -56,11 +56,27 @@ const Dashboard = () => {
       <div className="relative mt-8">
         <div className="absolute -top-16 right-4 md:right-12 z-20 group">
           <FloatingCarrots count={8} className="inset-0 -translate-y-4" />
+          {/* Side Carrots */}
+          <motion.span 
+            animate={{ rotate: [0, 10, -10, 0] }}
+            transition={{ duration: 2, repeat: Infinity, ease: "easeInOut" }}
+            className="absolute -left-6 top-8 text-3xl select-none"
+          >
+            🥕
+          </motion.span>
+          <motion.span 
+            animate={{ rotate: [0, -10, 10, 0] }}
+            transition={{ duration: 2, repeat: Infinity, ease: "easeInOut", delay: 0.5 }}
+            className="absolute -right-6 top-12 text-2xl select-none"
+          >
+            🥕
+          </motion.span>
+
           <motion.img 
             src="/assets/oguri-peeking.png" 
             alt="Oguri Cap" 
             whileHover={{ scale: 1.1, rotate: 5 }}
-            className="w-32 md:w-40 h-auto object-contain drop-shadow-[0_10px_10px_rgba(236,72,153,0.3)] cursor-help rounded-full bg-white p-1 border-2 border-pink-200 transition-all duration-300"
+            className="w-32 md:w-40 h-auto object-contain drop-shadow-[0_10px_10px_rgba(236,72,153,0.3)] cursor-help rounded-full bg-white p-1 border-2 border-pink-200 transition-all duration-300 relative z-10"
           />
         </div>
         
@@ -83,6 +99,22 @@ const Dashboard = () => {
           </div>
           <div className="hidden md:flex relative w-64 h-64 bg-white/10 rounded-full border-4 border-white/20 items-center justify-center p-4 backdrop-blur-sm shadow-inner rotate-3 hover:rotate-0 transition-transform duration-500 overflow-visible group/logo">
              <FloatingCarrots count={6} className="inset-0" />
+             {/* Side Carrots for Chibi */}
+             <motion.span 
+               animate={{ y: [0, -5, 0], rotate: [-10, 10, -10] }}
+               transition={{ duration: 1.5, repeat: Infinity, ease: "easeInOut" }}
+               className="absolute -left-4 bottom-10 text-3xl select-none z-20"
+             >
+               🥕
+             </motion.span>
+             <motion.span 
+               animate={{ y: [0, -8, 0], rotate: [10, -10, 10] }}
+               transition={{ duration: 1.8, repeat: Infinity, ease: "easeInOut", delay: 0.3 }}
+               className="absolute -right-4 top-10 text-3xl select-none z-20"
+             >
+               🥕
+             </motion.span>
+             
              <img 
                src="/assets/oguri-chibi-logo.png" 
                alt="Oguri Cap Logo" 
