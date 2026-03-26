@@ -20,24 +20,24 @@ const FloatingCarrots = ({ count = 5, className = "" }: { count?: number, classN
             opacity: [0, 1, 1, 0],
             scale: [0, 1.2, 1, 0],
             x: [
-              Math.random() * 60 - 30, 
-              Math.random() * 100 - 50, 
-              Math.random() * 140 - 70
+              Math.random() * 30 - 15, 
+              Math.random() * 50 - 25, 
+              Math.random() * 70 - 35
             ],
             y: [
-              Math.random() * 60 - 30, 
-              Math.random() * -100 - 50, 
-              Math.random() * -150 - 100
+              Math.random() * 30 - 15, 
+              Math.random() * -40 - 20, 
+              Math.random() * -60 - 30
             ],
             rotate: [0, 180, 360]
           }}
           transition={{
-            duration: 3 + Math.random() * 4,
+            duration: 4 + Math.random() * 3,
             repeat: Infinity,
-            delay: Math.random() * 5,
+            delay: Math.random() * 2,
             ease: "easeInOut"
           }}
-          className="absolute text-2xl filter drop-shadow-sm select-none"
+          className="absolute text-xl filter drop-shadow-sm select-none"
           style={{ 
             left: "50%", 
             top: "50%",
@@ -55,19 +55,19 @@ const Dashboard = () => {
     <div className="space-y-8 animate-in fade-in duration-500 pb-10">
       <div className="relative mt-8">
         <div className="absolute -top-16 right-4 md:right-12 z-20 group">
-          <FloatingCarrots count={8} className="inset-0 -translate-y-4" />
-          {/* Side Carrots */}
+          <FloatingCarrots count={6} className="inset-0" />
+          {/* Side Carrots - More Centralized */}
           <motion.span 
-            animate={{ rotate: [0, 10, -10, 0] }}
+            animate={{ rotate: [0, 10, -10, 0], scale: [1, 1.1, 1] }}
             transition={{ duration: 2, repeat: Infinity, ease: "easeInOut" }}
-            className="absolute -left-6 top-8 text-3xl select-none"
+            className="absolute -left-2 top-10 text-2xl select-none z-20"
           >
             🥕
           </motion.span>
           <motion.span 
-            animate={{ rotate: [0, -10, 10, 0] }}
+            animate={{ rotate: [0, -10, 10, 0], scale: [1, 1.1, 1] }}
             transition={{ duration: 2, repeat: Infinity, ease: "easeInOut", delay: 0.5 }}
-            className="absolute -right-6 top-12 text-2xl select-none"
+            className="absolute -right-2 top-14 text-xl select-none z-20"
           >
             🥕
           </motion.span>
@@ -99,18 +99,18 @@ const Dashboard = () => {
           </div>
           <div className="hidden md:flex relative w-64 h-64 bg-white/10 rounded-full border-4 border-white/20 items-center justify-center p-4 backdrop-blur-sm shadow-inner rotate-3 hover:rotate-0 transition-transform duration-500 overflow-visible group/logo">
              <FloatingCarrots count={6} className="inset-0" />
-             {/* Side Carrots for Chibi */}
+             {/* Side Carrots for Chibi - More Centralized */}
              <motion.span 
                animate={{ y: [0, -5, 0], rotate: [-10, 10, -10] }}
                transition={{ duration: 1.5, repeat: Infinity, ease: "easeInOut" }}
-               className="absolute -left-4 bottom-10 text-3xl select-none z-20"
+               className="absolute left-2 bottom-12 text-2xl select-none z-20"
              >
                🥕
              </motion.span>
              <motion.span 
                animate={{ y: [0, -8, 0], rotate: [10, -10, 10] }}
                transition={{ duration: 1.8, repeat: Infinity, ease: "easeInOut", delay: 0.3 }}
-               className="absolute -right-4 top-10 text-3xl select-none z-20"
+               className="absolute right-2 top-12 text-2xl select-none z-20"
              >
                🥕
              </motion.span>
