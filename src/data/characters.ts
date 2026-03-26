@@ -59,6 +59,11 @@ export interface CharacterVersion {
   imageUrl: string;
 }
 
+export interface RunningStyleDetails {
+  statsPriority: string[];
+  reasoning: string;
+}
+
 export interface PlayableCharacter {
   id: string;
   name: string;
@@ -67,6 +72,7 @@ export interface PlayableCharacter {
   style: string;
   versions: CharacterVersion[];
   scenarioDecks: ScenarioDeck[];
+  runningStyleDetails?: RunningStyleDetails;
 }
 
 export function getCardById(id: string) {
@@ -128,6 +134,69 @@ const RAW: CharDef[] = [
   ['biwa-hayahide','Biwa Hayahide','ビワハヤヒデ','Longa','Leader'],
   ['super-creek','Super Creek','スーパークリーク','Longa','Betweener'],
 ];
+
+const STYLE_DATA: Record<string, RunningStyleDetails> = {
+  'Sakura Bakushin O': {
+    statsPriority: ['Speed', 'Intelligence', 'Power'],
+    reasoning: 'Sendo uma velocista nata, Bakushin O deve focar totalmente em Speed e Intelligence para dominar como Front Runner desde o início.'
+  },
+  'Tokai Teio': {
+    statsPriority: ['Speed', 'Power', 'Stamina'],
+    reasoning: 'Com sua agilidade lateral, Teio brilha como Leader, precisando de Power para se posicionar e Speed para a reta final.'
+  },
+  'Silence Suzuka': {
+    statsPriority: ['Speed', 'Intelligence', 'Stamina'],
+    reasoning: 'A "Silêncio do Paddock" exige Speed máxima e Intelligence para manter o fôlego na liderança isolada.'
+  },
+  'Gold Ship': {
+    statsPriority: ['Stamina', 'Power', 'Guts'],
+    reasoning: 'Como Chaser, Gold Ship precisa de Stamina e Power massivos para realizar sua famosa ultrapassagem na última curva.'
+  },
+  'Mejiro McQueen': {
+    statsPriority: ['Stamina', 'Speed', 'Intelligence'],
+    reasoning: 'Uma especialista em longa distância que combina Stamina de ferro com a elegância de uma Runner/Leader.'
+  },
+  'Rice Shower': {
+    statsPriority: ['Stamina', 'Power', 'Guts'],
+    reasoning: 'Focada em resistência extrema e força para superar as subidas e dominar em distâncias longas.'
+  },
+  'Oguri Cap': {
+    statsPriority: ['Speed', 'Power', 'Intelligence'],
+    reasoning: 'Extremamente versátil, Oguri usa seu Power para se infiltrar entre os corredores e Speed para finalizar como Betweener.'
+  },
+  'Special Week': {
+    statsPriority: ['Speed', 'Stamina', 'Power'],
+    reasoning: 'Uma all-rounder clássica que equilibra Speed e Stamina para brilhar em distâncias médias como Betweener.'
+  },
+  'Daiwa Scarlet': {
+    statsPriority: ['Speed', 'Intelligence', 'Stamina'],
+    reasoning: 'Brilha como Leader/Runner; use Intelligence para garantir que suas habilidades de controle de ritmo ativem no momento certo.'
+  },
+  'Vodka': {
+    statsPriority: ['Speed', 'Power', 'Stamina'],
+    reasoning: 'Focada em Power bruto para furar bloqueios em milhas e Speed para fechar a corrida com força.'
+  },
+  'Maruzensky': {
+    statsPriority: ['Speed', 'Intelligence', 'Power'],
+    reasoning: 'A "Rainha das Milhas" precisa de Speed máxima; sua versatilidade permite dominar como Runner em quase qualquer pista curta/milha.'
+  },
+  'King Halo': {
+    statsPriority: ['Speed', 'Power', 'Intelligence'],
+    reasoning: 'Uma Leader técnica que necessita de Power para se manter competitiva nas retas de curta distância.'
+  },
+  'Haru Urara': {
+    statsPriority: ['Speed', 'Power', 'Guts'],
+    reasoning: 'A pequena guerreira compensa a falta de Stamina com Guts e muito Power para sprints em terra firme (Dirt).'
+  },
+  'Taiki Shuttle': {
+    statsPriority: ['Speed', 'Power', 'Intelligence'],
+    reasoning: 'Dominante em Milhas; seu foco em Power permite uma aceleração explosiva na saída das curvas.'
+  },
+  'Grass Wonder': {
+    statsPriority: ['Speed', 'Power', 'Stamina'],
+    reasoning: 'Como Betweener, Grass Wonder usa seu Power para se posicionar estrategicamente antes da reta final.'
+  }
+};
 
 export const PLAYABLE_CHARACTERS: PlayableCharacter[] = RAW.map(([id,name,nameJp,distance,style]) => {
   const norm = normalizeName(name);
@@ -191,5 +260,6 @@ export const PLAYABLE_CHARACTERS: PlayableCharacter[] = RAW.map(([id,name,nameJp
     id: `chara-${id}`, name, nameJp, distance, style,
     versions: allVersions,
     scenarioDecks: META_DECKS[`chara-${id}`] || [],
+    runningStyleDetails: STYLE_DATA[name]
   };
 });

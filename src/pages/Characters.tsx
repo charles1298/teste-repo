@@ -8,7 +8,10 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { useDeck } from '../hooks/useDeck';
 
 const scenarioColors: Record<string, string> = {
-  'URA Finale': 'bg-blue-500',
+  'U.A.F. Ready GO!': 'bg-rose-500',
+  'Grand Masters': 'bg-amber-500',
+  'Project L\'Arc': 'bg-blue-600',
+  'URA Finale': 'bg-slate-500',
   'Unity Cup': 'bg-green-500',
   'Trackblazer': 'bg-purple-500',
 };
@@ -47,7 +50,6 @@ const typeIcons: Record<string, string> = {
   'Unknown': '/assets/icons/icon-type-5.png',
   'Group': '/assets/icons/icon-type-5.png',
 };
-
 
 const getMockCardEffect = (card: any, reason: string) => {
   const effects = [];
@@ -123,21 +125,22 @@ const CardModal = ({ card, reason, onClose }: { card: any, reason: string, onClo
   );
 };
 
-
 const RecommendedCardItem = ({ item, isOwned = false, onClick }: { item: RecommendedCard, isOwned?: boolean, onClick?: () => void }) => {
   const card = getCardById(item.id);
   if (!card) return null;
 
   return (
-    <div 
+    <motion.div 
+      whileHover={{ y: -5, scale: 1.02 }}
+      whileTap={{ scale: 0.98 }}
       className={clsx(
-        "flex flex-col items-center group relative p-1 rounded-lg transition-all bg-white hover:shadow-md border border-slate-100",
-        onClick && "cursor-pointer hover:-translate-y-1 hover:border-pink-300 hover:shadow-pink-100",
+        "flex flex-col items-center group relative p-1 rounded-xl transition-all bg-white hover:shadow-xl border border-slate-100",
+        onClick && "cursor-pointer hover:border-pink-300 hover:shadow-pink-100",
         isOwned && "ring-2 ring-uma-pink ring-offset-1"
       )}
       onClick={onClick}
     >
-      <div className="w-full aspect-[5/7] rounded-md overflow-hidden bg-white border border-pink-100 relative group-hover:scale-[1.02] transition-transform">
+      <div className="w-full aspect-[5/7] rounded-lg overflow-hidden bg-white border border-pink-100 relative shadow-sm group-hover:shadow-md transition-all">
         <img
           src={card.imageUrl}
           alt={card.name}
@@ -149,18 +152,18 @@ const RecommendedCardItem = ({ item, isOwned = false, onClick }: { item: Recomme
           }}
         />
         {isOwned && (
-          <div className="absolute bottom-0 inset-x-0 bg-uma-pink/90 text-white text-[8px] font-black py-0.5 text-center uppercase tracking-tighter">
-            Você tem!
+          <div className="absolute bottom-0 inset-x-0 bg-gradient-to-t from-uma-pink to-pink-500 text-white text-[8px] font-black py-0.5 text-center uppercase tracking-tighter shadow-lg">
+            Possuída
           </div>
         )}
       </div>
-      <div className="mt-1 w-full flex flex-col items-center gap-0.5">
-        <span className="text-[10px] font-bold text-slate-700 truncate w-full text-center leading-tight">{card.name}</span>
-        <span className="text-[9px] font-medium text-uma-pink bg-pink-50 px-1 rounded-sm truncate w-full text-center">
+      <div className="mt-1.5 w-full flex flex-col items-center gap-0.5 px-0.5">
+        <span className="text-[10px] font-black text-slate-700 truncate w-full text-center leading-tight group-hover:text-uma-pink transition-colors">{card.name}</span>
+        <span className="text-[8px] font-bold text-uma-pink bg-pink-50 px-1.5 py-0.5 rounded-full truncate w-full text-center border border-pink-100/50">
           {item.reason}
         </span>
       </div>
-    </div>
+    </motion.div>
   );
 };
 
@@ -174,23 +177,24 @@ const CharacterCard = ({ character, index, ownedDeck, onCardClick }: { character
   const activeVersion = character.versions.find(v => v.id === activeVersionId) || character.versions[0];
   const currentDeck = character.scenarioDecks[activeScenario];
   
-  // Group cards by type
   const categories: Record<string, RecommendedCard[]> = {
     'Speed': [], 'Stamina': [], 'Power': [], 'Guts': [], 'Intelligence': [], 'Friend': []
   };
   
-  currentDeck.cards.forEach(card => {
-    if (categories[card.type]) {
-      categories[card.type].push(card);
-    }
-  });
+  if (currentDeck) {
+    currentDeck.cards.forEach(card => {
+      if (categories[card.type]) {
+        categories[card.type].push(card);
+      }
+    });
+  }
 
   return (
     <motion.div
       layout
       initial={{ opacity: 0, y: 20 }}
       animate={{ opacity: 1, y: 0 }}
-      transition={{ delay: index * 0.03 }}
+      transition={{ delay: Math.min(index * 0.05, 0.5) }}
       className="bg-white rounded-2xl border border-pink-100 shadow-sm overflow-hidden hover:shadow-md transition-shadow"
     >
       <div
@@ -240,206 +244,249 @@ const CharacterCard = ({ character, index, ownedDeck, onCardClick }: { character
           >
             <div className="px-4 pb-4 space-y-4">
               
-              {/* Variações de Evento e Imagem Oficial */}
-              <div className="bg-gradient-to-br from-pink-50/30 to-purple-50/30 rounded-2xl border border-pink-100/50 p-4 flex flex-col md:flex-row gap-4 items-center">
-                <div className="flex-shrink-0 w-32 h-44 rounded-xl overflow-hidden shadow-sm bg-white border border-pink-200">
-                  <img
-                    src={activeVersion.imageUrl}
-                    alt={activeVersion.name}
-                    className="w-full h-full object-cover object-top"
-                    onError={(e) => {
-                      const target = e.target as HTMLImageElement;
-                      target.onerror = null;
-                      target.src = 'https://upload.wikimedia.org/wikipedia/en/thumb/8/87/Uma_Musume_Pretty_Derby_logo.png/400px-Uma_Musume_Pretty_Derby_logo.png';
-                    }}
-                  />
-                </div>
-                <div className="flex-grow flex flex-col items-center md:items-start w-full">
-                  <h4 className="text-sm font-black text-uma-pink uppercase tracking-wider mb-2">
-                    Versões Disponíveis
-                  </h4>
-                  <div className="flex flex-wrap gap-2 justify-center md:justify-start">
-                    {character.versions.map((ver) => (
-                      <button
-                        key={ver.id}
-                        onClick={() => setActiveVersionId(ver.id)}
-                        className={clsx(
-                          "px-3 py-1.5 rounded-full text-xs font-bold transition-all border",
-                          activeVersionId === ver.id
-                            ? "bg-uma-pink text-white border-uma-pink shadow-md scale-105"
-                            : "bg-white text-slate-500 border-slate-200 hover:text-uma-pink hover:border-uma-pink"
-                        )}
-                      >
-                        {ver.name}
-                      </button>
-                    ))}
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                <div className="bg-gradient-to-br from-pink-50/30 to-purple-50/30 rounded-2xl border border-pink-100/50 p-4 flex flex-col sm:flex-row gap-4 items-center">
+                  <div className="flex-shrink-0 w-24 h-32 rounded-xl overflow-hidden shadow-md bg-white border-2 border-white">
+                    <img
+                      src={activeVersion.imageUrl}
+                      alt={activeVersion.name}
+                      className="w-full h-full object-cover object-top"
+                      onError={(e) => {
+                        const target = e.target as HTMLImageElement;
+                        target.onerror = null;
+                        target.src = 'https://upload.wikimedia.org/wikipedia/en/thumb/8/87/Uma_Musume_Pretty_Derby_logo.png/400px-Uma_Musume_Pretty_Derby_logo.png';
+                      }}
+                    />
                   </div>
-                  <p className="text-[10px] text-slate-400 font-medium mt-3 text-center md:text-left">
-                    Selecione uma versão para visualizar seu traje e ícone correspondente.
-                  </p>
-                </div>
-              </div>
-
-              {/* Scenarios */}
-              <div className="flex flex-wrap gap-2 items-center bg-slate-50 p-2 rounded-2xl border border-slate-100 mt-2">
-                <span className="text-[10px] font-black uppercase text-slate-400 mr-1 pl-2">Cenário:</span>
-                {character.scenarioDecks.map((deck, i) => (
-                  <button
-                    key={deck.scenario}
-                    onClick={() => { setActiveScenario(i); setActiveDeckIdx(0); }}
-                    className={clsx(
-                      "px-3 py-1.5 rounded-xl text-xs font-bold transition-all",
-                      activeScenario === i
-                        ? `${scenarioColors[deck.scenario] || 'bg-uma-pink'} text-white shadow-sm`
-                        : "bg-white text-slate-500 hover:bg-slate-200 border border-slate-200"
-                    )}
-                  >
-                    <Trophy size={12} className="inline mr-1" />
-                    {deck.scenario}
-                  </button>
-                ))}
-              </div>
-
-              <div className="space-y-6">
-                {/* Decks System */}
-                <div className="flex flex-col gap-4">
-                  {/* Deck Tabs */}
-                  <div className="flex gap-2 overflow-x-auto pb-2 scrollbar-none snap-x mt-2">
-                    {currentDeck.decks.map((deckVar, dIdx) => (
-                      <button
-                        key={dIdx}
-                        onClick={() => setActiveDeckIdx(dIdx)}
-                        className={clsx(
-                          "flex-shrink-0 px-4 py-2 text-xs font-black rounded-xl border transition-all snap-start",
-                          activeDeckIdx === dIdx
-                            ? (deckVar.tier === 'S' ? 'bg-gradient-to-r from-amber-100 to-yellow-100 border-amber-400 text-amber-900 shadow-sm ring-1 ring-amber-300' : 'bg-pink-50 border-uma-pink text-uma-pink shadow-sm')
-                            : "bg-white border-slate-200 text-slate-500 hover:border-pink-300 hover:text-pink-600 hover:bg-pink-50/30"
-                        )}
-                      >
-                        {deckVar.tier && (
-                          <span className={clsx(
-                            "mr-1.5 px-1.5 py-0.5 rounded text-[9px] uppercase font-black tracking-wider",
-                            deckVar.tier === 'S' ? 'bg-amber-400 text-amber-950' :
-                            deckVar.tier === 'A' ? 'bg-rose-400 text-white' : 'bg-blue-400 text-white'
-                          )}>
-                            Tier {deckVar.tier}
-                          </span>
-                        )}
-                        {deckVar.name}
-                      </button>
-                    ))}
-                  </div>
-
-                  {/* Active Deck Content */}
-                  {(() => {
-                    const deckVar = currentDeck.decks[activeDeckIdx];
-                    return (
-                      <motion.div
-                        key={`${activeScenario}-${activeDeckIdx}`}
-                        initial={{ opacity: 0, y: 5 }}
-                        animate={{ opacity: 1, y: 0 }}
-                        className={clsx(
-                          "rounded-2xl p-4 sm:p-5 border relative overflow-hidden",
-                          deckVar.tier === 'S' ? "bg-gradient-to-br from-amber-50/50 to-orange-50/30 border-amber-300 shadow-md ring-1 ring-amber-100" :
-                          deckVar.tier === 'A' ? "bg-gradient-to-br from-rose-50/50 to-pink-50/30 border-rose-200 shadow-sm" :
-                          "bg-white border-slate-200 shadow-sm"
-                        )}
-                      >
-                        {deckVar.tier === 'S' && <div className="absolute top-0 right-0 w-32 h-32 bg-gradient-to-bl from-amber-300 to-transparent opacity-20 pointer-events-none rounded-bl-full" />}
-                        <div className="flex flex-col mb-4 border-b border-black/5 pb-4 relative z-10">
-                          <div className="flex items-center gap-3">
-                            <h4 className="text-sm sm:text-base font-black text-slate-800 flex items-center gap-1.5">
-                              {deckVar.tier === 'S' && <Trophy size={18} className="text-amber-500 fill-amber-500 drop-shadow-sm" />}
-                              {deckVar.name}
-                            </h4>
-                            <span className="ml-auto text-[10px] font-bold text-slate-500 bg-white/80 px-2 py-0.5 rounded-full border border-slate-200 shadow-sm">
-                              {deckVar.recommendedIds.length} Cartas
-                            </span>
-                          </div>
-                          {deckVar.description && (
-                            <p className="text-[13px] font-medium text-slate-600 mt-2.5 leading-relaxed bg-white/70 p-3 rounded-xl border border-white shadow-sm inline-block italic">
-                              {deckVar.description}
-                            </p>
+                  <div className="flex-grow flex flex-col items-center sm:items-start w-full">
+                    <h4 className="text-[10px] font-black text-uma-pink uppercase tracking-widest mb-2">
+                      Trajes e Versões
+                    </h4>
+                    <div className="flex flex-wrap gap-1.5 justify-center sm:justify-start">
+                      {character.versions.map((ver) => (
+                        <button
+                          key={ver.id}
+                          onClick={() => setActiveVersionId(ver.id)}
+                          className={clsx(
+                            "px-2.5 py-1 rounded-lg text-[10px] font-bold transition-all border",
+                            activeVersionId === ver.id
+                              ? "bg-uma-pink text-white border-uma-pink shadow-sm scale-105"
+                              : "bg-white text-slate-400 border-slate-100 hover:text-uma-pink hover:border-pink-200"
                           )}
-                        </div>
-                        <div className="grid grid-cols-3 sm:grid-cols-6 gap-3 sm:gap-4 relative z-10">
-                          {deckVar.recommendedIds.map(id => {
-                            const card = getCardById(id);
-                            if (!card) return null;
-                            const poolCard = currentDeck.cards.find(c => c.id === id);
-                            return (
-                              <div key={id} className="relative group flex justify-center w-full">
-                                <RecommendedCardItem 
-                                  item={{ id, reason: poolCard?.reason || card.type, type: poolCard?.type || (card.type as any) }} 
-                                  isOwned={ownedDeck.includes(id)} 
-                                  onClick={() => onCardClick(card, poolCard?.reason || card.type as string)}
-                                />
-                              </div>
-                            );
-                          })}
-                        </div>
-                      </motion.div>
-                    );
-                  })()}
+                        >
+                          {ver.name}
+                        </button>
+                      ))}
+                    </div>
+                  </div>
                 </div>
 
-                {/* Categorized Options Toggle */}
-                <div className="pt-2 border-t border-dashed border-slate-200 mt-6">
-                  <button
-                    onClick={() => setShowCategories(!showCategories)}
-                    className="w-full py-3 flex items-center justify-center gap-2 text-xs font-black text-slate-500 hover:text-uma-pink bg-slate-50 hover:bg-pink-50 rounded-xl transition-colors border border-slate-100 hover:border-pink-200"
-                  >
-                    <Search size={14} />
-                    {showCategories ? 'Ocultar Opções Extras por Categoria' : 'Ver Opções Extras por Categoria'}
-                    {showCategories ? <ChevronUp size={14} /> : <ChevronDown size={14} />}
-                  </button>
-                  
-                  <AnimatePresence>
-                    {showCategories && (
-                      <motion.div
-                        initial={{ height: 0, opacity: 0 }}
-                        animate={{ height: 'auto', opacity: 1 }}
-                        exit={{ height: 0, opacity: 0 }}
-                        className="overflow-hidden"
-                      >
-                        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3 pt-4">
-                          {Object.entries(categories).map(([type, cards]) => (
-                            <div key={type} className="bg-slate-50/80 rounded-2xl p-3 border border-slate-100">
-                              <div className="flex items-center gap-1.5 mb-3 border-b border-slate-200/50 pb-2 pl-1">
-                                <img src={typeIcons[type]} alt={type} className="w-5 h-5 drop-shadow-sm" />
-                                <span className="text-[11px] font-black text-slate-600 uppercase tracking-wider">
-                                  {typeNames[type]}
+                <div className="bg-slate-900 rounded-2xl p-4 text-white relative overflow-hidden shadow-lg border border-slate-800">
+                  <div className="absolute top-0 right-0 w-24 h-24 bg-uma-pink/10 blur-3xl rounded-full -mr-10 -mt-10" />
+                  <div className="relative z-10 flex flex-col h-full">
+                    <div className="flex items-center justify-between mb-3">
+                      <h4 className="text-[10px] font-black text-uma-pink uppercase tracking-widest">Build & Estratégia</h4>
+                      <div className="bg-white/10 px-2 py-0.5 rounded-full text-[9px] font-bold border border-white/10">
+                        {character.style}
+                      </div>
+                    </div>
+                    
+                    {(() => {
+                      const details = character.runningStyleDetails;
+                      if (!details) {
+                        return (
+                          <div className="flex items-center justify-center h-full text-slate-500 text-[10px] italic">
+                            Dados de build em atualização...
+                          </div>
+                        );
+                      }
+                      
+                      return (
+                        <div className="space-y-3 flex-grow">
+                          <div className="flex items-center gap-2 flex-wrap">
+                            <span className="text-[9px] text-slate-400 font-bold">Foco:</span>
+                            {details.statsPriority.map((stat, i) => (
+                              <div key={stat} className="flex items-center">
+                                <span className={clsx(
+                                  "text-[10px] font-black px-1.5 py-0.5 rounded-md",
+                                  i === 0 ? "bg-uma-pink text-white shadow-sm" : "bg-white/10 text-slate-200"
+                                )}>
+                                  {stat}
                                 </span>
-                                <span className="ml-auto text-[9px] font-bold text-slate-400 bg-white px-1.5 py-0.5 rounded-full border border-slate-100">
-                                  {cards.length}
-                                </span>
-                              </div>
-                              <div className="grid grid-cols-3 gap-2">
-                                {cards.map(item => (
-                                  <RecommendedCardItem 
-                                    key={item.id} 
-                                    item={item} 
-                                    isOwned={ownedDeck.includes(item.id)} 
-                                    onClick={() => {
-                                      const card = getCardById(item.id);
-                                      if (card) onCardClick(card, item.reason);
-                                    }}
-                                  />
-                                ))}
-                                {cards.length === 0 && (
-                                  <div className="col-span-3 py-3 text-center text-[10px] text-slate-400 font-medium italic bg-white rounded-lg border border-dashed border-slate-200">
-                                    Nenhuma recomendação meta
-                                  </div>
+                                {i < details.statsPriority.length - 1 && (
+                                  <span className="mx-1 text-slate-600 text-[8px]">▶</span>
                                 )}
                               </div>
-                            </div>
-                          ))}
+                            ))}
+                          </div>
+                          <p className="text-[11px] text-slate-300 font-medium leading-relaxed italic border-l-2 border-uma-pink/30 pl-2">
+                            "{details.reasoning}"
+                          </p>
                         </div>
-                      </motion.div>
-                    )}
-                  </AnimatePresence>
+                      );
+                    })()}
+                  </div>
                 </div>
               </div>
+
+              {character.scenarioDecks.length > 0 && (
+                <>
+                  <div className="flex flex-wrap gap-2 items-center bg-slate-50 p-2 rounded-2xl border border-slate-100 mt-2">
+                    <span className="text-[10px] font-black uppercase text-slate-400 mr-1 pl-2">Cenário:</span>
+                    {character.scenarioDecks.map((deck, i) => (
+                      <button
+                        key={deck.scenario}
+                        onClick={() => { setActiveScenario(i); setActiveDeckIdx(0); }}
+                        className={clsx(
+                          "px-3 py-1.5 rounded-xl text-xs font-bold transition-all",
+                          activeScenario === i
+                            ? `${scenarioColors[deck.scenario] || 'bg-uma-pink'} text-white shadow-sm`
+                            : "bg-white text-slate-500 hover:bg-slate-200 border border-slate-200"
+                        )}
+                      >
+                        <Trophy size={12} className="inline mr-1" />
+                        {deck.scenario}
+                      </button>
+                    ))}
+                  </div>
+
+                  <div className="space-y-6">
+                    <div className="flex flex-col gap-4">
+                      <div className="flex gap-2 overflow-x-auto pb-2 scrollbar-none snap-x mt-2">
+                        {currentDeck.decks.map((deckVar, dIdx) => (
+                          <button
+                            key={dIdx}
+                            onClick={() => setActiveDeckIdx(dIdx)}
+                            className={clsx(
+                              "flex-shrink-0 px-4 py-2 text-xs font-black rounded-xl border transition-all snap-start",
+                              activeDeckIdx === dIdx
+                                ? (deckVar.tier === 'S' ? 'bg-gradient-to-r from-amber-100 to-yellow-100 border-amber-400 text-amber-900 shadow-sm ring-1 ring-amber-300' : 'bg-pink-50 border-uma-pink text-uma-pink shadow-sm')
+                                : "bg-white border-slate-200 text-slate-500 hover:border-pink-300 hover:text-pink-600 hover:bg-pink-50/30"
+                            )}
+                          >
+                            {deckVar.tier && (
+                              <span className={clsx(
+                                "mr-1.5 px-1.5 py-0.5 rounded text-[9px] uppercase font-black tracking-wider",
+                                deckVar.tier === 'S' ? 'bg-amber-400 text-amber-950' :
+                                deckVar.tier === 'A' ? 'bg-rose-400 text-white' : 'bg-blue-400 text-white'
+                              )}>
+                                Tier {deckVar.tier}
+                              </span>
+                            )}
+                            {deckVar.name}
+                          </button>
+                        ))}
+                      </div>
+
+                      {(() => {
+                        const deckVar = currentDeck.decks[activeDeckIdx];
+                        return (
+                          <motion.div
+                            key={`${character.id}-${activeScenario}-${activeDeckIdx}`}
+                            initial={{ opacity: 0, y: 5 }}
+                            animate={{ opacity: 1, y: 0 }}
+                            className={clsx(
+                              "rounded-2xl p-4 sm:p-5 border relative overflow-hidden",
+                              deckVar.tier === 'S' ? "bg-gradient-to-br from-amber-50/50 to-orange-50/30 border-amber-300 shadow-md ring-1 ring-amber-100" :
+                              deckVar.tier === 'A' ? "bg-gradient-to-br from-rose-50/50 to-pink-50/30 border-rose-200 shadow-sm" :
+                              "bg-white border-slate-200 shadow-sm"
+                            )}
+                          >
+                            <div className="flex flex-col mb-4 border-b border-black/5 pb-4 relative z-10">
+                              <div className="flex items-center gap-3">
+                                <h4 className="text-sm sm:text-base font-black text-slate-800 flex items-center gap-1.5">
+                                  {deckVar.tier === 'S' && <Trophy size={18} className="text-amber-500 fill-amber-500 drop-shadow-sm" />}
+                                  {deckVar.name}
+                                </h4>
+                                <span className="ml-auto text-[10px] font-bold text-slate-500 bg-white/80 px-2 py-0.5 rounded-full border border-slate-200 shadow-sm">
+                                  {deckVar.recommendedIds.length} Cartas
+                                </span>
+                              </div>
+                              {deckVar.description && (
+                                <p className="text-[13px] font-medium text-slate-600 mt-2.5 leading-relaxed bg-white/70 p-3 rounded-xl border border-white shadow-sm inline-block italic">
+                                  {deckVar.description}
+                                </p>
+                              )}
+                            </div>
+                            <div className="grid grid-cols-3 sm:grid-cols-6 gap-3 sm:gap-4 relative z-10">
+                              {deckVar.recommendedIds.map(id => {
+                                const card = getCardById(id);
+                                if (!card) return null;
+                                const poolCard = currentDeck.cards.find(c => c.id === id);
+                                return (
+                                  <div key={id} className="relative group flex justify-center w-full">
+                                    <RecommendedCardItem 
+                                      item={{ id, reason: poolCard?.reason || card.type, type: poolCard?.type || (card.type as any) }} 
+                                      isOwned={ownedDeck.includes(id)} 
+                                      onClick={() => onCardClick(card, poolCard?.reason || card.type as string)}
+                                    />
+                                  </div>
+                                );
+                              })}
+                            </div>
+                          </motion.div>
+                        );
+                      })()}
+                    </div>
+
+                    <div className="pt-2 border-t border-dashed border-slate-200 mt-6">
+                      <button
+                        onClick={() => setShowCategories(!showCategories)}
+                        className="w-full py-3 flex items-center justify-center gap-2 text-xs font-black text-slate-500 hover:text-uma-pink bg-slate-50 hover:bg-pink-50 rounded-xl transition-colors border border-slate-100 hover:border-pink-200"
+                      >
+                        <Search size={14} />
+                        {showCategories ? 'Ocultar Opções Extras por Categoria' : 'Ver Opções Extras por Categoria'}
+                        {showCategories ? <ChevronUp size={14} /> : <ChevronDown size={14} />}
+                      </button>
+                      
+                      <AnimatePresence>
+                        {showCategories && (
+                          <motion.div
+                            initial={{ height: 0, opacity: 0 }}
+                            animate={{ height: 'auto', opacity: 1 }}
+                            exit={{ height: 0, opacity: 0 }}
+                            className="overflow-hidden"
+                          >
+                            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3 pt-4">
+                              {Object.entries(categories).map(([type, cards]) => (
+                                <div key={type} className="bg-slate-50/80 rounded-2xl p-3 border border-slate-100">
+                                  <div className="flex items-center gap-1.5 mb-3 border-b border-slate-200/50 pb-2 pl-1">
+                                    <img src={typeIcons[type]} alt={type} className="w-5 h-5 drop-shadow-sm" />
+                                    <span className="text-[11px] font-black text-slate-600 uppercase tracking-wider">
+                                      {typeNames[type]}
+                                    </span>
+                                    <span className="ml-auto text-[9px] font-bold text-slate-400 bg-white px-1.5 py-0.5 rounded-full border border-slate-100">
+                                      {cards.length}
+                                    </span>
+                                  </div>
+                                  <div className="grid grid-cols-3 gap-2">
+                                    {cards.map(item => (
+                                      <RecommendedCardItem 
+                                        key={item.id} 
+                                        item={item} 
+                                        isOwned={ownedDeck.includes(item.id)} 
+                                        onClick={() => {
+                                          const card = getCardById(item.id);
+                                          if (card) onCardClick(card, item.reason);
+                                        }}
+                                      />
+                                    ))}
+                                    {cards.length === 0 && (
+                                      <div className="col-span-3 py-3 text-center text-[10px] text-slate-400 font-medium italic bg-white rounded-lg border border-dashed border-slate-200">
+                                        Nenhuma recomendação meta
+                                      </div>
+                                    )}
+                                  </div>
+                                </div>
+                              ))}
+                            </div>
+                          </motion.div>
+                        )}
+                      </AnimatePresence>
+                    </div>
+                  </div>
+                </>
+              )}
             </div>
           </motion.div>
         )}
@@ -466,59 +513,73 @@ const Characters = () => {
 
   return (
     <div className="space-y-6 pb-10">
-      <div className="bg-white rounded-3xl p-6 shadow-sm border border-pink-100">
-        <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-4">
-          <div>
-            <h1 className="text-3xl font-black text-uma-pink drop-shadow-sm">🏇 Personagens</h1>
-            <p className="text-slate-500 font-medium text-sm">
-              {PLAYABLE_CHARACTERS.length} personagens jogáveis e seus melhores decks de suporte por cenário
-            </p>
+      <div className="sticky top-0 z-50 pt-4 pb-2 bg-slate-50/80 backdrop-blur-md -mx-4 px-4 sm:-mx-6 sm:px-6 mb-6 border-b border-pink-100/50">
+        <div className="bg-white rounded-2xl p-4 sm:p-6 shadow-md border border-pink-100">
+          <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-4">
+            <div>
+              <h1 className="text-2xl sm:text-3xl font-black text-uma-pink drop-shadow-sm flex items-center gap-2">
+                <span className="bg-uma-pink text-white p-1 rounded-lg text-xl sm:text-2xl">🏇</span> 
+                Personagens
+              </h1>
+              <p className="text-slate-400 font-bold text-xs sm:text-sm mt-1">
+                {PLAYABLE_CHARACTERS.length} corredoras e seus melhores decks
+              </p>
+            </div>
+            <div className="relative w-full md:w-72">
+              <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-pink-300" size={18} />
+              <input
+                type="text"
+                placeholder="Buscar personagem..."
+                className="w-full bg-pink-50 border-2 border-pink-200 text-slate-700 rounded-full pl-10 pr-4 py-2 focus:outline-none focus:border-uma-pink focus:ring-4 focus:ring-pink-100 transition-all font-bold text-sm"
+                value={searchTerm}
+                onChange={(e) => setSearchTerm(e.target.value)}
+              />
+            </div>
           </div>
-          <div className="relative w-full md:w-72">
-            <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-pink-300" size={20} />
-            <input
-              type="text"
-              placeholder="Buscar personagem..."
-              className="w-full bg-pink-50 border-2 border-pink-200 text-slate-700 rounded-full pl-10 pr-4 py-2 focus:outline-none focus:border-uma-pink focus:ring-2 focus:ring-pink-200 transition-all font-medium"
-              value={searchTerm}
-              onChange={(e) => setSearchTerm(e.target.value)}
-            />
+          <div className="flex flex-wrap gap-1.5 mt-4">
+            {distances.map(d => (
+              <button
+                key={d}
+                onClick={() => setDistanceFilter(d)}
+                className={clsx(
+                  'px-4 py-1.5 rounded-full text-[10px] sm:text-xs font-black border transition-all uppercase tracking-wider',
+                  distanceFilter === d
+                    ? 'bg-uma-pink text-white border-uma-pink shadow-lg scale-105'
+                    : 'bg-white text-slate-400 border-slate-100 hover:border-uma-pink hover:text-uma-pink shadow-sm'
+                )}
+              >
+                {d}
+              </button>
+            ))}
           </div>
-        </div>
-        <div className="flex flex-wrap gap-2 mt-4">
-          {distances.map(d => (
-            <button
-              key={d}
-              onClick={() => setDistanceFilter(d)}
-              className={clsx(
-                'px-4 py-1.5 rounded-full text-xs font-bold border transition-all',
-                distanceFilter === d
-                  ? 'bg-uma-pink text-white border-uma-pink shadow-md'
-                  : 'bg-white text-slate-500 border-slate-200 hover:border-uma-pink hover:text-uma-pink'
-              )}
-            >
-              {d}
-            </button>
-          ))}
         </div>
       </div>
 
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-        {filtered.map((character, i) => (
-          <CharacterCard 
-            key={character.id} 
-            character={character} 
-            index={i} 
-            ownedDeck={ownedDeck} 
-            onCardClick={(card, reason) => setSelectedCardInfo({ card, reason })}
-          />
-        ))}
-      </div>
+      <motion.div 
+        layout
+        className="grid grid-cols-1 md:grid-cols-2 gap-4"
+      >
+        <AnimatePresence mode="popLayout">
+          {filtered.map((character, i) => (
+            <CharacterCard 
+              key={character.id} 
+              character={character} 
+              index={i} 
+              ownedDeck={ownedDeck} 
+              onCardClick={(card, reason) => setSelectedCardInfo({ card, reason })}
+            />
+          ))}
+        </AnimatePresence>
+      </motion.div>
 
       {filtered.length === 0 && (
-        <div className="py-12 text-center text-slate-400 bg-white rounded-3xl border-2 border-dashed border-pink-200">
+        <motion.div 
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          className="py-12 text-center text-slate-400 bg-white rounded-3xl border-2 border-dashed border-pink-200"
+        >
           <p className="text-xl font-bold">Nenhum personagem encontrado.</p>
-        </div>
+        </motion.div>
       )}
 
       <AnimatePresence>
