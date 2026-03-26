@@ -1,15 +1,69 @@
 import { ArrowRight, Trophy, Heart } from 'lucide-react';
 import { NavLink } from 'react-router-dom';
+import { motion } from 'framer-motion';
+import clsx from 'clsx';
+
+const FloatingCarrots = ({ count = 5, className = "" }: { count?: number, className?: string }) => {
+  return (
+    <div className={clsx("absolute pointer-events-none overflow-hidden", className)}>
+      {Array.from({ length: count }).map((_, i) => (
+        <motion.span
+          key={i}
+          initial={{ 
+            opacity: 0, 
+            scale: 0, 
+            x: Math.random() * 100 - 50, 
+            y: Math.random() * 100 - 50,
+            rotate: Math.random() * 360 
+          }}
+          animate={{ 
+            opacity: [0, 1, 1, 0],
+            scale: [0, 1.2, 1, 0],
+            x: [
+              Math.random() * 60 - 30, 
+              Math.random() * 100 - 50, 
+              Math.random() * 140 - 70
+            ],
+            y: [
+              Math.random() * 60 - 30, 
+              Math.random() * -100 - 50, 
+              Math.random() * -150 - 100
+            ],
+            rotate: [0, 180, 360]
+          }}
+          transition={{
+            duration: 3 + Math.random() * 4,
+            repeat: Infinity,
+            delay: Math.random() * 5,
+            ease: "easeInOut"
+          }}
+          className="absolute text-2xl filter drop-shadow-sm select-none"
+          style={{ 
+            left: "50%", 
+            top: "50%",
+          }}
+        >
+          🥕
+        </motion.span>
+      ))}
+    </div>
+  );
+};
 
 const Dashboard = () => {
   return (
     <div className="space-y-8 animate-in fade-in duration-500 pb-10">
       <div className="relative mt-8">
-        <img 
-          src="/assets/oguri-peeking.png" 
-          alt="Oguri Cap" 
-          className="absolute -top-16 right-4 md:right-12 w-32 md:w-40 h-auto object-contain drop-shadow-[0_10px_10px_rgba(236,72,153,0.3)] z-20 hover:-translate-y-2 transition-transform duration-300 rounded-full bg-white p-1 border-2 border-pink-200"
-        />
+        <div className="absolute -top-16 right-4 md:right-12 z-20 group">
+          <FloatingCarrots count={8} className="inset-0 -translate-y-4" />
+          <motion.img 
+            src="/assets/oguri-peeking.png" 
+            alt="Oguri Cap" 
+            whileHover={{ scale: 1.1, rotate: 5 }}
+            className="w-32 md:w-40 h-auto object-contain drop-shadow-[0_10px_10px_rgba(236,72,153,0.3)] cursor-help rounded-full bg-white p-1 border-2 border-pink-200 transition-all duration-300"
+          />
+        </div>
+        
         <div className="relative overflow-hidden rounded-3xl bg-gradient-to-br from-uma-pink to-pink-400 p-8 md:p-12 shadow-xl border-4 border-pink-200">
           <div className="absolute inset-0 opacity-20 pointer-events-none mix-blend-overlay" style={{ backgroundImage: "url('/assets/uma-pattern.png')", backgroundSize: "200px", animation: "scroll-pattern 20s linear infinite" }}></div>
           <div className="absolute top-0 right-0 w-64 h-64 bg-white/20 rounded-full -translate-y-1/4 translate-x-1/4 blur-3xl"></div>
@@ -23,15 +77,16 @@ const Dashboard = () => {
             <p className="text-pink-50 text-lg md:text-xl font-medium max-w-xl mb-8 leading-relaxed">
               Prepare suas garotas cavalo (Umamusume) para a glória no Twinkle Series. Monte o melhor deck de cartas de suporte e conquiste a vitória!
             </p>
-            <NavLink to="/cards" className="inline-block bg-white text-uma-pink font-bold text-lg px-8 py-3 rounded-full hover:bg-pink-50 hover:scale-105 active:scale-95 transition-all shadow-lg border-2 border-white">
-              Ver Cartas de Suporte
+            <NavLink to="/characters" className="inline-block bg-white text-uma-pink font-bold text-lg px-8 py-3 rounded-full hover:bg-pink-50 hover:scale-105 active:scale-95 transition-all shadow-lg border-2 border-white">
+               Treinar Personagens
             </NavLink>
           </div>
-          <div className="hidden md:flex w-64 h-64 bg-white/10 rounded-full border-4 border-white/20 items-center justify-center p-4 backdrop-blur-sm shadow-inner rotate-3 hover:rotate-0 transition-transform duration-500 overflow-hidden group/logo">
+          <div className="hidden md:flex relative w-64 h-64 bg-white/10 rounded-full border-4 border-white/20 items-center justify-center p-4 backdrop-blur-sm shadow-inner rotate-3 hover:rotate-0 transition-transform duration-500 overflow-visible group/logo">
+             <FloatingCarrots count={6} className="inset-0" />
              <img 
                src="/assets/oguri-chibi-logo.png" 
                alt="Oguri Cap Logo" 
-               className="w-full h-full object-contain drop-shadow-[0_0_15px_rgba(255,255,255,0.8)] group-hover/logo:scale-110 transition-transform duration-500"
+               className="w-full h-full object-contain drop-shadow-[0_0_15px_rgba(255,255,255,0.8)] group-hover/logo:scale-110 transition-transform duration-500 relative z-10"
              />
           </div>
         </div>
