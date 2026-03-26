@@ -27,9 +27,14 @@ const Timeline: React.FC = () => {
       </motion.div>
 
       {/* Control Bar */}
-      <div className="flex flex-col sm:flex-row items-center justify-between mb-12 gap-4">
+      <motion.div 
+        initial={{ opacity: 0, y: 10 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true }}
+        className="flex flex-col sm:flex-row items-center justify-between mb-12 gap-4"
+      >
         <div className="flex items-center space-x-4">
-          <button className="flex items-center space-x-2 px-6 py-2 bg-white rounded-full border-2 border-slate-100 text-slate-500 font-bold hover:border-uma-pink hover:text-uma-pink transition-all shadow-sm">
+          <button className="flex items-center space-x-2 px-6 py-2 bg-white rounded-full border-2 border-slate-100 text-slate-500 font-bold hover:border-uma-pink hover:text-uma-pink transition-all shadow-sm active:scale-95">
             <Filter size={18} />
             <span>Filtrar</span>
           </button>
@@ -47,7 +52,7 @@ const Timeline: React.FC = () => {
           <TrendingUp size={18} className="text-uma-green" />
           <span>Focado no Meta atual</span>
         </div>
-      </div>
+      </motion.div>
 
       {/* Timeline Content */}
       <div className="relative">
@@ -73,10 +78,6 @@ const Timeline: React.FC = () => {
         </div>
       </div>
 
-      {/* Floating Today Button (Simplified) */}
-      <button className="fixed bottom-24 right-8 bg-uma-pink text-white w-14 h-14 rounded-full shadow-2xl flex items-center justify-center hover:scale-110 active:scale-95 transition-transform z-40 border-4 border-white">
-        <Clock size={24} />
-      </button>
     </div>
   );
 };

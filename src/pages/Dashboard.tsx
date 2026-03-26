@@ -125,8 +125,16 @@ const Dashboard = () => {
         </div>
       </div>
 
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-        <div className="bg-white rounded-3xl p-6 shadow-md border-2 border-pink-100 hover:border-uma-pink hover:shadow-xl transition-all duration-300 group">
+      <motion.div 
+        initial={{ opacity: 0, scale: 0.95 }}
+        whileInView={{ opacity: 1, scale: 1 }}
+        viewport={{ once: true }}
+        className="grid grid-cols-1 md:grid-cols-2 gap-6"
+      >
+        <motion.div 
+          whileHover={{ y: -5 }}
+          className="bg-white rounded-3xl p-6 shadow-md border-2 border-pink-100 hover:border-uma-pink hover:shadow-xl transition-all duration-300 group"
+        >
           <div className="w-12 h-12 bg-pink-100 text-uma-pink rounded-xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
             <Heart size={24} fill="currentColor" />
           </div>
@@ -137,9 +145,12 @@ const Dashboard = () => {
           <NavLink to="/cards" className="text-uma-pink font-bold flex items-center gap-2 group-hover:gap-3 transition-all">
             Explorar Cartas <ArrowRight size={18} />
           </NavLink>
-        </div>
+        </motion.div>
 
-        <div className="bg-white rounded-3xl p-6 shadow-md border-2 border-blue-100 hover:border-blue-400 hover:shadow-xl transition-all duration-300 group">
+        <motion.div 
+          whileHover={{ y: -5 }}
+          className="bg-white rounded-3xl p-6 shadow-md border-2 border-blue-100 hover:border-blue-400 hover:shadow-xl transition-all duration-300 group"
+        >
           <div className="w-12 h-12 bg-blue-100 text-blue-500 rounded-xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
             <Trophy size={24} fill="currentColor" />
           </div>
@@ -150,8 +161,8 @@ const Dashboard = () => {
           <NavLink to="/deck" className="text-blue-500 font-bold flex items-center gap-2 group-hover:gap-3 transition-all">
             Ver Meu Deck <ArrowRight size={18} />
           </NavLink>
-        </div>
-      </div>
+        </motion.div>
+      </motion.div>
     </div>
   );
 };

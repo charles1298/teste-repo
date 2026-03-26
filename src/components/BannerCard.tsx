@@ -16,10 +16,10 @@ const BannerCard: React.FC<BannerCardProps> = ({ banner, index }) => {
 
   return (
     <motion.div
-      initial={{ opacity: 0, y: 30 }}
-      whileInView={{ opacity: 1, y: 0 }}
-      viewport={{ once: true, margin: "-50px" }}
-      transition={{ duration: 0.5, delay: index % 5 * 0.05 }}
+      initial={{ opacity: 0, y: 40, scale: 0.98 }}
+      whileInView={{ opacity: 1, y: 0, scale: 1 }}
+      viewport={{ once: true, margin: "-100px" }}
+      transition={{ duration: 0.6, ease: "easeOut", delay: index % 3 * 0.1 }}
       className="relative flex flex-col items-center w-full mb-16"
     >
       {/* Date floating label for desktop */}
