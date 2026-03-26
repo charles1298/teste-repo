@@ -53,21 +53,21 @@ const FloatingCarrots = ({ count = 5, className = "" }: { count?: number, classN
 const Dashboard = () => {
   return (
     <div className="space-y-8 animate-in fade-in duration-500 pb-10">
-      <div className="relative mt-8">
-        <div className="absolute -top-16 right-4 md:right-12 z-20 group">
+      <div className="relative mt-4 md:mt-8">
+        <div className="absolute -top-12 md:-top-16 right-2 md:right-12 z-20 group">
           <FloatingCarrots count={6} className="inset-0" />
           {/* Side Carrots - More Centralized */}
           <motion.span 
             animate={{ rotate: [0, 10, -10, 0], scale: [1, 1.1, 1] }}
             transition={{ duration: 2, repeat: Infinity, ease: "easeInOut" }}
-            className="absolute -left-2 top-10 text-2xl select-none z-20"
+            className="absolute -left-1 md:-left-2 top-8 md:top-10 text-xl md:text-2xl select-none z-20"
           >
             🥕
           </motion.span>
           <motion.span 
             animate={{ rotate: [0, -10, 10, 0], scale: [1, 1.1, 1] }}
             transition={{ duration: 2, repeat: Infinity, ease: "easeInOut", delay: 0.5 }}
-            className="absolute -right-2 top-14 text-xl select-none z-20"
+            className="absolute -right-1 md:-right-2 top-12 md:top-14 text-lg md:text-xl select-none z-20"
           >
             🥕
           </motion.span>
@@ -76,52 +76,52 @@ const Dashboard = () => {
             src="/assets/oguri-peeking.png" 
             alt="Oguri Cap" 
             whileHover={{ scale: 1.1, rotate: 5 }}
-            className="w-32 md:w-40 h-auto object-contain drop-shadow-[0_10px_10px_rgba(236,72,153,0.3)] cursor-help rounded-full bg-white p-1 border-2 border-pink-200 transition-all duration-300 relative z-10"
+            className="w-24 md:w-40 h-auto object-contain drop-shadow-[0_10px_10px_rgba(236,72,153,0.3)] cursor-help rounded-full bg-white p-1 border-2 border-pink-200 transition-all duration-300 relative z-10"
           />
         </div>
         
-        <div className="relative overflow-hidden rounded-3xl bg-gradient-to-br from-uma-pink to-pink-400 p-8 md:p-12 shadow-xl border-4 border-pink-200">
+        <div className="relative overflow-hidden rounded-3xl bg-gradient-to-br from-uma-pink to-pink-400 p-6 sm:p-8 md:p-12 shadow-xl border-4 border-pink-200">
           <div className="absolute inset-0 opacity-20 pointer-events-none mix-blend-overlay" style={{ backgroundImage: "url('/assets/uma-pattern.png')", backgroundSize: "200px", animation: "scroll-pattern 20s linear infinite" }}></div>
           <div className="absolute top-0 right-0 w-64 h-64 bg-white/20 rounded-full -translate-y-1/4 translate-x-1/4 blur-3xl"></div>
           <div className="absolute bottom-0 left-0 w-48 h-48 bg-yellow-300/20 rounded-full translate-y-1/4 -translate-x-1/4 blur-2xl"></div>
         
-        <div className="relative z-10 flex flex-col md:flex-row items-center gap-8 text-white">
-          <div className="flex-1 text-center md:text-left">
-            <h1 className="text-4xl md:text-5xl font-black mb-4 drop-shadow-md cursor-default">
-              Bem-vindo à <br/><span className="text-yellow-300">Tracen Academy!</span>
-            </h1>
-            <p className="text-pink-50 text-lg md:text-xl font-medium max-w-xl mb-8 leading-relaxed">
-              Prepare suas garotas cavalo (Umamusume) para a glória no Twinkle Series. Monte o melhor deck de cartas de suporte e conquiste a vitória!
-            </p>
-            <NavLink to="/characters" className="inline-block bg-white text-uma-pink font-bold text-lg px-8 py-3 rounded-full hover:bg-pink-50 hover:scale-105 active:scale-95 transition-all shadow-lg border-2 border-white">
-               Treinar Personagens
-            </NavLink>
+          <div className="relative z-10 flex flex-col md:flex-row items-center gap-6 md:gap-8 text-white">
+            <div className="flex-1 text-center md:text-left">
+              <h1 className="text-3xl sm:text-4xl md:text-5xl font-black mb-3 md:mb-4 drop-shadow-md cursor-default leading-tight">
+                Bem-vindo à <br/><span className="text-yellow-300">Tracen Academy!</span>
+              </h1>
+              <p className="text-pink-50 text-base sm:text-lg md:text-xl font-medium max-w-xl mb-6 md:mb-8 leading-relaxed">
+                Prepare suas garotas cavalo (Umamusume) para a glória no Twinkle Series. Monte o melhor deck de suporte e conquiste a vitória!
+              </p>
+              <NavLink to="/characters" className="inline-block bg-white text-uma-pink font-bold text-base md:text-lg px-6 md:px-8 py-2.5 md:py-3 rounded-full hover:bg-pink-50 hover:scale-105 active:scale-95 transition-all shadow-lg border-2 border-white">
+                 Treinar Personagens
+              </NavLink>
+            </div>
+            <div className="hidden md:flex relative w-64 h-64 bg-white/10 rounded-full border-4 border-white/20 items-center justify-center p-4 backdrop-blur-sm shadow-inner rotate-3 hover:rotate-0 transition-transform duration-500 overflow-visible group/logo">
+               <FloatingCarrots count={6} className="inset-0" />
+               {/* Side Carrots for Chibi - More Centralized */}
+               <motion.span 
+                 animate={{ y: [0, -5, 0], rotate: [-10, 10, -10] }}
+                 transition={{ duration: 1.5, repeat: Infinity, ease: "easeInOut" }}
+                 className="absolute left-2 bottom-12 text-2xl select-none z-20"
+               >
+                 🥕
+               </motion.span>
+               <motion.span 
+                 animate={{ y: [0, -8, 0], rotate: [10, -10, 10] }}
+                 transition={{ duration: 1.8, repeat: Infinity, ease: "easeInOut", delay: 0.3 }}
+                 className="absolute right-2 top-12 text-2xl select-none z-20"
+               >
+                 🥕
+               </motion.span>
+               
+               <img 
+                 src="/assets/oguri-chibi-logo.png" 
+                 alt="Oguri Cap Logo" 
+                 className="w-full h-full object-contain drop-shadow-[0_0_15px_rgba(255,255,255,0.8)] group-hover/logo:scale-110 transition-transform duration-500 relative z-10"
+               />
+            </div>
           </div>
-          <div className="hidden md:flex relative w-64 h-64 bg-white/10 rounded-full border-4 border-white/20 items-center justify-center p-4 backdrop-blur-sm shadow-inner rotate-3 hover:rotate-0 transition-transform duration-500 overflow-visible group/logo">
-             <FloatingCarrots count={6} className="inset-0" />
-             {/* Side Carrots for Chibi - More Centralized */}
-             <motion.span 
-               animate={{ y: [0, -5, 0], rotate: [-10, 10, -10] }}
-               transition={{ duration: 1.5, repeat: Infinity, ease: "easeInOut" }}
-               className="absolute left-2 bottom-12 text-2xl select-none z-20"
-             >
-               🥕
-             </motion.span>
-             <motion.span 
-               animate={{ y: [0, -8, 0], rotate: [10, -10, 10] }}
-               transition={{ duration: 1.8, repeat: Infinity, ease: "easeInOut", delay: 0.3 }}
-               className="absolute right-2 top-12 text-2xl select-none z-20"
-             >
-               🥕
-             </motion.span>
-             
-             <img 
-               src="/assets/oguri-chibi-logo.png" 
-               alt="Oguri Cap Logo" 
-               className="w-full h-full object-contain drop-shadow-[0_0_15px_rgba(255,255,255,0.8)] group-hover/logo:scale-110 transition-transform duration-500 relative z-10"
-             />
-          </div>
-        </div>
         </div>
       </div>
 

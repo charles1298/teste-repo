@@ -1,6 +1,6 @@
+import React, { useState, useEffect } from 'react';
 import { NavLink, Outlet, useLocation } from 'react-router-dom';
 import { Home, Layers, Star, Users, Newspaper, Calendar, ChevronUp } from 'lucide-react';
-import { useState, useEffect } from 'react';
 import clsx from 'clsx';
 import { twMerge } from 'tailwind-merge';
 import { motion, AnimatePresence } from 'framer-motion';
@@ -35,20 +35,20 @@ const Layout = () => {
       {/* Top Navbar */}
       <header className="bg-white/80 backdrop-blur-md border-b-4 border-uma-pink sticky top-0 z-50 shadow-sm">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex items-center justify-between h-20">
+          <div className="flex items-center justify-between h-16 md:h-20">
             <div className="flex items-center">
               <NavLink 
                 to="/"
                 className="flex items-center group cursor-pointer"
               >
-                <div className="w-12 h-12 rounded-full overflow-hidden flex items-center justify-center rotate-3 group-hover:rotate-6 transition-transform shadow-md border-2 border-pink-200 bg-white">
+                <div className="w-10 h-10 md:w-12 md:h-12 rounded-full overflow-hidden flex items-center justify-center rotate-3 group-hover:rotate-6 transition-transform shadow-md border-2 border-pink-200 bg-white">
                   <img src="/assets/oguri-chibi-logo.png" alt="Logo" className="w-full h-full object-contain p-0.5" />
                 </div>
-                <div className="ml-3 flex flex-col">
-                  <span className="text-2xl font-black text-gray-800 leading-none group-hover:text-uma-pink transition-colors">
+                <div className="ml-2 md:ml-3 flex flex-col">
+                  <span className="text-xl md:text-2xl font-black text-gray-800 leading-none group-hover:text-uma-pink transition-colors">
                     Umamusume
                   </span>
-                  <span className="text-xs font-bold text-uma-pink tracking-widest uppercase mt-0.5">
+                  <span className="text-[10px] md:text-xs font-bold text-uma-pink tracking-widest uppercase mt-0.5">
                     Pretty Derby
                   </span>
                 </div>
@@ -85,7 +85,7 @@ const Layout = () => {
       </header>
 
       {/* Main Content Area with Page Transitions */}
-      <main className="flex-grow w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 relative z-10">
+      <main className="flex-grow w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6 md:py-8 relative z-10">
         <motion.div
           key={location.pathname}
           initial={{ opacity: 0, y: 10 }}
@@ -108,7 +108,7 @@ const Layout = () => {
             whileHover={{ scale: 1.1 }}
             whileTap={{ scale: 0.9 }}
             onClick={scrollToTop}
-            className="fixed bottom-20 md:bottom-8 right-6 z-50 p-3 bg-uma-pink text-white rounded-full shadow-lg border-2 border-white hover:bg-uma-pink-hover transition-colors"
+            className="fixed bottom-24 md:bottom-8 right-4 md:right-6 z-50 p-3.5 bg-uma-pink text-white rounded-full shadow-lg border-2 border-white hover:bg-uma-pink-hover transition-colors"
             title="Voltar ao topo"
           >
             <ChevronUp size={24} />
@@ -117,39 +117,47 @@ const Layout = () => {
       </AnimatePresence>
 
       {/* Mobile Navigation Bar */}
-      <nav className="md:hidden fixed bottom-0 left-0 right-0 bg-white/90 backdrop-blur-md border-t-2 border-pink-100 pb-safe z-50 shadow-[0_-5px_15px_rgba(0,0,0,0.05)]">
-        <ul className="flex justify-around items-center h-16">
-          {navItems.map((item) => (
-            <li key={item.to} className="w-full">
-              <NavLink
-                to={item.to}
-                className={({ isActive }) =>
-                  twMerge(
-                    clsx(
-                      'flex flex-col items-center justify-center w-full h-full p-2 text-[10px] font-bold transition-all duration-300 active:scale-90',
-                      isActive ? 'text-uma-pink' : 'text-slate-400 hover:text-uma-pink'
+      <nav className="md:hidden fixed bottom-1 left-2 right-2 bg-white/95 backdrop-blur-lg border-2 border-pink-100/50 pb-safe z-50 shadow-[0_8px_30px_rgb(0,0,0,0.12)] rounded-3xl overflow-hidden">
+        <ul className="flex justify-around items-center h-18">
+          {navItems.map((item) => {
+            // Scale up or modify icons for mobile if needed
+            const MobileIcon = React.cloneElement(item.icon as React.ReactElement<any>, { size: 24 });
+            
+            return (
+              <li key={item.to} className="w-full">
+                <NavLink
+                  to={item.to}
+                  className={({ isActive }) =>
+                    twMerge(
+                      clsx(
+                        'flex flex-col items-center justify-center w-full h-full p-2 font-bold transition-all duration-300 active:scale-90',
+                        isActive ? 'text-uma-pink' : 'text-slate-400 hover:text-uma-pink'
+                      )
                     )
-                  )
-                }
-              >
-                {({ isActive }) => (
-                  <>
-                    <motion.div 
-                      animate={isActive ? { scale: 1.1, y: -2 } : { scale: 1, y: 0 }}
-                      className={clsx("p-1.5 rounded-full transition-colors", isActive && "bg-pink-100 mb-0.5")}
-                    >
-                      {item.icon}
-                    </motion.div>
-                    <span>{item.label}</span>
-                  </>
-                )}
-              </NavLink>
-            </li>
-          ))}
+                  }
+                >
+                  {({ isActive }) => (
+                    <>
+                      <motion.div 
+                        animate={isActive ? { scale: 1.15, y: -4 } : { scale: 1, y: 0 }}
+                        className={clsx(
+                          "p-2 rounded-2xl transition-colors", 
+                          isActive ? "bg-pink-100 shadow-sm shadow-pink-200/50 mb-1" : "mb-1"
+                        )}
+                      >
+                        {MobileIcon}
+                      </motion.div>
+                      <span className="text-[9px] uppercase tracking-tighter leading-none">{item.label.split(' ')[0]}</span>
+                    </>
+                  )}
+                </NavLink>
+              </li>
+            );
+          })}
         </ul>
       </nav>
       {/* Spacer to prevent content clipping on mobile behind bottom nav */}
-      <div className="md:hidden h-20"></div>
+      <div className="md:hidden h-24"></div>
     </div>
   );
 };

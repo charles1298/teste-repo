@@ -259,19 +259,19 @@ const CharacterCard = ({ character, index, ownedDeck, onCardClick }: { character
                     />
                   </div>
                   <div className="flex-grow flex flex-col items-center sm:items-start w-full">
-                    <h4 className="text-[10px] font-black text-uma-pink uppercase tracking-widest mb-2">
+                    <h4 className="text-[10px] sm:text-[11px] font-black text-uma-pink uppercase tracking-widest mb-2 shadow-sm bg-white/50 px-2 py-0.5 rounded-full inline-block">
                       Trajes e Versões
                     </h4>
-                    <div className="flex flex-wrap gap-1.5 justify-center sm:justify-start">
+                    <div className="flex flex-wrap gap-2 justify-center sm:justify-start">
                       {character.versions.map((ver) => (
                         <button
                           key={ver.id}
                           onClick={() => setActiveVersionId(ver.id)}
                           className={clsx(
-                            "px-2.5 py-1 rounded-lg text-[10px] font-bold transition-all border",
+                            "px-3 py-1.5 rounded-xl text-[11px] font-bold transition-all border shadow-sm",
                             activeVersionId === ver.id
-                              ? "bg-uma-pink text-white border-uma-pink shadow-sm scale-105"
-                              : "bg-white text-slate-400 border-slate-100 hover:text-uma-pink hover:border-pink-200"
+                              ? "bg-uma-pink text-white border-uma-pink scale-105"
+                              : "bg-white text-slate-400 border-slate-100 hover:text-uma-pink hover:border-pink-200 active:scale-95"
                           )}
                         >
                           {ver.name}
@@ -285,8 +285,8 @@ const CharacterCard = ({ character, index, ownedDeck, onCardClick }: { character
                   <div className="absolute top-0 right-0 w-24 h-24 bg-uma-pink/10 blur-3xl rounded-full -mr-10 -mt-10" />
                   <div className="relative z-10 flex flex-col h-full">
                     <div className="flex items-center justify-between mb-3">
-                      <h4 className="text-[10px] font-black text-uma-pink uppercase tracking-widest">Build & Estratégia</h4>
-                      <div className="bg-white/10 px-2 py-0.5 rounded-full text-[9px] font-bold border border-white/10">
+                      <h4 className="text-[10px] sm:text-[11px] font-black text-uma-pink uppercase tracking-widest">Build & Estratégia</h4>
+                      <div className="bg-white/10 px-2.5 py-1 rounded-full text-[10px] font-bold border border-white/10">
                         {character.style}
                       </div>
                     </div>
@@ -304,22 +304,22 @@ const CharacterCard = ({ character, index, ownedDeck, onCardClick }: { character
                       return (
                         <div className="space-y-3 flex-grow">
                           <div className="flex items-center gap-2 flex-wrap">
-                            <span className="text-[9px] text-slate-400 font-bold">Foco:</span>
+                            <span className="text-[10px] text-slate-400 font-bold uppercase tracking-tight">Foco:</span>
                             {details.statsPriority.map((stat, i) => (
                               <div key={stat} className="flex items-center">
                                 <span className={clsx(
-                                  "text-[10px] font-black px-1.5 py-0.5 rounded-md",
+                                  "text-[11px] font-black px-2 py-1 rounded-lg",
                                   i === 0 ? "bg-uma-pink text-white shadow-sm" : "bg-white/10 text-slate-200"
                                 )}>
                                   {stat}
                                 </span>
                                 {i < details.statsPriority.length - 1 && (
-                                  <span className="mx-1 text-slate-600 text-[8px]">▶</span>
+                                  <span className="mx-1.5 text-slate-600 text-[9px]">▶</span>
                                 )}
                               </div>
                             ))}
                           </div>
-                          <p className="text-[11px] text-slate-300 font-medium leading-relaxed italic border-l-2 border-uma-pink/30 pl-2">
+                          <p className="text-[12px] sm:text-[13px] text-slate-300 font-medium leading-relaxed italic border-l-2 border-uma-pink/30 pl-3 py-1 bg-white/5 rounded-r-lg">
                             "{details.reasoning}"
                           </p>
                         </div>
@@ -331,20 +331,20 @@ const CharacterCard = ({ character, index, ownedDeck, onCardClick }: { character
 
               {character.scenarioDecks.length > 0 && (
                 <>
-                  <div className="flex flex-wrap gap-2 items-center bg-slate-50 p-2 rounded-2xl border border-slate-100 mt-2">
+                  <div className="flex flex-wrap gap-2 items-center bg-slate-50 p-2.5 rounded-2xl border border-slate-100 mt-2">
                     <span className="text-[10px] font-black uppercase text-slate-400 mr-1 pl-2">Cenário:</span>
                     {character.scenarioDecks.map((deck, i) => (
                       <button
                         key={deck.scenario}
                         onClick={() => { setActiveScenario(i); setActiveDeckIdx(0); }}
                         className={clsx(
-                          "px-3 py-1.5 rounded-xl text-xs font-bold transition-all",
+                          "px-3.5 py-2 rounded-xl text-xs font-bold transition-all border shadow-sm",
                           activeScenario === i
-                            ? `${scenarioColors[deck.scenario] || 'bg-uma-pink'} text-white shadow-sm`
-                            : "bg-white text-slate-500 hover:bg-slate-200 border border-slate-200"
+                            ? `${scenarioColors[deck.scenario] || 'bg-uma-pink'} text-white border-transparent scale-105`
+                            : "bg-white text-slate-500 hover:bg-slate-200 border-slate-200 active:scale-95"
                         )}
                       >
-                        <Trophy size={12} className="inline mr-1" />
+                        <Trophy size={12} className="inline mr-1.5" />
                         {deck.scenario}
                       </button>
                     ))}
@@ -352,16 +352,16 @@ const CharacterCard = ({ character, index, ownedDeck, onCardClick }: { character
 
                   <div className="space-y-6">
                     <div className="flex flex-col gap-4">
-                      <div className="flex gap-2 overflow-x-auto pb-2 scrollbar-none snap-x mt-2">
+                      <div className="flex gap-2 overflow-x-auto pb-3 pt-1 scrollbar-none snap-x mt-2">
                         {currentDeck.decks.map((deckVar, dIdx) => (
                           <button
                             key={dIdx}
                             onClick={() => setActiveDeckIdx(dIdx)}
                             className={clsx(
-                              "flex-shrink-0 px-4 py-2 text-xs font-black rounded-xl border transition-all snap-start",
+                              "flex-shrink-0 px-4 py-2.5 text-xs font-black rounded-xl border transition-all snap-start",
                               activeDeckIdx === dIdx
                                 ? (deckVar.tier === 'S' ? 'bg-gradient-to-r from-amber-100 to-yellow-100 border-amber-400 text-amber-900 shadow-sm ring-1 ring-amber-300' : 'bg-pink-50 border-uma-pink text-uma-pink shadow-sm')
-                                : "bg-white border-slate-200 text-slate-500 hover:border-pink-300 hover:text-pink-600 hover:bg-pink-50/30"
+                                : "bg-white border-slate-200 text-slate-500 hover:border-pink-300 hover:text-pink-600 hover:bg-pink-50/30 active:scale-95"
                             )}
                           >
                             {deckVar.tier && (
@@ -386,29 +386,29 @@ const CharacterCard = ({ character, index, ownedDeck, onCardClick }: { character
                             initial={{ opacity: 0, y: 5 }}
                             animate={{ opacity: 1, y: 0 }}
                             className={clsx(
-                              "rounded-2xl p-4 sm:p-5 border relative overflow-hidden",
+                              "rounded-3xl p-4 sm:p-5 md:p-6 border relative overflow-hidden",
                               deckVar.tier === 'S' ? "bg-gradient-to-br from-amber-50/50 to-orange-50/30 border-amber-300 shadow-md ring-1 ring-amber-100" :
                               deckVar.tier === 'A' ? "bg-gradient-to-br from-rose-50/50 to-pink-50/30 border-rose-200 shadow-sm" :
                               "bg-white border-slate-200 shadow-sm"
                             )}
                           >
-                            <div className="flex flex-col mb-4 border-b border-black/5 pb-4 relative z-10">
+                            <div className="flex flex-col mb-5 border-b border-black/5 pb-4 relative z-10">
                               <div className="flex items-center gap-3">
-                                <h4 className="text-sm sm:text-base font-black text-slate-800 flex items-center gap-1.5">
+                                <h4 className="text-sm sm:text-base font-black text-slate-800 flex items-center gap-2">
                                   {deckVar.tier === 'S' && <Trophy size={18} className="text-amber-500 fill-amber-500 drop-shadow-sm" />}
                                   {deckVar.name}
                                 </h4>
-                                <span className="ml-auto text-[10px] font-bold text-slate-500 bg-white/80 px-2 py-0.5 rounded-full border border-slate-200 shadow-sm">
+                                <span className="ml-auto text-[10px] font-black text-slate-500 bg-white/80 px-2.5 py-1 rounded-full border border-slate-200 shadow-sm">
                                   {deckVar.recommendedIds.length} Cartas
                                 </span>
                               </div>
                               {deckVar.description && (
-                                <p className="text-[13px] font-medium text-slate-600 mt-2.5 leading-relaxed bg-white/70 p-3 rounded-xl border border-white shadow-sm inline-block italic">
+                                <p className="text-[13px] sm:text-[14px] font-medium text-slate-600 mt-3 leading-relaxed bg-white/70 p-4 rounded-2xl border border-white shadow-sm inline-block italic">
                                   {deckVar.description}
                                 </p>
                               )}
                             </div>
-                            <div className="grid grid-cols-3 sm:grid-cols-6 gap-3 sm:gap-4 relative z-10">
+                            <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-6 gap-3 sm:gap-4 relative z-10">
                               {deckVar.recommendedIds.map(id => {
                                 const card = getCardById(id);
                                 if (!card) return null;
@@ -513,39 +513,41 @@ const Characters = () => {
 
   return (
     <div className="space-y-6 pb-10">
-      <div className="sticky top-0 z-50 pt-4 pb-2 bg-slate-50/80 backdrop-blur-md -mx-4 px-4 sm:-mx-6 sm:px-6 mb-6 border-b border-pink-100/50">
-        <div className="bg-white rounded-2xl p-4 sm:p-6 shadow-md border border-pink-100">
-          <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-4">
-            <div>
-              <h1 className="text-2xl sm:text-3xl font-black text-uma-pink drop-shadow-sm flex items-center gap-2">
-                <span className="bg-uma-pink text-white p-1 rounded-lg text-xl sm:text-2xl">🏇</span> 
-                Personagens
-              </h1>
-              <p className="text-slate-400 font-bold text-xs sm:text-sm mt-1">
-                {PLAYABLE_CHARACTERS.length} corredoras e seus melhores decks
-              </p>
+      <div className="sticky top-0 z-50 pt-2 md:pt-4 pb-2 bg-slate-50/80 backdrop-blur-md -mx-4 px-4 sm:-mx-6 sm:px-6 mb-4 md:mb-6 border-b border-pink-100/50">
+        <div className="bg-white rounded-2xl p-3 sm:p-4 md:p-6 shadow-md border border-pink-100">
+          <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-3 md:gap-4">
+            <div className="flex items-center justify-between w-full md:w-auto">
+              <div>
+                <h1 className="text-xl sm:text-2xl md:text-3xl font-black text-uma-pink drop-shadow-sm flex items-center gap-2">
+                  <span className="bg-uma-pink text-white p-1 rounded-lg text-lg sm:text-2xl">🏇</span> 
+                  Personagens
+                </h1>
+                <p className="text-slate-400 font-bold text-[10px] sm:text-sm mt-0.5">
+                  {PLAYABLE_CHARACTERS.length} corredoras e seus melhores decks
+                </p>
+              </div>
             </div>
             <div className="relative w-full md:w-72">
               <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-pink-300" size={18} />
               <input
                 type="text"
                 placeholder="Buscar personagem..."
-                className="w-full bg-pink-50 border-2 border-pink-200 text-slate-700 rounded-full pl-10 pr-4 py-2 focus:outline-none focus:border-uma-pink focus:ring-4 focus:ring-pink-100 transition-all font-bold text-sm"
+                className="w-full bg-pink-50 border-2 border-pink-200 text-slate-700 rounded-full pl-10 pr-4 py-2.5 focus:outline-none focus:border-uma-pink focus:ring-4 focus:ring-pink-100 transition-all font-bold text-sm"
                 value={searchTerm}
                 onChange={(e) => setSearchTerm(e.target.value)}
               />
             </div>
           </div>
-          <div className="flex flex-wrap gap-1.5 mt-4">
+          <div className="flex flex-wrap gap-2 mt-3 md:mt-4">
             {distances.map(d => (
               <button
                 key={d}
                 onClick={() => setDistanceFilter(d)}
                 className={clsx(
-                  'px-4 py-1.5 rounded-full text-[10px] sm:text-xs font-black border transition-all uppercase tracking-wider',
+                  'px-4 py-2 rounded-full text-[11px] sm:text-xs font-black border transition-all uppercase tracking-wider',
                   distanceFilter === d
                     ? 'bg-uma-pink text-white border-uma-pink shadow-lg scale-105'
-                    : 'bg-white text-slate-400 border-slate-100 hover:border-uma-pink hover:text-uma-pink shadow-sm'
+                    : 'bg-white text-slate-400 border-slate-100 hover:border-uma-pink hover:text-uma-pink shadow-sm active:scale-95'
                 )}
               >
                 {d}

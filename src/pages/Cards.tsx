@@ -176,18 +176,18 @@ const Cards = () => {
 
   return (
     <div className="space-y-6 pb-10">
-      <div className="bg-white rounded-3xl p-6 shadow-sm border border-pink-100 flex flex-col md:flex-row justify-between items-center gap-4">
-        <div>
-          <h1 className="text-3xl font-black text-uma-pink drop-shadow-sm">Cartas de Suporte</h1>
-          <p className="text-slate-500 font-medium">Veja e adicione as cartas SSR ao seu deck!</p>
+      <div className="bg-white rounded-3xl p-4 sm:p-6 shadow-sm border border-pink-100 flex flex-col md:flex-row justify-between items-center gap-4">
+        <div className="text-center md:text-left">
+          <h1 className="text-2xl sm:text-3xl font-black text-uma-pink drop-shadow-sm">Cartas de Suporte</h1>
+          <p className="text-slate-500 font-bold text-xs sm:text-base">Veja e adicione as cartas SSR ao seu deck!</p>
         </div>
         
         <div className="relative w-full md:w-72">
-          <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-pink-300" size={20} />
+          <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-pink-300" size={18} />
           <input
             type="text"
             placeholder="Buscar pelo nome..."
-            className="w-full bg-pink-50 border-2 border-pink-200 text-slate-700 rounded-full pl-10 pr-4 py-2 focus:outline-none focus:border-uma-pink focus:ring-2 focus:ring-pink-200 transition-all font-medium"
+            className="w-full bg-pink-50 border-2 border-pink-200 text-slate-700 rounded-full pl-10 pr-4 py-2.5 focus:outline-none focus:border-uma-pink focus:ring-4 focus:ring-pink-100 transition-all font-bold text-sm"
             value={searchTerm}
             onChange={(e) => setSearchTerm(e.target.value)}
           />
@@ -200,10 +200,10 @@ const Cards = () => {
             key={cat}
             onClick={() => setCategory(cat)}
             className={clsx(
-              "px-4 py-1.5 rounded-full text-xs font-bold transition-all border",
+              "px-4 py-2 rounded-full text-xs font-black transition-all border shadow-sm",
               category === cat
-                ? "bg-uma-pink text-white border-uma-pink shadow-md"
-                : "bg-white text-slate-500 border-slate-200 hover:text-uma-pink hover:border-uma-pink"
+                ? "bg-uma-pink text-white border-uma-pink scale-105"
+                : "bg-white text-slate-500 border-slate-100 hover:text-uma-pink hover:border-uma-pink active:scale-95"
             )}
           >
             {typeMap[cat] || cat}

@@ -35,19 +35,19 @@ const MyDeck = () => {
 
   return (
     <div className="space-y-6 pb-10">
-      <div className="bg-white rounded-3xl p-6 shadow-sm border border-pink-100 flex flex-col gap-4">
+      <div className="bg-white rounded-3xl p-4 sm:p-6 shadow-sm border border-pink-100 flex flex-col gap-4">
         {/* Header and Deck count */}
-        <div className="flex flex-col md:flex-row justify-between items-center gap-4">
-          <div>
-            <h1 className="text-3xl font-black text-uma-pink drop-shadow-sm flex items-center gap-3">
-              Meus Decks <Star className="text-yellow-400 fill-yellow-400" size={28} />
+        <div className="flex flex-col md:flex-row justify-between items-center gap-3 md:gap-4">
+          <div className="text-center md:text-left">
+            <h1 className="text-2xl sm:text-3xl font-black text-uma-pink drop-shadow-sm flex items-center justify-center md:justify-start gap-2">
+              Meus Decks <Star className="text-yellow-400 fill-yellow-400" size={24} />
             </h1>
-            <p className="text-slate-500 font-medium">Organize até 5 decks de suporte diferentes.</p>
+            <p className="text-slate-500 font-bold text-xs sm:text-base">Organize até 5 decks de suporte diferentes.</p>
           </div>
-          <div className="bg-pink-50 py-2 px-6 rounded-full border border-pink-200">
-            <span className={clsx("font-bold text-lg", ownedCards.length === 6 ? "text-red-500" : "text-uma-pink")}>{ownedCards.length}</span>
-            <span className="text-uma-pink font-bold text-lg">/6</span>
-            <span className="text-slate-500 font-medium ml-2">cartas salvas</span>
+          <div className="bg-pink-50 py-1.5 px-5 rounded-full border border-pink-200 shadow-inner flex items-center">
+            <span className={clsx("font-black text-base sm:text-lg", ownedCards.length === 6 ? "text-red-500" : "text-uma-pink")}>{ownedCards.length}</span>
+            <span className="text-uma-pink font-black text-base sm:text-lg">/6</span>
+            <span className="text-slate-500 font-bold ml-2 text-xs sm:text-sm">cartas salvas</span>
           </div>
         </div>
 

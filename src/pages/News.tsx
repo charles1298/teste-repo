@@ -87,24 +87,24 @@ const News = () => {
   return (
     <div className="space-y-6 pb-10">
       {/* Header and Controls */}
-      <div className="bg-white rounded-3xl p-6 shadow-sm border border-pink-100 relative overflow-hidden">
+      <div className="bg-white rounded-3xl p-4 sm:p-6 shadow-sm border border-pink-100 relative overflow-hidden">
         <div className="absolute top-0 right-0 w-64 h-64 bg-gradient-to-bl from-pink-100/50 to-transparent opacity-50 rounded-bl-full pointer-events-none" />
         
-        <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-6 relative z-10">
-          <div>
-            <h1 className="text-3xl font-black text-uma-pink drop-shadow-sm flex items-center gap-3">
-              <Newspaper size={32} className="text-pink-400" />
+        <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-4 md:gap-6 relative z-10">
+          <div className="text-center md:text-left w-full md:w-auto">
+            <h1 className="text-2xl sm:text-3xl font-black text-uma-pink drop-shadow-sm flex items-center justify-center md:justify-start gap-2 md:gap-3">
+              <Newspaper size={28} className="text-pink-400" />
               Central de Notícias
             </h1>
-            <p className="text-slate-500 font-medium text-sm mt-1">
-              Fique por dentro das atualizações de Umamusume e do mundo hípico real.
+            <p className="text-slate-500 font-bold text-[10px] sm:text-sm mt-0.5">
+              Fique por dentro de Umamusume e do mundo hípico real.
             </p>
           </div>
 
           <button
             onClick={fetchNews}
             disabled={loading}
-            className="flex items-center gap-2 px-4 py-2 bg-white text-slate-600 hover:text-uma-pink font-bold rounded-xl border-2 border-slate-100 hover:border-pink-200 transition-all shadow-sm active:scale-95 disabled:opacity-50 disabled:cursor-not-allowed group"
+            className="w-full md:w-auto flex items-center justify-center gap-2 px-4 py-2 bg-white text-slate-600 hover:text-uma-pink font-black text-sm rounded-xl border-2 border-slate-100 hover:border-pink-200 transition-all shadow-sm active:scale-95 disabled:opacity-50 group"
           >
             <RefreshCw size={16} className={clsx(loading && "animate-spin text-uma-pink", "group-hover:text-uma-pink")} />
             {loading ? 'Atualizando...' : 'Atualizar Feed'}
