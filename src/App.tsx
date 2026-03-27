@@ -1,6 +1,7 @@
 import { BrowserRouter as Router, Routes, Route, useLocation } from 'react-router-dom';
 import { AnimatePresence } from 'framer-motion';
 import Layout from './components/Layout';
+import EasterEgg from './components/EasterEgg';
 import Dashboard from './pages/Dashboard';
 import Cards from './pages/Cards';
 import MyDeck from './pages/MyDeck';
@@ -30,6 +31,7 @@ const AnimatedRoutes = () => {
 function App() {
   return (
     <Router>
+      <EasterEgg />
       <AnimatedRoutes />
     </Router>
   );
