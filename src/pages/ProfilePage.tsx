@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { 
-  User, Medal, Trophy, Camera, Star, Gift, ChevronRight, 
+  User, Trophy, Camera, Star, Gift, ChevronRight, 
   TrendingUp, ShoppingBag, Receipt, Target, Crown,
   Settings, LogOut, Bell, Shield
 } from 'lucide-react';

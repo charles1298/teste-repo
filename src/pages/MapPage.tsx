@@ -1,6 +1,6 @@
 import { MapContainer, TileLayer, Marker, Popup } from 'react-leaflet';
 import L from 'leaflet';
-import { Navigation, Star, Clock, MapPin } from 'lucide-react';
+import { Star, MapPin } from 'lucide-react';
 
 const stores = [
   { id: 1, name: 'Mercado Preço Baixo', lat: -20.9495, lng: -48.4790, rating: 4.3, distance: '800m', deals: 12, bestPrice: 'R$ 2,99' },

@@ -1,0 +1,14 @@
+﻿
+> arc-raiders-guide@0.0.0 build
+> tsc -b && vite build
+
+[36mvite v8.0.1 [32mbuilding client environment for production...[36m[39m
+[2K
+transforming...Ô£ô 1784 modules transformed.
+rendering chunks...
+computing gzip size...
+dist/index.html                   1.07 kB Ôöé gzip:   0.55 kB
+dist/assets/index-DgTpthrT.css   51.72 kB Ôöé gzip:   9.11 kB
+dist/assets/index-BALtYWcC.js   445.99 kB Ôöé gzip: 134.62 kB
+
+[32mÔ£ô built in 570ms[39m
