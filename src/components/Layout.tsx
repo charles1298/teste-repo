@@ -95,7 +95,8 @@ export default function Layout() {
   return (
     <div className="min-h-screen bg-[#f0f2f5]">
       {/* ====== HEADER ====== */}
-      <header className="fixed top-0 left-0 right-0 z-50 h-14 flex items-center justify-between px-4 bg-white border-b border-gray-100 glass">
+      <header className="fixed top-0 left-0 right-0 z-50 h-14 bg-white border-b border-gray-100 glass">
+        <div className="h-full flex items-center justify-between px-4" style={{ maxWidth: '480px', margin: '0 auto' }}>
         <button 
           onClick={() => setSidebarOpen(true)}
           className="w-10 h-10 flex items-center justify-center rounded-full text-gray-500 hover:bg-gray-100 hover:text-gray-800 transition-all active:scale-90"
@@ -163,10 +164,12 @@ export default function Layout() {
             </div>
           )}
         </div>
+        </div>
       </header>
 
       {/* ====== SEARCH BAR ====== */}
-      <div className="fixed top-14 left-0 right-0 z-40 px-4 py-2 bg-white/95 backdrop-blur-md border-b border-gray-100" ref={searchRef}>
+      <div className="fixed top-14 left-0 right-0 z-40 bg-white/95 backdrop-blur-md border-b border-gray-100" ref={searchRef}>
+        <div className="px-4 py-2" style={{ maxWidth: '480px', margin: '0 auto' }}>
         <div className={`flex items-center h-11 rounded-2xl px-4 transition-all duration-300 ${
           searchFocused 
             ? 'bg-white border-green-400 ring-3 ring-green-500/15 shadow-lg border' 
@@ -211,6 +214,7 @@ export default function Layout() {
             </div>
           </div>
         )}
+        </div>
       </div>
 
       {/* ====== SIDEBAR OVERLAY ====== */}
@@ -251,12 +255,13 @@ export default function Layout() {
       </aside>
 
       {/* ====== MAIN CONTENT ====== */}
-      <main className="pt-[108px] pb-20 min-h-screen">
+      <main className="pt-[108px] pb-20 min-h-screen" style={{ maxWidth: '480px', margin: '0 auto' }}>
         <Outlet />
       </main>
 
       {/* ====== BOTTOM NAVIGATION ====== */}
-      <nav className="fixed bottom-0 left-0 right-0 z-50 h-16 flex items-center justify-around bg-white border-t border-gray-200 px-2 pb-[env(safe-area-inset-bottom)]">
+      <nav className="fixed bottom-0 left-0 right-0 z-50 h-16 bg-white border-t border-gray-200 pb-[env(safe-area-inset-bottom)]">
+        <div className="h-full flex items-center justify-around px-2" style={{ maxWidth: '480px', margin: '0 auto' }}>
         <NavLink to="/" className="nav-item flex flex-col items-center justify-center flex-1 h-full relative group">
           {isActive('/') && <div className="absolute top-0 left-1/2 -translate-x-1/2 w-6 h-[3px] bg-green-500 rounded-b-full" />}
           <MapPin size={20} className={`transition-colors ${isActive('/') ? 'text-green-500' : 'text-gray-400 group-hover:text-green-500'}`} />
@@ -290,6 +295,7 @@ export default function Layout() {
           <User size={20} className={`transition-colors ${isActive('/profile') ? 'text-green-500' : 'text-gray-400 group-hover:text-green-500'}`} />
           <span className={`text-[10px] font-semibold uppercase tracking-wider mt-0.5 ${isActive('/profile') ? 'text-green-500' : 'text-gray-400'}`}>Perfil</span>
         </NavLink>
+        </div>
       </nav>
     </div>
   );
