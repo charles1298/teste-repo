@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+  <meta name="description" content="O Waze dos Mercados - Compare preços, economize e ganhe pontos colaborando com a comunidade." />
+  <meta name="theme-color" content="#2ecc71" />
+  <title>MercadoMap - O Waze dos Mercados</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <!-- ====== A. BARRA SUPERIOR DE NAVEGAÇÃO (CABEÇALHO) ====== -->
+  <header id="header-nav" class="header-nav">
+    <button id="menu-hamburger" class="header-btn" aria-label="Abrir menu lateral">
+      <i class="fas fa-bars"></i>
+    </button>
+    <div id="header-logo" class="header-logo">
+      <div class="logo-icon-wrap">
+        <i class="fas fa-shopping-cart logo-cart"></i>
+        <i class="fas fa-map-marker-alt logo-pin"></i>
+      </div>
+      <span class="logo-text">Mercado<span class="logo-accent">Map</span></span>
+    </div>
+    <button id="btn-notifications" class="header-btn" aria-label="Notificações">
+      <i class="fas fa-bell"></i>
+      <span class="notif-badge">3</span>
+    </button>
+  </header>
+
+  <!-- ====== B. BARRA DE PESQUISA ====== -->
+  <div id="search-bar-container" class="search-bar-container">
+    <div class="search-bar">
+      <i class="fas fa-search search-icon"></i>
+      <input id="search-input" type="text" placeholder="Pesquisar produtos ou mercados..." autocomplete="off" />
+    </div>
+    <!-- Search Suggestions (hidden by default) -->
+    <div id="search-suggestions" class="search-suggestions hidden">
+      <p class="suggestion-title">Buscas recentes</p>
+      <div class="suggestion-chips">
+        <button class="chip">Leite Integral</button>
+        <button class="chip">Arroz 5kg</button>
+        <button class="chip">Café</button>
+      </div>
+      <p class="suggestion-title">Categorias populares</p>
+      <div class="suggestion-chips">
+        <button class="chip"><i class="fas fa-carrot"></i> Hortifruti</button>
+        <button class="chip"><i class="fas fa-drumstick-bite"></i> Açougue</button>
+        <button class="chip"><i class="fas fa-pump-soap"></i> Higiene</button>
+        <button class="chip"><i class="fas fa-bread-slice"></i> Padaria</button>
+        <button class="chip"><i class="fas fa-wine-bottle"></i> Bebidas</button>
+        <button class="chip"><i class="fas fa-cheese"></i> Laticínios</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ====== MENU LATERAL (SIDEBAR) ====== -->
+  <div id="sidebar-overlay" class="sidebar-overlay"></div>
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-header">
+      <div class="sidebar-user-avatar">
+        <i class="fas fa-user"></i>
+      </div>
+      <div class="sidebar-user-info">
+        <h3>Pedro Silva</h3>
+        <p>Nível 3 - Caçador</p>
+      </div>
+      <button id="sidebar-close" class="sidebar-close" aria-label="Fechar menu">
+        <i class="fas fa-times"></i>
+      </button>
+    </div>
+    <nav class="sidebar-nav">
+      <a href="#" class="sidebar-link"><i class="fas fa-cog"></i> Configurações</a>
+      <a href="#" class="sidebar-link"><i class="fas fa-history"></i> Histórico de Compras</a>
+      <a href="#" class="sidebar-link"><i class="fas fa-tags"></i> Meus Cupons</a>
+      <a href="#" class="sidebar-link"><i class="fas fa-trophy"></i> Ranking</a>
+      <a href="#" class="sidebar-link"><i class="fas fa-question-circle"></i> Ajuda</a>
+      <a href="#" class="sidebar-link"><i class="fas fa-info-circle"></i> Sobre o App</a>
+    </nav>
+    <div class="sidebar-footer">
+      <p>MercadoMap v1.0</p>
+    </div>
+  </aside>
+
+  <!-- ====== NOTIFICATIONS PANEL ====== -->
+  <div id="notif-panel" class="notif-panel hidden">
+    <div class="notif-panel-header">
+      <h3>Notificações</h3>
+      <button id="notif-close" class="notif-close-btn"><i class="fas fa-times"></i></button>
+    </div>
+    <div class="notif-list">
+      <div class="notif-item notif-unread">
+        <div class="notif-icon recipe"><i class="fas fa-utensils"></i></div>
+        <div class="notif-content">
+          <p class="notif-text"><strong>Nova receita:</strong> "Bolo de Cenoura" com ingredientes da sua despensa!</p>
+          <span class="notif-time">Há 5 min</span>
+        </div>
+      </div>
+      <div class="notif-item notif-unread">
+        <div class="notif-icon coupon"><i class="fas fa-ticket-alt"></i></div>
+        <div class="notif-content">
+          <p class="notif-text"><strong>Novo cupom!</strong> Você ganhou R$ 5,00 de desconto no Mercado Preço Baixo.</p>
+          <span class="notif-time">Há 30 min</span>
+        </div>
+      </div>
+      <div class="notif-item">
+        <div class="notif-icon price"><i class="fas fa-arrow-down"></i></div>
+        <div class="notif-content">
+          <p class="notif-text"><strong>Preço baixou!</strong> Arroz Tio João está R$ 3,89 no Mercado Extra.</p>
+          <span class="notif-time">Há 2 horas</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ====== ZONA CENTRAL DINÂMICA ====== -->
+  <main id="main-content" class="main-content">
+    <div class="cards-container">
+
+      <!-- ====== CARTÃO 1: MELHORES PREÇOS HOJE ====== -->
+      <section id="card-prices" class="card card-prices">
+        <h2 class="card-title">
+          <i class="fas fa-fire-alt card-title-icon"></i>
+          MELHORES PREÇOS HOJE
+        </h2>
+        
+        <!-- Map Snippet -->
+        <div id="map-snippet" class="map-snippet">
+          <div class="map-container">
+            <!-- Simulated map background -->
+            <div class="map-bg">
+              <div class="map-road map-road-h1"></div>
+              <div class="map-road map-road-h2"></div>
+              <div class="map-road map-road-h3"></div>
+              <div class="map-road map-road-v1"></div>
+              <div class="map-road map-road-v2"></div>
+              <div class="map-road map-road-v3"></div>
+              <div class="map-block map-block-1"></div>
+              <div class="map-block map-block-2"></div>
+              <div class="map-block map-block-3"></div>
+              <div class="map-block map-block-4"></div>
+              <div class="map-block map-block-5"></div>
+              <div class="map-block map-block-6"></div>
+            </div>
+            <!-- Price Pins -->
+            <div class="price-pin" style="top: 22%; left: 18%;" data-price="R$ 4,50">
+              <span class="pin-value">R$ 4,50</span>
+              <div class="pin-tail"></div>
+            </div>
+            <div class="price-pin" style="top: 45%; left: 55%;" data-price="R$ 3,89">
+              <span class="pin-value">R$ 3,89</span>
+              <div class="pin-tail"></div>
+            </div>
+            <div class="price-pin" style="top: 65%; left: 30%;" data-price="R$ 4,57">
+              <span class="pin-value">R$ 4,57</span>
+              <div class="pin-tail"></div>
+            </div>
+            <div class="price-pin pin-highlight" style="top: 35%; left: 78%;" data-price="R$ 2,99">
+              <span class="pin-value">R$ 2,99</span>
+              <div class="pin-tail"></div>
+            </div>
+            <!-- Map label -->
+            <div class="map-city-label">Bebedouro - SP</div>
+          </div>
+        </div>
+
+        <!-- Product Carousel -->
+        <div class="product-carousel-wrap">
+          <div id="product-carousel" class="product-carousel">
+            <div class="product-card">
+              <div class="product-img-wrap">
+                <img src="assets/images/produto_leite.png" alt="Leite Integral" loading="lazy" />
+              </div>
+              <div class="product-info">
+                <h4 class="product-name">Leite Integral Líder</h4>
+                <span class="product-price">R$ 4,50</span>
+                <span class="product-store">Mercado Preço Baixo</span>
+                <span class="product-updated"><i class="fas fa-clock"></i> Atualizado: 5 min atrás</span>
+              </div>
+            </div>
+            <div class="product-card">
+              <div class="product-img-wrap">
+                <img src="assets/images/produto_arroz.png" alt="Arroz" loading="lazy" />
+              </div>
+              <div class="product-info">
+                <h4 class="product-name">Arroz Tio João 5kg</h4>
+                <span class="product-price">R$ 3,89</span>
+                <span class="product-store">Supermercado Extra</span>
+                <span class="product-updated"><i class="fas fa-clock"></i> Atualizado: 12 min atrás</span>
+              </div>
+            </div>
+            <div class="product-card">
+              <div class="product-img-wrap">
+                <img src="assets/images/produto_oleo.png" alt="Óleo de Soja" loading="lazy" />
+              </div>
+              <div class="product-info">
+                <h4 class="product-name">Óleo de Soja Liza</h4>
+                <span class="product-price">R$ 6,99</span>
+                <span class="product-store">Atacadão</span>
+                <span class="product-updated"><i class="fas fa-clock"></i> Atualizado: 20 min atrás</span>
+              </div>
+            </div>
+            <div class="product-card">
+              <div class="product-img-wrap">
+                <img src="assets/images/produto_cafe.png" alt="Café" loading="lazy" />
+              </div>
+              <div class="product-info">
+                <h4 class="product-name">Café Melitta 500g</h4>
+                <span class="product-price">R$ 14,90</span>
+                <span class="product-store">Mercado Preço Baixo</span>
+                <span class="product-updated"><i class="fas fa-clock"></i> Atualizado: 8 min atrás</span>
+              </div>
+            </div>
+            <div class="product-card">
+              <div class="product-img-wrap">
+                <img src="assets/images/produto_ovos.png" alt="Ovos" loading="lazy" />
+              </div>
+              <div class="product-info">
+                <h4 class="product-name">Ovos Caipira 12un</h4>
+                <span class="product-price">R$ 12,50</span>
+                <span class="product-store">Supermercado Dia</span>
+                <span class="product-updated"><i class="fas fa-clock"></i> Atualizado: 3 min atrás</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ====== CARTÃO 2: MINHA DESPENSA INTELIGENTE ====== -->
+      <section id="card-pantry" class="card card-pantry">
+        <h2 class="card-title">
+          <i class="fas fa-lightbulb card-title-icon"></i>
+          MINHA DESPENSA INTELIGENTE
+        </h2>
+
+        <!-- Recipe Cards -->
+        <div class="recipe-cards">
+          <div class="recipe-card">
+            <div class="recipe-img-wrap">
+              <img src="assets/images/omelete_frango.png" alt="Omelete Especial de Frango" loading="lazy" />
+              <div class="recipe-badge">Rápido</div>
+            </div>
+            <div class="recipe-info">
+              <h4 class="recipe-name">Omelete Especial de Frango</h4>
+              <div class="recipe-ingredients">
+                <span class="ingredient">Ovos</span>
+                <span class="ingredient">Frango desfiado</span>
+                <span class="ingredient ingredient-expiring">Tomate <small>(vence amanhã)</small></span>
+                <span class="ingredient">Cebola</span>
+              </div>
+              <button class="btn btn-cook">
+                <i class="fas fa-utensils"></i> Cozinhar
+              </button>
+            </div>
+          </div>
+
+          <div class="recipe-card">
+            <div class="recipe-img-wrap">
+              <img src="assets/images/receita_arroz_feijao.png" alt="Arroz com Feijão Tropeiro" loading="lazy" />
+              <div class="recipe-badge">Favorito</div>
+            </div>
+            <div class="recipe-info">
+              <h4 class="recipe-name">Arroz com Feijão Tropeiro</h4>
+              <div class="recipe-ingredients">
+                <span class="ingredient">Arroz</span>
+                <span class="ingredient">Feijão</span>
+                <span class="ingredient ingredient-expiring">Linguiça <small>(vence em 2 dias)</small></span>
+                <span class="ingredient">Ovo</span>
+              </div>
+              <button class="btn btn-cook">
+                <i class="fas fa-utensils"></i> Cozinhar
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <button id="btn-view-pantry" class="btn btn-outline-green">
+          <i class="fas fa-box-open"></i> Ver Toda Despensa
+        </button>
+      </section>
+
+      <!-- ====== CARTÃO 3: COLABORE E GANHE PONTOS ====== -->
+      <section id="card-collab" class="card card-collab">
+        <h2 class="card-title">
+          <i class="fas fa-star card-title-icon"></i>
+          COLABORE E GANHE PONTOS
+        </h2>
+
+        <!-- Scan CTA Card -->
+        <div id="scan-cta" class="scan-cta">
+          <div class="scan-cta-content">
+            <i class="fas fa-camera scan-cta-icon"></i>
+            <div class="scan-cta-text">
+              <span class="scan-cta-title">ESCANEIE SUA NOTA FISCAL</span>
+              <span class="scan-cta-sub">Contribua com preços reais e ganhe pontos!</span>
+            </div>
+            <i class="fas fa-qrcode scan-cta-icon"></i>
+          </div>
+          <div class="scan-cta-glow"></div>
+        </div>
+
+        <!-- Progress Bar -->
+        <div class="progress-section">
+          <div class="progress-header">
+            <span class="progress-label">Progresso para o Nível 4</span>
+            <span class="progress-value">1.250 / 2.000 pts</span>
+          </div>
+          <div class="progress-bar-track">
+            <div class="progress-bar-fill" style="width: 62.5%;"></div>
+            <div class="progress-bar-glow"></div>
+          </div>
+          <div class="user-status">
+            <div class="user-status-info">
+              <i class="fas fa-medal user-level-icon"></i>
+              <span>Você tem <strong>1.250 pontos</strong> (Nível 3 - Caçador)</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Ranking Link -->
+        <a href="#" id="ranking-link" class="ranking-link">
+          <i class="fas fa-trophy"></i> Ver Ranking da Região
+        </a>
+      </section>
+
+    </div>
+  </main>
+
+  <!-- ====== C. BARRA DE NAVEGAÇÃO INFERIOR ====== -->
+  <nav id="bottom-nav" class="bottom-nav">
+    <button class="nav-item" data-tab="map" aria-label="Mapa">
+      <i class="fas fa-map-marker-alt nav-icon"></i>
+      <span class="nav-label">Mapa</span>
+    </button>
+    <button class="nav-item" data-tab="list" aria-label="Lista de Compras">
+      <i class="fas fa-clipboard-list nav-icon"></i>
+      <span class="nav-label">Lista</span>
+    </button>
+    <button id="btn-scan" class="nav-item nav-scan" data-tab="scan" aria-label="Escanear Nota Fiscal">
+      <div class="scan-btn-circle">
+        <i class="fas fa-camera nav-icon"></i>
+      </div>
+      <span class="nav-label">Escanear</span>
+    </button>
+    <button class="nav-item" data-tab="recipes" aria-label="Receitas">
+      <i class="fas fa-utensils nav-icon"></i>
+      <span class="nav-label">Receitas</span>
+    </button>
+    <button class="nav-item active" data-tab="home" aria-label="Perfil">
+      <i class="fas fa-user nav-icon"></i>
+      <span class="nav-label">Perfil</span>
+    </button>
+  </nav>
+
+  <script src="app.js"></script>
+</body>
+</html>

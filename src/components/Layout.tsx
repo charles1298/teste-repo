@@ -1,182 +1,139 @@
-import React, { useState, useEffect } from 'react';
-import { NavLink, Outlet, useLocation } from 'react-router-dom';
-import { Home, Layers, Star, Users, Newspaper, Calendar, ChevronUp } from 'lucide-react';
-import clsx from 'clsx';
-import { twMerge } from 'tailwind-merge';
-import { motion, AnimatePresence } from 'framer-motion';
+import { useState, useRef, useEffect } from 'react';
+import { Outlet, NavLink, useLocation } from 'react-router-dom';
+import { 
+  Bell, X, MapPin, ClipboardList, Camera, 
+  UtensilsCrossed, User
+} from 'lucide-react';
 
-const Layout = () => {
+const notifications = [
+  { id: 1, type: 'recipe', title: 'Nova receita!', text: '"Bolo de Cenoura" com ingredientes da sua despensa!', time: 'Há 5 min', unread: true },
+  { id: 2, type: 'coupon', title: 'Novo cupom!', text: 'Você ganhou R$ 5,00 de desconto no Mercado Preço Baixo.', time: 'Há 30 min', unread: true },
+  { id: 3, type: 'price', title: 'Preço baixou!', text: 'Arroz Tio João está R$ 3,89 no Mercado Extra.', time: 'Há 2 horas', unread: false },
+];
+
+export default function Layout() {
+  const [notifOpen, setNotifOpen] = useState(false);
   const location = useLocation();
-  const [showScrollTop, setShowScrollTop] = useState(false);
+  const notifRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
-    const handleScroll = () => {
-      setShowScrollTop(window.scrollY > 400);
+    const handleClick = (e: MouseEvent) => {
+      if (notifRef.current && !notifRef.current.contains(e.target as Node)) {
+        setNotifOpen(false);
+      }
     };
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
+    document.addEventListener('mousedown', handleClick);
+    return () => document.removeEventListener('mousedown', handleClick);
   }, []);
 
-  const scrollToTop = () => {
-    window.scrollTo({ top: 0, behavior: 'smooth' });
-  };
 
-  const navItems = [
-    { to: '/', label: 'Início', icon: <Home size={20} /> },
-    { to: '/cards', label: 'Cartas de Suporte', icon: <Layers size={20} /> },
-    { to: '/deck', label: 'Meu Deck', icon: <Star size={20} /> },
-    { to: '/characters', label: 'Personagens', icon: <Users size={20} /> },
-    { to: '/news', label: 'Notícias', icon: <Newspaper size={20} /> },
-    { to: '/timeline', label: 'Timeline', icon: <Calendar size={20} /> },
-  ];
 
-  const Logo = ({ isSidebar = false }: { isSidebar?: boolean }) => (
-    <NavLink 
-      to="/"
-      className={clsx("flex items-center group cursor-pointer", isSidebar ? "justify-center w-full my-6 flex-col gap-3" : "")}
-    >
-      <div className={clsx(
-        "bg-white rounded-full overflow-hidden flex items-center justify-center rotate-3 group-hover:rotate-6 transition-transform shadow-md border-2 border-pink-200",
-        isSidebar ? "w-20 h-20" : "w-10 h-10 md:w-12 md:h-12"
-      )}>
-        <img src="/assets/oguri-chibi-logo.png" alt="Logo" className="w-full h-full object-contain p-0.5 relative z-10" />
+  const NavItems = () => (
+    <>
+      <NavLink to="/" className={({isActive}) => `flex flex-col md:flex-row items-center gap-1 md:gap-4 flex-1 md:flex-none p-2 md:p-3 md:rounded-xl transition-colors ${isActive ? 'text-green-600 md:bg-green-50' : 'text-gray-400 hover:text-green-500'}`}>
+        <MapPin size={22} className={location.pathname === '/' ? 'text-green-600' : ''} />
+        <span className={`text-[10px] md:text-sm md:font-bold mt-1 md:mt-0 ${location.pathname === '/' ? 'font-bold' : 'font-medium'}`}>Início</span>
+      </NavLink>
+      <NavLink to="/list" className={({isActive}) => `flex flex-col md:flex-row items-center gap-1 md:gap-4 flex-1 md:flex-none p-2 md:p-3 md:rounded-xl transition-colors ${isActive ? 'text-green-600 md:bg-green-50' : 'text-gray-400 hover:text-green-500'}`}>
+        <ClipboardList size={22} className={location.pathname === '/list' ? 'text-green-600' : ''} />
+        <span className={`text-[10px] md:text-sm md:font-bold mt-1 md:mt-0 ${location.pathname === '/list' ? 'font-bold' : 'font-medium'}`}>Lista</span>
+      </NavLink>
+      
+      {/* SCAN - Emphasized on mobile, regular on desktop */}
+      <div className="flex flex-col md:flex-row items-center justify-center flex-1 md:flex-none md:p-3 md:rounded-xl md:bg-green-600 md:text-white md:hover:bg-green-700 cursor-pointer -mt-6 md:mt-0 relative md:static">
+        <div className="w-14 h-14 md:w-auto md:h-auto rounded-full md:rounded-none bg-green-600 md:bg-transparent flex items-center justify-center text-white shadow-lg md:shadow-none hover:scale-105 active:scale-95 transition-all">
+          <Camera size={24} className="md:w-5 md:h-5" />
+        </div>
+        <span className="text-[10px] md:text-sm md:font-bold font-bold text-green-600 md:text-white mt-1 md:mt-0 md:ml-3">Escanear</span>
       </div>
-      <div className={clsx("flex flex-col", isSidebar ? "items-center" : "ml-2 md:ml-3")}>
-        <span className={clsx("font-black text-gray-800 leading-none group-hover:text-uma-pink transition-colors", isSidebar ? "text-2xl mt-2" : "text-xl md:text-2xl")}>
-          Umamusume
-        </span>
-        <span className={clsx("font-bold text-uma-pink tracking-widest uppercase mt-0.5", isSidebar ? "text-xs" : "text-[10px] md:text-xs")}>
-          Pretty Derby
-        </span>
-      </div>
-    </NavLink>
+
+      <NavLink to="/recipes" className={({isActive}) => `flex flex-col md:flex-row items-center gap-1 md:gap-4 flex-1 md:flex-none p-2 md:p-3 md:rounded-xl transition-colors ${isActive ? 'text-green-600 md:bg-green-50' : 'text-gray-400 hover:text-green-500'}`}>
+        <UtensilsCrossed size={22} className={location.pathname === '/recipes' ? 'text-green-600' : ''} />
+        <span className={`text-[10px] md:text-sm md:font-bold mt-1 md:mt-0 ${location.pathname === '/recipes' ? 'font-bold' : 'font-medium'}`}>Receitas</span>
+      </NavLink>
+      <NavLink to="/profile" className={({isActive}) => `flex flex-col md:flex-row items-center gap-1 md:gap-4 flex-1 md:flex-none p-2 md:p-3 md:rounded-xl transition-colors ${isActive ? 'text-green-600 md:bg-green-50' : 'text-gray-400 hover:text-green-500'}`}>
+        <User size={22} className={location.pathname === '/profile' ? 'text-green-600' : ''} />
+        <span className={`text-[10px] md:text-sm md:font-bold mt-1 md:mt-0 ${location.pathname === '/profile' ? 'font-bold' : 'font-medium'}`}>Perfil</span>
+      </NavLink>
+    </>
   );
 
   return (
-    <div className="flex bg-transparent min-h-screen">
+    <div className="flex min-h-screen bg-white font-sans">
       
-      {/* Desktop Sidebar (lg and up) */}
-      <aside className="hidden lg:flex flex-col w-64 xl:w-72 fixed inset-y-0 bg-white/90 backdrop-blur-xl border-r-4 border-uma-pink z-50 shadow-2xl">
-        <Logo isSidebar={true} />
-        
-        <nav className="flex-1 px-4 mt-6 overflow-y-auto scrollbar-none pb-8 space-y-2">
-          {navItems.map((item) => (
-            <NavLink
-              key={item.to}
-              to={item.to}
-              className={({ isActive }) =>
-                twMerge(
-                  clsx(
-                    'group relative flex items-center space-x-3 px-4 py-3.5 rounded-2xl font-black transition-all duration-300 w-full',
-                    isActive 
-                      ? 'text-white bg-gradient-to-r from-uma-pink to-pink-500 shadow-md shadow-pink-200 scale-105' 
-                      : 'text-slate-500 hover:text-uma-pink hover:bg-pink-50 hover:scale-105 active:scale-95 border border-transparent hover:border-pink-100'
-                  )
-                )
-              }
-            >
-              <div className="flex-shrink-0">{item.icon}</div>
-              <span className="text-sm xl:text-base">{item.label}</span>
-            </NavLink>
-          ))}
-        </nav>
-        
-        <div className="p-4 mt-auto">
-          <div className="bg-pink-50/80 rounded-2xl p-4 border border-pink-100 text-center">
-            <span className="text-[10px] uppercase font-black text-uma-pink tracking-widest">Tracen Academy</span>
-            <p className="text-xs font-bold text-slate-500 mt-1">Database & Tools</p>
-          </div>
+      {/* ====== DESKTOP SIDEBAR ====== */}
+      <aside className="hidden lg:flex flex-col w-64 border-r border-gray-100 bg-white fixed top-0 bottom-0 left-0 z-50">
+        <div className="p-8">
+          <span className="text-2xl font-extrabold tracking-tight text-gray-800 flex items-center gap-2">
+            <div className="w-8 h-8 rounded-full bg-green-600 flex items-center justify-center text-white text-lg overflow-hidden">
+               🍜
+            </div>
+            Kupa<span className="text-green-600">Map</span>
+          </span>
         </div>
+        <nav className="flex-1 px-4 flex flex-col gap-2">
+           <NavItems />
+        </nav>
       </aside>
 
-      {/* Main Container */}
-      <div className="flex-grow lg:ml-64 xl:ml-72 flex flex-col min-h-screen relative w-full">
+      {/* ====== MAIN CONTENT WRAPPER ====== */}
+      <div className="flex-1 lg:ml-64 flex flex-col min-h-screen relative w-full">
         
-        {/* Mobile/Tablet Top Navbar (hidden on lg) */}
-        <header className="lg:hidden bg-white/80 backdrop-blur-md border-b-4 border-uma-pink sticky top-0 z-50 shadow-sm">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6">
-            <div className="flex items-center justify-between h-16 md:h-20">
-              <Logo />
-              {/* Tablet Hidden Nav? We'll rely on Bottom bar for MD */}
+        {/* ====== HEADER ====== */}
+        <header className="sticky top-0 z-40 bg-white/90 backdrop-blur-lg px-5 py-4 flex justify-between items-center max-w-7xl mx-auto w-full">
+          <div className="flex items-center gap-3 cursor-pointer">
+            <div className="w-10 h-10 rounded-full bg-gray-100 overflow-hidden flex items-center justify-center border border-gray-200">
+              <User size={20} className="text-gray-400" />
             </div>
+            <div>
+              <p className="text-[12px] text-gray-500 font-medium">Delivery to</p>
+              <p className="text-sm font-bold text-gray-800 flex items-center gap-1">
+                Rua Utama No.20 <X className="rotate-45" size={14} />
+              </p>
+            </div>
+          </div>
+
+          <div className="relative" ref={notifRef}>
+            <button 
+              onClick={() => setNotifOpen(!notifOpen)}
+              className="w-10 h-10 flex items-center justify-center rounded-full bg-white border border-gray-100 text-gray-600 hover:bg-gray-50 transition-all shadow-sm"
+              aria-label="Notificações"
+            >
+              <Bell size={20} />
+              <div className="absolute top-2 right-2 w-2.5 h-2.5 bg-red-500 rounded-full border-2 border-white" />
+            </button>
+
+            {notifOpen && (
+              <div className="absolute top-12 right-0 w-80 max-w-[90vw] bg-white rounded-2xl shadow-[0_8px_30px_rgba(0,0,0,0.12)] border border-gray-100 overflow-hidden animate-scaleIn origin-top-right z-50">
+                <div className="p-4 border-b border-gray-50 flex justify-between items-center">
+                  <h3 className="font-bold text-gray-800">Notifications</h3>
+                </div>
+                <div className="max-h-80 overflow-y-auto p-2 space-y-1">
+                  {notifications.map(n => (
+                    <div key={n.id} className="p-3 rounded-xl hover:bg-gray-50 transition-colors cursor-pointer flex gap-3">
+                       <div className="w-10 h-10 rounded-full bg-green-50 flex items-center justify-center text-green-600 shrink-0">🔔</div>
+                       <div>
+                         <p className="text-sm font-bold text-gray-800">{n.title}</p>
+                         <p className="text-xs text-gray-500 mt-0.5">{n.text}</p>
+                       </div>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            )}
           </div>
         </header>
 
-        {/* Main Content Area with Page Transitions */}
-        <main className="flex-grow w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6 md:py-8 relative z-10">
-          <motion.div
-            key={location.pathname}
-            initial={{ opacity: 0, scale: 0.98, y: 10 }}
-            animate={{ opacity: 1, scale: 1, y: 0 }}
-            exit={{ opacity: 0, scale: 0.98, y: -10 }}
-            transition={{ duration: 0.3, ease: "easeOut" }}
-            className="page-transition"
-          >
-            <Outlet />
-          </motion.div>
+        {/* ====== PAGE INJECTION ====== */}
+        <main className="flex-1 pb-24 lg:pb-8 px-4 md:px-8 w-full max-w-7xl mx-auto">
+          <Outlet />
         </main>
 
-        {/* Back to Top Button */}
-        <AnimatePresence>
-          {showScrollTop && (
-            <motion.button
-              initial={{ opacity: 0, scale: 0.5, y: 20 }}
-              animate={{ opacity: 1, scale: 1, y: 0 }}
-              exit={{ opacity: 0, scale: 0.5, y: 20 }}
-              whileHover={{ scale: 1.1 }}
-              whileTap={{ scale: 0.9 }}
-              onClick={scrollToTop}
-              className="fixed bottom-24 lg:bottom-8 right-4 lg:right-8 z-50 p-3.5 bg-uma-pink text-white rounded-full shadow-lg border-3 border-white hover:bg-uma-pink-hover transition-colors"
-              title="Voltar ao topo"
-            >
-              <ChevronUp size={24} />
-            </motion.button>
-          )}
-        </AnimatePresence>
-
-        {/* Mobile/Tablet Navigation Bar */}
-        <nav className="lg:hidden fixed bottom-1 left-2 right-2 bg-white/95 backdrop-blur-xl border-2 border-pink-100/50 pb-safe z-50 shadow-[0_8px_30px_rgb(0,0,0,0.12)] rounded-3xl overflow-hidden">
-          <ul className="flex justify-around items-center h-18">
-            {navItems.map((item) => {
-              const MobileIcon = React.cloneElement(item.icon as React.ReactElement<any>, { size: 24 });
-              return (
-                <li key={item.to} className="w-full">
-                  <NavLink
-                    to={item.to}
-                    className={({ isActive }) =>
-                      twMerge(
-                        clsx(
-                          'flex flex-col items-center justify-center w-full h-full p-2 font-bold transition-all duration-300 active:scale-90',
-                          isActive ? 'text-uma-pink' : 'text-slate-400 hover:text-uma-pink'
-                        )
-                      )
-                    }
-                  >
-                    {({ isActive }) => (
-                      <>
-                        <motion.div 
-                          animate={isActive ? { scale: 1.15, y: -4 } : { scale: 1, y: 0 }}
-                          className={clsx(
-                            "p-2 rounded-2xl transition-colors", 
-                            isActive ? "bg-pink-100 shadow-sm shadow-pink-200/50 mb-1" : "mb-1"
-                          )}
-                        >
-                          {MobileIcon}
-                        </motion.div>
-                        <span className="text-[9px] uppercase tracking-tighter leading-none">{item.label.split(' ')[0]}</span>
-                      </>
-                    )}
-                  </NavLink>
-                </li>
-              );
-            })}
-          </ul>
+        {/* ====== MOBILE BOTTOM NAV ====== */}
+        <nav className="lg:hidden fixed bottom-0 left-0 right-0 z-50 h-[72px] bg-white border-t border-gray-100 shadow-[0_-10px_30px_rgba(0,0,0,0.03)] px-2 flex justify-between items-center pb-[env(safe-area-inset-bottom)]">
+           <NavItems />
         </nav>
-        {/* Spacer to prevent content clipping on mobile behind bottom nav */}
-        <div className="lg:hidden h-24"></div>
       </div>
     </div>
   );
-};
-
-export default Layout;
+}
