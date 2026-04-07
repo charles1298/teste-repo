@@ -244,7 +244,7 @@ const CharacterCard = ({ character, index, ownedDeck, onCardClick }: { character
           >
             <div className="px-4 pb-4 space-y-4">
               
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+              <div className="grid grid-cols-1 lg:grid-cols-2 gap-4">
                 <div className="bg-gradient-to-br from-pink-50/30 to-purple-50/30 rounded-2xl border border-pink-100/50 p-4 flex flex-col sm:flex-row gap-4 items-center">
                   <div className="flex-shrink-0 w-24 h-32 rounded-xl overflow-hidden shadow-md bg-white border-2 border-white">
                     <img
@@ -559,7 +559,7 @@ const Characters = () => {
 
       <motion.div 
         layout
-        className="grid grid-cols-1 md:grid-cols-2 gap-4"
+        className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-4 lg:gap-6"
       >
         <AnimatePresence mode="popLayout">
           {filtered.map((character, i) => (
