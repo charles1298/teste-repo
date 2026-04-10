@@ -1,14 +1,14 @@
 import { useState, useRef, useEffect } from 'react';
 import { Outlet, NavLink, useLocation } from 'react-router-dom';
 import { 
-  Bell, X, MapPin, ClipboardList, Camera, 
-  UtensilsCrossed, User
+  Bell, MapPin, ClipboardList, Camera, 
+  UtensilsCrossed, User, Search, Settings, HelpCircle, Trophy, ShoppingCart
 } from 'lucide-react';
 
 const notifications = [
-  { id: 1, type: 'recipe', title: 'Nova receita!', text: '"Bolo de Cenoura" com ingredientes da sua despensa!', time: 'Há 5 min', unread: true },
-  { id: 2, type: 'coupon', title: 'Novo cupom!', text: 'Você ganhou R$ 5,00 de desconto no Mercado Preço Baixo.', time: 'Há 30 min', unread: true },
-  { id: 3, type: 'price', title: 'Preço baixou!', text: 'Arroz Tio João está R$ 3,89 no Mercado Extra.', time: 'Há 2 horas', unread: false },
+  { id: 1, type: 'recipe', title: 'Nova receita!', text: '"Omelete de Frango" com itens da despensa!', time: 'Há 5 min', unread: true },
+  { id: 2, type: 'coupon', title: 'Novo cupom!', text: 'Você ganhou R$ 5,00 de desconto no Mercado Local.', time: 'Há 30 min', unread: true },
+  { id: 3, type: 'price', title: 'Preço baixou!', text: 'Arroz 5kg está R$ 22,90 no Supermercado.', time: 'Há 2 horas', unread: false },
 ];
 
 export default function Layout() {
@@ -26,95 +26,131 @@ export default function Layout() {
     return () => document.removeEventListener('mousedown', handleClick);
   }, []);
 
-
-
   const NavItems = () => (
     <>
-      <NavLink to="/" className={({isActive}) => `flex flex-col md:flex-row items-center gap-1 md:gap-4 flex-1 md:flex-none p-2 md:p-3 md:rounded-xl transition-colors ${isActive ? 'text-green-600 md:bg-green-50' : 'text-gray-400 hover:text-green-500'}`}>
+      <NavLink to="/" className={({isActive}) => `flex flex-col lg:flex-row items-center gap-1 lg:gap-4 flex-1 lg:flex-none p-2 lg:p-3.5 lg:rounded-2xl transition-all font-medium ${isActive ? 'text-green-600 lg:bg-green-50 lg:shadow-sm' : 'text-gray-400 hover:text-green-500 lg:hover:bg-gray-50'}`}>
         <MapPin size={22} className={location.pathname === '/' ? 'text-green-600' : ''} />
-        <span className={`text-[10px] md:text-sm md:font-bold mt-1 md:mt-0 ${location.pathname === '/' ? 'font-bold' : 'font-medium'}`}>Início</span>
+        <span className={`text-[10px] lg:text-[15px] mt-1 lg:mt-0 ${location.pathname === '/' ? 'font-bold' : ''}`}>Dashboard</span>
       </NavLink>
-      <NavLink to="/list" className={({isActive}) => `flex flex-col md:flex-row items-center gap-1 md:gap-4 flex-1 md:flex-none p-2 md:p-3 md:rounded-xl transition-colors ${isActive ? 'text-green-600 md:bg-green-50' : 'text-gray-400 hover:text-green-500'}`}>
+      <NavLink to="/list" className={({isActive}) => `flex flex-col lg:flex-row items-center gap-1 lg:gap-4 flex-1 lg:flex-none p-2 lg:p-3.5 lg:rounded-2xl transition-all font-medium ${isActive ? 'text-green-600 lg:bg-green-50 lg:shadow-sm' : 'text-gray-400 hover:text-green-500 lg:hover:bg-gray-50'}`}>
         <ClipboardList size={22} className={location.pathname === '/list' ? 'text-green-600' : ''} />
-        <span className={`text-[10px] md:text-sm md:font-bold mt-1 md:mt-0 ${location.pathname === '/list' ? 'font-bold' : 'font-medium'}`}>Lista</span>
+        <span className={`text-[10px] lg:text-[15px] mt-1 lg:mt-0 ${location.pathname === '/list' ? 'font-bold' : ''}`}>Minha Lista</span>
       </NavLink>
       
-      {/* SCAN - Emphasized on mobile, regular on desktop */}
-      <div className="flex flex-col md:flex-row items-center justify-center flex-1 md:flex-none md:p-3 md:rounded-xl md:bg-green-600 md:text-white md:hover:bg-green-700 cursor-pointer -mt-6 md:mt-0 relative md:static">
-        <div className="w-14 h-14 md:w-auto md:h-auto rounded-full md:rounded-none bg-green-600 md:bg-transparent flex items-center justify-center text-white shadow-lg md:shadow-none hover:scale-105 active:scale-95 transition-all">
-          <Camera size={24} className="md:w-5 md:h-5" />
+      {/* SCAN - Emphasized on mobile, integrated smoothly on desktop */}
+      <div className="flex flex-col lg:flex-row items-center justify-center flex-1 lg:flex-none lg:p-3.5 lg:rounded-2xl lg:bg-gradient-to-r lg:from-green-500 lg:to-green-600 lg:text-white lg:hover:shadow-lg lg:hover:-translate-y-0.5 cursor-pointer -mt-6 lg:mt-2 relative lg:static transition-all shadow-glow-green lg:shadow-md">
+        <div className="w-14 h-14 lg:w-auto lg:h-auto rounded-full lg:rounded-none bg-green-500 lg:bg-transparent flex items-center justify-center text-white shadow-lg lg:shadow-none hover:scale-105 active:scale-95 transition-all">
+          <Camera size={24} className="lg:w-5 lg:h-5" />
         </div>
-        <span className="text-[10px] md:text-sm md:font-bold font-bold text-green-600 md:text-white mt-1 md:mt-0 md:ml-3">Escanear</span>
+        <span className="text-[10px] lg:text-[15px] font-bold text-green-600 lg:text-white mt-1 lg:mt-0 lg:ml-3">Escanear Nota</span>
       </div>
 
-      <NavLink to="/recipes" className={({isActive}) => `flex flex-col md:flex-row items-center gap-1 md:gap-4 flex-1 md:flex-none p-2 md:p-3 md:rounded-xl transition-colors ${isActive ? 'text-green-600 md:bg-green-50' : 'text-gray-400 hover:text-green-500'}`}>
+      <NavLink to="/recipes" className={({isActive}) => `flex flex-col lg:flex-row items-center gap-1 lg:gap-4 flex-1 lg:flex-none p-2 lg:p-3.5 lg:rounded-2xl transition-all font-medium ${isActive ? 'text-green-600 lg:bg-green-50 lg:shadow-sm' : 'text-gray-400 hover:text-green-500 lg:hover:bg-gray-50'}`}>
         <UtensilsCrossed size={22} className={location.pathname === '/recipes' ? 'text-green-600' : ''} />
-        <span className={`text-[10px] md:text-sm md:font-bold mt-1 md:mt-0 ${location.pathname === '/recipes' ? 'font-bold' : 'font-medium'}`}>Receitas</span>
+        <span className={`text-[10px] lg:text-[15px] mt-1 lg:mt-0 ${location.pathname === '/recipes' ? 'font-bold' : ''}`}>Despensa</span>
       </NavLink>
-      <NavLink to="/profile" className={({isActive}) => `flex flex-col md:flex-row items-center gap-1 md:gap-4 flex-1 md:flex-none p-2 md:p-3 md:rounded-xl transition-colors ${isActive ? 'text-green-600 md:bg-green-50' : 'text-gray-400 hover:text-green-500'}`}>
+      <NavLink to="/profile" className={({isActive}) => `flex flex-col lg:flex-row items-center gap-1 lg:gap-4 flex-1 lg:flex-none p-2 lg:p-3.5 lg:rounded-2xl transition-all font-medium ${isActive ? 'text-green-600 lg:bg-green-50 lg:shadow-sm' : 'text-gray-400 hover:text-green-500 lg:hover:bg-gray-50'}`}>
         <User size={22} className={location.pathname === '/profile' ? 'text-green-600' : ''} />
-        <span className={`text-[10px] md:text-sm md:font-bold mt-1 md:mt-0 ${location.pathname === '/profile' ? 'font-bold' : 'font-medium'}`}>Perfil</span>
+        <span className={`text-[10px] lg:text-[15px] mt-1 lg:mt-0 ${location.pathname === '/profile' ? 'font-bold' : ''}`}>Meu Perfil</span>
       </NavLink>
     </>
   );
 
   return (
-    <div className="flex min-h-screen bg-white font-sans">
+    <div className="flex min-h-screen bg-[#f0f2f5] font-sans">
       
       {/* ====== DESKTOP SIDEBAR ====== */}
-      <aside className="hidden lg:flex flex-col w-64 border-r border-gray-100 bg-white fixed top-0 bottom-0 left-0 z-50">
-        <div className="p-8">
-          <span className="text-2xl font-extrabold tracking-tight text-gray-800 flex items-center gap-2">
-            <div className="w-8 h-8 rounded-full bg-green-600 flex items-center justify-center text-white text-lg overflow-hidden">
-               🍜
-            </div>
-            Kupa<span className="text-green-600">Map</span>
+      <aside className="hidden lg:flex flex-col w-[280px] border-r border-gray-200 bg-white fixed top-0 bottom-0 left-0 z-50 shadow-sm">
+        <div className="p-7 flex items-center gap-3">
+          <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-green-400 to-green-600 flex items-center justify-center text-white shadow-md">
+             <ShoppingCart size={22} />
+          </div>
+          <span className="text-2xl font-extrabold tracking-tight text-gray-800">
+            Mercado<span className="text-green-600">Map</span>
           </span>
         </div>
-        <nav className="flex-1 px-4 flex flex-col gap-2">
+        
+        <div className="px-6 pb-4">
+          <div className="bg-gray-50 rounded-2xl p-4 flex items-center gap-3 border border-gray-100">
+             <div className="w-10 h-10 rounded-full bg-blue-100 flex items-center justify-center text-blue-600 font-bold">
+               PS
+             </div>
+             <div>
+               <p className="text-sm font-bold text-gray-800">Pedro Silva</p>
+               <p className="text-xs text-orange-500 font-medium flex items-center gap-1">
+                 <Trophy size={12}/> Nível 3 - Caçador
+               </p>
+             </div>
+          </div>
+        </div>
+
+        <nav className="flex-1 px-4 flex flex-col gap-1.5 overflow-y-auto python-scrollbar py-2">
+           <p className="text-[11px] font-bold text-gray-400 uppercase tracking-wider px-4 mb-2 mt-2">Navegação Principal</p>
            <NavItems />
+           
+           <hr className="my-4 border-gray-100 mx-4" />
+           <p className="text-[11px] font-bold text-gray-400 uppercase tracking-wider px-4 mb-2">Opções</p>
+           
+           <button className="flex flex-row items-center gap-4 flex-none p-3.5 rounded-2xl transition-all font-medium text-gray-500 hover:text-gray-800 hover:bg-gray-50 text-[15px] text-left">
+             <Settings size={20} /> Configurações
+           </button>
+           <button className="flex flex-row items-center gap-4 flex-none p-3.5 rounded-2xl transition-all font-medium text-gray-500 hover:text-gray-800 hover:bg-gray-50 text-[15px] text-left">
+             <HelpCircle size={20} /> Ajuda
+           </button>
         </nav>
       </aside>
 
       {/* ====== MAIN CONTENT WRAPPER ====== */}
-      <div className="flex-1 lg:ml-64 flex flex-col min-h-screen relative w-full">
+      <div className="flex-1 lg:ml-[280px] flex flex-col min-h-screen relative w-full">
         
         {/* ====== HEADER ====== */}
-        <header className="sticky top-0 z-40 bg-white/90 backdrop-blur-lg px-5 py-4 flex justify-between items-center max-w-7xl mx-auto w-full">
-          <div className="flex items-center gap-3 cursor-pointer">
-            <div className="w-10 h-10 rounded-full bg-gray-100 overflow-hidden flex items-center justify-center border border-gray-200">
-              <User size={20} className="text-gray-400" />
-            </div>
-            <div>
-              <p className="text-[12px] text-gray-500 font-medium">Delivery to</p>
-              <p className="text-sm font-bold text-gray-800 flex items-center gap-1">
-                Rua Utama No.20 <X className="rotate-45" size={14} />
-              </p>
+        <header className="sticky top-0 z-40 bg-white/80 backdrop-blur-xl px-5 lg:px-8 py-3.5 flex justify-between items-center w-full border-b border-gray-100 shadow-sm">
+          {/* Logo on mobile only inline */}
+          <div className="lg:hidden flex items-center gap-2">
+            <ShoppingCart className="text-green-500" size={24} />
+            <span className="text-xl font-extrabold text-gray-800">M<span className="text-green-600">Map</span></span>
+          </div>
+
+          {/* Search bar for desktop */}
+          <div className="hidden lg:flex flex-1 max-w-xl mx-4">
+            <div className="relative w-full">
+              <div className="absolute inset-y-0 left-0 pl-4 flex items-center pointer-events-none">
+                <Search size={18} className="text-gray-400" />
+              </div>
+              <input 
+                type="text" 
+                className="block w-full pl-11 pr-4 py-2.5 bg-gray-50 border border-transparent rounded-full text-sm placeholder-gray-500 focus:bg-white focus:border-green-400 focus:ring-4 focus:ring-green-50 transition-all outline-none text-gray-800" 
+                placeholder="Pesquisar produtos, mercados ou receitas..." 
+              />
             </div>
           </div>
 
-          <div className="relative" ref={notifRef}>
+          <div className="flex items-center gap-4 ml-auto" ref={notifRef}>
             <button 
               onClick={() => setNotifOpen(!notifOpen)}
-              className="w-10 h-10 flex items-center justify-center rounded-full bg-white border border-gray-100 text-gray-600 hover:bg-gray-50 transition-all shadow-sm"
+              className="relative w-10 h-10 flex items-center justify-center rounded-full bg-white border border-gray-200 text-gray-600 hover:bg-gray-50 hover:text-green-600 transition-all shadow-sm"
               aria-label="Notificações"
             >
               <Bell size={20} />
-              <div className="absolute top-2 right-2 w-2.5 h-2.5 bg-red-500 rounded-full border-2 border-white" />
+              <div className="absolute top-2 right-2.5 w-2.5 h-2.5 bg-red-500 rounded-full border-2 border-white animate-pulse" />
             </button>
 
             {notifOpen && (
-              <div className="absolute top-12 right-0 w-80 max-w-[90vw] bg-white rounded-2xl shadow-[0_8px_30px_rgba(0,0,0,0.12)] border border-gray-100 overflow-hidden animate-scaleIn origin-top-right z-50">
+              <div className="absolute top-16 right-5 lg:right-8 w-80 max-w-[90vw] bg-white rounded-2xl shadow-[0_10px_40px_rgba(0,0,0,0.12)] border border-gray-100 overflow-hidden animate-scaleIn origin-top-right z-50">
                 <div className="p-4 border-b border-gray-50 flex justify-between items-center">
-                  <h3 className="font-bold text-gray-800">Notifications</h3>
+                  <h3 className="font-bold text-gray-800">Notificações</h3>
+                  <span className="text-xs font-medium text-green-600 bg-green-50 px-2 py-1 rounded-md cursor-pointer hover:bg-green-100">Marcar lidas</span>
                 </div>
                 <div className="max-h-80 overflow-y-auto p-2 space-y-1">
                   {notifications.map(n => (
-                    <div key={n.id} className="p-3 rounded-xl hover:bg-gray-50 transition-colors cursor-pointer flex gap-3">
-                       <div className="w-10 h-10 rounded-full bg-green-50 flex items-center justify-center text-green-600 shrink-0">🔔</div>
+                     <div key={n.id} className={`p-3 rounded-xl hover:bg-gray-50 transition-colors cursor-pointer flex gap-3 ${n.unread ? 'bg-[#f0fdf5]/50' : ''}`}>
+                       <div className={`w-10 h-10 rounded-full flex items-center justify-center shrink-0 ${n.type === 'recipe' ? 'bg-orange-100 text-orange-600' : n.type === 'coupon' ? 'bg-blue-100 text-blue-600' : 'bg-green-100 text-green-600'}`}>
+                         {n.type === 'recipe' ? <UtensilsCrossed size={18}/> : n.type === 'coupon' ? <ShoppingCart size={18}/> : <Bell size={18}/>}
+                       </div>
                        <div>
-                         <p className="text-sm font-bold text-gray-800">{n.title}</p>
-                         <p className="text-xs text-gray-500 mt-0.5">{n.text}</p>
+                         <p className="text-[13px] font-bold text-gray-800">{n.title}</p>
+                         <p className="text-[12px] text-gray-500 mt-0.5 leading-snug">{n.text}</p>
+                         <p className="text-[10px] text-gray-400 mt-1 font-medium">{n.time}</p>
                        </div>
                     </div>
                   ))}
@@ -125,7 +161,7 @@ export default function Layout() {
         </header>
 
         {/* ====== PAGE INJECTION ====== */}
-        <main className="flex-1 pb-24 lg:pb-8 px-4 md:px-8 w-full max-w-7xl mx-auto">
+        <main className="flex-1 pb-24 lg:pb-10 pt-4 lg:pt-6 w-full">
           <Outlet />
         </main>
 
