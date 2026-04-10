@@ -1,5 +1,4 @@
-import { useState } from 'react';
-import { Search, ChevronRight, MapPin, Clock, Camera, Plus, Map as MapIcon, UtensilsCrossed, Star, TrendingDown } from 'lucide-react';
+import { ChevronRight, MapPin, Clock, Camera, Plus, Map as MapIcon, UtensilsCrossed, Star, TrendingDown } from 'lucide-react';
 
 const products = [
   { id: 1, name: 'Leite Integral Líder', price: 'R$ 4,50', oldPrice: 'R$ 5,20', store: 'Mercado Preço Baixo', updated: '5 min', img: 'https://images.unsplash.com/photo-1550583724-b2692b85b150?w=500&h=500&fit=crop' },
