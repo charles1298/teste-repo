@@ -1343,6 +1343,67 @@ img {
 }
 
 /* ============================================================
+   DESKTOP (FORMATO DE SITE)
+   ============================================================ */
+@media (min-width: 1024px) {
+  /* Fix sidebar permanently on the left */
+  .sidebar { 
+    transform: translateX(0); 
+    box-shadow: 1px 0 10px rgba(0,0,0,0.05);
+  }
+  .sidebar-close { display: none; }
+  .sidebar-overlay { display: none !important; }
+  
+  /* Hide Hamburguer menu */
+  #menu-hamburger { display: none; }
+  
+  /* Shift content to the right */
+  .header-nav { 
+    left: 280px; 
+    padding: 0 32px;
+  }
+  .search-bar-container { 
+    left: 280px; 
+    padding: 16px 32px 8px;
+  }
+  .main-content { 
+    margin-left: 280px; 
+    padding-bottom: 32px; /* remove bottom-nav spacing */
+    padding-top: calc(var(--header-h) + var(--search-h) + 24px);
+  }
+  
+  /* Hide Bottom Nav & Show Desktop Links in Sidebar */
+  .bottom-nav { display: none; }
+  .desktop-only-link { display: flex; }
+  
+  /* Fix the Cards Container width */
+  .cards-container {
+    max-width: none;
+    padding: 24px 32px;
+  }
+  
+  /* Allow cards to span fully on wide grids */
+  .card {
+    flex: 1 1 calc(33.333% - 16px);
+  }
+  
+  /* Move Notification panel away from edges */
+  .notif-panel {
+    right: 32px;
+  }
+}
+
+/* Utilities for Desktop Navbar items inside Sidebar */
+.desktop-only-link {
+  display: none;
+}
+.sidebar-divider {
+  border: none;
+  border-top: 1px solid var(--gray-200);
+  margin: 12px 20px;
+}
+
+/* ============================================================
    UTILITIES / ANIMATIONS
    ============================================================ */
 .hidden {
