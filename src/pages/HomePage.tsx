@@ -1,235 +1,445 @@
-import { ChevronRight, MapPin, Clock, Camera, Plus, Map as MapIcon, UtensilsCrossed, Star, TrendingDown } from 'lucide-react';
+import { useState, useEffect, useRef, useCallback } from 'react';
+import { useNavigate } from 'react-router-dom';
+import {
+  ArrowRight, Star, TrendingDown, Plus, Check,
+  Camera, QrCode, Trophy, ChevronRight, Clock, MapPin,
+} from 'lucide-react';
+import useRealtimeData from '../hooks/useRealtimeData';
+import MapSnippet from '../components/MapSnippet';
+import AnimatedCounter from '../components/AnimatedCounter';
 
-const products = [
-  { id: 1, name: 'Leite Integral Líder', price: 'R$ 4,50', oldPrice: 'R$ 5,20', store: 'Mercado Preço Baixo', updated: '5 min', img: 'https://images.unsplash.com/photo-1550583724-b2692b85b150?w=500&h=500&fit=crop' },
-  { id: 2, name: 'Arroz Tio João 5kg', price: 'R$ 22,90', oldPrice: 'R$ 26,00', store: 'Supermercado Extra', updated: '12 min', img: 'https://images.unsplash.com/photo-1586201375761-83865001e8ac?w=500&h=500&fit=crop' },
-  { id: 3, name: 'Óleo de Soja Liza', price: 'R$ 6,99', oldPrice: 'R$ 8,50', store: 'Atacadão', updated: '20 min', img: 'https://images.unsplash.com/photo-1620706857370-e1b9770e8bb1?w=500&h=500&fit=crop' },
-  { id: 4, name: 'Café Melitta 500g', price: 'R$ 14,90', oldPrice: 'R$ 18,90', store: 'Mercado Preço Baixo', updated: '8 min', img: 'https://images.unsplash.com/photo-1559525839-b184a4d698c7?w=500&h=500&fit=crop' },
-  { id: 5, name: 'Ovos Caipira 12un', price: 'R$ 12,50', oldPrice: 'R$ 15,00', store: 'Supermercado Dia', updated: '3 min', img: 'https://images.unsplash.com/photo-1598965675045-45c5e72b7d8d?w=500&h=500&fit=crop' },
-];
-
+/* ---- static data ---- */
 const categories = [
-  { id: 'all', label: 'Tudo', active: true },
-  { id: 'hortifruti', label: 'Hortifruti', active: false },
-  { id: 'acougue', label: 'Açougue', active: false },
-  { id: 'higiene', label: 'Higiene', active: false },
-  { id: 'padaria', label: 'Padaria', active: false },
-  { id: 'bebidas', label: 'Bebidas', active: false },
+  { id: 'all', label: 'Todos' },
+  { id: 'basicos', label: 'Básicos' },
+  { id: 'hortifruti', label: 'Hortifruti' },
+  { id: 'higiene', label: 'Higiene' },
+  { id: 'padaria', label: 'Padaria' },
+  { id: 'bebidas', label: 'Bebidas' },
+  { id: 'acougue', label: 'Açougue' },
 ];
 
-export default function HomePage() {
+const productCategories: Record<number, string> = {
+  1: 'basicos', 2: 'basicos', 3: 'basicos', 4: 'basicos',
+  5: 'hortifruti', 6: 'basicos', 7: 'basicos', 8: 'basicos',
+};
+
+/* ---- Stars component ---- */
+function Stars({ rating, onRate }: { rating: number; onRate?: (n: number) => void }) {
+  const [hover, setHover] = useState(0);
   return (
-    <div className="space-y-6 lg:space-y-8 px-4 lg:px-8 max-w-[1600px] mx-auto font-sans animate-fadeInUp">
-      
-      {/* 1. Header Details (Desktop) */}
-      <div className="hidden lg:flex items-center justify-between pt-2">
-        <div>
-          <h1 className="text-3xl font-extrabold text-gray-800 leading-tight">
-            Bem-vindo de volta, <br/>
-            <span className="text-green-600">Pedro Silva!</span>
+    <div className="product-card stars" style={{ marginBottom: 0 }}>
+      {[1, 2, 3, 4, 5].map(n => (
+        <Star
+          key={n}
+          size={15}
+          fill={(hover || rating) >= n ? '#F59E0B' : 'transparent'}
+          stroke={(hover || rating) >= n ? '#F59E0B' : '#57534E'}
+          style={{ cursor: onRate ? 'pointer' : 'default', transition: 'all 0.15s' }}
+          onMouseEnter={() => onRate && setHover(n)}
+          onMouseLeave={() => onRate && setHover(0)}
+          onClick={() => onRate?.(n)}
+        />
+      ))}
+    </div>
+  );
+}
+
+/* ---- Progress Bar (inline) ---- */
+function ProgressBar({ value, max }: { value: number; max: number }) {
+  const [width, setWidth] = useState(0);
+  const ref = useRef<HTMLDivElement>(null);
+  useEffect(() => {
+    const obs = new IntersectionObserver(([e]) => {
+      if (e.isIntersecting) { setTimeout(() => setWidth((value / max) * 100), 200); obs.disconnect(); }
+    }, { threshold: 0.3 });
+    if (ref.current) obs.observe(ref.current);
+    return () => obs.disconnect();
+  }, [value, max]);
+  return (
+    <div ref={ref} className="progress-track">
+      <div className="progress-fill" style={{ width: `${width}%` }} />
+    </div>
+  );
+}
+
+/* ================================================================
+   HOME PAGE
+   ================================================================ */
+export default function HomePage() {
+  const { products, recipes, gamification, formatPrice } = useRealtimeData();
+  const navigate = useNavigate();
+
+  const [activeCategory, setActiveCategory] = useState('all');
+  const [addedItems, setAddedItems] = useState<Set<number>>(new Set());
+  const [ratings, setRatings] = useState<Record<number, number>>({
+    1: 5, 2: 5, 3: 4, 4: 5, 5: 4, 6: 4, 7: 5, 8: 5,
+  });
+  const [selectedRecipe, setSelectedRecipe] = useState(0);
+
+  const toggleAdd = useCallback((id: number) => {
+    setAddedItems(prev => {
+      const next = new Set(prev);
+      if (next.has(id)) next.delete(id); else next.add(id);
+      return next;
+    });
+  }, []);
+
+  const filteredProducts = activeCategory === 'all'
+    ? products
+    : products.filter(p => productCategories[p.id] === activeCategory);
+
+  const discount = (old: number, cur: number) => {
+    const pct = Math.round(((old - cur) / old) * 100);
+    return pct > 0 ? `-${pct}%` : null;
+  };
+
+  const currentRecipe = recipes[selectedRecipe] || recipes[0];
+
+  return (
+    <>
+      {/* ============================================================
+          HERO SECTION
+          ============================================================ */}
+      <section className="hero">
+        <div
+          className="hero-bg"
+          style={{ backgroundImage: 'url(https://images.unsplash.com/photo-1542838132-92c53300491e?w=1920&h=900&fit=crop)' }}
+        />
+        <div className="hero-overlay" />
+        <div className="hero-content">
+          <p className="eyebrow" style={{ marginBottom: 12 }}>O Waze dos Mercados</p>
+          <h1 className="section-title" style={{ fontSize: 'clamp(36px, 5vw, 64px)', marginBottom: 16 }}>
+            Encontre os Melhores<br />
+            Preços de <span style={{ color: 'var(--accent)' }}>Bebedouro</span>
           </h1>
-          <p className="text-gray-500 mt-2 font-medium">Veja as melhores ofertas na sua região de Bebedouro - SP</p>
-        </div>
-        <div className="flex gap-4">
-          <div className="bg-white px-5 py-3 rounded-2xl border border-gray-200 shadow-sm flex items-center gap-4">
-             <div className="w-12 h-12 bg-orange-100 rounded-full flex items-center justify-center text-orange-500">
-                <Star size={24} className="fill-orange-500" />
-             </div>
-             <div>
-               <p className="text-xs text-gray-400 font-bold uppercase tracking-wider">Seus Pontos</p>
-               <p className="text-xl font-black text-gray-800">1.250</p>
-             </div>
-          </div>
-        </div>
-      </div>
-
-      {/* 5. Mobile Only Title */}
-      <div className="lg:hidden">
-        <h2 className="text-2xl font-extrabold text-gray-800">
-          Olá, Pedro! <span className="inline-block animate-wave">👋</span>
-        </h2>
-        <p className="text-sm text-gray-500 mt-1 flex items-center gap-1"><MapPin size={14}/> Bebedouro - SP</p>
-      </div>
-
-      {/* Categories Scroll */}
-      <div className="flex gap-3 overflow-x-auto scrollbar-none pb-2 -mx-4 px-4 lg:mx-0 lg:px-0">
-        <button className="flex items-center gap-2 px-4 py-2 bg-green-600 text-white font-bold rounded-full whitespace-nowrap shadow-md hover:bg-green-700 transition">
-           <TrendingDown size={16} /> Preços em Queda
-        </button>
-        {categories.map(cat => (
-          <button 
-            key={cat.id} 
-            className={`whitespace-nowrap px-4 py-2 text-[14px] font-bold rounded-full transition-all border ${
-              cat.active ? 'bg-gray-800 text-white border-gray-800' : 'bg-white text-gray-500 border-gray-200 hover:border-gray-300 hover:bg-gray-50'
-            }`}
-          >
-            {cat.label}
+          <p className="section-subtitle" style={{ margin: '0 auto', maxWidth: 520, fontSize: 16 }}>
+            Preços atualizados colaborativamente por mais de 2.000 usuários.
+            Compare, economize e ganhe pontos.
+          </p>
+          <button className="hero-cta" onClick={() => navigate('/map')}>
+            Explorar Mapa <ArrowRight size={16} />
           </button>
-        ))}
-      </div>
+        </div>
 
-      {/* DASHBOARD GRID: Desktop Layout */}
-      <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 lg:gap-8">
-        
-        {/* LEFT COLUMN: Map & Deals (Spans 2 columns on desktop) */}
-        <div className="lg:col-span-2 space-y-6 lg:space-y-8">
-          
-          {/* Map Snippet Header */}
-          <div className="bg-white rounded-[24px] overflow-hidden border border-gray-200 shadow-sm relative group cursor-pointer hover:shadow-md transition-shadow">
-             <div className="absolute top-4 left-4 z-10 bg-white/90 backdrop-blur-md px-4 py-2 rounded-xl shadow-md border border-gray-100 flex items-center gap-2">
-                 <MapIcon size={18} className="text-green-600" />
-                 <span className="font-bold text-gray-800 text-sm">Mapa de Ofertas (Ao Vivo)</span>
-             </div>
-             <div className="absolute top-4 right-4 z-10 font-bold bg-green-600 text-white px-3 py-1 text-xs rounded-full shadow-sm animate-pulse">
-                12 novidades agora
-             </div>
-             
-             {/* Fake Map Background */}
-             <div className="h-[200px] lg:h-[280px] w-full bg-[#e8f0e0] relative overflow-hidden flex items-center justify-center">
-                 {/* Decorative roads */}
-                 <div className="absolute inset-x-0 top-1/3 h-4 bg-white/70 border-y border-[#d9ddd5]"></div>
-                 <div className="absolute inset-y-0 left-1/4 w-5 bg-white/70 border-x border-[#d9ddd5]"></div>
-                 <div className="absolute inset-y-0 right-1/3 w-3 bg-white/70 border-x border-[#d9ddd5]"></div>
-                 
-                 {/* Pins */}
-                 <div className="absolute top-[20%] left-[35%] bg-green-600 text-white px-2 py-1 rounded-md text-xs font-bold shadow-lg animate-float delay-1">R$ 4,50</div>
-                 <div className="absolute top-[60%] left-[15%] bg-green-600 text-white px-2 py-1 rounded-md text-xs font-bold shadow-lg animate-float delay-2">R$ 22,90</div>
-                 <div className="absolute top-[45%] left-[65%] bg-red-500 text-white px-2 py-1 rounded-md text-xs font-bold shadow-lg animate-float delay-3 ring-4 ring-red-500/20">R$ 2,99</div>
-                 
-                 <div className="relative z-0 opacity-20 transform scale-150"><MapIcon size={200} /></div>
-             </div>
+        {/* Live counter in hero */}
+        <div style={{
+          position: 'absolute', bottom: 32, left: '50%', transform: 'translateX(-50%)',
+          display: 'flex', gap: 40, zIndex: 2,
+        }}>
+          {[
+            { label: 'Produtos rastreados', value: 1847 },
+            { label: 'Colaboradores ativos', value: 2031 },
+            { label: 'Mercados mapeados', value: 23 },
+          ].map(stat => (
+            <div key={stat.label} style={{ textAlign: 'center' }}>
+              <span style={{
+                display: 'block',
+                fontFamily: 'var(--serif)', fontWeight: 700, fontSize: 28, color: 'var(--text)',
+              }}>
+                <AnimatedCounter target={stat.value} duration={2500} />
+              </span>
+              <span style={{ fontSize: 10, fontWeight: 600, letterSpacing: 1.5, textTransform: 'uppercase' as const, color: 'var(--text-sub)' }}>
+                {stat.label}
+              </span>
+            </div>
+          ))}
+        </div>
+      </section>
 
-             <div className="bg-white p-4 flex justify-between items-center">
-                <p className="text-sm text-gray-500 font-medium">Veja os preços atualizados colaborativamente por outros usuários próximos a você.</p>
-                <div className="w-10 h-10 bg-gray-50 rounded-full flex items-center justify-center text-gray-400 group-hover:text-green-600 group-hover:bg-green-50 transition-colors">
-                  <ChevronRight />
+      {/* ============================================================
+          MELHORES PREÇOS SECTION
+          ============================================================ */}
+      <section className="section">
+        <div className="section-header">
+          <span className="eyebrow">Ofertas em Destaque</span>
+          <h2 className="section-title">Melhores Preços Hoje</h2>
+          <p className="section-subtitle">
+            Preços verificados por usuários reais, atualizados em tempo real.
+          </p>
+          <div className="section-divider" />
+        </div>
+
+        {/* Live badge + Map toggle */}
+        <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: 24 }}>
+          <div style={{ display: 'flex', alignItems: 'center', gap: 8 }}>
+            <span className="live-dot" />
+            <span style={{ fontSize: 11, fontWeight: 700, letterSpacing: 1.5, textTransform: 'uppercase' as const, color: 'var(--accent)' }}>
+              Ao vivo
+            </span>
+          </div>
+          <button
+            onClick={() => navigate('/map')}
+            style={{
+              fontSize: 12, fontWeight: 600, color: 'var(--text-sub)',
+              background: 'none', border: '1px solid var(--border)', padding: '8px 16px',
+              display: 'flex', alignItems: 'center', gap: 8, transition: 'all 0.2s',
+            }}
+            onMouseEnter={e => { e.currentTarget.style.borderColor = 'var(--accent)'; e.currentTarget.style.color = 'var(--accent)'; }}
+            onMouseLeave={e => { e.currentTarget.style.borderColor = 'var(--border)'; e.currentTarget.style.color = 'var(--text-sub)'; }}
+          >
+            <MapPin size={14} /> Ver no Mapa
+          </button>
+        </div>
+
+        {/* Category Tabs */}
+        <div className="cat-tabs">
+          {categories.map(cat => (
+            <button
+              key={cat.id}
+              className={`cat-tab ${activeCategory === cat.id ? 'active' : ''}`}
+              onClick={() => setActiveCategory(cat.id)}
+            >
+              {cat.label}
+            </button>
+          ))}
+        </div>
+
+        {/* Product Grid */}
+        <div className="product-grid">
+          {filteredProducts.map((product, i) => {
+            const disc = discount(product.oldPrice, product.price);
+            const isAdded = addedItems.has(product.id);
+            return (
+              <div
+                key={product.id}
+                className="product-card animate-fadeInUp"
+                style={{ animationDelay: `${i * 0.06}s` }}
+              >
+                {/* Image */}
+                <div className="img-wrap">
+                  <img src={product.img} alt={product.name} loading="lazy" />
+                  {disc && (
+                    <div className="badge">
+                      <TrendingDown size={10} style={{ marginRight: 3, verticalAlign: -1 }} />
+                      {disc}
+                    </div>
+                  )}
                 </div>
-             </div>
+
+                {/* Info */}
+                <div className="info">
+                  <h3 className="name">{product.name}</h3>
+                  <p className="store">
+                    {product.store} · <Clock size={10} style={{ verticalAlign: -1 }} /> {product.updatedMinutes} min
+                  </p>
+
+                  <Stars
+                    rating={ratings[product.id] || 4}
+                    onRate={n => setRatings(prev => ({ ...prev, [product.id]: n }))}
+                  />
+
+                  <div className="price-row" style={{ marginTop: 10 }}>
+                    <span className="price">{formatPrice(product.price)}</span>
+                    <span className="old-price">{formatPrice(product.oldPrice)}</span>
+                  </div>
+
+                  <button
+                    className={`add-btn ${isAdded ? 'added' : ''}`}
+                    onClick={() => toggleAdd(product.id)}
+                  >
+                    {isAdded ? <><Check size={14} /> Adicionado</> : <>Adicionar <ArrowRight size={14} /></>}
+                  </button>
+                </div>
+              </div>
+            );
+          })}
+        </div>
+      </section>
+
+      {/* ============================================================
+          DESPENSA SECTION (Split Layout like the reference)
+          ============================================================ */}
+      <section className="despensa-section">
+        {/* Left: Text */}
+        <div className="despensa-text">
+          <span className="eyebrow" style={{ marginBottom: 12, display: 'block' }}>Sua Cozinha</span>
+          <h2 className="section-title" style={{ fontSize: 'clamp(28px, 3vw, 40px)', marginBottom: 16 }}>
+            Despensa<br />Inteligente
+          </h2>
+          <p className="section-subtitle" style={{ marginBottom: 24 }}>
+            Ingredientes próximos do vencimento na sua despensa virtual.
+            Sugerimos receitas para evitar desperdício — cozinhe agora e
+            economize depois.
+          </p>
+
+          {/* Recipe nav */}
+          <div className="recipe-nav-dots" style={{ marginBottom: 24 }}>
+            {recipes.map((_, i) => (
+              <button
+                key={i}
+                className={`recipe-dot ${selectedRecipe === i ? 'active' : ''}`}
+                onClick={() => setSelectedRecipe(i)}
+              />
+            ))}
           </div>
 
-          {/* Product Cards Grid */}
-          <div>
-            <div className="flex items-center justify-between mb-4">
-              <h3 className="text-lg font-extrabold text-gray-800 flex items-center gap-2">
-                 <TrendingDown className="text-green-500"/> Mais Buscados na Semana
-              </h3>
-              <button className="text-sm font-bold text-green-600 bg-green-50 hover:bg-green-100 transition-colors px-3 py-1.5 rounded-xl">
-                Ver todos
+          <button className="despensa-cta" onClick={() => navigate('/recipes')}>
+            Ver Receitas <ArrowRight size={14} />
+          </button>
+        </div>
+
+        {/* Right: Recipe Image */}
+        <div className="despensa-recipes">
+          <div className="recipe-slide">
+            <img
+              src={currentRecipe.img}
+              alt={currentRecipe.name}
+              loading="lazy"
+            />
+            <div className="recipe-overlay">
+              <h3>{currentRecipe.name}</h3>
+              <div style={{ display: 'flex', flexWrap: 'wrap', gap: 0 }}>
+                {currentRecipe.ingredients.map(ing => {
+                  const isDanger = ing.daysUntilExpiry <= 1;
+                  const isWarn = ing.daysUntilExpiry <= 3 && !isDanger;
+                  return (
+                    <span
+                      key={ing.name}
+                      className={`ingredient-tag ${isDanger ? 'danger' : isWarn ? 'warning' : 'ok'}`}
+                    >
+                      {ing.name}
+                      {isDanger && ' (vence amanhã!)'}
+                      {isWarn && ` (${ing.daysUntilExpiry}d)`}
+                    </span>
+                  );
+                })}
+              </div>
+              <button
+                className="despensa-cta"
+                style={{ marginTop: 20, background: 'var(--accent)', color: 'var(--bg)', borderColor: 'var(--accent)' }}
+              >
+                Cozinhar <ArrowRight size={14} />
               </button>
             </div>
+          </div>
+        </div>
+      </section>
 
-            <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 lg:gap-5">
-              {products.slice(0, 4).map(product => (
-                <div key={product.id} className="bg-white rounded-[20px] p-4 flex flex-col relative group cursor-pointer hover:-translate-y-1 transition-all border border-gray-100 shadow-[0_4px_20px_rgba(0,0,0,0.02)] hover:shadow-xl hover:shadow-green-500/10 hover:border-green-200">
-                  
-                  {/* Discount Badge */}
-                  <div className="absolute top-3 left-3 bg-red-50 text-red-600 text-[10px] font-bold px-2 py-1 rounded-lg border border-red-100 z-10 flex items-center gap-1">
-                     <TrendingDown size={10}/> Baixou
-                  </div>
-                  
-                  {/* Product Image */}
-                  <div className="w-full aspect-square rounded-2xl mb-4 bg-gray-50 p-2 overflow-hidden flex items-center justify-center order-1 mt-6">
-                    <img src={product.img} alt={product.name} className="w-full h-full object-cover rounded-xl group-hover:scale-110 transition-transform duration-500 mix-blend-multiply" />
-                  </div>
-                  
-                  {/* Details */}
-                  <div className="flex-1 flex flex-col justify-end order-2">
-                    <h4 className="text-[13px] font-extrabold text-gray-800 leading-snug mb-1 line-clamp-2">{product.name}</h4>
-                    <p className="text-[11px] text-gray-400 font-medium mb-3 flex flex-col gap-0.5">
-                       <span>{product.store}</span>
-                       <span className="flex items-center gap-1"><Clock size={10}/> {product.updated} atrás</span>
-                    </p>
-                    
-                    <div className="flex items-end justify-between mt-auto">
-                      <div>
-                        <p className="text-[10px] text-gray-400 line-through font-medium">{product.oldPrice}</p>
-                        <span className="text-[16px] font-black text-green-700 leading-none">{product.price}</span>
-                      </div>
-                      <button className="w-8 h-8 rounded-full bg-green-50 flex items-center justify-center text-green-600 group-hover:bg-green-600 group-hover:text-white transition-colors">
-                        <Plus size={16} />
-                      </button>
-                    </div>
-                  </div>
+      {/* ============================================================
+          MAPA SNIPPET (full-width band)
+          ============================================================ */}
+      <section style={{ padding: '60px 40px', maxWidth: 1400, margin: '0 auto' }}>
+        <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-end', marginBottom: 20 }}>
+          <div>
+            <span className="eyebrow" style={{ display: 'block', marginBottom: 6 }}>Mapa ao Vivo</span>
+            <h3 style={{ fontFamily: 'var(--serif)', fontSize: 24, fontWeight: 700 }}>
+              Ofertas Próximas de Você
+            </h3>
+          </div>
+          <button
+            onClick={() => navigate('/map')}
+            style={{
+              fontSize: 12, fontWeight: 700, letterSpacing: 2, textTransform: 'uppercase' as const,
+              color: 'var(--accent)', background: 'none', border: '1px solid var(--border-accent)',
+              padding: '12px 24px', display: 'flex', alignItems: 'center', gap: 10, transition: 'all 0.3s',
+            }}
+            onMouseEnter={e => { e.currentTarget.style.background = 'var(--accent)'; e.currentTarget.style.color = 'var(--bg)'; }}
+            onMouseLeave={e => { e.currentTarget.style.background = 'transparent'; e.currentTarget.style.color = 'var(--accent)'; }}
+          >
+            Abrir Mapa Completo <ArrowRight size={14} />
+          </button>
+        </div>
+        <div style={{ border: '1px solid var(--border)', overflow: 'hidden' }}>
+          <MapSnippet
+            products={products.slice(0, 6)}
+            formatPrice={formatPrice}
+            onClick={() => navigate('/map')}
+          />
+        </div>
+      </section>
+
+      {/* ============================================================
+          COLABORE SECTION
+          ============================================================ */}
+      <section className="collab-section">
+        <div className="section-header">
+          <span className="eyebrow">Comunidade</span>
+          <h2 className="section-title">Colabore e Ganhe Pontos</h2>
+          <p className="section-subtitle">
+            Escaneie notas fiscais, atualize preços e suba no ranking da região.
+          </p>
+          <div className="section-divider" />
+        </div>
+
+        <div className="collab-grid">
+          {/* Scan Card */}
+          <div className="scan-card">
+            <h3 style={{ fontSize: 20, fontWeight: 800, letterSpacing: 2, textTransform: 'uppercase' as const, color: 'white', marginBottom: 8 }}>
+              Escaneie Sua Nota Fiscal
+            </h3>
+            <p style={{ fontSize: 13, color: 'rgba(255,255,255,0.6)', marginBottom: 0 }}>
+              Leia o QRCode ou tire uma foto. Atualize preços e ganhe pontos.
+            </p>
+
+            <div className="scan-icons">
+              <div className="scan-icon-box">
+                <Camera size={28} />
+              </div>
+              <div className="scan-icon-box">
+                <QrCode size={28} />
+              </div>
+            </div>
+
+            <button className="scan-main-btn">
+              Escanear Agora
+            </button>
+          </div>
+
+          {/* Stats */}
+          <div className="stats-grid">
+            <div className="stat-card">
+              <div className="stat-label">Seus Pontos</div>
+              <div className="stat-value green">
+                <AnimatedCounter target={gamification.points} />
+              </div>
+              <div style={{ marginTop: 12 }}>
+                <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: 4 }}>
+                  <span style={{ fontSize: 10, fontWeight: 600, color: 'var(--text-dim)', textTransform: 'uppercase' as const, letterSpacing: 1 }}>
+                    Progresso Nível {gamification.level + 1}
+                  </span>
+                  <span style={{ fontSize: 11, fontWeight: 800, color: 'var(--accent)' }}>
+                    {gamification.points.toLocaleString('pt-BR')} / {gamification.nextLevelPoints.toLocaleString('pt-BR')}
+                  </span>
                 </div>
-              ))}
+                <ProgressBar value={gamification.points} max={gamification.nextLevelPoints} />
+              </div>
+            </div>
+
+            <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 16 }}>
+              <div className="stat-card">
+                <div className="stat-label">Nível</div>
+                <div className="stat-value amber">
+                  <Trophy size={24} style={{ marginRight: 8, verticalAlign: -4 }} />
+                  {gamification.level}
+                </div>
+                <div style={{ fontSize: 12, color: 'var(--text-sub)', marginTop: 4 }}>{gamification.levelName}</div>
+              </div>
+              <div className="stat-card">
+                <div className="stat-label">Contribuições</div>
+                <div className="stat-value">
+                  <AnimatedCounter target={gamification.totalContributions} />
+                </div>
+              </div>
+            </div>
+
+            <div className="stat-card" style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>
+              <div>
+                <div className="stat-label">Ranking Regional</div>
+                <p style={{ fontSize: 14, fontWeight: 600, marginTop: 4 }}>
+                  Você está em <span style={{ color: 'var(--accent)', fontWeight: 800 }}>#{gamification.ranking}</span> em Bebedouro
+                </p>
+              </div>
+              <button className="ranking-link">
+                Ver Ranking <ChevronRight size={14} style={{ verticalAlign: -2 }} />
+              </button>
             </div>
           </div>
         </div>
+      </section>
 
-        {/* RIGHT COLUMN: Sidebar elements (Spans 1 col on desktop) */}
-        <div className="space-y-6 lg:space-y-8">
-          
-          {/* Minha Despensa Inteligente */}
-          <div className="bg-gradient-to-b from-orange-50 to-white rounded-[24px] p-6 border border-orange-100 shadow-sm relative overflow-hidden group">
-             <div className="absolute top-0 right-0 w-32 h-32 bg-orange-200 rounded-full blur-3xl opacity-50 -translate-y-10 translate-x-10"></div>
-             
-             <div className="relative z-10">
-               <h3 className="text-xl font-extrabold text-gray-800 mb-2 flex items-center gap-2">
-                  <UtensilsCrossed className="text-orange-500"/> Despensa Inteligente
-               </h3>
-               <p className="text-sm text-gray-600 font-medium mb-6">Você tem ingredientes próximos do vencimento. Veja o que fazer:</p>
-
-               <div className="space-y-4">
-                 <div className="bg-white rounded-2xl p-4 shadow-sm border border-gray-100 flex gap-4 hover:border-orange-200 cursor-pointer transition-colors">
-                    <div className="w-16 h-16 rounded-xl overflow-hidden shrink-0">
-                       <img src="https://images.unsplash.com/photo-1512149177596-f817c7ef5d4c?w=500&h=500&fit=crop" className="w-full h-full object-cover" alt="Omelete" />
-                    </div>
-                    <div>
-                       <h4 className="font-bold text-gray-800 text-[14px]">Omelete de Frango</h4>
-                       <p className="text-[12px] text-gray-500 mt-1"><span className="text-red-500 font-bold">Tomate vence amanhã!</span> Use na receita.</p>
-                    </div>
-                 </div>
-
-                 <div className="bg-white rounded-2xl p-4 shadow-sm border border-gray-100 flex gap-4 hover:border-orange-200 cursor-pointer transition-colors">
-                    <div className="w-16 h-16 rounded-xl overflow-hidden shrink-0">
-                       <img src="https://images.unsplash.com/photo-1548869206-9bfcb64ff73f?w=500&h=500&fit=crop" className="w-full h-full object-cover" alt="Arroz" />
-                    </div>
-                    <div>
-                       <h4 className="font-bold text-gray-800 text-[14px]">Mexidão Rápido</h4>
-                       <p className="text-[12px] text-gray-500 mt-1"><span className="text-orange-500 font-bold">Linguiça em 2 dias.</span> Ideal com sobras.</p>
-                    </div>
-                 </div>
-               </div>
-
-               <button className="w-full mt-6 py-3 bg-white border-2 border-orange-100 text-orange-600 font-bold rounded-xl hover:bg-orange-50 transition-colors">
-                 Ver Toda a Despensa
-               </button>
-             </div>
-          </div>
-
-          {/* Colabore e Ganhe Pontos (Scan CTA) */}
-          <div className="bg-gray-900 rounded-[24px] p-6 text-white shadow-xl relative overflow-hidden group border border-gray-800">
-             <div className="absolute top-0 right-0 w-40 h-40 bg-green-500 rounded-full blur-[60px] opacity-30 group-hover:scale-150 transition-transform duration-700"></div>
-             
-             <div className="relative z-10 text-center">
-                 <div className="w-16 h-16 bg-gradient-to-br from-green-400 to-green-600 rounded-2xl mx-auto flex items-center justify-center shadow-lg mb-4 transform group-hover:-translate-y-2 transition-transform shadow-glow-green">
-                    <Camera size={28} className="text-white" />
-                 </div>
-                 <h3 className="text-xl font-black mb-2">Escaneie & Ganhe</h3>
-                 <p className="text-sm text-gray-400 mb-6 font-medium">Leia o QRCode da sua nota fiscal. Atualize preços e ganhe pontos valiosos.</p>
-                 
-                 <div className="bg-gray-800 rounded-xl p-4 text-left border border-gray-700 mb-6">
-                    <div className="flex justify-between items-center mb-2">
-                       <span className="text-xs font-bold text-gray-400">Progresso Nível 4</span>
-                       <span className="text-xs font-black text-green-400">1.250 / 2.000 pts</span>
-                    </div>
-                    <div className="w-full bg-gray-900 h-2 rounded-full overflow-hidden">
-                       <div className="bg-green-500 h-full w-[62.5%] relative">
-                           <div className="absolute inset-0 bg-white/20 animate-shimmer"></div>
-                       </div>
-                    </div>
-                 </div>
-
-                 <button className="w-full py-3.5 bg-green-500 text-white font-black rounded-xl hover:bg-green-400 transition-colors shadow-lg">
-                    Escanear Nota Agora
-                 </button>
-             </div>
-          </div>
-
-        </div>
-
-      </div>
-
-    </div>
+      {/* Footer spacer */}
+      <div style={{ height: 80 }} />
+    </>
   );
 }
