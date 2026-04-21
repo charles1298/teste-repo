@@ -1,27 +1,17 @@
-import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
+import { Routes, Route } from 'react-router-dom';
 import Layout from './components/Layout';
 import HomePage from './pages/HomePage';
-import MapPage from './pages/MapPage';
-import ListPage from './pages/ListPage';
-import RecipesPage from './pages/RecipesPage';
-import ProfilePage from './pages/ProfilePage';
 
-function App() {
+export default function App() {
   return (
-    <Router>
-      <Routes>
-        <Route path="/" element={<Layout />}>
-          <Route index element={<HomePage />} />
-          <Route path="map" element={<MapPage />} />
-          <Route path="list" element={<ListPage />} />
-          <Route path="recipes" element={<RecipesPage />} />
-          <Route path="profile" element={<ProfilePage />} />
-        </Route>
-        {/* Catch-all: redirect any unknown route (e.g. /characters) to home */}
-        <Route path="*" element={<Navigate to="/" replace />} />
-      </Routes>
-    </Router>
+    <Routes>
+      <Route element={<Layout />}>
+        <Route path="/" element={<HomePage />} />
+        <Route path="/map" element={<div style={{ padding: '120px 40px 80px', textAlign: 'center' }}><h2 style={{ fontFamily: 'var(--serif)', fontSize: 32 }}>Mapa de Ofertas</h2><p style={{ color: 'var(--text-sub)', marginTop: 12 }}>Em breve...</p></div>} />
+        <Route path="/list" element={<div style={{ padding: '120px 40px 80px', textAlign: 'center' }}><h2 style={{ fontFamily: 'var(--serif)', fontSize: 32 }}>Minha Lista</h2><p style={{ color: 'var(--text-sub)', marginTop: 12 }}>Em breve...</p></div>} />
+        <Route path="/recipes" element={<div style={{ padding: '120px 40px 80px', textAlign: 'center' }}><h2 style={{ fontFamily: 'var(--serif)', fontSize: 32 }}>Despensa & Receitas</h2><p style={{ color: 'var(--text-sub)', marginTop: 12 }}>Em breve...</p></div>} />
+        <Route path="/profile" element={<div style={{ padding: '120px 40px 80px', textAlign: 'center' }}><h2 style={{ fontFamily: 'var(--serif)', fontSize: 32 }}>Meu Perfil</h2><p style={{ color: 'var(--text-sub)', marginTop: 12 }}>Em breve...</p></div>} />
+      </Route>
+    </Routes>
   );
 }
-
-export default App;
