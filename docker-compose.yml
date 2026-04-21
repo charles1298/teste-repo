@@ -1,0 +1,9 @@
+services:
+  app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: mercadomap-web
+    ports:
+      - "4102:80"
+    restart: unless-stopped
