@@ -24,6 +24,15 @@ export interface FeedPost {
   comments: Comment[];
 }
 
+export interface PantryItem {
+  id: number;
+  name: string;
+  quantity: number;
+  unit: string;
+  daysUntilExpiry: number;
+  category: string;
+}
+
 export interface Product {
   id: number;
   name: string;
@@ -97,6 +106,14 @@ const GAMIFICATION: GamificationData = {
   totalContributions: 83,
 };
 
+const INITIAL_PANTRY: PantryItem[] = [
+  { id: 1, name: 'Ovos Caipira', quantity: 6, unit: 'unidades', daysUntilExpiry: 5, category: 'Básicos' },
+  { id: 2, name: 'Leite Integral', quantity: 2, unit: 'litros', daysUntilExpiry: 1, category: 'Laticínios' },
+  { id: 3, name: 'Arroz Branco', quantity: 3, unit: 'kg', daysUntilExpiry: 120, category: 'Básicos' },
+  { id: 4, name: 'Tomate', quantity: 4, unit: 'unidades', daysUntilExpiry: 2, category: 'Hortifruti' },
+  { id: 5, name: 'Peito de Frango', quantity: 500, unit: 'g', daysUntilExpiry: 0, category: 'Açougue' },
+];
+
 const FEED_POSTS: FeedPost[] = [
   {
     id: 1,
@@ -154,6 +171,7 @@ export default function useRealtimeData() {
   const [products, setProducts] = useState<Product[]>(INITIAL_PRODUCTS);
   const [recipes] = useState<Recipe[]>(RECIPES);
   const [feedPosts, setFeedPosts] = useState<FeedPost[]>(FEED_POSTS);
+  const [pantryItems, setPantryItems] = useState<PantryItem[]>(INITIAL_PANTRY);
   const [gamification, setGamification] = useState<GamificationData>(GAMIFICATION);
   const [liveUpdates, setLiveUpdates] = useState(0);
   const [isLive, setIsLive] = useState(true);
@@ -193,5 +211,5 @@ export default function useRealtimeData() {
     return () => clearInterval(blink);
   }, []);
 
-  return { products, recipes, feedPosts, setFeedPosts, gamification, liveUpdates, isLive, formatPrice };
+  return { products, recipes, feedPosts, setFeedPosts, pantryItems, setPantryItems, gamification, liveUpdates, isLive, formatPrice };
 }

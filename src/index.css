@@ -1115,3 +1115,214 @@ a { text-decoration: none; color: inherit; }
   outline: none;
   border-color: var(--accent);
 }
+
+/* ---------- PANTRY (DESPENSA) ---------- */
+.pantry-container {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 100px 40px 80px;
+}
+
+.pantry-stats-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  margin-bottom: 40px;
+}
+
+@media (max-width: 768px) {
+  .pantry-stats-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.pantry-stat-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.pantry-stat-label {
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  color: var(--text-sub);
+}
+
+.pantry-stat-value {
+  font-family: var(--serif);
+  font-size: 32px;
+  font-weight: 700;
+  color: var(--text);
+}
+
+.pantry-actions {
+  display: flex;
+  gap: 16px;
+  margin-bottom: 40px;
+}
+
+@media (max-width: 600px) {
+  .pantry-actions {
+    flex-direction: column;
+  }
+}
+
+.pantry-action-btn {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  padding: 16px;
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  color: var(--text);
+  font-weight: 700;
+  font-size: 14px;
+  transition: all 0.3s;
+  cursor: pointer;
+}
+
+.pantry-action-btn.primary {
+  background: var(--accent);
+  border-color: var(--accent);
+  color: var(--bg);
+}
+
+.pantry-action-btn:hover {
+  transform: translateY(-2px);
+  border-color: var(--border-accent);
+}
+.pantry-action-btn.primary:hover {
+  background: #4ade80;
+}
+
+.pantry-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 20px;
+}
+
+.pantry-item-card {
+  background: var(--bg-surface);
+  border: 1px solid var(--border);
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  transition: border-color 0.3s;
+}
+.pantry-item-card:hover {
+  border-color: var(--border-accent);
+}
+
+.pantry-item-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.pantry-item-name {
+  font-family: var(--serif);
+  font-weight: 700;
+  font-size: 18px;
+  color: var(--text);
+}
+
+.pantry-item-cat {
+  font-size: 11px;
+  color: var(--text-dim);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.pantry-expiry-badge {
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 0.5px;
+  padding: 4px 10px;
+  border-radius: 12px;
+  display: inline-block;
+}
+.pantry-expiry-badge.danger {
+  background: rgba(239,68,68,0.1);
+  color: var(--red);
+  border: 1px solid rgba(239,68,68,0.3);
+  animation: subtlePulse 2s infinite;
+}
+.pantry-expiry-badge.warning {
+  background: rgba(249,115,22,0.1);
+  color: var(--orange);
+  border: 1px solid rgba(249,115,22,0.3);
+}
+.pantry-expiry-badge.safe {
+  background: rgba(34,197,94,0.1);
+  color: var(--accent);
+  border: 1px solid rgba(34,197,94,0.3);
+}
+
+.pantry-item-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: auto;
+  padding-top: 12px;
+  border-top: 1px solid var(--border);
+}
+
+.pantry-item-qty {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--text-sub);
+}
+
+.pantry-controls {
+  display: flex;
+  gap: 8px;
+}
+
+.pantry-ctrl-btn {
+  width: 28px;
+  height: 28px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  color: var(--text-sub);
+  transition: all 0.2s;
+  cursor: pointer;
+}
+.pantry-ctrl-btn:hover {
+  border-color: var(--accent);
+  color: var(--accent);
+}
+.pantry-ctrl-btn.delete:hover {
+  border-color: var(--red);
+  color: var(--red);
+}
+
+/* Modal Simple */
+.pantry-modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.8);
+  backdrop-filter: blur(4px);
+  z-index: 999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+.pantry-modal {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  width: 100%;
+  max-width: 400px;
+  padding: 24px;
+}
