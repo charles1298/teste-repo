@@ -3,7 +3,7 @@ import { Outlet, NavLink, useLocation } from 'react-router-dom';
 import {
   Bell, MapPin, ClipboardList, Camera,
   UtensilsCrossed, User, Menu, X, ShoppingBag,
-  Settings, HelpCircle, Info, Trophy, ChevronRight,
+  Settings, HelpCircle, Info, Trophy, ChevronRight, Home, MessageSquare
 } from 'lucide-react';
 
 const notifications = [
@@ -32,7 +32,7 @@ export default function Layout() {
 
   const navLinks = [
     { to: '/', label: 'Início' },
-    { to: '/map', label: 'Mapa' },
+    { to: '/feed', label: 'Comunidade' },
     { to: '/list', label: 'Lista' },
     { to: '/recipes', label: 'Despensa' },
     { to: '/profile', label: 'Perfil' },
@@ -197,19 +197,19 @@ export default function Layout() {
       {/* ====== MOBILE BOTTOM NAV ====== */}
       <nav className="bottom-nav">
         <NavLink to="/" className={`nav-item ${location.pathname === '/' ? 'active' : ''}`}>
-          <MapPin size={20} />
-          <span>Mapa</span>
+          <Home size={20} />
+          <span>Início</span>
         </NavLink>
-        <NavLink to="/list" className={`nav-item ${location.pathname === '/list' ? 'active' : ''}`}>
-          <ClipboardList size={20} />
-          <span>Lista</span>
+        <NavLink to="/feed" className={`nav-item ${location.pathname === '/feed' ? 'active' : ''}`}>
+          <MessageSquare size={20} />
+          <span>Comunidade</span>
         </NavLink>
         <button className="scan-fab" aria-label="Escanear">
           <Camera size={22} />
         </button>
         <NavLink to="/recipes" className={`nav-item ${location.pathname === '/recipes' ? 'active' : ''}`}>
           <UtensilsCrossed size={20} />
-          <span>Receitas</span>
+          <span>Despensa</span>
         </NavLink>
         <NavLink to="/profile" className={`nav-item ${location.pathname === '/profile' ? 'active' : ''}`}>
           <User size={20} />

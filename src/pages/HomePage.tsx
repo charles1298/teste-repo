@@ -117,8 +117,8 @@ export default function HomePage() {
             Preços atualizados colaborativamente por mais de 2.000 usuários.
             Compare, economize e ganhe pontos.
           </p>
-          <button className="hero-cta" onClick={() => navigate('/map')}>
-            Explorar Mapa <ArrowRight size={16} />
+          <button className="hero-cta" onClick={() => navigate('/feed')}>
+            Explorar Comunidade <ArrowRight size={16} />
           </button>
         </div>
 
@@ -169,7 +169,7 @@ export default function HomePage() {
             </span>
           </div>
           <button
-            onClick={() => navigate('/map')}
+            onClick={() => navigate('/feed')}
             style={{
               fontSize: 12, fontWeight: 600, color: 'var(--text-sub)',
               background: 'none', border: '1px solid var(--border)', padding: '8px 16px',
@@ -178,7 +178,7 @@ export default function HomePage() {
             onMouseEnter={e => { e.currentTarget.style.borderColor = 'var(--accent)'; e.currentTarget.style.color = 'var(--accent)'; }}
             onMouseLeave={e => { e.currentTarget.style.borderColor = 'var(--border)'; e.currentTarget.style.color = 'var(--text-sub)'; }}
           >
-            <MapPin size={14} /> Ver no Mapa
+            <MapPin size={14} /> Ver na Comunidade
           </button>
         </div>
 
@@ -317,18 +317,18 @@ export default function HomePage() {
       </section>
 
       {/* ============================================================
-          MAPA SNIPPET (full-width band)
+          MAPA SNIPPET (full-width band) -> changed to Feed link
           ============================================================ */}
       <section style={{ padding: '60px 40px', maxWidth: 1400, margin: '0 auto' }}>
         <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-end', marginBottom: 20 }}>
           <div>
-            <span className="eyebrow" style={{ display: 'block', marginBottom: 6 }}>Mapa ao Vivo</span>
+            <span className="eyebrow" style={{ display: 'block', marginBottom: 6 }}>Ao Vivo</span>
             <h3 style={{ fontFamily: 'var(--serif)', fontSize: 24, fontWeight: 700 }}>
-              Ofertas Próximas de Você
+              Compartilhando Agora
             </h3>
           </div>
           <button
-            onClick={() => navigate('/map')}
+            onClick={() => navigate('/feed')}
             style={{
               fontSize: 12, fontWeight: 700, letterSpacing: 2, textTransform: 'uppercase' as const,
               color: 'var(--accent)', background: 'none', border: '1px solid var(--border-accent)',
@@ -337,14 +337,14 @@ export default function HomePage() {
             onMouseEnter={e => { e.currentTarget.style.background = 'var(--accent)'; e.currentTarget.style.color = 'var(--bg)'; }}
             onMouseLeave={e => { e.currentTarget.style.background = 'transparent'; e.currentTarget.style.color = 'var(--accent)'; }}
           >
-            Abrir Mapa Completo <ArrowRight size={14} />
+            Abrir Comunidade <ArrowRight size={14} />
           </button>
         </div>
         <div style={{ border: '1px solid var(--border)', overflow: 'hidden' }}>
           <MapSnippet
             products={products.slice(0, 6)}
             formatPrice={formatPrice}
-            onClick={() => navigate('/map')}
+            onClick={() => navigate('/feed')}
           />
         </div>
       </section>

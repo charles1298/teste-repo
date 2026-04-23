@@ -1,5 +1,26 @@
 import { useState, useEffect, useCallback } from 'react';
 
+export interface Comment {
+  id: number;
+  authorName: string;
+  authorAvatar: string;
+  text: string;
+  timeAgo: string;
+}
+
+export interface FeedPost {
+  id: number;
+  authorName: string;
+  authorAvatar: string;
+  timeAgo: string;
+  text: string;
+  recipeTitle?: string;
+  img?: string;
+  likes: number;
+  isLiked: boolean;
+  comments: Comment[];
+}
+
 export interface Product {
   id: number;
   name: string;
@@ -73,12 +94,56 @@ const GAMIFICATION: GamificationData = {
   totalContributions: 83,
 };
 
+const FEED_POSTS: FeedPost[] = [
+  {
+    id: 1,
+    authorName: 'Ana Souza',
+    authorAvatar: 'AS',
+    timeAgo: 'Há 20 min',
+    text: 'Aproveitei a promoção de ovos no Extra e fiz essa maravilha! Super recomendo para o café da manhã.',
+    recipeTitle: 'Omelete Cremoso com Ervas',
+    img: 'https://images.unsplash.com/photo-1510693215286-63d1db13ce32?w=600&h=400&fit=crop',
+    likes: 12,
+    isLiked: false,
+    comments: [
+      { id: 101, authorName: 'Carlos M.', authorAvatar: 'CM', text: 'Que delícia! Vou tentar fazer amanhã.', timeAgo: 'Há 5 min' }
+    ]
+  },
+  {
+    id: 2,
+    authorName: 'Rafael Lima',
+    authorAvatar: 'RL',
+    timeAgo: 'Há 2 horas',
+    text: 'Dica: o preço do peito de frango caiu bastante no Atacadão. Fiz um strogonoff incrível pra família toda.',
+    recipeTitle: 'Strogonoff de Frango Rápido',
+    img: 'https://images.unsplash.com/photo-1604908176997-125f25cc6f3d?w=600&h=400&fit=crop',
+    likes: 45,
+    isLiked: true,
+    comments: []
+  },
+  {
+    id: 3,
+    authorName: 'Marina Costas',
+    authorAvatar: 'MC',
+    timeAgo: 'Há 4 horas',
+    text: 'Comprei os vegetais frescos que indicaram no app e montei essa salada super colorida. Ajudando na dieta e no bolso!',
+    img: 'https://images.unsplash.com/photo-1512621776951-a57141f2eefd?w=600&h=400&fit=crop',
+    likes: 8,
+    isLiked: false,
+    comments: [
+      { id: 102, authorName: 'Juliana P.', authorAvatar: 'JP', text: 'Lindíssima a salada, peguei a dica do hortifruti tbm.', timeAgo: 'Há 1 hora' },
+      { id: 103, authorName: 'Pedro Silva', authorAvatar: 'PS', text: 'Show de bola!', timeAgo: 'Há 30 min' }
+    ]
+  }
+];
+
 const formatPrice = (value: number): string =>
   `R$ ${value.toFixed(2).replace('.', ',')}`;
 
 export default function useRealtimeData() {
   const [products, setProducts] = useState<Product[]>(INITIAL_PRODUCTS);
   const [recipes] = useState<Recipe[]>(RECIPES);
+  const [feedPosts, setFeedPosts] = useState<FeedPost[]>(FEED_POSTS);
   const [gamification, setGamification] = useState<GamificationData>(GAMIFICATION);
   const [liveUpdates, setLiveUpdates] = useState(0);
   const [isLive, setIsLive] = useState(true);
@@ -118,5 +183,5 @@ export default function useRealtimeData() {
     return () => clearInterval(blink);
   }, []);
 
-  return { products, recipes, gamification, liveUpdates, isLive, formatPrice };
+  return { products, recipes, feedPosts, setFeedPosts, gamification, liveUpdates, isLive, formatPrice };
 }
