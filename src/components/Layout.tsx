@@ -32,6 +32,7 @@ export default function Layout() {
 
   const navLinks = [
     { to: '/', label: 'Início' },
+    { to: '/map', label: 'Mapa' },
     { to: '/feed', label: 'Comunidade' },
     { to: '/list', label: 'Lista' },
     { to: '/recipes', label: 'Despensa' },
@@ -199,6 +200,10 @@ export default function Layout() {
         <NavLink to="/" className={`nav-item ${location.pathname === '/' ? 'active' : ''}`}>
           <Home size={20} />
           <span>Início</span>
+        </NavLink>
+        <NavLink to="/map" className={`nav-item ${location.pathname === '/map' ? 'active' : ''}`}>
+          <MapPin size={20} />
+          <span>Mapa</span>
         </NavLink>
         <NavLink to="/feed" className={`nav-item ${location.pathname === '/feed' ? 'active' : ''}`}>
           <MessageSquare size={20} />
