@@ -1326,3 +1326,140 @@ a { text-decoration: none; color: inherit; }
   max-width: 400px;
   padding: 24px;
 }
+
+/* ---------- SHOPPING LIST ---------- */
+.list-container {
+  max-width: 680px;
+  margin: 0 auto;
+  padding: 100px 40px 80px;
+}
+
+.list-input-wrapper {
+  position: relative;
+  margin-bottom: 32px;
+}
+
+.list-input {
+  width: 100%;
+  padding: 16px 60px 16px 20px;
+  font-size: 16px;
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  color: var(--text);
+  border-radius: 0;
+  transition: all 0.3s;
+}
+
+.list-input:focus {
+  outline: none;
+  border-color: var(--accent);
+  box-shadow: 0 0 0 1px var(--accent);
+}
+
+.list-add-btn {
+  position: absolute;
+  right: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  background: var(--accent);
+  color: var(--bg);
+  border: none;
+  width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.list-add-btn:hover {
+  background: #4ade80;
+}
+
+.shopping-item-card {
+  display: flex;
+  align-items: center;
+  padding: 16px 20px;
+  background: var(--bg-surface);
+  border: 1px solid var(--border);
+  margin-bottom: 8px;
+  transition: all 0.2s;
+  cursor: pointer;
+}
+
+.shopping-item-card:hover {
+  border-color: var(--border-accent);
+}
+
+.shopping-item-card.bought {
+  background: var(--bg-card);
+  opacity: 0.6;
+}
+
+.shopping-item-card.bought .shopping-item-name {
+  text-decoration: line-through;
+  color: var(--text-dim);
+}
+
+.shopping-item-checkbox {
+  width: 24px;
+  height: 24px;
+  border: 2px solid var(--border-accent);
+  border-radius: 50%;
+  margin-right: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: transparent;
+  transition: all 0.2s;
+}
+
+.shopping-item-card.bought .shopping-item-checkbox {
+  background: var(--accent);
+  border-color: var(--accent);
+  color: var(--bg);
+}
+
+.shopping-item-name {
+  flex: 1;
+  font-size: 16px;
+  font-weight: 500;
+  color: var(--text);
+  transition: all 0.2s;
+}
+
+.shopping-item-delete {
+  color: var(--text-dim);
+  background: none;
+  border: none;
+  padding: 8px;
+  cursor: pointer;
+  transition: color 0.2s;
+}
+
+.shopping-item-delete:hover {
+  color: var(--red);
+}
+
+.list-clear-btn {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin: 32px auto 0;
+  padding: 12px 24px;
+  background: none;
+  border: 1px solid var(--border);
+  color: var(--text-sub);
+  font-size: 12px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.list-clear-btn:hover {
+  border-color: var(--text);
+  color: var(--text);
+}

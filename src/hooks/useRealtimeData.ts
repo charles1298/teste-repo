@@ -33,6 +33,12 @@ export interface PantryItem {
   category: string;
 }
 
+export interface ShoppingItem {
+  id: number;
+  name: string;
+  isBought: boolean;
+}
+
 export interface Product {
   id: number;
   name: string;
@@ -114,6 +120,12 @@ const INITIAL_PANTRY: PantryItem[] = [
   { id: 5, name: 'Peito de Frango', quantity: 500, unit: 'g', daysUntilExpiry: 0, category: 'Açougue' },
 ];
 
+const INITIAL_SHOPPING_LIST: ShoppingItem[] = [
+  { id: 1, name: 'Cebola Roxa (2 un)', isBought: false },
+  { id: 2, name: 'Azeite de Oliva Extra Virgem', isBought: false },
+  { id: 3, name: 'Queijo Parmesão Ralado', isBought: true },
+];
+
 const FEED_POSTS: FeedPost[] = [
   {
     id: 1,
@@ -172,6 +184,7 @@ export default function useRealtimeData() {
   const [recipes] = useState<Recipe[]>(RECIPES);
   const [feedPosts, setFeedPosts] = useState<FeedPost[]>(FEED_POSTS);
   const [pantryItems, setPantryItems] = useState<PantryItem[]>(INITIAL_PANTRY);
+  const [shoppingItems, setShoppingItems] = useState<ShoppingItem[]>(INITIAL_SHOPPING_LIST);
   const [gamification, setGamification] = useState<GamificationData>(GAMIFICATION);
   const [liveUpdates, setLiveUpdates] = useState(0);
   const [isLive, setIsLive] = useState(true);
@@ -211,5 +224,10 @@ export default function useRealtimeData() {
     return () => clearInterval(blink);
   }, []);
 
-  return { products, recipes, feedPosts, setFeedPosts, pantryItems, setPantryItems, gamification, liveUpdates, isLive, formatPrice };
+  return { 
+    products, recipes, feedPosts, setFeedPosts, 
+    pantryItems, setPantryItems, 
+    shoppingItems, setShoppingItems,
+    gamification, liveUpdates, isLive, formatPrice 
+  };
 }
