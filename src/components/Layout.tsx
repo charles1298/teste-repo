@@ -2,7 +2,7 @@ import { useState, useRef, useEffect } from 'react';
 import { Outlet, NavLink, useLocation } from 'react-router-dom';
 import {
   Bell, MapPin, ClipboardList, Camera,
-  UtensilsCrossed, User, Menu, X, ShoppingBag,
+  UtensilsCrossed, User, Menu, X, ShoppingBag, ShoppingCart,
   Settings, HelpCircle, Info, Trophy, ChevronRight, Home, MessageSquare
 } from 'lucide-react';
 
@@ -35,6 +35,7 @@ export default function Layout() {
     { to: '/map', label: 'Mapa' },
     { to: '/feed', label: 'Comunidade' },
     { to: '/list', label: 'Lista' },
+    { to: '/cart', label: 'Carrinho' },
     { to: '/recipes', label: 'Despensa' },
     { to: '/profile', label: 'Perfil' },
   ];
@@ -212,6 +213,10 @@ export default function Layout() {
         <button className="scan-fab" aria-label="Escanear">
           <Camera size={22} />
         </button>
+        <NavLink to="/cart" className={`nav-item ${location.pathname === '/cart' ? 'active' : ''}`}>
+          <ShoppingCart size={20} />
+          <span>Carrinho</span>
+        </NavLink>
         <NavLink to="/recipes" className={`nav-item ${location.pathname === '/recipes' ? 'active' : ''}`}>
           <UtensilsCrossed size={20} />
           <span>Despensa</span>
