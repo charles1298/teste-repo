@@ -5,6 +5,9 @@ import useRealtimeData, { FeedPost, Comment } from '../hooks/useRealtimeData';
 export default function FeedPage() {
   const { feedPosts, setFeedPosts } = useRealtimeData();
   const [newPostText, setNewPostText] = useState('');
+  const [recipeTitle, setRecipeTitle] = useState('');
+  const [ingredientsText, setIngredientsText] = useState('');
+  const [instructionsText, setInstructionsText] = useState('');
   const [activeCommentPostId, setActiveCommentPostId] = useState<number | null>(null);
   const [commentText, setCommentText] = useState('');
 
@@ -46,7 +49,7 @@ export default function FeedPage() {
   };
 
   const handleAddPost = () => {
-    if (!newPostText.trim()) return;
+    if (!newPostText.trim() && !recipeTitle.trim() && !ingredientsText.trim()) return;
 
     const newPost: FeedPost = {
       id: Date.now(),
@@ -54,6 +57,9 @@ export default function FeedPage() {
       authorAvatar: 'PS',
       timeAgo: 'Agora',
       text: newPostText,
+      recipeTitle: recipeTitle.trim() || undefined,
+      ingredients: ingredientsText.trim() ? ingredientsText.split('\n').map(i => i.trim()).filter(Boolean) : undefined,
+      instructions: instructionsText.trim() || undefined,
       likes: 0,
       isLiked: false,
       comments: []
@@ -61,6 +67,9 @@ export default function FeedPage() {
 
     setFeedPosts([newPost, ...feedPosts]);
     setNewPostText('');
+    setRecipeTitle('');
+    setIngredientsText('');
+    setInstructionsText('');
   };
 
   return (
@@ -80,12 +89,38 @@ export default function FeedPage() {
           <div className="feed-avatar">PS</div>
           <span style={{ fontWeight: 700, fontSize: 15 }}>Pedro Silva</span>
         </div>
+        
+        <input 
+          type="text"
+          className="feed-compose-input"
+          style={{ minHeight: 'auto', padding: '12px 16px', fontWeight: 600, fontFamily: 'var(--serif)' }}
+          placeholder="Nome da Receita (Opcional)"
+          value={recipeTitle}
+          onChange={(e) => setRecipeTitle(e.target.value)}
+        />
+
         <textarea 
           className="feed-compose-input" 
-          placeholder="O que você vai cozinhar hoje?"
+          placeholder="Conte um pouco sobre essa receita..."
           value={newPostText}
           onChange={(e) => setNewPostText(e.target.value)}
         />
+
+        <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 16 }}>
+          <textarea 
+            className="feed-compose-input" 
+            placeholder="Ingredientes (um por linha)"
+            value={ingredientsText}
+            onChange={(e) => setIngredientsText(e.target.value)}
+          />
+          <textarea 
+            className="feed-compose-input" 
+            placeholder="Modo de preparo detalhado"
+            value={instructionsText}
+            onChange={(e) => setInstructionsText(e.target.value)}
+          />
+        </div>
+
         <div className="feed-compose-actions">
           <button style={{ background: 'none', border: 'none', color: 'var(--text-sub)', display: 'flex', alignItems: 'center', gap: 8, fontSize: 14, fontWeight: 600, cursor: 'pointer' }}>
             <ImageIcon size={18} /> Adicionar Foto
@@ -111,6 +146,21 @@ export default function FeedPage() {
             <div className="feed-post-body">
               {post.recipeTitle && <h3 className="feed-post-title">{post.recipeTitle}</h3>}
               <p className="feed-post-text">{post.text}</p>
+              
+              {post.ingredients && post.ingredients.length > 0 && (
+                <div className="feed-post-ingredients">
+                  {post.ingredients.map((ing, idx) => (
+                    <span key={idx} className="feed-ingredient-tag">{ing}</span>
+                  ))}
+                </div>
+              )}
+              
+              {post.instructions && (
+                <div className="feed-post-instructions">
+                  <strong>Modo de Preparo:</strong><br/>
+                  {post.instructions}
+                </div>
+              )}
             </div>
 
             {post.img && (

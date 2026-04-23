@@ -15,6 +15,8 @@ export interface FeedPost {
   timeAgo: string;
   text: string;
   recipeTitle?: string;
+  ingredients?: string[];
+  instructions?: string;
   img?: string;
   likes: number;
   isLiked: boolean;
@@ -102,6 +104,8 @@ const FEED_POSTS: FeedPost[] = [
     timeAgo: 'Há 20 min',
     text: 'Aproveitei a promoção de ovos no Extra e fiz essa maravilha! Super recomendo para o café da manhã.',
     recipeTitle: 'Omelete Cremoso com Ervas',
+    ingredients: ['3 ovos', '1 colher de manteiga', 'Cebolinha', 'Queijo ralado', 'Sal e pimenta a gosto'],
+    instructions: 'Bata os ovos com o sal e a pimenta. Derreta a manteiga na frigideira, despeje os ovos e adicione o queijo e a cebolinha. Dobre ao meio e sirva!',
     img: 'https://images.unsplash.com/photo-1510693215286-63d1db13ce32?w=600&h=400&fit=crop',
     likes: 12,
     isLiked: false,
@@ -116,6 +120,8 @@ const FEED_POSTS: FeedPost[] = [
     timeAgo: 'Há 2 horas',
     text: 'Dica: o preço do peito de frango caiu bastante no Atacadão. Fiz um strogonoff incrível pra família toda.',
     recipeTitle: 'Strogonoff de Frango Rápido',
+    ingredients: ['500g de peito de frango', '1 creme de leite', 'Mostarda e Ketchup', 'Batata palha', 'Cebola'],
+    instructions: 'Doure a cebola e o frango picado. Adicione mostarda, ketchup e um pouco de água. Deixe engrossar e por fim, misture o creme de leite com o fogo desligado.',
     img: 'https://images.unsplash.com/photo-1604908176997-125f25cc6f3d?w=600&h=400&fit=crop',
     likes: 45,
     isLiked: true,
