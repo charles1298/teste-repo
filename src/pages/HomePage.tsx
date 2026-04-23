@@ -123,23 +123,17 @@ export default function HomePage() {
         </div>
 
         {/* Live counter in hero */}
-        <div style={{
-          position: 'absolute', bottom: 32, left: '50%', transform: 'translateX(-50%)',
-          display: 'flex', gap: 40, zIndex: 2,
-        }}>
+        <div className="hero-stats">
           {[
             { label: 'Produtos rastreados', value: 1847 },
             { label: 'Colaboradores ativos', value: 2031 },
             { label: 'Mercados mapeados', value: 23 },
           ].map(stat => (
-            <div key={stat.label} style={{ textAlign: 'center' }}>
-              <span style={{
-                display: 'block',
-                fontFamily: 'var(--serif)', fontWeight: 700, fontSize: 28, color: 'var(--text)',
-              }}>
+            <div key={stat.label} style={{ textAlign: 'center', flex: 1 }}>
+              <span className="hero-stat-value">
                 <AnimatedCounter target={stat.value} duration={2500} />
               </span>
-              <span style={{ fontSize: 10, fontWeight: 600, letterSpacing: 1.5, textTransform: 'uppercase' as const, color: 'var(--text-sub)' }}>
+              <span className="hero-stat-label">
                 {stat.label}
               </span>
             </div>

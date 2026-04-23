@@ -221,6 +221,48 @@ a { text-decoration: none; color: inherit; }
   letter-spacing: 3.5px;
 }
 
+.hero-stats {
+  position: absolute;
+  bottom: 32px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 40px;
+  z-index: 2;
+  width: 100%;
+  justify-content: center;
+}
+.hero-stat-value {
+  display: block;
+  font-family: var(--serif);
+  font-weight: 700;
+  font-size: 28px;
+  color: var(--text);
+}
+.hero-stat-label {
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  color: var(--text-sub);
+}
+
+@media (max-width: 600px) {
+  .hero-stats {
+    gap: 16px;
+    bottom: 24px;
+    padding: 0 16px;
+  }
+  .hero-stat-value {
+    font-size: 22px;
+  }
+  .hero-stat-label {
+    font-size: 9px;
+    letter-spacing: 1px;
+  }
+}
+
+
 /* ---------- SECTION SHARED ---------- */
 .section {
   padding: 80px 40px;
