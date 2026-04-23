@@ -135,7 +135,7 @@ export default function Layout() {
             <NavLink
               key={link.to}
               to={link.to}
-              className={`nav-link ${location.pathname === link.to ? 'active' : ''}`}
+              className={`nav-link animated-underline ${location.pathname === link.to ? 'active' : ''}`}
             >
               {link.label}
             </NavLink>

@@ -2,9 +2,10 @@ import { useState, useEffect, useRef, useCallback } from 'react';
 import { useNavigate } from 'react-router-dom';
 import {
   ArrowRight, Star, TrendingDown, Plus, Check,
-  Camera, QrCode, Trophy, ChevronRight, Clock, MapPin,
+  Camera, QrCode, Trophy, ChevronRight, Clock, MapPin, Sparkles,
 } from 'lucide-react';
 import useRealtimeData from '../hooks/useRealtimeData';
+import { useScrollReveal } from '../hooks/useScrollReveal';
 import MapSnippet from '../components/MapSnippet';
 import AnimatedCounter from '../components/AnimatedCounter';
 
@@ -96,6 +97,35 @@ export default function HomePage() {
 
   const currentRecipe = recipes[selectedRecipe] || recipes[0];
 
+  /* ---- scroll reveal refs ---- */
+  const heroReveal = useScrollReveal<HTMLDivElement>();
+  const productsReveal = useScrollReveal<HTMLElement>();
+  const despensaReveal = useScrollReveal<HTMLElement>({ threshold: 0.1 });
+  const mapReveal = useScrollReveal<HTMLElement>({ threshold: 0.1 });
+  const collabReveal = useScrollReveal<HTMLElement>({ threshold: 0.1 });
+
+  /* ---- card glow mouse tracking ---- */
+  const handleCardMouseMove = useCallback((e: React.MouseEvent<HTMLDivElement>) => {
+    const card = e.currentTarget;
+    const rect = card.getBoundingClientRect();
+    card.style.setProperty('--mouse-x', `${e.clientX - rect.left}px`);
+    card.style.setProperty('--mouse-y', `${e.clientY - rect.top}px`);
+  }, []);
+
+  /* ---- ripple effect ---- */
+  const createRipple = useCallback((e: React.MouseEvent<HTMLButtonElement>) => {
+    const btn = e.currentTarget;
+    const ripple = document.createElement('span');
+    const rect = btn.getBoundingClientRect();
+    const size = Math.max(rect.width, rect.height);
+    ripple.style.width = ripple.style.height = `${size}px`;
+    ripple.style.left = `${e.clientX - rect.left - size / 2}px`;
+    ripple.style.top = `${e.clientY - rect.top - size / 2}px`;
+    ripple.className = 'ripple';
+    btn.appendChild(ripple);
+    setTimeout(() => ripple.remove(), 600);
+  }, []);
+
   return (
     <>
       {/* ============================================================
@@ -107,17 +137,33 @@ export default function HomePage() {
           style={{ backgroundImage: 'url(https://images.unsplash.com/photo-1542838132-92c53300491e?w=1920&h=900&fit=crop)' }}
         />
         <div className="hero-overlay" />
-        <div className="hero-content">
-          <p className="eyebrow" style={{ marginBottom: 12 }}>O Waze dos Mercados</p>
+
+        {/* Floating particles */}
+        <div className="particle" style={{ top: '15%', left: '10%' }} />
+        <div className="particle" style={{ top: '25%', right: '15%' }} />
+        <div className="particle" style={{ top: '60%', left: '20%' }} />
+        <div className="particle" style={{ top: '70%', right: '25%' }} />
+
+        <div
+          ref={heroReveal.ref}
+          className={`hero-content reveal ${heroReveal.isVisible ? 'visible' : ''}`}
+        >
+          <p className="eyebrow" style={{ marginBottom: 12 }}>
+            <Sparkles size={14} style={{ verticalAlign: -2, marginRight: 6 }} />
+            O Waze dos Mercados
+          </p>
           <h1 className="section-title" style={{ fontSize: 'clamp(36px, 5vw, 64px)', marginBottom: 16 }}>
             Encontre os Melhores<br />
-            Preços de <span style={{ color: 'var(--accent)' }}>Bebedouro</span>
+            Preços de <span className="shimmer-text" style={{ WebkitTextFillColor: 'transparent' }}>Bebedouro</span>
           </h1>
           <p className="section-subtitle" style={{ margin: '0 auto', maxWidth: 520, fontSize: 16 }}>
             Preços atualizados colaborativamente por mais de 2.000 usuários.
             Compare, economize e ganhe pontos.
           </p>
-          <button className="hero-cta" onClick={() => navigate('/feed')}>
+          <button
+            className="hero-cta btn-press ripple-container"
+            onClick={(e) => { createRipple(e as any); navigate('/feed'); }}
+          >
             Explorar Comunidade <ArrowRight size={16} />
           </button>
         </div>
@@ -144,7 +190,10 @@ export default function HomePage() {
       {/* ============================================================
           MELHORES PREÇOS SECTION
           ============================================================ */}
-      <section className="section">
+      <section
+        ref={productsReveal.ref}
+        className={`section reveal ${productsReveal.isVisible ? 'visible' : ''}`}
+      >
         <div className="section-header">
           <span className="eyebrow">Ofertas em Destaque</span>
           <h2 className="section-title">Melhores Preços Hoje</h2>
@@ -197,8 +246,9 @@ export default function HomePage() {
             return (
               <div
                 key={product.id}
-                className="product-card animate-fadeInUp"
+                className={`product-card animate-fadeInUp stagger-${Math.min(i + 1, 8)}`}
                 style={{ animationDelay: `${i * 0.06}s` }}
+                onMouseMove={handleCardMouseMove}
               >
                 {/* Image */}
                 <div className="img-wrap">
@@ -229,7 +279,7 @@ export default function HomePage() {
                   </div>
 
                   <button
-                    className={`add-btn ${isAdded ? 'added' : ''}`}
+                    className={`add-btn btn-press ${isAdded ? 'added' : ''}`}
                     onClick={() => toggleAdd(product.id)}
                   >
                     {isAdded ? <><Check size={14} /> Adicionado</> : <>Adicionar <ArrowRight size={14} /></>}
@@ -244,7 +294,10 @@ export default function HomePage() {
       {/* ============================================================
           DESPENSA SECTION (Split Layout like the reference)
           ============================================================ */}
-      <section className="despensa-section">
+      <section
+        ref={despensaReveal.ref}
+        className={`despensa-section reveal-left ${despensaReveal.isVisible ? 'visible' : ''}`}
+      >
         {/* Left: Text */}
         <div className="despensa-text">
           <span className="eyebrow" style={{ marginBottom: 12, display: 'block' }}>Sua Cozinha</span>
@@ -268,7 +321,7 @@ export default function HomePage() {
             ))}
           </div>
 
-          <button className="despensa-cta" onClick={() => navigate('/recipes')}>
+          <button className="despensa-cta btn-press" onClick={() => navigate('/recipes')}>
             Ver Receitas <ArrowRight size={14} />
           </button>
         </div>
@@ -300,7 +353,7 @@ export default function HomePage() {
                 })}
               </div>
               <button
-                className="despensa-cta"
+                className="despensa-cta btn-press"
                 style={{ marginTop: 20, background: 'var(--accent)', color: 'var(--bg)', borderColor: 'var(--accent)' }}
               >
                 Cozinhar <ArrowRight size={14} />
@@ -313,7 +366,11 @@ export default function HomePage() {
       {/* ============================================================
           MAPA SNIPPET (full-width band) -> changed to Feed link
           ============================================================ */}
-      <section style={{ padding: '60px 40px', maxWidth: 1400, margin: '0 auto' }}>
+      <section
+        ref={mapReveal.ref}
+        className={`reveal ${mapReveal.isVisible ? 'visible' : ''}`}
+        style={{ padding: '60px 40px', maxWidth: 1400, margin: '0 auto' }}
+      >
         <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-end', marginBottom: 20 }}>
           <div>
             <span className="eyebrow" style={{ display: 'block', marginBottom: 6 }}>Ao Vivo</span>
@@ -346,7 +403,10 @@ export default function HomePage() {
       {/* ============================================================
           COLABORE SECTION
           ============================================================ */}
-      <section className="collab-section">
+      <section
+        ref={collabReveal.ref}
+        className={`collab-section reveal ${collabReveal.isVisible ? 'visible' : ''}`}
+      >
         <div className="section-header">
           <span className="eyebrow">Comunidade</span>
           <h2 className="section-title">Colabore e Ganhe Pontos</h2>
@@ -375,7 +435,7 @@ export default function HomePage() {
               </div>
             </div>
 
-            <button className="scan-main-btn">
+            <button className="scan-main-btn btn-press">
               Escanear Agora
             </button>
           </div>
