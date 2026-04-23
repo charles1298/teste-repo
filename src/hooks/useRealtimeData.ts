@@ -20,6 +20,7 @@ export interface FeedPost {
   img?: string;
   likes: number;
   isLiked: boolean;
+  isSaved: boolean;
   comments: Comment[];
 }
 
@@ -109,6 +110,7 @@ const FEED_POSTS: FeedPost[] = [
     img: 'https://images.unsplash.com/photo-1510693215286-63d1db13ce32?w=600&h=400&fit=crop',
     likes: 12,
     isLiked: false,
+    isSaved: true,
     comments: [
       { id: 101, authorName: 'Carlos M.', authorAvatar: 'CM', text: 'Que delícia! Vou tentar fazer amanhã.', timeAgo: 'Há 5 min' }
     ]
@@ -125,6 +127,7 @@ const FEED_POSTS: FeedPost[] = [
     img: 'https://images.unsplash.com/photo-1604908176997-125f25cc6f3d?w=600&h=400&fit=crop',
     likes: 45,
     isLiked: true,
+    isSaved: false,
     comments: []
   },
   {
@@ -136,6 +139,7 @@ const FEED_POSTS: FeedPost[] = [
     img: 'https://images.unsplash.com/photo-1512621776951-a57141f2eefd?w=600&h=400&fit=crop',
     likes: 8,
     isLiked: false,
+    isSaved: false,
     comments: [
       { id: 102, authorName: 'Juliana P.', authorAvatar: 'JP', text: 'Lindíssima a salada, peguei a dica do hortifruti tbm.', timeAgo: 'Há 1 hora' },
       { id: 103, authorName: 'Pedro Silva', authorAvatar: 'PS', text: 'Show de bola!', timeAgo: 'Há 30 min' }

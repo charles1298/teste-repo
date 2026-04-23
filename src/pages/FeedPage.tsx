@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { Heart, MessageSquare, Share2, ImageIcon, Send } from 'lucide-react';
+import { Heart, MessageSquare, Share2, ImageIcon, Send, Bookmark } from 'lucide-react';
 import useRealtimeData, { FeedPost, Comment } from '../hooks/useRealtimeData';
 
 export default function FeedPage() {
@@ -10,6 +10,7 @@ export default function FeedPage() {
   const [instructionsText, setInstructionsText] = useState('');
   const [activeCommentPostId, setActiveCommentPostId] = useState<number | null>(null);
   const [commentText, setCommentText] = useState('');
+  const [activeTab, setActiveTab] = useState<'all' | 'saved'>('all');
 
   const handleLike = (postId: number) => {
     setFeedPosts(prev => prev.map(post => {
@@ -19,6 +20,15 @@ export default function FeedPage() {
           isLiked: !post.isLiked,
           likes: post.isLiked ? post.likes - 1 : post.likes + 1
         };
+      }
+      return post;
+    }));
+  };
+
+  const handleSave = (postId: number) => {
+    setFeedPosts(prev => prev.map(post => {
+      if (post.id === postId) {
+        return { ...post, isSaved: !post.isSaved };
       }
       return post;
     }));
@@ -62,6 +72,7 @@ export default function FeedPage() {
       instructions: instructionsText.trim() || undefined,
       likes: 0,
       isLiked: false,
+      isSaved: false,
       comments: []
     };
 
@@ -72,15 +83,35 @@ export default function FeedPage() {
     setInstructionsText('');
   };
 
+  const displayedPosts = activeTab === 'all' 
+    ? feedPosts 
+    : feedPosts.filter(post => post.isSaved);
+
   return (
     <div className="feed-container animate-fadeIn">
       {/* Header section text */}
-      <div style={{ textAlign: 'center', marginBottom: 40 }}>
+      <div style={{ textAlign: 'center', marginBottom: 32 }}>
         <span className="eyebrow">Comunidade MercadoMap</span>
         <h2 className="section-title" style={{ fontSize: 32, marginTop: 8 }}>Feed de Receitas</h2>
         <p className="section-subtitle" style={{ margin: '12px auto 0' }}>
           Compartilhe o que você está cozinhando com os ingredientes em promoção!
         </p>
+      </div>
+
+      {/* Tabs */}
+      <div className="cat-tabs">
+        <button 
+          className={`cat-tab ${activeTab === 'all' ? 'active' : ''}`}
+          onClick={() => setActiveTab('all')}
+        >
+          Todas as Receitas
+        </button>
+        <button 
+          className={`cat-tab ${activeTab === 'saved' ? 'active' : ''}`}
+          onClick={() => setActiveTab('saved')}
+        >
+          Receitas Salvas
+        </button>
       </div>
 
       {/* Compose Card */}
@@ -133,9 +164,14 @@ export default function FeedPage() {
 
       {/* Feed List */}
       <div>
-        {feedPosts.map(post => (
-          <div key={post.id} className="feed-post-card">
-            <div className="feed-post-header">
+        {displayedPosts.length === 0 ? (
+          <div style={{ textAlign: 'center', padding: '60px 20px', color: 'var(--text-dim)' }}>
+            {activeTab === 'saved' ? 'Você ainda não salvou nenhuma receita.' : 'Nenhuma publicação encontrada.'}
+          </div>
+        ) : (
+          displayedPosts.map(post => (
+            <div key={post.id} className="feed-post-card">
+              <div className="feed-post-header">
               <div className="feed-avatar">{post.authorAvatar}</div>
               <div>
                 <div className="feed-post-author">{post.authorName}</div>
@@ -167,21 +203,31 @@ export default function FeedPage() {
               <img src={post.img} alt="Receita" className="feed-post-img" loading="lazy" />
             )}
 
-            <div className="feed-post-actions">
+            <div className="feed-post-actions" style={{ justifyContent: 'space-between' }}>
+              <div style={{ display: 'flex', gap: 24 }}>
+                <button 
+                  className={`feed-action-btn ${post.isLiked ? 'liked' : ''}`}
+                  onClick={() => handleLike(post.id)}
+                >
+                  <Heart size={20} /> {post.likes} Curtidas
+                </button>
+                <button 
+                  className="feed-action-btn"
+                  onClick={() => setActiveCommentPostId(activeCommentPostId === post.id ? null : post.id)}
+                >
+                  <MessageSquare size={20} /> {post.comments.length} Comentários
+                </button>
+                <button className="feed-action-btn">
+                  <Share2 size={20} /> Compartilhar
+                </button>
+              </div>
+              
               <button 
-                className={`feed-action-btn ${post.isLiked ? 'liked' : ''}`}
-                onClick={() => handleLike(post.id)}
+                className={`feed-action-btn ${post.isSaved ? 'liked' : ''}`}
+                onClick={() => handleSave(post.id)}
+                title={post.isSaved ? "Remover dos salvos" : "Salvar receita"}
               >
-                <Heart size={20} /> {post.likes} Curtidas
-              </button>
-              <button 
-                className="feed-action-btn"
-                onClick={() => setActiveCommentPostId(activeCommentPostId === post.id ? null : post.id)}
-              >
-                <MessageSquare size={20} /> {post.comments.length} Comentários
-              </button>
-              <button className="feed-action-btn">
-                <Share2 size={20} /> Compartilhar
+                <Bookmark size={20} fill={post.isSaved ? "currentColor" : "none"} />
               </button>
             </div>
 
@@ -223,7 +269,7 @@ export default function FeedPage() {
               </div>
             )}
           </div>
-        ))}
+        )))}
       </div>
     </div>
   );
