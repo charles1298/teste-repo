@@ -63,3 +63,44 @@ jobs:
         run: |
           sshpass -p "$SSH_PASS" ssh -o StrictHostKeyChecking=no -p $SSH_PORT $SSH_USER@$SSH_HOST \
             "cd $DEPLOY_PATH && echo '$SSH_PASS' | sudo -S docker compose up -d --build app"
+
+      # Ate aqui o job ficava verde mesmo se o container subisse e morresse em
+      # seguida. Este passo falha o deploy se o app nao estiver servindo de fato.
+      - name: Verify container is serving
+        env:
+          SSH_HOST: ${{ secrets.SSH_HOST }}
+          SSH_PORT: ${{ secrets.SSH_PORT }}
+          SSH_USER: ${{ secrets.SSH_USER }}
+          SSH_PASS: ${{ secrets.SSH_PASS }}
+          DEPLOY_PATH: ${{ secrets.DEPLOY_PATH }}
+        run: |
+          sshpass -p "$SSH_PASS" ssh -o StrictHostKeyChecking=no -p $SSH_PORT $SSH_USER@$SSH_HOST \
+            "cd $DEPLOY_PATH && bash scripts/verify-deploy.sh"
+
+      # Roda so depois da verificacao: se o deploy novo falhar, a imagem
+      # anterior continua no servidor para um rollback manual.
+      - name: Prune old Docker images
+        continue-on-error: true
+        env:
+          SSH_HOST: ${{ secrets.SSH_HOST }}
+          SSH_PORT: ${{ secrets.SSH_PORT }}
+          SSH_USER: ${{ secrets.SSH_USER }}
+          SSH_PASS: ${{ secrets.SSH_PASS }}
+        run: |
+          sshpass -p "$SSH_PASS" ssh -o StrictHostKeyChecking=no -p $SSH_PORT $SSH_USER@$SSH_HOST \
+            "echo '$SSH_PASS' | sudo -S docker image prune -f; \
+             echo '$SSH_PASS' | sudo -S docker builder prune -f --keep-storage 2GB \
+             || echo '$SSH_PASS' | sudo -S docker builder prune -f"
+
+      - name: Collect diagnostics on failure
+        if: failure()
+        env:
+          SSH_HOST: ${{ secrets.SSH_HOST }}
+          SSH_PORT: ${{ secrets.SSH_PORT }}
+          SSH_USER: ${{ secrets.SSH_USER }}
+          SSH_PASS: ${{ secrets.SSH_PASS }}
+        run: |
+          sshpass -p "$SSH_PASS" ssh -o StrictHostKeyChecking=no -p $SSH_PORT $SSH_USER@$SSH_HOST \
+            "echo '--- containers ---'; echo '$SSH_PASS' | sudo -S docker ps -a --filter name=mercadomap-web; \
+             echo '--- logs ---'; echo '$SSH_PASS' | sudo -S docker logs --tail 80 mercadomap-web 2>&1 || true; \
+             echo '--- disco ---'; df -h /" || true

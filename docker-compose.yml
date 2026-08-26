@@ -7,3 +7,20 @@ services:
     ports:
       - "4102:80"
     restart: unless-stopped
+
+    # Se o Nginx interno parar de responder, o container e marcado como
+    # unhealthy e aparece no `docker ps` — em vez de ficar "Up" servindo 502.
+    healthcheck:
+      test: ["CMD", "wget", "-q", "-O", "/dev/null", "http://127.0.0.1/"]
+      interval: 30s
+      timeout: 5s
+      retries: 3
+      start_period: 10s
+
+    # Sem limite, o log do Nginx cresce indefinidamente e enche o disco da VPS
+    # — uma das causas de o container morrer sozinho depois de meses no ar.
+    logging:
+      driver: "json-file"
+      options:
+        max-size: "10m"
+        max-file: "3"
