@@ -3,6 +3,9 @@ services:
     build:
       context: .
       dockerfile: Dockerfile
+    # Nome fixo: o rollback depende de referenciar :latest e :previous. Sem
+    # isso o compose derivaria o nome da imagem do diretorio do deploy.
+    image: mercadomap:latest
     container_name: mercadomap-web
     ports:
       - "4102:80"
